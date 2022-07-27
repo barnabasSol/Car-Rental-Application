@@ -2,7 +2,7 @@
 C-sharp defense project
 
 ## Made using
-* C-sharp (WPF)
+* C-sharp (WINDOWSFORM)
 * T-sql
 
 ## Project Management
