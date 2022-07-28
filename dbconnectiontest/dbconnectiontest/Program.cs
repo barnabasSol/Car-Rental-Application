@@ -28,8 +28,6 @@ namespace dbconnectiontest
             conn.ConnectionString = my_connection_string;
             
 
-
-
             string commandText = "SELECT id, name from dbo.trial;";
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
