@@ -116,10 +116,11 @@ namespace Car_Rental_App
             // dhaalbl
             // 
             this.dhaalbl.AutoSize = true;
+            this.dhaalbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dhaalbl.ForeColor = System.Drawing.Color.Black;
-            this.dhaalbl.Location = new System.Drawing.Point(552, 296);
+            this.dhaalbl.Location = new System.Drawing.Point(539, 296);
             this.dhaalbl.Name = "dhaalbl";
-            this.dhaalbl.Size = new System.Drawing.Size(120, 13);
+            this.dhaalbl.Size = new System.Drawing.Size(133, 15);
             this.dhaalbl.TabIndex = 7;
             this.dhaalbl.Text = "don\'t have an account?";
             // 
@@ -136,9 +137,10 @@ namespace Car_Rental_App
             // create_here_lbl
             // 
             this.create_here_lbl.AutoSize = true;
-            this.create_here_lbl.Location = new System.Drawing.Point(669, 296);
+            this.create_here_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.create_here_lbl.Location = new System.Drawing.Point(668, 296);
             this.create_here_lbl.Name = "create_here_lbl";
-            this.create_here_lbl.Size = new System.Drawing.Size(61, 13);
+            this.create_here_lbl.Size = new System.Drawing.Size(69, 15);
             this.create_here_lbl.TabIndex = 9;
             this.create_here_lbl.Text = "create here";
             this.create_here_lbl.MouseLeave += new System.EventHandler(this.create_here_lbl_MouseLeave);
