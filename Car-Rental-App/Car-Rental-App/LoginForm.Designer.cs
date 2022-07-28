@@ -141,6 +141,8 @@ namespace Car_Rental_App
             this.create_here_lbl.Size = new System.Drawing.Size(61, 13);
             this.create_here_lbl.TabIndex = 9;
             this.create_here_lbl.Text = "create here";
+            this.create_here_lbl.MouseLeave += new System.EventHandler(this.create_here_lbl_MouseLeave);
+            this.create_here_lbl.MouseHover += new System.EventHandler(this.create_here_lbl_MouseHover);
             // 
             // LoginForm
             // 
