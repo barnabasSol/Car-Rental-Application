@@ -1,4 +1,9 @@
 create database car_rental_database;
+
+
+go
+
+
 use car_rental_database;
 
 GO
@@ -80,5 +85,4 @@ create table rented_cars(
 
 
 GO
-
 
