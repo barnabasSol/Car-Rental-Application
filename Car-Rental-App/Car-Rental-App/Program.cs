@@ -11,7 +11,7 @@ namespace Car_Rental_App
         /// The main entry point for the application.
 
         public static string my_connection_string = "Data Source=BARNEY\\SQLEXPRESS;" +
-                                                    "Initial Catalog=connectiontest;" +
+                                                    "Initial Catalog=car_rental_database;" +
                                                     "Integrated Security=SSPI;";
         [STAThread]
         static void Main()
