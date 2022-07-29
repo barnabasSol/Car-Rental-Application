@@ -17,6 +17,15 @@ namespace Car_Rental_App
             InitializeComponent();
         }
 
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void create_here_lbl_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void create_here_lbl_MouseHover(object sender, EventArgs e)
         {
             create_here_lbl.Font = new Font(create_here_lbl.Font, FontStyle.Underline);
@@ -26,5 +35,6 @@ namespace Car_Rental_App
         {
             create_here_lbl.Font = new Font(create_here_lbl.Font, FontStyle.Regular);
         }
+
     }
 }

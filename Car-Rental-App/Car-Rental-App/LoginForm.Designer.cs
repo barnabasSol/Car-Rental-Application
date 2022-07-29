@@ -133,16 +133,19 @@ namespace Car_Rental_App
             this.login_btn.TabIndex = 8;
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // create_here_lbl
             // 
             this.create_here_lbl.AutoSize = true;
+            this.create_here_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.create_here_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.create_here_lbl.Location = new System.Drawing.Point(668, 296);
             this.create_here_lbl.Name = "create_here_lbl";
             this.create_here_lbl.Size = new System.Drawing.Size(69, 15);
             this.create_here_lbl.TabIndex = 9;
             this.create_here_lbl.Text = "create here";
+            this.create_here_lbl.Click += new System.EventHandler(this.create_here_lbl_Click);
             this.create_here_lbl.MouseLeave += new System.EventHandler(this.create_here_lbl_MouseLeave);
             this.create_here_lbl.MouseHover += new System.EventHandler(this.create_here_lbl_MouseHover);
             // 

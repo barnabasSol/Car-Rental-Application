@@ -8,9 +8,11 @@ namespace Car_Rental_App
 {
     static class Program
     {
-        /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+
+        public static string my_connection_string = "Data Source=BARNEY\\SQLEXPRESS;" +
+                                                    "Initial Catalog=connectiontest;" +
+                                                    "Integrated Security=SSPI;";
         [STAThread]
         static void Main()
         {
