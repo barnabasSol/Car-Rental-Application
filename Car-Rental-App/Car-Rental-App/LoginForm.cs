@@ -17,9 +17,29 @@ namespace Car_Rental_App
             InitializeComponent();
         }
 
+        Profile p = new Profile();
+
         private void login_btn_Click(object sender, EventArgs e)
         {
-            
+            if (p.is_customer(login_idtxt.Text, password_txt.Text)){
+                //the customer form goes here
+                MessageBox.Show("customer here");
+            }
+            else if (p.is_admin(login_idtxt.Text, password_txt.Text))
+            {
+                //the admin form goes here
+                MessageBox.Show("admin here");
+            }
+            else if (p.is_renter(login_idtxt.Text, password_txt.Text))
+            {
+                //the renter form goes here
+                MessageBox.Show("renter here");
+            }
+            else
+            {
+                errorProvider1.SetError(login_idtxt, "user does not exist");
+
+            }
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
