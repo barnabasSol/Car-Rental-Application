@@ -26,11 +26,38 @@ namespace dbconnectiontest
                                              "Integrated Security=SSPI;";
         static void Main(string[] args)
         {
+            int id = 7;
+            string n = "aster";
+
+             write(id, n);
+           // read();
+        }
+
+        public static void write(int id, string name)
+        {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = my_connection_string;
-            
+            string commandText = "exec enter_data "+id+", "+name;
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandText, connection))
+                {
+                    connection.Open();
+                    command.ExecuteScalar();
+                    connection.Close();
+                }
+            }
+        }
 
+<<<<<<< HEAD
             string commandText = "SELECT id, name from dbo.trial";
+=======
+        public static void read()
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = my_connection_string;
+            string commandText = "select * from trial";
+>>>>>>> a2d0754f33f944a0c71a8b898793fb5ee3033fee
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
@@ -40,10 +67,11 @@ namespace dbconnectiontest
                     {
                         while (reader.Read())
                         {
-                            Console.Write(reader[0]+" ");
+                            Console.Write(reader[0] + " ");
                             Console.WriteLine(reader[1]);
                         }
                     }
+                    connection.Close();
                 }
             }
             Console.ReadKey();

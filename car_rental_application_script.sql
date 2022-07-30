@@ -1,8 +1,6 @@
 create database car_rental_database;
 
-
 go
-
 
 use car_rental_database;
 
@@ -17,7 +15,8 @@ create table profile(
     login_id  varchar(200) primary key,
     first_name nvarchar(100) not null, 
     last_name nvarchar(100) not null,
-    phone_number varchar(100) not null, 
+    sex varchar(2) not null,
+    phone_number varchar(100) not null UNIQUE, 
     home_address nvarchar(100) not null, 
     password varchar(100) not null,
     profile_type_id varchar(50),
@@ -32,7 +31,7 @@ create table customer(
 
 create table admin(
     login_id varchar(200), 
-    salary money
+    salary money,
     constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id)
 )
 
@@ -50,6 +49,7 @@ create table branch(
      car_model varchar(100) not null,
      car_color varchar(50) not null,
      car_status TINYINT not null,
+     car_condition varchar(100) not null, /*new column*/
      car_rating int default 0,
      price_per_hour money not null,
      car_branch nvarchar(100), 
@@ -85,4 +85,6 @@ create table rented_cars(
 
 
 GO
+
+
 

@@ -8,15 +8,17 @@ namespace Car_Rental_App
 {
     static class Program
     {
-        /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+
+        public static string my_connection_string = "Data Source=BARNEY\\SQLEXPRESS;" +
+                                                    "Initial Catalog=car_rental_database;" +
+                                                    "Integrated Security=SSPI;";
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }
