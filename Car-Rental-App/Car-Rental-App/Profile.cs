@@ -109,7 +109,5 @@ namespace Car_Rental_App
             return isRenter;
         }
 
-
-
     }
 }
