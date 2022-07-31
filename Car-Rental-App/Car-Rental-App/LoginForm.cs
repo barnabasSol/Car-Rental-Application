@@ -21,6 +21,10 @@ namespace Car_Rental_App
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+            errorProvider1.SetError(login_idtxt, null);
+            errorProvider1.SetError(password_txt, null);
+            errorProvider2.SetError(login_idtxt, null);
+
             if (p.is_customer(login_idtxt.Text, password_txt.Text)){
                 //the customer form goes here
                 MessageBox.Show("customer here");
@@ -37,13 +41,29 @@ namespace Car_Rental_App
             }
             else
             {
-                errorProvider1.SetError(login_idtxt, "user does not exist");
+                if (string.IsNullOrEmpty(login_idtxt.Text) && string.IsNullOrEmpty(password_txt.Text))
+                {
+                    errorProvider1.SetError(login_idtxt, "empty field here");
+                    errorProvider1.SetError(password_txt, "empty field here");
+                }
 
+                else if (string.IsNullOrEmpty(login_idtxt.Text))
+                {
+                    errorProvider1.SetError(login_idtxt, "empty field here");
+                }
+                else if (string.IsNullOrEmpty(password_txt.Text))
+                {
+                    errorProvider1.SetError(password_txt, "empty field here");
+                }
+                else
+                {
+                    errorProvider2.SetError(login_idtxt, "user doesn't exist");
+                }
             }
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
-            
+            //create account form goes here
         }
 
         private void create_here_lbl_MouseHover(object sender, EventArgs e)
