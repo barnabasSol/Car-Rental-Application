@@ -1,13 +1,13 @@
 create database car_rental_database;
 
-go
+GO
 
 use car_rental_database;
 
 GO
 
 create table profile_type(
-    prof_id varchar(50) primary key,
+    prof_id int primary key,
     profile_type_name varchar(100) not null
 )
 
@@ -19,7 +19,7 @@ create table profile(
     phone_number varchar(100) not null UNIQUE, 
     home_address nvarchar(100) not null, 
     password varchar(100) not null,
-    profile_type_id varchar(50),
+    profile_type_id int,
     constraint fk_profile_id foreign key (profile_type_id) REFERENCES profile_type(prof_id)
 )
 
@@ -50,13 +50,21 @@ create table branch(
      car_color varchar(50) not null,
      car_status TINYINT not null,
      car_condition varchar(100) not null, /*new column*/
-     car_rating int default 0,
      price_per_hour money not null,
      car_branch nvarchar(100), 
      renter_login_id varchar(200) default 'company'''+'s',
      CONSTRAINT fk_renter_id FOREIGN KEY(renter_login_id) REFERENCES profile(login_id),
      CONSTRAINT fk_car_branch FOREIGN KEY(car_branch) REFERENCES branch(branch_address)
   )
+
+  create table car_reviews(
+       c_login_id varchar(200),
+       license_plate_no varchar(200),
+       car_rating int default 0,
+       constraint fk_c_id foreign key(c_login_id) REFERENCES profile(login_id),
+       CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no)
+  )
+  
 
 create table payment(
     payment_id int PRIMARY KEY, 
@@ -86,5 +94,14 @@ create table rented_cars(
 
 GO
 
+insert into profile_type values(1, 'admin'),
+                               (2, 'customer'),
+                               (3, 'renter')
+insert into profile values ('rntr10', 'barnabas', 'solomon', 'M', '097426534', 'cmc michael', '0000',3),
+                           ('cus10', 'nathnael', 'lastname', 'M', '092355534', 'summit', '1111',2),
+                           ('adm10', 'nathan', 'dawit', 'M', '09093664', 'hayat', '2222',1)  
+
+                           drop databse car_rental_database
 
 
+                
