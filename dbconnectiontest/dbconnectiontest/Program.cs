@@ -49,15 +49,15 @@ namespace dbconnectiontest
             }
         }
 
-<<<<<<< HEAD
+
             string commandText = "SELECT id, name from dbo.trial";
-=======
+
         public static void read()
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = my_connection_string;
             string commandText = "select * from trial";
->>>>>>> a2d0754f33f944a0c71a8b898793fb5ee3033fee
+
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
