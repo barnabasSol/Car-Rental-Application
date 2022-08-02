@@ -17,9 +17,11 @@ namespace dbconnectiontest
       
      
      */
+
+  
     class Program
     {
-        static string my_connection_string = "Data Source=BARNEY\\SQLEXPRESS;" +
+        static string my_connection_string = "Data Source=DESKTOP-CRCECQ7\\SQLEXPRESS;" +
                                              "Initial Catalog=connectiontest;" +
                                              "Integrated Security=SSPI;";
         static void Main(string[] args)
@@ -56,11 +58,15 @@ namespace dbconnectiontest
             }
         }
 
+
+            string commandText = "SELECT id, name from dbo.trial";
+
         public static void read()
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = my_connection_string;
             string commandText = "select * from trial";
+
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))

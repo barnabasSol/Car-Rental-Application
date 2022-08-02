@@ -63,7 +63,10 @@ namespace Car_Rental_App
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
-            //create account form goes here
+            CreateAccount createAccount = new CreateAccount();
+            createAccount.Show();
+            Hide();
+            
         }
 
         private void create_here_lbl_MouseHover(object sender, EventArgs e)
@@ -76,5 +79,14 @@ namespace Car_Rental_App
             create_here_lbl.Font = new Font(create_here_lbl.Font, FontStyle.Regular);
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
