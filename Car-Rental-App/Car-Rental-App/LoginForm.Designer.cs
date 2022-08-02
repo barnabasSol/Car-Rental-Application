@@ -29,6 +29,7 @@ namespace Car_Rental_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.welcomelbl = new System.Windows.Forms.Label();
             this.little_car = new System.Windows.Forms.PictureBox();
@@ -40,8 +41,12 @@ namespace Car_Rental_App
             this.dhaalbl = new System.Windows.Forms.Label();
             this.login_btn = new System.Windows.Forms.Button();
             this.create_here_lbl = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomelbl
@@ -149,6 +154,16 @@ namespace Car_Rental_App
             this.create_here_lbl.MouseLeave += new System.EventHandler(this.create_here_lbl_MouseLeave);
             this.create_here_lbl.MouseHover += new System.EventHandler(this.create_here_lbl_MouseHover);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +186,8 @@ namespace Car_Rental_App
             this.Text = "Rent a Car";
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +205,8 @@ namespace Car_Rental_App
         private System.Windows.Forms.Label dhaalbl;
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label create_here_lbl;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
 

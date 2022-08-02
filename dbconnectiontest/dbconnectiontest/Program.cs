@@ -4,7 +4,7 @@ using System.Linq;
 using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
 namespace dbconnectiontest
 {
 
@@ -26,8 +26,9 @@ namespace dbconnectiontest
                                              "Integrated Security=SSPI;";
         static void Main(string[] args)
         {
-            int id = 7;
-            string n = "aster";
+
+            int id = 1;
+            string n = "aster; drop table trial";
 
              write(id, n);
            // read();
@@ -37,13 +38,21 @@ namespace dbconnectiontest
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = my_connection_string;
-            string commandText = "exec enter_data "+id+", "+name;
+
+            string commandText = "exec enter_data @id, @name";
+            SqlParameter idparam = new SqlParameter("@id", SqlDbType.Int, 0) ;
+            SqlParameter nameparam = new SqlParameter("@name", SqlDbType.VarChar, 50);
+            idparam.Value = id;
+            nameparam.Value = name;
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
                     connection.Open();
-                    command.ExecuteScalar();
+                    command.Parameters.Add(idparam);
+                    command.Parameters.Add(nameparam);
+                    command.Prepare();
+                    command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
