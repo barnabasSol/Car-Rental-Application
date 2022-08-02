@@ -26,7 +26,7 @@ create table profile(
 create table customer(
     login_id varchar(200),
     reputation varchar(50) not null, 
-    constraint fk_c_id foreign key(login_id) REFERENCES profile(login_id)
+    constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
     )
 
 create table admin(
@@ -43,6 +43,7 @@ create table branch(
 
  create table cars(
      license_plate_no varchar(200) primary key, 
+     verification varchar(100) DEFAULT 'unverified',
      car_name varchar(100) not null, 
      car_type varchar(100) not null,
      car_capacity int not null,
@@ -50,6 +51,7 @@ create table branch(
      car_color varchar(50) not null,
      car_status TINYINT not null,
      car_condition varchar(100) not null, /*new column*/
+     rep_min_req int not null,
      price_per_hour money not null,
      car_branch nvarchar(100), 
      renter_login_id varchar(200) default 'company'''+'s',
@@ -62,7 +64,7 @@ create table branch(
        license_plate_no varchar(200),
        car_rating int default 0,
        constraint fk_c_id foreign key(c_login_id) REFERENCES profile(login_id),
-       CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no)
+       CONSTRAINT fk_lpp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no)
   )
   
 
@@ -101,7 +103,4 @@ insert into profile values ('rntr10', 'barnabas', 'solomon', 'M', '097426534', '
                            ('cus10', 'nathnael', 'lastname', 'M', '092355534', 'summit', '1111',2),
                            ('adm10', 'nathan', 'dawit', 'M', '09093664', 'hayat', '2222',1)  
 
-                           drop databse car_rental_database
 
-
-                
