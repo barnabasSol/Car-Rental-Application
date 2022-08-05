@@ -18,7 +18,7 @@ create table profile(
     sex varchar(2) not null,
     phone_number varchar(100) not null UNIQUE, 
     home_address nvarchar(100) not null, 
-    password varchar(100) not null,
+    [password] varchar(100) not null,
     profile_type_id int,
     activity tinyint default 1,
     constraint fk_profile_id foreign key (profile_type_id) REFERENCES profile_type(prof_id)
@@ -30,7 +30,7 @@ create table customer(
     constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
     )
 
-create table admin(
+create table [admin](
     login_id varchar(200), 
     salary money,
     constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id)
