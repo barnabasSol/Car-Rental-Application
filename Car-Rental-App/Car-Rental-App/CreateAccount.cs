@@ -92,8 +92,9 @@ namespace Car_Rental_App
 
             else
             {
-                MessageBox.Show("You have succefully Created Your Account");
                 errorProvider1.Clear();
+                MessageBox.Show("You have succefully Created Your Account");
+               
             }
 
 
