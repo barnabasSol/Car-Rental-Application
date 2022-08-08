@@ -16,6 +16,7 @@ namespace Car_Rental_App
         {
             InitializeComponent();
         }
+     
 
         Profile p = new Profile();
 
@@ -33,9 +34,9 @@ namespace Car_Rental_App
             {
                 //the admin form goes here
                 AdminForm1 a = new AdminForm1();
+                Profile.current_userid = login_idtxt.Text;
                 this.Hide();
                 a.Show();
-                MessageBox.Show("admin here");
             }
             else if (p.is_renter(login_idtxt.Text, password_txt.Text))
             {
@@ -66,9 +67,7 @@ namespace Car_Rental_App
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
-            CreateAccount createAccount = new CreateAccount();
-            createAccount.Show();
-            Hide();
+           
             
         }
 

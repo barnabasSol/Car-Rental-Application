@@ -11,6 +11,9 @@ namespace Car_Rental_App
     {
         public string login_id { get; set; }
         public string password { get; set; }
+        public string full_name { get; set; }
+
+        public static string current_userid;
 
         public Profile()
         {
@@ -39,7 +42,7 @@ namespace Car_Rental_App
                     {
                         while (reader.Read())
                         {
-                           if (reader[0].ToString()==login_id && reader[1].ToString() == password)
+                            if (reader[0].ToString() == login_id && reader[1].ToString() == password)
                             {
                                 isCustomer = true;
                                 break;
@@ -109,5 +112,34 @@ namespace Car_Rental_App
             return isRenter;
         }
 
+        public string get_full_name(string login_id)
+        {
+            string full_name = "";
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Program.my_connection_string;
+            string commandText = "select first_name, last_name from profile where login_id=" + "\'"+login_id+"\'";
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandText, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            full_name = reader[0].ToString() + " " + reader[1].ToString();
+                        }
+                    }
+
+                    connection.Close();
+                }
+                full_name[0].ToString().ToUpper();
+                full_name[full_name.IndexOf(' ') + 1].ToString().ToUpper();
+                return full_name;
+            }
+
+        }
     }
 }
+
+

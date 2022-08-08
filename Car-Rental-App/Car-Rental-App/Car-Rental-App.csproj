@@ -52,11 +52,15 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount.cs">
-      <SubType>Form</SubType>
+    <Compile Include="car_rental_databaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount.Designer.cs">
-      <DependentUpon>CreateAccount.cs</DependentUpon>
+    <Compile Include="car_rental_databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -70,26 +74,45 @@
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccount.resx">
-      <DependentUpon>CreateAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="car_rental_databaseDataSet.xsc">
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>car_rental_databaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="car_rental_databaseDataSet.xss">
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xsc">
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>car_rental_databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xss">
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -98,9 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carrentlogo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
@@ -112,13 +132,7 @@
     <None Include="Resources\Screenshot 2022-08-06 184554.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\personimg2_1_46.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\My project.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot 2022-08-06 214359.png" />
+    <None Include="Resources\552848.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

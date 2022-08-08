@@ -63,9 +63,9 @@ namespace Car_Rental_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap carrentlogo {
+        internal static System.Drawing.Bitmap _552848 {
             get {
-                object obj = ResourceManager.GetObject("carrentlogo", resourceCulture);
+                object obj = ResourceManager.GetObject("552848", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,36 +123,6 @@ namespace Car_Rental_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap My_project {
-            get {
-                object obj = ResourceManager.GetObject("My project", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap personimg2_1_46 {
-            get {
-                object obj = ResourceManager.GetObject("personimg2_1_46", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap personimg2_1_461 {
-            get {
-                object obj = ResourceManager.GetObject("personimg2_1_461", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2022_08_06_184554 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2022-08-06 184554", resourceCulture);
@@ -173,9 +143,9 @@ namespace Car_Rental_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2022_08_06_214359 {
+        internal static System.Drawing.Bitmap Screenshot_2022_08_06_1845542 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2022-08-06 214359", resourceCulture);
+                object obj = ResourceManager.GetObject("Screenshot 2022-08-06 1845542", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
