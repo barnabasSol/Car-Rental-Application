@@ -26,14 +26,17 @@ create table profile(
 
 create table customer(
     login_id varchar(200),
-    reputation varchar(50) not null, 
+    reputation int default 5, 
     constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
     )
 
 create table [admin](
     login_id varchar(200), 
+    employment_date date,
     salary money,
-    constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id)
+    branch_address nvarchar(100),
+    constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id),
+    constraint fk_br_adm FOREIGN KEY (branc_address) REFERENCES branch(branch_address)
 )
 
 create table branch(
@@ -89,20 +92,32 @@ create table rented_cars(
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
     CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no)
 )
+
+
 create table [audit] (
-    admin_id varchar(200),
+    adm_id varchar(200),
     task varchar(1000),
     done_date date
+    CONSTRAINT fk_adm_prof FOREIGN KEY REFERENCES profile(login_id)
 )
+
 GO
+
+-- create function admin_id_generator()
+-- returns varchar(100)
+-- as 
+-- begin 
+
+-- END
+-- GO
 
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
                                (3, 'renter')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
-                           values ('rntr10', 'barnabas', 'solomon', 'M', '097426534', 'cmc michael', '0000',3),
+                           values ('rntr10', 'Nathan', 'solomon', 'M', 'Dawit', 'cmc michael', '0000',3),
                            ('cus10', 'nathnael', 'lastname', 'M', '092355534', 'summit', '1111',2),
-                           ('adm10', 'nathan', 'dawit', 'M', '09093664', 'hayat', '2222',1)  
+                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'hayat', '2222',1) 
 
 -- use master
 -- drop database car_rental_database
