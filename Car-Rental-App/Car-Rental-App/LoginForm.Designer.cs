@@ -86,14 +86,24 @@ namespace Car_Rental_App
             // 
             // login_idtxt
             // 
+<<<<<<< HEAD
             this.login_idtxt.Location = new System.Drawing.Point(597, 154);
+=======
+            this.login_idtxt.Location = new System.Drawing.Point(796, 190);
+            this.login_idtxt.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 83d5c21a91e0ef04eb0cf51a26ddae891c0f7114
             this.login_idtxt.Name = "login_idtxt";
             this.login_idtxt.Size = new System.Drawing.Size(157, 20);
             this.login_idtxt.TabIndex = 5;
             // 
             // password_txt
             // 
+<<<<<<< HEAD
             this.password_txt.Location = new System.Drawing.Point(597, 209);
+=======
+            this.password_txt.Location = new System.Drawing.Point(796, 257);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 83d5c21a91e0ef04eb0cf51a26ddae891c0f7114
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '●';
             this.password_txt.Size = new System.Drawing.Size(157, 20);
@@ -114,7 +124,12 @@ namespace Car_Rental_App
             // login_btn
             // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             this.login_btn.Location = new System.Drawing.Point(597, 260);
+=======
+            this.login_btn.Location = new System.Drawing.Point(796, 320);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 83d5c21a91e0ef04eb0cf51a26ddae891c0f7114
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(75, 23);
             this.login_btn.TabIndex = 8;
@@ -183,6 +198,10 @@ namespace Car_Rental_App
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.IndianRed;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 83d5c21a91e0ef04eb0cf51a26ddae891c0f7114
             this.Name = "LoginForm";
             this.Text = "Rent a Car";
             this.Load += new System.EventHandler(this.LoginForm_Load);

@@ -45,9 +45,6 @@ namespace Car_Rental_App
             this.customerbtn = new System.Windows.Forms.Button();
             this.auditTableAdapter = new Car_Rental_App.car_rental_databaseDataSetTableAdapters.auditTableAdapter();
             this.little_car = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.taskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donedateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auditBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.car_rental_databaseDataSet1 = new Car_Rental_App.car_rental_databaseDataSet1();
             this.auditBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -56,7 +53,6 @@ namespace Car_Rental_App
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_rental_databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_rental_databaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).BeginInit();
@@ -179,38 +175,6 @@ namespace Car_Rental_App
             this.little_car.TabIndex = 14;
             this.little_car.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.taskDataGridViewTextBoxColumn,
-            this.donedateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.auditBindingSource2;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(234, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(449, 201);
-            this.dataGridView1.TabIndex = 15;
-            // 
-            // taskDataGridViewTextBoxColumn
-            // 
-            this.taskDataGridViewTextBoxColumn.DataPropertyName = "task";
-            this.taskDataGridViewTextBoxColumn.HeaderText = "task";
-            this.taskDataGridViewTextBoxColumn.Name = "taskDataGridViewTextBoxColumn";
-            this.taskDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // donedateDataGridViewTextBoxColumn
-            // 
-            this.donedateDataGridViewTextBoxColumn.DataPropertyName = "done_date";
-            this.donedateDataGridViewTextBoxColumn.HeaderText = "done_date";
-            this.donedateDataGridViewTextBoxColumn.Name = "donedateDataGridViewTextBoxColumn";
-            this.donedateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // auditBindingSource2
             // 
             this.auditBindingSource2.DataMember = "audit";
@@ -236,7 +200,6 @@ namespace Car_Rental_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(719, 484);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.little_car);
             this.Controls.Add(this.customerbtn);
             this.Controls.Add(this.datedescbtn);
@@ -255,7 +218,6 @@ namespace Car_Rental_App
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_rental_databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_rental_databaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).EndInit();
@@ -280,9 +242,6 @@ namespace Car_Rental_App
         private System.Windows.Forms.BindingSource auditBindingSource;
         private car_rental_databaseDataSetTableAdapters.auditTableAdapter auditTableAdapter;
         private System.Windows.Forms.PictureBox little_car;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donedateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource auditBindingSource1;
         private car_rental_databaseDataSet1 car_rental_databaseDataSet1;
         private System.Windows.Forms.BindingSource auditBindingSource2;
