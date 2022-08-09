@@ -83,17 +83,17 @@ namespace Car_Rental_App
             this.pswlbl.TabIndex = 4;
             this.pswlbl.Text = "Password:";
             this.pswlbl.UseCompatibleTextRendering = true;
-            // 
-            // login_idtxt
-            // 
+ 
             this.login_idtxt.Location = new System.Drawing.Point(597, 154);
+            this.login_idtxt.Location = new System.Drawing.Point(796, 190);
+            this.login_idtxt.Margin = new System.Windows.Forms.Padding(4);
             this.login_idtxt.Name = "login_idtxt";
             this.login_idtxt.Size = new System.Drawing.Size(157, 20);
             this.login_idtxt.TabIndex = 5;
-            // 
-            // password_txt
-            // 
+
             this.password_txt.Location = new System.Drawing.Point(597, 209);
+            this.password_txt.Location = new System.Drawing.Point(796, 257);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '●';
             this.password_txt.Size = new System.Drawing.Size(157, 20);
@@ -110,11 +110,10 @@ namespace Car_Rental_App
             this.dhaalbl.Size = new System.Drawing.Size(133, 15);
             this.dhaalbl.TabIndex = 7;
             this.dhaalbl.Text = "don\'t have an account?";
-            // 
-            // login_btn
-            // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
             this.login_btn.Location = new System.Drawing.Point(597, 260);
+            this.login_btn.Location = new System.Drawing.Point(796, 320);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(4);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(75, 23);
             this.login_btn.TabIndex = 8;
@@ -183,6 +182,7 @@ namespace Car_Rental_App
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.IndianRed;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "Rent a Car";
             this.Load += new System.EventHandler(this.LoginForm_Load);
