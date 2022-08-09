@@ -53,31 +53,42 @@
             this.Female_rb = new System.Windows.Forms.RadioButton();
             this.Sex_lbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.little_car = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
+=======
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+>>>>>>> master
             this.SuspendLayout();
             // 
             // lbl4
             // 
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Lucida Bright", 31.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(418, 180);
-            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl4.Location = new System.Drawing.Point(557, 221);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(0, 47);
+            this.lbl4.Size = new System.Drawing.Size(0, 60);
             this.lbl4.TabIndex = 4;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Arial", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+<<<<<<< HEAD
             this.lbl1.Location = new System.Drawing.Point(120, 9);
             this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
+            this.lbl1.Location = new System.Drawing.Point(324, 29);
+>>>>>>> master
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(298, 34);
+            this.lbl1.Size = new System.Drawing.Size(384, 42);
             this.lbl1.TabIndex = 5;
             this.lbl1.Text = "Create your Account";
             // 
@@ -85,31 +96,50 @@
             // 
             this.Name_lbl.AutoSize = true;
             this.Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Name_lbl.Location = new System.Drawing.Point(18, 129);
             this.Name_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Name_lbl.Name = "Name_lbl";
             this.Name_lbl.Size = new System.Drawing.Size(66, 24);
+=======
+            this.Name_lbl.Location = new System.Drawing.Point(39, 193);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(84, 29);
+>>>>>>> master
             this.Name_lbl.TabIndex = 6;
             this.Name_lbl.Text = " Name";
             this.Name_lbl.Click += new System.EventHandler(this.lbl2_Click);
             // 
             // login_textbox
             // 
+<<<<<<< HEAD
             this.login_textbox.Location = new System.Drawing.Point(109, 87);
             this.login_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.login_textbox.Multiline = true;
             this.login_textbox.Name = "login_textbox";
             this.login_textbox.Size = new System.Drawing.Size(97, 19);
+=======
+            this.login_textbox.Location = new System.Drawing.Point(196, 108);
+            this.login_textbox.Multiline = true;
+            this.login_textbox.Name = "login_textbox";
+            this.login_textbox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.login_textbox.TabIndex = 7;
             // 
             // lbl3
             // 
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+<<<<<<< HEAD
             this.lbl3.Location = new System.Drawing.Point(246, 157);
             this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(58, 13);
+=======
+            this.lbl3.Location = new System.Drawing.Point(422, 221);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(76, 17);
+>>>>>>> master
             this.lbl3.TabIndex = 8;
             this.lbl3.Text = "Last Name";
             // 
@@ -117,10 +147,16 @@
             // 
             this.Phone_lbl.AutoSize = true;
             this.Phone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Phone_lbl.Location = new System.Drawing.Point(21, 180);
             this.Phone_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Phone_lbl.Name = "Phone_lbl";
             this.Phone_lbl.Size = new System.Drawing.Size(66, 24);
+=======
+            this.Phone_lbl.Location = new System.Drawing.Point(40, 259);
+            this.Phone_lbl.Name = "Phone_lbl";
+            this.Phone_lbl.Size = new System.Drawing.Size(83, 29);
+>>>>>>> master
             this.Phone_lbl.TabIndex = 11;
             this.Phone_lbl.Text = "Phone";
             // 
@@ -128,35 +164,59 @@
             // 
             this.Address_lbl.AutoSize = true;
             this.Address_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Address_lbl.Location = new System.Drawing.Point(21, 267);
             this.Address_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address_lbl.Name = "Address_lbl";
             this.Address_lbl.Size = new System.Drawing.Size(80, 24);
+=======
+            this.Address_lbl.Location = new System.Drawing.Point(40, 417);
+            this.Address_lbl.Name = "Address_lbl";
+            this.Address_lbl.Size = new System.Drawing.Size(102, 29);
+>>>>>>> master
             this.Address_lbl.TabIndex = 12;
             this.Address_lbl.Text = "Address";
             // 
             // First_Name_textBox
             // 
+<<<<<<< HEAD
             this.First_Name_textBox.Location = new System.Drawing.Point(109, 129);
             this.First_Name_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.First_Name_textBox.Name = "First_Name_textBox";
             this.First_Name_textBox.Size = new System.Drawing.Size(97, 20);
+=======
+            this.First_Name_textBox.Location = new System.Drawing.Point(196, 193);
+            this.First_Name_textBox.Name = "First_Name_textBox";
+            this.First_Name_textBox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.First_Name_textBox.TabIndex = 13;
             // 
             // Last_Name_textBox
             // 
+<<<<<<< HEAD
             this.Last_Name_textBox.Location = new System.Drawing.Point(232, 129);
             this.Last_Name_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Last_Name_textBox.Name = "Last_Name_textBox";
             this.Last_Name_textBox.Size = new System.Drawing.Size(97, 20);
+=======
+            this.Last_Name_textBox.Location = new System.Drawing.Point(406, 186);
+            this.Last_Name_textBox.Name = "Last_Name_textBox";
+            this.Last_Name_textBox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.Last_Name_textBox.TabIndex = 14;
             // 
             // Phone_textBox
             // 
+<<<<<<< HEAD
             this.Phone_textBox.Location = new System.Drawing.Point(109, 185);
             this.Phone_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Phone_textBox.Name = "Phone_textBox";
             this.Phone_textBox.Size = new System.Drawing.Size(97, 20);
+=======
+            this.Phone_textBox.Location = new System.Drawing.Point(196, 266);
+            this.Phone_textBox.Name = "Phone_textBox";
+            this.Phone_textBox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.Phone_textBox.TabIndex = 15;
             // 
             // Account_CBox
@@ -165,10 +225,16 @@
             this.Account_CBox.Items.AddRange(new object[] {
             "Customer",
             "Renter"});
+<<<<<<< HEAD
             this.Account_CBox.Location = new System.Drawing.Point(113, 311);
             this.Account_CBox.Margin = new System.Windows.Forms.Padding(2);
             this.Account_CBox.Name = "Account_CBox";
             this.Account_CBox.Size = new System.Drawing.Size(97, 21);
+=======
+            this.Account_CBox.Location = new System.Drawing.Point(196, 501);
+            this.Account_CBox.Name = "Account_CBox";
+            this.Account_CBox.Size = new System.Drawing.Size(128, 24);
+>>>>>>> master
             this.Account_CBox.TabIndex = 17;
             this.Account_CBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -176,10 +242,16 @@
             // 
             this.Account_lbl.AutoSize = true;
             this.Account_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Account_lbl.Location = new System.Drawing.Point(18, 306);
             this.Account_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Account_lbl.Name = "Account_lbl";
             this.Account_lbl.Size = new System.Drawing.Size(80, 24);
+=======
+            this.Account_lbl.Location = new System.Drawing.Point(43, 501);
+            this.Account_lbl.Name = "Account_lbl";
+            this.Account_lbl.Size = new System.Drawing.Size(98, 29);
+>>>>>>> master
             this.Account_lbl.TabIndex = 18;
             this.Account_lbl.Text = "Account";
             // 
@@ -187,29 +259,47 @@
             // 
             this.Login_Id_lbl.AutoSize = true;
             this.Login_Id_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Login_Id_lbl.Location = new System.Drawing.Point(21, 82);
             this.Login_Id_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Login_Id_lbl.Name = "Login_Id_lbl";
             this.Login_Id_lbl.Size = new System.Drawing.Size(77, 24);
+=======
+            this.Login_Id_lbl.Location = new System.Drawing.Point(43, 101);
+            this.Login_Id_lbl.Name = "Login_Id_lbl";
+            this.Login_Id_lbl.Size = new System.Drawing.Size(99, 29);
+>>>>>>> master
             this.Login_Id_lbl.TabIndex = 19;
             this.Login_Id_lbl.Text = "Login Id";
             // 
             // Address_textBox
             // 
+<<<<<<< HEAD
             this.Address_textBox.Location = new System.Drawing.Point(109, 272);
             this.Address_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Address_textBox.Name = "Address_textBox";
             this.Address_textBox.Size = new System.Drawing.Size(97, 20);
+=======
+            this.Address_textBox.Location = new System.Drawing.Point(196, 424);
+            this.Address_textBox.Name = "Address_textBox";
+            this.Address_textBox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.Address_textBox.TabIndex = 20;
             // 
             // Finish_btn
             // 
             this.Finish_btn.BackColor = System.Drawing.Color.DarkGray;
             this.Finish_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+<<<<<<< HEAD
             this.Finish_btn.Location = new System.Drawing.Point(272, 377);
             this.Finish_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Finish_btn.Name = "Finish_btn";
             this.Finish_btn.Size = new System.Drawing.Size(109, 40);
+=======
+            this.Finish_btn.Location = new System.Drawing.Point(490, 424);
+            this.Finish_btn.Name = "Finish_btn";
+            this.Finish_btn.Size = new System.Drawing.Size(145, 49);
+>>>>>>> master
             this.Finish_btn.TabIndex = 21;
             this.Finish_btn.Text = "Finish";
             this.Finish_btn.UseVisualStyleBackColor = false;
@@ -219,48 +309,78 @@
             // 
             this.Password_lbl.AutoSize = true;
             this.Password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Password_lbl.Location = new System.Drawing.Point(18, 347);
             this.Password_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password_lbl.Name = "Password_lbl";
             this.Password_lbl.Size = new System.Drawing.Size(92, 24);
+=======
+            this.Password_lbl.Location = new System.Drawing.Point(677, 120);
+            this.Password_lbl.Name = "Password_lbl";
+            this.Password_lbl.Size = new System.Drawing.Size(120, 29);
+>>>>>>> master
             this.Password_lbl.TabIndex = 22;
             this.Password_lbl.Text = "Password";
             // 
             // Confirm_TextBox
             // 
             this.Confirm_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.Confirm_TextBox.Location = new System.Drawing.Point(113, 391);
             this.Confirm_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.Confirm_TextBox.Name = "Confirm_TextBox";
             this.Confirm_TextBox.Size = new System.Drawing.Size(97, 19);
+=======
+            this.Confirm_TextBox.Location = new System.Drawing.Point(830, 200);
+            this.Confirm_TextBox.Name = "Confirm_TextBox";
+            this.Confirm_TextBox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.Confirm_TextBox.TabIndex = 23;
             // 
             // Password_Textbox
             // 
+<<<<<<< HEAD
             this.Password_Textbox.Location = new System.Drawing.Point(113, 351);
             this.Password_Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Password_Textbox.Name = "Password_Textbox";
             this.Password_Textbox.Size = new System.Drawing.Size(97, 20);
+=======
+            this.Password_Textbox.Location = new System.Drawing.Point(830, 120);
+            this.Password_Textbox.Name = "Password_Textbox";
+            this.Password_Textbox.Size = new System.Drawing.Size(128, 22);
+>>>>>>> master
             this.Password_Textbox.TabIndex = 24;
             // 
             // Confirm_lbl
             // 
             this.Confirm_lbl.AutoSize = true;
             this.Confirm_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.Confirm_lbl.Location = new System.Drawing.Point(18, 386);
             this.Confirm_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Confirm_lbl.Name = "Confirm_lbl";
             this.Confirm_lbl.Size = new System.Drawing.Size(75, 24);
+=======
+            this.Confirm_lbl.Location = new System.Drawing.Point(689, 193);
+            this.Confirm_lbl.Name = "Confirm_lbl";
+            this.Confirm_lbl.Size = new System.Drawing.Size(97, 29);
+>>>>>>> master
             this.Confirm_lbl.TabIndex = 25;
             this.Confirm_lbl.Text = "Confirm";
             // 
             // Male_rb
             // 
             this.Male_rb.AutoSize = true;
+<<<<<<< HEAD
             this.Male_rb.Location = new System.Drawing.Point(109, 232);
             this.Male_rb.Margin = new System.Windows.Forms.Padding(2);
             this.Male_rb.Name = "Male_rb";
             this.Male_rb.Size = new System.Drawing.Size(48, 17);
+=======
+            this.Male_rb.Location = new System.Drawing.Point(196, 331);
+            this.Male_rb.Name = "Male_rb";
+            this.Male_rb.Size = new System.Drawing.Size(58, 20);
+>>>>>>> master
             this.Male_rb.TabIndex = 26;
             this.Male_rb.TabStop = true;
             this.Male_rb.Text = "Male";
@@ -269,10 +389,16 @@
             // Female_rb
             // 
             this.Female_rb.AutoSize = true;
+<<<<<<< HEAD
             this.Female_rb.Location = new System.Drawing.Point(173, 232);
             this.Female_rb.Margin = new System.Windows.Forms.Padding(2);
             this.Female_rb.Name = "Female_rb";
             this.Female_rb.Size = new System.Drawing.Size(59, 17);
+=======
+            this.Female_rb.Location = new System.Drawing.Point(196, 357);
+            this.Female_rb.Name = "Female_rb";
+            this.Female_rb.Size = new System.Drawing.Size(74, 20);
+>>>>>>> master
             this.Female_rb.TabIndex = 27;
             this.Female_rb.TabStop = true;
             this.Female_rb.Text = "Female";
@@ -282,6 +408,7 @@
             // 
             this.Sex_lbl.AutoSize = true;
             this.Sex_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F);
+<<<<<<< HEAD
             this.Sex_lbl.Location = new System.Drawing.Point(20, 224);
             this.Sex_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Sex_lbl.Name = "Sex_lbl";
@@ -308,22 +435,63 @@
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+=======
+            this.Sex_lbl.Location = new System.Drawing.Point(40, 331);
+            this.Sex_lbl.Name = "Sex_lbl";
+            this.Sex_lbl.Size = new System.Drawing.Size(56, 29);
+            this.Sex_lbl.TabIndex = 28;
+            this.Sex_lbl.Text = "Sex";
+>>>>>>> master
             // 
-            // little_car
+            // label7
             // 
+<<<<<<< HEAD
             this.little_car.Image = global::Car_Rental_App.Properties.Resources.icon;
             this.little_car.Location = new System.Drawing.Point(475, 377);
             this.little_car.Name = "little_car";
             this.little_car.Size = new System.Drawing.Size(67, 67);
             this.little_car.TabIndex = 30;
             this.little_car.TabStop = false;
+=======
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
+            this.label7.Location = new System.Drawing.Point(222, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 17);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "First Name";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.icon1;
+            this.pictureBox2.Location = new System.Drawing.Point(1011, 464);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 74);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+>>>>>>> master
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(542, 438);
             this.Controls.Add(this.little_car);
+=======
+            this.ClientSize = new System.Drawing.Size(1108, 539);
+            this.Controls.Add(this.pictureBox2);
+>>>>>>> master
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Sex_lbl);
             this.Controls.Add(this.Female_rb);
@@ -348,12 +516,20 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lbl4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateAccount";
             this.Text = "Rent a car";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
+=======
+            this.Name = "CreateAccount";
+            this.Text = "Rent a car";
+            this.Load += new System.EventHandler(this.CreateAccount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+>>>>>>> master
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,8 +559,14 @@
         private System.Windows.Forms.RadioButton Female_rb;
         private System.Windows.Forms.Label Sex_lbl;
         private System.Windows.Forms.Label label7;
+<<<<<<< HEAD
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox little_car;
+=======
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
+>>>>>>> master
     }
 }
