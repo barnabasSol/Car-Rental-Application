@@ -116,7 +116,7 @@ namespace Car_Rental_App
             // login_btn
             // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
-            this.login_btn.Location = new System.Drawing.Point(796, 320);
+            this.login_btn.Location = new System.Drawing.Point(584, 246);
             this.login_btn.Margin = new System.Windows.Forms.Padding(4);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(75, 23);
