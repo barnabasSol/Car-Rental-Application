@@ -26,7 +26,7 @@ create table profile(
 
 create table customer(
     login_id varchar(200),
-    reputation varchar(50) not null, 
+    reputation int not null, 
     constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
     )
 
