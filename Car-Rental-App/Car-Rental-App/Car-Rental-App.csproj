@@ -53,16 +53,6 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="car_rental_databaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="car_rental_databaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,28 +73,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="car_rental_databaseDataSet.xsc">
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>car_rental_databaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="car_rental_databaseDataSet.xss">
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xsc">
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>car_rental_databaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xss">
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

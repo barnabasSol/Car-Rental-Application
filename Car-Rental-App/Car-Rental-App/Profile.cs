@@ -133,11 +133,8 @@ namespace Car_Rental_App
 
                     connection.Close();
                 }
-                full_name[0].ToString().ToUpper();
-                full_name[full_name.IndexOf(' ') + 1].ToString().ToUpper();
                 return full_name;
             }
-
         }
     }
 }
