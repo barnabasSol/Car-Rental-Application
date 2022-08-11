@@ -67,8 +67,7 @@ namespace Car_Rental_App
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
-           
-            
+                       
         }
 
         private void create_here_lbl_MouseHover(object sender, EventArgs e)
