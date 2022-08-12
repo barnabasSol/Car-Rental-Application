@@ -45,13 +45,13 @@ namespace Car_Rental_App
             this.little_car = new System.Windows.Forms.PictureBox();
             this.auditBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.auditBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.auditdataview = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auditdataview)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -67,7 +67,7 @@ namespace Car_Rental_App
             // 
             this.id_lablel.AutoSize = true;
             this.id_lablel.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_lablel.Location = new System.Drawing.Point(71, 232);
+            this.id_lablel.Location = new System.Drawing.Point(74, 232);
             this.id_lablel.Name = "id_lablel";
             this.id_lablel.Size = new System.Drawing.Size(51, 16);
             this.id_lablel.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace Car_Rental_App
             // 
             this.fullnamelbl.AutoSize = true;
             this.fullnamelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullnamelbl.Location = new System.Drawing.Point(50, 216);
+            this.fullnamelbl.Location = new System.Drawing.Point(53, 216);
             this.fullnamelbl.Name = "fullnamelbl";
             this.fullnamelbl.Size = new System.Drawing.Size(98, 16);
             this.fullnamelbl.TabIndex = 2;
@@ -96,7 +96,7 @@ namespace Car_Rental_App
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(312, 276);
+            this.label2.Location = new System.Drawing.Point(298, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace Car_Rental_App
             // 
             // vehicle
             // 
-            this.vehicle.Location = new System.Drawing.Point(209, 350);
+            this.vehicle.Location = new System.Drawing.Point(191, 334);
             this.vehicle.Name = "vehicle";
             this.vehicle.Size = new System.Drawing.Size(106, 42);
             this.vehicle.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace Car_Rental_App
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(289, 232);
+            this.label4.Location = new System.Drawing.Point(279, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 10;
@@ -127,25 +127,27 @@ namespace Car_Rental_App
             // 
             // dateascbtn
             // 
-            this.dateascbtn.Location = new System.Drawing.Point(350, 226);
+            this.dateascbtn.Location = new System.Drawing.Point(340, 226);
             this.dateascbtn.Name = "dateascbtn";
             this.dateascbtn.Size = new System.Drawing.Size(79, 29);
             this.dateascbtn.TabIndex = 11;
-            this.dateascbtn.Text = "date (asc)";
+            this.dateascbtn.Text = "latest";
             this.dateascbtn.UseVisualStyleBackColor = true;
+            this.dateascbtn.Click += new System.EventHandler(this.dateascbtn_Click);
             // 
             // datedescbtn
             // 
-            this.datedescbtn.Location = new System.Drawing.Point(449, 226);
+            this.datedescbtn.Location = new System.Drawing.Point(446, 226);
             this.datedescbtn.Name = "datedescbtn";
             this.datedescbtn.Size = new System.Drawing.Size(79, 29);
             this.datedescbtn.TabIndex = 12;
-            this.datedescbtn.Text = "date (desc)";
+            this.datedescbtn.Text = "oldest";
             this.datedescbtn.UseVisualStyleBackColor = true;
+            this.datedescbtn.Click += new System.EventHandler(this.datedescbtn_Click);
             // 
             // customerbtn
             // 
-            this.customerbtn.Location = new System.Drawing.Point(388, 350);
+            this.customerbtn.Location = new System.Drawing.Point(395, 334);
             this.customerbtn.Name = "customerbtn";
             this.customerbtn.Size = new System.Drawing.Size(106, 42);
             this.customerbtn.TabIndex = 13;
@@ -169,13 +171,13 @@ namespace Car_Rental_App
             // 
             this.auditBindingSource1.DataMember = "audit";
             // 
-            // dataGridView1
+            // auditdataview
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(455, 201);
-            this.dataGridView1.TabIndex = 15;
+            this.auditdataview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.auditdataview.Location = new System.Drawing.Point(236, 12);
+            this.auditdataview.Name = "auditdataview";
+            this.auditdataview.Size = new System.Drawing.Size(471, 201);
+            this.auditdataview.TabIndex = 15;
             // 
             // AdminForm1
             // 
@@ -183,7 +185,7 @@ namespace Car_Rental_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(719, 484);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.auditdataview);
             this.Controls.Add(this.little_car);
             this.Controls.Add(this.customerbtn);
             this.Controls.Add(this.datedescbtn);
@@ -203,7 +205,7 @@ namespace Car_Rental_App
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auditdataview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,6 +227,6 @@ namespace Car_Rental_App
         private System.Windows.Forms.PictureBox little_car;
         private System.Windows.Forms.BindingSource auditBindingSource1;
         private System.Windows.Forms.BindingSource auditBindingSource2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView auditdataview;
     }
 }

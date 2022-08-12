@@ -65,7 +65,7 @@ namespace Car_Rental_App
             this.loginidlbl.AutoSize = true;
             this.loginidlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginidlbl.ForeColor = System.Drawing.Color.Black;
-            this.loginidlbl.Location = new System.Drawing.Point(488, 149);
+            this.loginidlbl.Location = new System.Drawing.Point(500, 154);
             this.loginidlbl.Name = "loginidlbl";
             this.loginidlbl.Size = new System.Drawing.Size(86, 27);
             this.loginidlbl.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace Car_Rental_App
             this.pswlbl.AutoSize = true;
             this.pswlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pswlbl.ForeColor = System.Drawing.Color.Black;
-            this.pswlbl.Location = new System.Drawing.Point(479, 204);
+            this.pswlbl.Location = new System.Drawing.Point(488, 204);
             this.pswlbl.Name = "pswlbl";
             this.pswlbl.Size = new System.Drawing.Size(98, 27);
             this.pswlbl.TabIndex = 4;
@@ -86,15 +86,15 @@ namespace Car_Rental_App
             // 
             // login_idtxt
             // 
-            this.login_idtxt.Location = new System.Drawing.Point(581, 154);
+            this.login_idtxt.Location = new System.Drawing.Point(584, 154);
             this.login_idtxt.Margin = new System.Windows.Forms.Padding(4);
             this.login_idtxt.Name = "login_idtxt";
-            this.login_idtxt.Size = new System.Drawing.Size(157, 20);
+            this.login_idtxt.Size = new System.Drawing.Size(160, 20);
             this.login_idtxt.TabIndex = 5;
             // 
             // password_txt
             // 
-            this.password_txt.Location = new System.Drawing.Point(584, 209);
+            this.password_txt.Location = new System.Drawing.Point(584, 204);
             this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '●';
@@ -152,7 +152,7 @@ namespace Car_Rental_App
             // little_car
             // 
             this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
-            this.little_car.Location = new System.Drawing.Point(752, 359);
+            this.little_car.Location = new System.Drawing.Point(762, 371);
             this.little_car.Name = "little_car";
             this.little_car.Size = new System.Drawing.Size(67, 67);
             this.little_car.TabIndex = 2;
@@ -167,6 +167,7 @@ namespace Car_Rental_App
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginForm
             // 

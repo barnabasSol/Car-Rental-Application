@@ -26,9 +26,9 @@ create table profile(
 
 create table customer(
     login_id varchar(200),
-    reputation int not null, 
+    reputation int DEFAULT 5, 
     constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
-    )
+)
 
 create table branch(
     branch_address nvarchar(100) PRIMARY KEY,
@@ -77,6 +77,7 @@ create table rental(
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id),
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id)
 )
+
 
 
   create table car_reviews(

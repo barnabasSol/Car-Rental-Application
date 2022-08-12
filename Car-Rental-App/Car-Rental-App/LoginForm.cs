@@ -89,5 +89,10 @@ namespace Car_Rental_App
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
