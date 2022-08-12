@@ -26,7 +26,33 @@ namespace Car_Rental_App
             this.password = password;
         }
 
-
+        public bool valdation(string login_id)
+        {
+            bool valdation1 = false;
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Program.my_connection_string;
+            string commandText = "select login_id from profile ";
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandText, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader[0].ToString() == login_id)
+                            {
+                                valdation1 = true;
+                                break;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return valdation1;
+        }
         public bool is_customer(string login_id, string password)
         {
             bool isCustomer = false;
