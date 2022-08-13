@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace Car_Rental_App
 {
@@ -186,9 +187,72 @@ namespace Car_Rental_App
 
             if (t)
             {
+                if(Account_CBox.Text== "Customer")
+                {
+                    MessageBox.Show("You have succefully Created Your Account");
+                    string male=Male_rb.Text;
+                    string female = Female_rb.Text;
+                   
+                    Customer obj = new Customer();
+                    obj.login_id = login_textbox.Text;
+                    obj.first_name = First_Name_textBox.Text;
+                    obj.last_name= Last_Name_textBox.Text;
+                    if (Male_rb.Checked)
+                    {
+                        obj.sex = male.Substring(0, 1);
+                    }
+                    if (Female_rb.Checked)
+                    {
+                        obj.sex=female.Substring(0, 1);
+                    }
+                    obj.phone=Phone_textBox.Text;
+                    obj.home_adress = Address_textBox.Text;
+                    obj.password = Password_Textbox.Text;
+                    obj.profile_type = 2;
+                    obj.insert();
 
-                MessageBox.Show("You have succefully Created Your Account");
+                   //
 
+
+                }
+
+                if(Account_CBox.Text== "Renter")
+                {
+                   
+                   MessageBox.Show("You have succefully Created Your Account");
+
+                    string male = Male_rb.Text;
+                    string female = Female_rb.Text;
+                    Renter obj1 = new Renter();
+                    obj1.login_id = login_textbox.Text;
+                    obj1.first_name = First_Name_textBox.Text;
+                    obj1.last_name = Last_Name_textBox.Text;
+                    if (Male_rb.Checked)
+                    {
+                        obj1.sex = male.Substring(0, 1);
+                    }
+                    if (Female_rb.Checked)
+                    {
+                        obj1.sex = female.Substring(0, 1);
+                    }
+                    obj1.phone = Phone_textBox.Text;
+                    obj1.home_adress = Address_textBox.Text;
+                    obj1.password = Password_Textbox.Text;
+                    obj1.profile_type = 3;
+
+                    obj1.insert();
+                    
+                }
+
+               
+              
+                
+        
+                //SqlConnection conn = new SqlConnection(Program.my_connection_string);
+                //var stm = "insert into profile (login_id,first_name,last_name,sex,phone_number,home_address,password,profile_type_id) values(@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password,@profile_type_id)";
+                //conn.Open();
+                //SqlCommand cmd = new SqlCommand(stm, conn);
+                //cmd.Parameters.Add(new SqlParameter("@login_id",System.Data.SqlDbType.varchar,200).Value=login_textbox.Text
             }
 
         }

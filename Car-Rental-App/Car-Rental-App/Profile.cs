@@ -10,7 +10,16 @@ namespace Car_Rental_App
     class Profile
     {
         public string login_id { get; set; }
+        public string first_name { get; set; }
+        public string  last_name  { get; set; }
+        public string  sex { get; set; }
+        public string phone { get; set; }
+        public string home_adress { get; set; }
         public string password { get; set; }
+
+        public int profile_type { get; set; }
+
+
         public string full_name { get; set; }
 
         public static string current_userid;

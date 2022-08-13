@@ -59,6 +59,7 @@
     <Compile Include="Create_Account_Form.Designer.cs">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,7 @@
     <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renter.cs" />
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>
