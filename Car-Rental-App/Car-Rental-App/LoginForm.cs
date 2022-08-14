@@ -67,6 +67,9 @@ namespace Car_Rental_App
         }
         private void create_here_lbl_Click(object sender, EventArgs e)
         {
+            Create_Account_Form create_Account_Form = new Create_Account_Form();
+            Hide();
+            create_Account_Form.Show();
                        
         }
 

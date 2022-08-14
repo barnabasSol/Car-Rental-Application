@@ -10,7 +10,16 @@ namespace Car_Rental_App
     class Profile
     {
         public string login_id { get; set; }
+        public string first_name { get; set; }
+        public string  last_name  { get; set; }
+        public string  sex { get; set; }
+        public string phone { get; set; }
+        public string home_adress { get; set; }
         public string password { get; set; }
+
+        public int profile_type { get; set; }
+
+
         public string full_name { get; set; }
 
         public static string current_userid;
@@ -26,7 +35,33 @@ namespace Car_Rental_App
             this.password = password;
         }
 
-
+        public bool valdation(string login_id)
+        {
+            bool valdation1 = false;
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Program.my_connection_string;
+            string commandText = "select login_id from profile ";
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandText, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader[0].ToString() == login_id)
+                            {
+                                valdation1 = true;
+                                break;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return valdation1;
+        }
         public bool is_customer(string login_id, string password)
         {
             bool isCustomer = false;
