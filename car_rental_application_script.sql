@@ -15,7 +15,7 @@ create table profile(
     login_id  varchar(200) primary key,
     first_name nvarchar(100) not null, 
     last_name nvarchar(100) not null,
-    sex varchar(2) not null,
+    sex varchar(3) not null,
     phone_number varchar(100) not null UNIQUE, 
     home_address nvarchar(100) not null, 
     [password] varchar(100) not null,
@@ -31,7 +31,7 @@ create table customer(
 )
 
 create table branch(
-    branch_address nvarchar(100) PRIMARY KEY,
+    branch_address nvarchar(100) primary key,
     branch_vehicles_amount int not null,
     branch_rating decimal(2,1)
 )
@@ -46,7 +46,7 @@ create table [admin](
 
  create table cars(
      license_plate_no varchar(200) primary key, 
-     verification varchar(100) DEFAULT 'unverified',
+     verification varchar(20) DEFAULT 'unv',
      car_name varchar(100) not null, 
      car_type varchar(100) not null,
      car_capacity int not null,
@@ -79,7 +79,6 @@ create table rental(
 )
 
 
-
   create table car_reviews(
        rent_id VARCHAR(200),
        car_rating int default 0,
@@ -97,15 +96,22 @@ create table [audit] (
     task varchar(1000),
     done_date date
 )
+
+
 GO
+
+insert into audit values('adm10', 'whatever', '1999-05-14')
 
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
-                               (3, 'renter')
+                               (3, 'renter'),
+                               (4, 'company')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
-                           values ('rntr10', 'barnabas', 'solomon', 'M', '097426534', 'cmc michael', '0000',3),
-                           ('cus10', 'nathnael', 'lastname', 'M', '092355534', 'summit', '1111',2),
-                           ('adm10', 'nathan', 'dawit', 'M', '09093664', 'hayat', '2222',1)  
+                           values ('company'''+'s', 'null', 'null', 'n/a', 'null', 'null', 'null', 4),
+                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
+                           ('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
+                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)  
+
 
 -- use master
 -- drop database car_rental_database

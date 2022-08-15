@@ -33,10 +33,11 @@ namespace Car_Rental_App
             else if (p.is_admin(login_idtxt.Text, password_txt.Text))
             {
                 //the admin form goes here
-                AdminForm1 a = new AdminForm1();
                 Profile.current_userid = login_idtxt.Text;
+                AdminForm1 a = new AdminForm1();
                 this.Hide();
                 a.Show();
+
             }
             else if (p.is_renter(login_idtxt.Text, password_txt.Text))
             {

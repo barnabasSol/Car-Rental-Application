@@ -29,204 +29,217 @@ namespace Car_Rental_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm1));
+            this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.id_lablel = new System.Windows.Forms.Label();
-            this.fullnamelbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.vehicle = new System.Windows.Forms.Button();
-            this.auditBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateascbtn = new System.Windows.Forms.Button();
-            this.datedescbtn = new System.Windows.Forms.Button();
-            this.customerbtn = new System.Windows.Forms.Button();
             this.little_car = new System.Windows.Forms.PictureBox();
-            this.auditBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.auditBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.auditdataview = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.vehiclebtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.customerbtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.homebtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.mainpanel = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditdataview)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // idlbl
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 201);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // id_lablel
-            // 
-            this.id_lablel.AutoSize = true;
-            this.id_lablel.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_lablel.Location = new System.Drawing.Point(74, 232);
-            this.id_lablel.Name = "id_lablel";
-            this.id_lablel.Size = new System.Drawing.Size(51, 16);
-            this.id_lablel.TabIndex = 1;
-            this.id_lablel.Text = "id here";
+            this.idlbl.AutoSize = true;
+            this.idlbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idlbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.idlbl.Location = new System.Drawing.Point(69, 30);
+            this.idlbl.Name = "idlbl";
+            this.idlbl.Size = new System.Drawing.Size(89, 19);
+            this.idlbl.TabIndex = 5;
+            this.idlbl.Text = "id goes here";
             // 
             // fullnamelbl
             // 
             this.fullnamelbl.AutoSize = true;
-            this.fullnamelbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullnamelbl.Location = new System.Drawing.Point(53, 216);
+            this.fullnamelbl.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnamelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fullnamelbl.Location = new System.Drawing.Point(69, 12);
             this.fullnamelbl.Name = "fullnamelbl";
-            this.fullnamelbl.Size = new System.Drawing.Size(98, 16);
-            this.fullnamelbl.TabIndex = 2;
-            this.fullnamelbl.Text = "full name here";
+            this.fullnamelbl.Size = new System.Drawing.Size(107, 18);
+            this.fullnamelbl.TabIndex = 4;
+            this.fullnamelbl.Text = "name goes here";
             // 
-            // label1
+            // panel1
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-5, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(783, 10);
-            this.label1.TabIndex = 3;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.panel1.Controls.Add(this.idlbl);
+            this.panel1.Controls.Add(this.fullnamelbl);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.little_car);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(844, 72);
+            this.panel1.TabIndex = 7;
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(298, 291);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tasks";
-            // 
-            // vehicle
-            // 
-            this.vehicle.Location = new System.Drawing.Point(191, 334);
-            this.vehicle.Name = "vehicle";
-            this.vehicle.Size = new System.Drawing.Size(106, 42);
-            this.vehicle.TabIndex = 5;
-            this.vehicle.Text = "Vehicle";
-            this.vehicle.UseVisualStyleBackColor = true;
-            // 
-            // auditBindingSource
-            // 
-            this.auditBindingSource.DataMember = "audit";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(279, 232);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "sort by:";
-            // 
-            // dateascbtn
-            // 
-            this.dateascbtn.Location = new System.Drawing.Point(340, 226);
-            this.dateascbtn.Name = "dateascbtn";
-            this.dateascbtn.Size = new System.Drawing.Size(79, 29);
-            this.dateascbtn.TabIndex = 11;
-            this.dateascbtn.Text = "latest";
-            this.dateascbtn.UseVisualStyleBackColor = true;
-            this.dateascbtn.Click += new System.EventHandler(this.dateascbtn_Click);
-            // 
-            // datedescbtn
-            // 
-            this.datedescbtn.Location = new System.Drawing.Point(446, 226);
-            this.datedescbtn.Name = "datedescbtn";
-            this.datedescbtn.Size = new System.Drawing.Size(79, 29);
-            this.datedescbtn.TabIndex = 12;
-            this.datedescbtn.Text = "oldest";
-            this.datedescbtn.UseVisualStyleBackColor = true;
-            this.datedescbtn.Click += new System.EventHandler(this.datedescbtn_Click);
-            // 
-            // customerbtn
-            // 
-            this.customerbtn.Location = new System.Drawing.Point(395, 334);
-            this.customerbtn.Name = "customerbtn";
-            this.customerbtn.Size = new System.Drawing.Size(106, 42);
-            this.customerbtn.TabIndex = 13;
-            this.customerbtn.Text = "Customer";
-            this.customerbtn.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 49);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // little_car
             // 
             this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
-            this.little_car.Location = new System.Drawing.Point(650, 417);
+            this.little_car.Location = new System.Drawing.Point(774, 2);
             this.little_car.Name = "little_car";
             this.little_car.Size = new System.Drawing.Size(67, 67);
-            this.little_car.TabIndex = 14;
+            this.little_car.TabIndex = 3;
             this.little_car.TabStop = false;
             // 
-            // auditBindingSource2
+            // panel2
             // 
-            this.auditBindingSource2.DataMember = "audit";
+            this.panel2.Controls.Add(this.vehiclebtn);
+            this.panel2.Controls.Add(this.customerbtn);
+            this.panel2.Controls.Add(this.settingbtn);
+            this.panel2.Controls.Add(this.homebtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(844, 52);
+            this.panel2.TabIndex = 8;
             // 
-            // auditBindingSource1
+            // vehiclebtn
             // 
-            this.auditBindingSource1.DataMember = "audit";
+            this.vehiclebtn.ActiveBorderThickness = 1;
+            this.vehiclebtn.ActiveCornerRadius = 20;
+            this.vehiclebtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.vehiclebtn.ActiveForecolor = System.Drawing.Color.White;
+            this.vehiclebtn.ActiveLineColor = System.Drawing.SystemColors.Menu;
+            this.vehiclebtn.BackColor = System.Drawing.SystemColors.Menu;
+            this.vehiclebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("vehiclebtn.BackgroundImage")));
+            this.vehiclebtn.ButtonText = "Vehicle";
+            this.vehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vehiclebtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vehiclebtn.ForeColor = System.Drawing.Color.Black;
+            this.vehiclebtn.IdleBorderThickness = 1;
+            this.vehiclebtn.IdleCornerRadius = 20;
+            this.vehiclebtn.IdleFillColor = System.Drawing.SystemColors.Menu;
+            this.vehiclebtn.IdleForecolor = System.Drawing.Color.Black;
+            this.vehiclebtn.IdleLineColor = System.Drawing.SystemColors.Menu;
+            this.vehiclebtn.Location = new System.Drawing.Point(446, 5);
+            this.vehiclebtn.Margin = new System.Windows.Forms.Padding(5);
+            this.vehiclebtn.Name = "vehiclebtn";
+            this.vehiclebtn.Size = new System.Drawing.Size(145, 42);
+            this.vehiclebtn.TabIndex = 10;
+            this.vehiclebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.vehiclebtn.Click += new System.EventHandler(this.vehiclebtn_Click);
             // 
-            // auditdataview
+            // customerbtn
             // 
-            this.auditdataview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.auditdataview.Location = new System.Drawing.Point(236, 12);
-            this.auditdataview.Name = "auditdataview";
-            this.auditdataview.Size = new System.Drawing.Size(471, 201);
-            this.auditdataview.TabIndex = 15;
+            this.customerbtn.ActiveBorderThickness = 1;
+            this.customerbtn.ActiveCornerRadius = 20;
+            this.customerbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.customerbtn.ActiveForecolor = System.Drawing.Color.White;
+            this.customerbtn.ActiveLineColor = System.Drawing.Color.White;
+            this.customerbtn.BackColor = System.Drawing.SystemColors.Menu;
+            this.customerbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customerbtn.BackgroundImage")));
+            this.customerbtn.ButtonText = "Customer";
+            this.customerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerbtn.ForeColor = System.Drawing.Color.Black;
+            this.customerbtn.IdleBorderThickness = 1;
+            this.customerbtn.IdleCornerRadius = 20;
+            this.customerbtn.IdleFillColor = System.Drawing.SystemColors.Menu;
+            this.customerbtn.IdleForecolor = System.Drawing.Color.Black;
+            this.customerbtn.IdleLineColor = System.Drawing.SystemColors.Menu;
+            this.customerbtn.Location = new System.Drawing.Point(230, 5);
+            this.customerbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.customerbtn.Name = "customerbtn";
+            this.customerbtn.Size = new System.Drawing.Size(145, 42);
+            this.customerbtn.TabIndex = 10;
+            this.customerbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customerbtn.Click += new System.EventHandler(this.customerbtn_Click);
+            // 
+            // settingbtn
+            // 
+            this.settingbtn.BackColor = System.Drawing.SystemColors.Menu;
+            this.settingbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingbtn.Image = ((System.Drawing.Image)(resources.GetObject("settingbtn.Image")));
+            this.settingbtn.ImageActive = null;
+            this.settingbtn.Location = new System.Drawing.Point(701, 6);
+            this.settingbtn.Name = "settingbtn";
+            this.settingbtn.Size = new System.Drawing.Size(131, 41);
+            this.settingbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.settingbtn.TabIndex = 9;
+            this.settingbtn.TabStop = false;
+            this.settingbtn.Zoom = 10;
+            this.settingbtn.Click += new System.EventHandler(this.settingbtn_Click);
+            // 
+            // homebtn
+            // 
+            this.homebtn.BackColor = System.Drawing.SystemColors.Menu;
+            this.homebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homebtn.Image = ((System.Drawing.Image)(resources.GetObject("homebtn.Image")));
+            this.homebtn.ImageActive = null;
+            this.homebtn.Location = new System.Drawing.Point(12, 6);
+            this.homebtn.Name = "homebtn";
+            this.homebtn.Size = new System.Drawing.Size(131, 41);
+            this.homebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homebtn.TabIndex = 9;
+            this.homebtn.TabStop = false;
+            this.homebtn.Zoom = 10;
+            this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
+            // 
+            // mainpanel
+            // 
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(0, 124);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(844, 340);
+            this.mainpanel.TabIndex = 9;
             // 
             // AdminForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(719, 484);
-            this.Controls.Add(this.auditdataview);
-            this.Controls.Add(this.little_car);
-            this.Controls.Add(this.customerbtn);
-            this.Controls.Add(this.datedescbtn);
-            this.Controls.Add(this.dateascbtn);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.vehicle);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.fullnamelbl);
-            this.Controls.Add(this.id_lablel);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.ClientSize = new System.Drawing.Size(844, 464);
+            this.Controls.Add(this.mainpanel);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminForm1";
-            this.Text = "AdminForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Admin";
             this.Load += new System.EventHandler(this.AdminForm1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditdataview)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label id_lablel;
-        private System.Windows.Forms.Label fullnamelbl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button vehicle;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button dateascbtn;
-        private System.Windows.Forms.Button datedescbtn;
-        private System.Windows.Forms.Button customerbtn;
-        private System.Windows.Forms.BindingSource auditBindingSource;
         private System.Windows.Forms.PictureBox little_car;
-        private System.Windows.Forms.BindingSource auditBindingSource1;
-        private System.Windows.Forms.BindingSource auditBindingSource2;
-        private System.Windows.Forms.DataGridView auditdataview;
+        private Bunifu.Framework.UI.BunifuCustomLabel idlbl;
+        private Bunifu.Framework.UI.BunifuCustomLabel fullnamelbl;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuImageButton homebtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 customerbtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 vehiclebtn;
+        private Bunifu.Framework.UI.BunifuImageButton settingbtn;
+        private System.Windows.Forms.Panel mainpanel;
     }
 }

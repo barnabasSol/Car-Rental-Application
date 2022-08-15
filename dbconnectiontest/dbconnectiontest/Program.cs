@@ -63,15 +63,20 @@ namespace dbconnectiontest
 
         public static void read()
         {
+            int item = 3;
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = my_connection_string;
-            string commandText = "select * from trial";
+            string commandText = "select * from trial where id=@id";
+            SqlParameter idpar = new SqlParameter("@id", SqlDbType.Int, 0);
+            idpar.Value = item;
 
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
                     connection.Open();
+                    command.Parameters.Add(idpar);
+                    command.Prepare();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())

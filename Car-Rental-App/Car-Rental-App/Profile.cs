@@ -16,11 +16,7 @@ namespace Car_Rental_App
         public string phone { get; set; }
         public string home_adress { get; set; }
         public string password { get; set; }
-
         public int profile_type { get; set; }
-
-
-        public string full_name { get; set; }
 
         public static string current_userid;
 
@@ -62,6 +58,8 @@ namespace Car_Rental_App
             }
             return valdation1;
         }
+
+
         public bool is_customer(string login_id, string password)
         {
             bool isCustomer = false;
