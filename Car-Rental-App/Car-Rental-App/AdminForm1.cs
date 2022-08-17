@@ -60,6 +60,7 @@ namespace Car_Rental_App
             reset_color();
             HomeUserControl h = new HomeUserControl();
             add_user_control(h);
+           
         }
 
         private void settingbtn_Click(object sender, EventArgs e)
@@ -81,6 +82,14 @@ namespace Car_Rental_App
             vehiclebtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
         }
 
-       
+        private void fullnamelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

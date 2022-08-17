@@ -41,8 +41,11 @@ namespace Car_Rental_App
             }
             else if (p.is_renter(login_idtxt.Text, password_txt.Text))
             {
-                //the renter form goes here
-                MessageBox.Show("renter here");
+                Profile.current_userid = login_idtxt.Text;
+                Renter_Form renter_Form = new Renter_Form();
+
+                Hide();
+                renter_Form.Show();
             }
             else
             {

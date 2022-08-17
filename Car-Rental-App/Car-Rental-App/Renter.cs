@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Car_Rental_App
 {
@@ -35,5 +36,27 @@ namespace Car_Rental_App
             conn.Close();
 
         }
+        public void insert_By_Sp()
+        {
+            SqlConnection conn = new SqlConnection(Program.my_connection_string);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("Insert_Profile", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = login_id;
+            cmd.Parameters.AddWithValue("@first_name", SqlDbType.VarChar).Value = first_name;
+            cmd.Parameters.AddWithValue("@last_name", SqlDbType.VarChar).Value = last_name;
+            cmd.Parameters.AddWithValue("@sex", SqlDbType.VarChar).Value = sex;
+            cmd.Parameters.AddWithValue("@phone_number", SqlDbType.VarChar).Value = phone;
+            cmd.Parameters.AddWithValue("@home_address", SqlDbType.VarChar).Value = home_adress;
+            cmd.Parameters.AddWithValue("@password", SqlDbType.VarChar).Value = password;
+            cmd.Parameters.AddWithValue("@profile_type_id", SqlDbType.Int).Value = profile_type;
+            cmd.Parameters.AddWithValue("@Activity", SqlDbType.Int).Value = 1;
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
     }
 }
