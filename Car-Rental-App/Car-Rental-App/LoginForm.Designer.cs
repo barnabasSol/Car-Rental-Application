@@ -90,7 +90,7 @@ namespace Car_Rental_App
             // login_idtxt
             // 
             this.login_idtxt.Location = new System.Drawing.Point(775, 190);
-            this.login_idtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.login_idtxt.Margin = new System.Windows.Forms.Padding(5);
             this.login_idtxt.Name = "login_idtxt";
             this.login_idtxt.Size = new System.Drawing.Size(208, 22);
             this.login_idtxt.TabIndex = 5;
@@ -98,7 +98,7 @@ namespace Car_Rental_App
             // password_txt
             // 
             this.password_txt.Location = new System.Drawing.Point(779, 257);
-            this.password_txt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(5);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '●';
             this.password_txt.Size = new System.Drawing.Size(208, 22);
@@ -121,7 +121,7 @@ namespace Car_Rental_App
             // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
             this.login_btn.Location = new System.Drawing.Point(796, 308);
-            this.login_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(5);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(100, 28);
             this.login_btn.TabIndex = 8;
@@ -160,7 +160,7 @@ namespace Car_Rental_App
             // 
             this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
             this.little_car.Location = new System.Drawing.Point(1003, 442);
-            this.little_car.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.little_car.Margin = new System.Windows.Forms.Padding(4);
             this.little_car.Name = "little_car";
             this.little_car.Size = new System.Drawing.Size(89, 82);
             this.little_car.TabIndex = 2;
@@ -170,7 +170,7 @@ namespace Car_Rental_App
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(437, 438);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -195,9 +195,11 @@ namespace Car_Rental_App
             this.Controls.Add(this.welcomelbl);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.IndianRed;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent a Car";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

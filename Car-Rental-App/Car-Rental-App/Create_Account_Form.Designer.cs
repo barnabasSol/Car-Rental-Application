@@ -97,7 +97,7 @@
             // 
             // First_Name_textBox
             // 
-            this.First_Name_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.First_Name_textBox.ForeColor = System.Drawing.Color.Black;
             this.First_Name_textBox.Location = new System.Drawing.Point(285, 187);
             this.First_Name_textBox.Name = "First_Name_textBox";
             this.First_Name_textBox.Size = new System.Drawing.Size(138, 22);
@@ -106,7 +106,7 @@
             // 
             // Phone_textBox
             // 
-            this.Phone_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Phone_textBox.ForeColor = System.Drawing.Color.Black;
             this.Phone_textBox.Location = new System.Drawing.Point(285, 275);
             this.Phone_textBox.Name = "Phone_textBox";
             this.Phone_textBox.Size = new System.Drawing.Size(138, 22);
@@ -140,7 +140,7 @@
             // 
             // Address_textBox
             // 
-            this.Address_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Address_textBox.ForeColor = System.Drawing.Color.Black;
             this.Address_textBox.Location = new System.Drawing.Point(285, 423);
             this.Address_textBox.Name = "Address_textBox";
             this.Address_textBox.Size = new System.Drawing.Size(138, 22);
@@ -148,7 +148,7 @@
             // 
             // Account_CBox
             // 
-            this.Account_CBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Account_CBox.ForeColor = System.Drawing.Color.Black;
             this.Account_CBox.FormattingEnabled = true;
             this.Account_CBox.Items.AddRange(new object[] {
             "Customer",
@@ -160,7 +160,7 @@
             // 
             // Password_Textbox
             // 
-            this.Password_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Password_Textbox.ForeColor = System.Drawing.Color.Black;
             this.Password_Textbox.Location = new System.Drawing.Point(902, 112);
             this.Password_Textbox.Name = "Password_Textbox";
             this.Password_Textbox.PasswordChar = '●';
@@ -169,7 +169,7 @@
             // 
             // Confirm_TextBox
             // 
-            this.Confirm_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Confirm_TextBox.ForeColor = System.Drawing.Color.Black;
             this.Confirm_TextBox.Location = new System.Drawing.Point(902, 180);
             this.Confirm_TextBox.Name = "Confirm_TextBox";
             this.Confirm_TextBox.PasswordChar = '●';
@@ -178,7 +178,7 @@
             // 
             // Last_Name_textBox
             // 
-            this.Last_Name_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Last_Name_textBox.ForeColor = System.Drawing.Color.Black;
             this.Last_Name_textBox.Location = new System.Drawing.Point(478, 187);
             this.Last_Name_textBox.Name = "Last_Name_textBox";
             this.Last_Name_textBox.Size = new System.Drawing.Size(138, 22);
@@ -432,7 +432,7 @@
             // 
             // login_textbox
             // 
-            this.login_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.login_textbox.ForeColor = System.Drawing.Color.Black;
             this.login_textbox.Location = new System.Drawing.Point(285, 124);
             this.login_textbox.Name = "login_textbox";
             this.login_textbox.Size = new System.Drawing.Size(138, 22);
@@ -478,8 +478,10 @@
             this.Controls.Add(this.First_Name_textBox);
             this.Controls.Add(this.login_textbox);
             this.Controls.Add(this.little_car);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Create_Account_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent a car";
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
