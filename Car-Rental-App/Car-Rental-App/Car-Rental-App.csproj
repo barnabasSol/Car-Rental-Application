@@ -105,11 +105,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renter.cs" />
-    <Compile Include="RenterUserControl\Add_Car_User_Control.cs" />
+    <Compile Include="RenterUserControl\Add_Car_User_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="RenterUserControl\Add_Car_User_Control.Designer.cs">
       <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.cs" />
+    <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.Designer.cs">
       <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
     </Compile>
