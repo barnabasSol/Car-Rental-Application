@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -167,6 +168,58 @@ namespace Car_Rental_App
                     connection.Close();
                 }
                 return full_name;
+            }
+        }
+
+        public bool validate_password(string loginid, string oldpsw)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Program.my_connection_string;
+            string query = "select password from profile where login_id=@loginid";
+            SqlParameter lid_par = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
+            lid_par.Value = loginid;
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    command.Parameters.Add(lid_par);
+                    command.Prepare();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader[0].ToString() != oldpsw)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        public void reset_admin_password(string loginid, string newpsw)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Program.my_connection_string;
+
+            string commandText = "exec [reset_admin_password] @loginid, @newpsw";
+            SqlParameter idparam = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
+            SqlParameter new_psw_param = new SqlParameter("@newpsw", SqlDbType.VarChar, 100);
+            idparam.Value = loginid;
+            new_psw_param.Value = newpsw;
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandText, connection))
+                {
+                    connection.Open();
+                    command.Parameters.Add(idparam);
+                    command.Parameters.Add(new_psw_param);
+                    command.Prepare();
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }

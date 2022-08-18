@@ -108,10 +108,35 @@ insert into profile_type values(1, 'admin'),
                                (4, 'company')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
                            values ('company'''+'s', 'null', 'null', 'n/a', 'null', 'null', 'null', 4),
-                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
-                           ('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
-                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)  
+                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
+                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
+						   
+						   insert into profile values('as','dsd','dsds','M','dsd','ghjk','bbbb',1,1)
+
+
 
 
 -- use master
 -- drop database car_rental_database
+
+
+--Procedure to insert new Profile
+go
+--drop procedure Insert_Profile
+CREATE PROCEDURE Insert_Profile
+  @login_id  varchar(200),
+   @first_name varchar(100), 
+    @last_name varchar(100),
+    @sex varchar(2),
+    @phone_number varchar(100), 
+    @home_address varchar(100) , 
+    @password varchar(100) ,
+    @profile_type_id int,
+	@Activity int
+as
+begin
+insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id,activity)
+                           values (@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password ,@profile_type_id,@Activity )
+end
+
+select * from profile
