@@ -37,10 +37,14 @@
       <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,14 +54,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminClass.cs" />
+    <Compile Include="AdminUserControl\DeactivateAccountUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\DeactivateAccountUC.Designer.cs">
+      <DependentUpon>DeactivateAccountUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserControl\HomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminUserControl\HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\ResetPswUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\ResetPswUC.Designer.cs">
+      <DependentUpon>ResetPswUC.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminUserControl\SettingUserControl.cs">
       <SubType>UserControl</SubType>
@@ -88,11 +105,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renter.cs" />
+    <Compile Include="reusable component\InputField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reusable component\InputField.Designer.cs">
+      <DependentUpon>InputField.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\DeactivateAccountUC.resx">
+      <DependentUpon>DeactivateAccountUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\ResetPswUC.resx">
+      <DependentUpon>ResetPswUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\SettingUserControl.resx">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
@@ -107,6 +136,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reusable component\InputField.resx">
+      <DependentUpon>InputField.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +179,13 @@
   <ItemGroup>
     <None Include="Resources\administrator-2-48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\eye.png" />
+    <Content Include="Resources\icons8-log-out-64.png" />
+    <Content Include="Resources\icons8-search-30.png" />
+    <Content Include="Resources\visible.png" />
+    <None Include="Resources\icons8-search-more-30.png" />
+    <Content Include="Resources\icons8-settings-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

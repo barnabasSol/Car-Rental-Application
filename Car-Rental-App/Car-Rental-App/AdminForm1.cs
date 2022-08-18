@@ -18,13 +18,22 @@ namespace Car_Rental_App
             InitializeComponent();
         }
 
-        private void add_user_control(UserControl uc)
+        public void add_user_control(UserControl uc)
         {
             uc.Dock = DockStyle.Fill;
             mainpanel.Controls.Clear();
             mainpanel.Controls.Add(uc);
-
         }
+
+        public void add_form_in_panel(Form f)
+        {
+            f.TopLevel = false;
+            mainpanel.Controls.Clear();
+            mainpanel.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
+
 
         private void AdminForm1_Load(object sender, EventArgs e)
         {
@@ -38,10 +47,10 @@ namespace Car_Rental_App
             vehiclebtn.IdleFillColor = Color.FromArgb(0xF0F0F0);
             vehiclebtn.IdleForecolor = Color.Black;
             vehiclebtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
-
             customerbtn.IdleFillColor = Color.FromArgb(199, 92, 92);
             customerbtn.IdleForecolor = Color.White;
             customerbtn.IdleLineColor = Color.FromArgb(199, 92, 92);
+
         }
 
         private void vehiclebtn_Click(object sender, EventArgs e)
@@ -49,10 +58,10 @@ namespace Car_Rental_App
             customerbtn.IdleFillColor = Color.FromArgb(0xF0F0F0);
             customerbtn.IdleForecolor = Color.Black;
             customerbtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
-
             vehiclebtn.IdleFillColor = Color.FromArgb(199, 92, 92);
             vehiclebtn.IdleForecolor = Color.White;
             vehiclebtn.IdleLineColor = Color.FromArgb(199, 92, 92);
+
         }
 
         private void homebtn_Click(object sender, EventArgs e)
@@ -67,7 +76,6 @@ namespace Car_Rental_App
             reset_color();
             SettingUserControl stu = new SettingUserControl(this);
             add_user_control(stu);
-
         }
 
         public void reset_color()
@@ -75,12 +83,9 @@ namespace Car_Rental_App
             customerbtn.IdleFillColor = Color.FromArgb(0xF0F0F0);
             customerbtn.IdleForecolor = Color.Black;
             customerbtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
-
             vehiclebtn.IdleFillColor = Color.FromArgb(0xF0F0F0);
             vehiclebtn.IdleForecolor = Color.Black;
             vehiclebtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
         }
-
-       
     }
 }

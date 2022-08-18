@@ -20,7 +20,7 @@ namespace Car_Rental_App.AdminUserControl
 
         private void HomeUserControl_Load(object sender, EventArgs e)
         {
-            searchtxt.text = "";
+            searchtxt.Text = "";
             AdminClass a = new AdminClass();
             a.read_audit(null);
             auditdatagridview.DataSource = null;
@@ -51,10 +51,10 @@ namespace Car_Rental_App.AdminUserControl
             auditdatagridview.Columns[1].HeaderText = "Done Date";
         }
 
-        private void searchtxt_OnTextChange(object sender, EventArgs e)
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
             AdminClass a = new AdminClass();
-            a.search_item(searchtxt.text);
+            a.search_item(searchtxt.Text);
             auditdatagridview.DataSource = null;
             auditdatagridview.DataSource = a.get_srch_result();
         }
