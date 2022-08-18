@@ -21,12 +21,24 @@ namespace Car_Rental_App
         {
                 
         }
+        private void add_user_control(UserControl uc)
+        {
+           uc.Dock = DockStyle.Fill;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(uc);
 
+        }
+        private void add_user_control_for_setting(UserControl uc)
+        {
+            uc.Dock = DockStyle.Bottom;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(uc);
+
+        }
         private void Renter_Form_Load(object sender, EventArgs e)
         {
             Profile p = new Profile();
-            logoutbtn.Hide();
-            
+
             fullnamelbl.Text=p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
 
@@ -50,7 +62,8 @@ namespace Car_Rental_App
      
         private void settingbtn_Click_1(object sender, EventArgs e)
         {
-            logoutbtn.Show();
+            Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control();
+            add_user_control_for_setting(s);
         }
 
         private void settingbtn_MouseEnter(object sender, EventArgs e)
@@ -73,6 +86,30 @@ namespace Car_Rental_App
         private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
         {
 
+        }
+
+        private void Renter_Form_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void logoutbtn_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuSeparator1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            
+            Add_Car_User_Control h = new Add_Car_User_Control();
+            add_user_control(h);
         }
     }
 }

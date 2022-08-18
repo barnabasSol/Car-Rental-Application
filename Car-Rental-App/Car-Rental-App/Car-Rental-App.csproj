@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Car_User_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_Car_User_Control.Designer.cs">
+      <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminClass.cs" />
     <Compile Include="AdminUserControl\HomeUserControl.cs">
       <SubType>UserControl</SubType>
@@ -94,6 +100,15 @@
     <Compile Include="Renter_Form.Designer.cs">
       <DependentUpon>Renter_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Setting_User_for_Renter_User_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setting_User_for_Renter_User_Control.Designer.cs">
+      <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Car_User_Control.resx">
+      <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Renter_Form.resx">
       <DependentUpon>Renter_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_User_for_Renter_User_Control.resx">
+      <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
