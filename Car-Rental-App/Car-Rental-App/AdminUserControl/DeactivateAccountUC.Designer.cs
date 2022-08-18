@@ -29,13 +29,16 @@ namespace Car_Rental_App.AdminUserControl
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeactivateAccountUC));
             this.backbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.deactivatebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.eyebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // backbtn
@@ -85,7 +88,7 @@ namespace Car_Rental_App.AdminUserControl
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(215, 141);
+            this.eyebtn.Location = new System.Drawing.Point(215, 125);
             this.eyebtn.Name = "eyebtn";
             this.eyebtn.Size = new System.Drawing.Size(43, 33);
             this.eyebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +110,7 @@ namespace Car_Rental_App.AdminUserControl
             this.password.LineIdleColor = System.Drawing.Color.DarkGray;
             this.password.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.password.LineThickness = 3;
-            this.password.Location = new System.Drawing.Point(265, 141);
+            this.password.Location = new System.Drawing.Point(265, 125);
             this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(320, 33);
@@ -116,6 +119,10 @@ namespace Car_Rental_App.AdminUserControl
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.password.Enter += new System.EventHandler(this.password_Enter_1);
             this.password.Leave += new System.EventHandler(this.password_Leave_1);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // DeactivateAccountUC
             // 
@@ -129,6 +136,7 @@ namespace Car_Rental_App.AdminUserControl
             this.Size = new System.Drawing.Size(844, 340);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +146,6 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuThinButton2 deactivatebtn;
         private Bunifu.Framework.UI.BunifuImageButton eyebtn;
         private Bunifu.Framework.UI.BunifuMaterialTextbox password;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

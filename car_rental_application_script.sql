@@ -100,8 +100,32 @@ create table [audit] (
 
 GO
 
-insert into audit values('adm10', 'whatever', '1999-05-14')
+/****************** admin proc ************************/
+create proc [reset_admin_password]
+@admid varchar(100), @newpsw varchar(100)
+as 
+BEGIN
+update [profile] set [password]=@newpsw where login_id = @admid
+END
 
+go
+
+create proc [deactive_admin_account]
+@admid varchar(100), @newpsw varchar(100)
+as 
+BEGIN
+update [profile] set [activity]=0 where login_id = @admid
+END
+
+
+
+/********************************************************/
+
+go
+
+
+insert into audit values('adm10', 'c', '2000-08-13')
+delete from audit
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
                                (3, 'renter'),
@@ -113,5 +137,12 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)  
 
 
+
+
 -- use master
 -- drop database car_rental_database
+select * from audit where (task like '%'+'c'+'%' and done_date like '%'+'c'+'%') order by done_date asc
+
+select CURRENT_TIMESTAMP
+
+select GETDATE()
