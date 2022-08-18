@@ -45,7 +45,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.logoutlbl.AutoSize = true;
             this.logoutlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutlbl.Location = new System.Drawing.Point(128, 198);
+            this.logoutlbl.Location = new System.Drawing.Point(127, 188);
+            this.logoutlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logoutlbl.Name = "logoutlbl";
             this.logoutlbl.Size = new System.Drawing.Size(60, 17);
             this.logoutlbl.TabIndex = 1;
@@ -56,7 +57,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.resetpswlbl.AutoSize = true;
             this.resetpswlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetpswlbl.Location = new System.Drawing.Point(361, 198);
+            this.resetpswlbl.Location = new System.Drawing.Point(351, 188);
+            this.resetpswlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resetpswlbl.Name = "resetpswlbl";
             this.resetpswlbl.Size = new System.Drawing.Size(107, 17);
             this.resetpswlbl.TabIndex = 2;
@@ -67,7 +69,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.deactivatelbl.AutoSize = true;
             this.deactivatelbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deactivatelbl.Location = new System.Drawing.Point(609, 198);
+            this.deactivatelbl.Location = new System.Drawing.Point(598, 188);
+            this.deactivatelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deactivatelbl.Name = "deactivatelbl";
             this.deactivatelbl.Size = new System.Drawing.Size(140, 17);
             this.deactivatelbl.TabIndex = 2;
@@ -80,13 +83,15 @@ namespace Car_Rental_App.AdminUserControl
             this.deactivatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deactivatebtn.Image = ((System.Drawing.Image)(resources.GetObject("deactivatebtn.Image")));
             this.deactivatebtn.ImageActive = null;
-            this.deactivatebtn.Location = new System.Drawing.Point(640, 117);
+            this.deactivatebtn.Location = new System.Drawing.Point(631, 123);
+            this.deactivatebtn.Margin = new System.Windows.Forms.Padding(2);
             this.deactivatebtn.Name = "deactivatebtn";
-            this.deactivatebtn.Size = new System.Drawing.Size(81, 78);
+            this.deactivatebtn.Size = new System.Drawing.Size(61, 63);
             this.deactivatebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.deactivatebtn.TabIndex = 4;
             this.deactivatebtn.TabStop = false;
             this.deactivatebtn.Zoom = 10;
+            this.deactivatebtn.Click += new System.EventHandler(this.deactivatebtn_Click);
             this.deactivatebtn.MouseLeave += new System.EventHandler(this.deactivatebtn_MouseLeave);
             this.deactivatebtn.MouseHover += new System.EventHandler(this.deactivatebtn_MouseHover);
             // 
@@ -96,9 +101,10 @@ namespace Car_Rental_App.AdminUserControl
             this.resetpswbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetpswbtn.Image = ((System.Drawing.Image)(resources.GetObject("resetpswbtn.Image")));
             this.resetpswbtn.ImageActive = null;
-            this.resetpswbtn.Location = new System.Drawing.Point(375, 117);
+            this.resetpswbtn.Location = new System.Drawing.Point(373, 123);
+            this.resetpswbtn.Margin = new System.Windows.Forms.Padding(2);
             this.resetpswbtn.Name = "resetpswbtn";
-            this.resetpswbtn.Size = new System.Drawing.Size(81, 78);
+            this.resetpswbtn.Size = new System.Drawing.Size(61, 63);
             this.resetpswbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.resetpswbtn.TabIndex = 3;
             this.resetpswbtn.TabStop = false;
@@ -113,9 +119,10 @@ namespace Car_Rental_App.AdminUserControl
             this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutbtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutbtn.Image")));
             this.logoutbtn.ImageActive = null;
-            this.logoutbtn.Location = new System.Drawing.Point(122, 117);
+            this.logoutbtn.Location = new System.Drawing.Point(130, 123);
+            this.logoutbtn.Margin = new System.Windows.Forms.Padding(2);
             this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Size = new System.Drawing.Size(108, 96);
+            this.logoutbtn.Size = new System.Drawing.Size(61, 63);
             this.logoutbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutbtn.TabIndex = 0;
             this.logoutbtn.TabStop = false;
@@ -126,7 +133,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // SettingUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.deactivatebtn);
             this.Controls.Add(this.resetpswbtn);
@@ -134,9 +141,8 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.resetpswlbl);
             this.Controls.Add(this.logoutlbl);
             this.Controls.Add(this.logoutbtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SettingUserControl";
-            this.Size = new System.Drawing.Size(1125, 418);
+            this.Size = new System.Drawing.Size(844, 340);
             this.Load += new System.EventHandler(this.SettingUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deactivatebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resetpswbtn)).EndInit();

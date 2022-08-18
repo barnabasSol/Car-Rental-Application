@@ -180,7 +180,7 @@ namespace Car_Rental_App.AdminUserControl
         {
             if (cnfrmtxt.Text!=newpswtxt.Text)
                 MessageBox.Show("new password doesn't match");
-            else if (!p.validate_reset_password(Profile.current_userid, oldpswtxt.Text))
+            else if (!p.validate_password(Profile.current_userid, oldpswtxt.Text))
                 errorProvider1.SetError(oldpswtxt, "old password isn't correct");
             else
             {

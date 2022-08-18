@@ -87,7 +87,7 @@
             // 
             this.filterbylbl.AutoSize = true;
             this.filterbylbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filterbylbl.Location = new System.Drawing.Point(536, 111);
+            this.filterbylbl.Location = new System.Drawing.Point(520, 119);
             this.filterbylbl.Name = "filterbylbl";
             this.filterbylbl.Size = new System.Drawing.Size(58, 17);
             this.filterbylbl.TabIndex = 2;
@@ -141,7 +141,7 @@
             this.filteroldestlbl.IdleFillColor = System.Drawing.Color.White;
             this.filteroldestlbl.IdleForecolor = System.Drawing.Color.Black;
             this.filteroldestlbl.IdleLineColor = System.Drawing.Color.Black;
-            this.filteroldestlbl.Location = new System.Drawing.Point(737, 103);
+            this.filteroldestlbl.Location = new System.Drawing.Point(708, 106);
             this.filteroldestlbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filteroldestlbl.Name = "filteroldestlbl";
             this.filteroldestlbl.Size = new System.Drawing.Size(104, 37);
@@ -167,7 +167,7 @@
             this.filterlatestlbl.IdleFillColor = System.Drawing.Color.White;
             this.filterlatestlbl.IdleForecolor = System.Drawing.Color.Black;
             this.filterlatestlbl.IdleLineColor = System.Drawing.Color.Black;
-            this.filterlatestlbl.Location = new System.Drawing.Point(612, 103);
+            this.filterlatestlbl.Location = new System.Drawing.Point(584, 106);
             this.filterlatestlbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filterlatestlbl.Name = "filterlatestlbl";
             this.filterlatestlbl.Size = new System.Drawing.Size(104, 37);

@@ -195,7 +195,7 @@ namespace Car_Rental_App.AdminUserControl
             this.resetbtn.IdleFillColor = System.Drawing.Color.White;
             this.resetbtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.resetbtn.IdleLineColor = System.Drawing.Color.Black;
-            this.resetbtn.Location = new System.Drawing.Point(390, 258);
+            this.resetbtn.Location = new System.Drawing.Point(364, 260);
             this.resetbtn.Margin = new System.Windows.Forms.Padding(5);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(118, 32);

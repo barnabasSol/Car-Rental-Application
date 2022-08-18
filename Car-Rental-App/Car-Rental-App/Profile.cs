@@ -171,7 +171,7 @@ namespace Car_Rental_App
             }
         }
 
-        public bool validate_reset_password(string loginid, string oldpsw)
+        public bool validate_password(string loginid, string oldpsw)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = Program.my_connection_string;

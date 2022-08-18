@@ -73,5 +73,11 @@ namespace Car_Rental_App.AdminUserControl
             ResetPswUC rp = new ResetPswUC(settingform);
             settingform.add_user_control(rp);
         }
+
+        private void deactivatebtn_Click(object sender, EventArgs e)
+        {
+            DeactivateAccountUC d = new DeactivateAccountUC(settingform);
+            settingform.add_user_control(d);
+        }
     }
 }

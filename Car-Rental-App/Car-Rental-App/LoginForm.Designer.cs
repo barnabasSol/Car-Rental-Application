@@ -75,7 +75,7 @@ namespace Car_Rental_App
             // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
             this.login_btn.Location = new System.Drawing.Point(597, 250);
-            this.login_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(4);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(75, 23);
             this.login_btn.TabIndex = 8;
@@ -188,9 +188,9 @@ namespace Car_Rental_App
             this.Controls.Add(this.welcomelbl);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.IndianRed;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent a Car";
