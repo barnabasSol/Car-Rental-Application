@@ -29,32 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Renter_Form));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.logoutbtn = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 60);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // fullnamelbl
             // 
@@ -93,13 +83,56 @@
             this.panel1.Size = new System.Drawing.Size(304, 518);
             this.panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.bunifuImageButton4);
+            this.panel2.Controls.Add(this.bunifuImageButton3);
+            this.panel2.Controls.Add(this.settingbtn);
+            this.panel2.Location = new System.Drawing.Point(303, -3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(803, 524);
+            this.panel2.TabIndex = 13;
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(313, 6);
+            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(113, 51);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 32;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(3, 4);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(126, 58);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 31;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
+            // 
             // settingbtn
             // 
             this.settingbtn.BackColor = System.Drawing.Color.White;
             this.settingbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingbtn.Image = ((System.Drawing.Image)(resources.GetObject("settingbtn.Image")));
             this.settingbtn.ImageActive = null;
-            this.settingbtn.Location = new System.Drawing.Point(276, 6);
+            this.settingbtn.Location = new System.Drawing.Point(624, 6);
             this.settingbtn.Margin = new System.Windows.Forms.Padding(4);
             this.settingbtn.Name = "settingbtn";
             this.settingbtn.Size = new System.Drawing.Size(175, 50);
@@ -110,71 +143,23 @@
             this.settingbtn.Click += new System.EventHandler(this.settingbtn_Click_1);
             this.settingbtn.MouseEnter += new System.EventHandler(this.settingbtn_MouseEnter);
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.bunifuThinButton21);
-            this.panel2.Controls.Add(this.bunifuSeparator1);
-            this.panel2.Controls.Add(this.logoutbtn);
-            this.panel2.Controls.Add(this.settingbtn);
-            this.panel2.Location = new System.Drawing.Point(303, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(803, 524);
-            this.panel2.TabIndex = 13;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 60);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // logoutbtn
+            // panel3
             // 
-            this.logoutbtn.BackColor = System.Drawing.Color.White;
-            this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutbtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutbtn.Image")));
-            this.logoutbtn.ImageActive = null;
-            this.logoutbtn.Location = new System.Drawing.Point(683, 424);
-            this.logoutbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Size = new System.Drawing.Size(108, 96);
-            this.logoutbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoutbtn.TabIndex = 13;
-            this.logoutbtn.TabStop = false;
-            this.logoutbtn.Zoom = 10;
-            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-4, 64);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(795, 43);
-            this.bunifuSeparator1.TabIndex = 15;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Add ";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 116);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(92, 52);
-            this.bunifuThinButton21.TabIndex = 30;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel3.Location = new System.Drawing.Point(3, 63);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(800, 458);
+            this.panel3.TabIndex = 33;
             // 
             // Renter_Form
             // 
@@ -189,12 +174,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Renter_Form";
             this.Load += new System.EventHandler(this.Renter_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MouseEnter += new System.EventHandler(this.Renter_Form_MouseEnter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoutbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,8 +194,8 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton settingbtn;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuImageButton logoutbtn;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
+        private System.Windows.Forms.Panel panel3;
     }
 }
