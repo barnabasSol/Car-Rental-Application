@@ -57,12 +57,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Car_User_Control.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Add_Car_User_Control.Designer.cs">
-      <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminClass.cs" />
     <Compile Include="AdminUserControl\DeactivateAccountUC.cs">
       <SubType>UserControl</SubType>
@@ -111,6 +105,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renter.cs" />
+    <Compile Include="RenterUserControl\Add_Car_User_Control.cs" />
+    <Compile Include="RenterUserControl\Add_Car_User_Control.Designer.cs">
+      <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.cs" />
+    <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.Designer.cs">
+      <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Renter_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +150,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Add_Car_User_Control.resx">
+      <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Setting_User_for_Renter_User_Control.resx">
+      <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Renter_Form.resx">
       <DependentUpon>Renter_Form.cs</DependentUpon>
