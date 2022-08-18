@@ -69,6 +69,7 @@ namespace Car_Rental_App
             reset_color();
             HomeUserControl h = new HomeUserControl();
             add_user_control(h);
+           
         }
 
         private void settingbtn_Click(object sender, EventArgs e)

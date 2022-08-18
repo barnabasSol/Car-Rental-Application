@@ -115,7 +115,7 @@ namespace Car_Rental_App.AdminUserControl
             this.logoutbtn.ImageActive = null;
             this.logoutbtn.Location = new System.Drawing.Point(122, 117);
             this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Size = new System.Drawing.Size(81, 78);
+            this.logoutbtn.Size = new System.Drawing.Size(108, 96);
             this.logoutbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutbtn.TabIndex = 0;
             this.logoutbtn.TabStop = false;
@@ -126,7 +126,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // SettingUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.deactivatebtn);
             this.Controls.Add(this.resetpswbtn);
@@ -134,8 +134,9 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.resetpswlbl);
             this.Controls.Add(this.logoutlbl);
             this.Controls.Add(this.logoutbtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SettingUserControl";
-            this.Size = new System.Drawing.Size(844, 340);
+            this.Size = new System.Drawing.Size(1125, 418);
             this.Load += new System.EventHandler(this.SettingUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deactivatebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resetpswbtn)).EndInit();

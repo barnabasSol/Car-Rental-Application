@@ -24,8 +24,11 @@ namespace Car_Rental_App
 
         }
 
-        private void Finish_btn_Click(object sender, EventArgs e)
+      
+       
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+
 
             Profile p = new Profile();
 
@@ -187,39 +190,40 @@ namespace Car_Rental_App
 
             if (t)
             {
-                if(Account_CBox.Text== "Customer")
+                if (Account_CBox.Text == "Customer")
                 {
                     MessageBox.Show("You have succefully Created Your Account");
-                    string male=Male_rb.Text;
+                    string male = Male_rb.Text;
                     string female = Female_rb.Text;
-                   
+
                     Customer obj = new Customer();
                     obj.login_id = login_textbox.Text;
                     obj.first_name = First_Name_textBox.Text;
-                    obj.last_name= Last_Name_textBox.Text;
+                    obj.last_name = Last_Name_textBox.Text;
                     if (Male_rb.Checked)
                     {
                         obj.sex = male.Substring(0, 1);
                     }
                     if (Female_rb.Checked)
                     {
-                        obj.sex=female.Substring(0, 1);
+                        obj.sex = female.Substring(0, 1);
                     }
-                    obj.phone=Phone_textBox.Text;
+                    obj.phone = Phone_textBox.Text;
                     obj.home_adress = Address_textBox.Text;
                     obj.password = Password_Textbox.Text;
                     obj.profile_type = 2;
-                    obj.insert();
+                    //obj.insert(); insert by prepapred statment
+                    obj.insert_By_Sp();
 
-                   //
+                    
 
 
                 }
 
-                if(Account_CBox.Text== "Renter")
+                if (Account_CBox.Text == "Renter")
                 {
-                   
-                   MessageBox.Show("You have succefully Created Your Account");
+
+                    MessageBox.Show("You have succefully Created Your Account");
 
                     string male = Male_rb.Text;
                     string female = Female_rb.Text;
@@ -240,24 +244,21 @@ namespace Car_Rental_App
                     obj1.password = Password_Textbox.Text;
                     obj1.profile_type = 3;
 
-                    obj1.insert();
-                    
+                    // obj1.insert(); insert by prepapred statment
+                    obj1.insert_By_Sp();
+
+
                 }
 
-               
-              
-                
-        
-                //SqlConnection conn = new SqlConnection(Program.my_connection_string);
-                //var stm = "insert into profile (login_id,first_name,last_name,sex,phone_number,home_address,password,profile_type_id) values(@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password,@profile_type_id)";
-                //conn.Open();
-                //SqlCommand cmd = new SqlCommand(stm, conn);
-                //cmd.Parameters.Add(new SqlParameter("@login_id",System.Data.SqlDbType.varchar,200).Value=login_textbox.Text
-            }
 
+
+
+
+
+            }
         }
 
-        private void Back_btn_Click(object sender, EventArgs e)
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
             Hide();
