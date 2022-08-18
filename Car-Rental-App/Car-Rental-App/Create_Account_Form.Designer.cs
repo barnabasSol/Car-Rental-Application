@@ -345,88 +345,88 @@
             // Login_Id_lbl
             // 
             this.Login_Id_lbl.AutoSize = true;
-            this.Login_Id_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Login_Id_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Login_Id_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Login_Id_lbl.Location = new System.Drawing.Point(98, 124);
             this.Login_Id_lbl.Name = "Login_Id_lbl";
-            this.Login_Id_lbl.Size = new System.Drawing.Size(113, 29);
+            this.Login_Id_lbl.Size = new System.Drawing.Size(127, 32);
             this.Login_Id_lbl.TabIndex = 31;
             this.Login_Id_lbl.Text = "Login-Id :";
             // 
             // Name_lbl
             // 
             this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Name_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Name_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Name_lbl.Location = new System.Drawing.Point(115, 187);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(90, 29);
+            this.Name_lbl.Size = new System.Drawing.Size(102, 32);
             this.Name_lbl.TabIndex = 32;
             this.Name_lbl.Text = "Name :";
             // 
             // Phone_lbl
             // 
             this.Phone_lbl.AutoSize = true;
-            this.Phone_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Phone_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Phone_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Phone_lbl.Location = new System.Drawing.Point(110, 275);
             this.Phone_lbl.Name = "Phone_lbl";
-            this.Phone_lbl.Size = new System.Drawing.Size(95, 29);
+            this.Phone_lbl.Size = new System.Drawing.Size(104, 32);
             this.Phone_lbl.TabIndex = 33;
             this.Phone_lbl.Text = "Phone :";
             // 
             // Address_lbl
             // 
             this.Address_lbl.AutoSize = true;
-            this.Address_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Address_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Address_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Address_lbl.Location = new System.Drawing.Point(91, 414);
             this.Address_lbl.Name = "Address_lbl";
-            this.Address_lbl.Size = new System.Drawing.Size(114, 29);
+            this.Address_lbl.Size = new System.Drawing.Size(126, 32);
             this.Address_lbl.TabIndex = 34;
             this.Address_lbl.Text = "Address :";
             // 
             // Confrim_lbl
             // 
             this.Confrim_lbl.AutoSize = true;
-            this.Confrim_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Confrim_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Confrim_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Confrim_lbl.Location = new System.Drawing.Point(751, 173);
             this.Confrim_lbl.Name = "Confrim_lbl";
-            this.Confrim_lbl.Size = new System.Drawing.Size(109, 29);
+            this.Confrim_lbl.Size = new System.Drawing.Size(122, 32);
             this.Confrim_lbl.TabIndex = 35;
             this.Confrim_lbl.Text = "Confirm :";
             // 
             // Sex_lbl
             // 
             this.Sex_lbl.AutoSize = true;
-            this.Sex_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Sex_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Sex_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Sex_lbl.Location = new System.Drawing.Point(139, 340);
             this.Sex_lbl.Name = "Sex_lbl";
-            this.Sex_lbl.Size = new System.Drawing.Size(66, 29);
+            this.Sex_lbl.Size = new System.Drawing.Size(71, 32);
             this.Sex_lbl.TabIndex = 36;
             this.Sex_lbl.Text = "Sex :";
             // 
             // Account_lbl
             // 
             this.Account_lbl.AutoSize = true;
-            this.Account_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Account_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Account_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Account_lbl.Location = new System.Drawing.Point(91, 487);
             this.Account_lbl.Name = "Account_lbl";
-            this.Account_lbl.Size = new System.Drawing.Size(110, 29);
+            this.Account_lbl.Size = new System.Drawing.Size(131, 32);
             this.Account_lbl.TabIndex = 37;
             this.Account_lbl.Text = "Account :";
             // 
             // Password_lbl
             // 
             this.Password_lbl.AutoSize = true;
-            this.Password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Password_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Password_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.Password_lbl.Location = new System.Drawing.Point(728, 112);
             this.Password_lbl.Name = "Password_lbl";
-            this.Password_lbl.Size = new System.Drawing.Size(132, 29);
+            this.Password_lbl.Size = new System.Drawing.Size(142, 32);
             this.Password_lbl.TabIndex = 38;
             this.Password_lbl.Text = "Password :";
             // 
