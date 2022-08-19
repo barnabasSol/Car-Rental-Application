@@ -57,6 +57,8 @@ namespace Car_Rental_App.AdminUserControl
             a.search_item(searchtxt.Text);
             auditdatagridview.DataSource = null;
             auditdatagridview.DataSource = a.get_srch_result();
+            auditdatagridview.Columns[0].HeaderText = "Done Task";
+            auditdatagridview.Columns[1].HeaderText = "Done Date";
         }
     }
 }

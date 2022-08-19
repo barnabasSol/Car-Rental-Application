@@ -25,21 +25,12 @@ namespace Car_Rental_App
             mainpanel.Controls.Add(uc);
         }
 
-        public void add_form_in_panel(Form f)
-        {
-            f.TopLevel = false;
-            mainpanel.Controls.Clear();
-            mainpanel.Controls.Add(f);
-            f.Dock = DockStyle.Fill;
-            f.Show();
-        }
-
-
         private void AdminForm1_Load(object sender, EventArgs e)
         {
             Profile p = new Profile();
             fullnamelbl.Text = p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
+            mainpanel.Controls.Add(pictureBox2);
         }
 
         private void customerbtn_Click(object sender, EventArgs e)
@@ -50,6 +41,10 @@ namespace Car_Rental_App
             customerbtn.IdleFillColor = Color.FromArgb(199, 92, 92);
             customerbtn.IdleForecolor = Color.White;
             customerbtn.IdleLineColor = Color.FromArgb(199, 92, 92);
+
+
+            CustomerUC c = new CustomerUC();
+            add_user_control(c);
 
         }
 
@@ -88,5 +83,11 @@ namespace Car_Rental_App
             vehiclebtn.IdleForecolor = Color.Black;
             vehiclebtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
         }
+
+
+
+       
+
+
     }
 }

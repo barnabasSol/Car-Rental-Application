@@ -41,12 +41,15 @@ namespace Car_Rental_App
             this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.homebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homebtn)).BeginInit();
+            this.mainpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // idlbl
@@ -89,7 +92,7 @@ namespace Car_Rental_App
             // 
             this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 57);
             this.pictureBox1.TabIndex = 1;
@@ -99,7 +102,7 @@ namespace Car_Rental_App
             // 
             this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
             this.little_car.Location = new System.Drawing.Point(768, 2);
-            this.little_car.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.little_car.Margin = new System.Windows.Forms.Padding(2);
             this.little_car.Name = "little_car";
             this.little_car.Size = new System.Drawing.Size(65, 68);
             this.little_car.TabIndex = 3;
@@ -136,7 +139,7 @@ namespace Car_Rental_App
             this.vehiclebtn.IdleForecolor = System.Drawing.Color.Black;
             this.vehiclebtn.IdleLineColor = System.Drawing.SystemColors.Menu;
             this.vehiclebtn.Location = new System.Drawing.Point(461, 6);
-            this.vehiclebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vehiclebtn.Margin = new System.Windows.Forms.Padding(5);
             this.vehiclebtn.Name = "vehiclebtn";
             this.vehiclebtn.Size = new System.Drawing.Size(145, 42);
             this.vehiclebtn.TabIndex = 10;
@@ -162,7 +165,7 @@ namespace Car_Rental_App
             this.customerbtn.IdleForecolor = System.Drawing.Color.Black;
             this.customerbtn.IdleLineColor = System.Drawing.SystemColors.Menu;
             this.customerbtn.Location = new System.Drawing.Point(236, 5);
-            this.customerbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.customerbtn.Margin = new System.Windows.Forms.Padding(5);
             this.customerbtn.Name = "customerbtn";
             this.customerbtn.Size = new System.Drawing.Size(145, 42);
             this.customerbtn.TabIndex = 10;
@@ -201,12 +204,23 @@ namespace Car_Rental_App
             // 
             // mainpanel
             // 
+            this.mainpanel.Controls.Add(this.pictureBox2);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(0, 124);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(844, 340);
             this.mainpanel.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.administrator;
+            this.pictureBox2.Location = new System.Drawing.Point(236, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(382, 258);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // AdminForm1
             // 
@@ -219,7 +233,7 @@ namespace Car_Rental_App
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -231,6 +245,8 @@ namespace Car_Rental_App
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homebtn)).EndInit();
+            this.mainpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,5 +263,6 @@ namespace Car_Rental_App
         private Bunifu.Framework.UI.BunifuThinButton2 vehiclebtn;
         private Bunifu.Framework.UI.BunifuImageButton settingbtn;
         private System.Windows.Forms.Panel mainpanel;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -11,12 +11,12 @@ namespace Car_Rental_App
     internal class Customer : Profile
     {
 
-       
+
+      
+
+
         public void insert()
         {
-           
-          
-            
             SqlConnection conn = new SqlConnection(Program.my_connection_string);
 
             var stm = "insert into profile ( login_id,first_name , last_name,sex,phone_number, home_address, password, profile_type_id,activity ) values(@login_id,@first_name , @last_name,@sex,@phone_number, @home_address, @password, @profile_type_id,@activity)";
