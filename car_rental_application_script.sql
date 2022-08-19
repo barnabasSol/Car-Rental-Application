@@ -30,6 +30,39 @@ create table customer(
     constraint fk_cc_id foreign key(login_id) REFERENCES profile(login_id)
 )
 
+GO
+
+go
+
+create proc [search customer]
+@searchby varchar(100)
+AS
+BEGIN
+select login_id, CONCAT(first_name, ' ', last_name) as full_name, sex, phone_number, home_address, activity, reputation from
+             customer_rep WHERE CONCAT(first_name, ' ', last_name) like '%'+@searchby+'%'
+                                or login_id like '%'+@searchby+'%'
+                                or phone_number like '%'+@searchby+'%'
+                                or home_address like '%'+@searchby+'%'
+
+END
+GO
+create proc[update customer change by admin]
+@customerid varchar(100), @activity int, @rep int
+as 
+BEGIN
+update profile set activity=@activity where login_id=@customerid
+update customer set reputation=@rep where login_id=@customerid
+END
+
+go
+----------------customer view-------------------------------------
+create view customer_rep as 
+    select profile.login_id, first_name, last_name, sex, phone_number, home_address, activity, reputation from profile
+    join customer on profile.login_id = customer.login_id where profile_type_id = 2
+    ----------------------------------------------------------
+go
+
+
 create table branch(
     branch_address nvarchar(100) primary key,
     branch_vehicles_amount int not null,
@@ -46,7 +79,7 @@ create table [admin](
 
  create table cars(
      license_plate_no varchar(200) primary key, 
-     verification varchar(20) DEFAULT 'unv',
+     verification varchar(20) DEFAULT 'unverified',
      car_name varchar(100) not null, 
      car_type varchar(100) not null,
      car_capacity int not null,
@@ -110,22 +143,20 @@ END
 
 go
 
-create proc [deactive_admin_account]
+create proc [deactivate_admin_account]
 @admid varchar(100), @newpsw varchar(100)
 as 
 BEGIN
 update [profile] set [activity]=0 where login_id = @admid
 END
 
-
-
-/********************************************************/
-
 go
 
 
-insert into audit values('adm10', 'c', '2000-08-13')
-delete from audit
+insert into audit values('adm10', 'inserted something', '2000-08-13'),
+                        ('adm10', 'deleted something', CURRENT_TIMESTAMP),
+                        ('adm10', 'updated something', CURRENT_TIMESTAMP)
+
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
                                (3, 'renter'),
@@ -135,28 +166,26 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
 						   
-						   insert into profile values('as','dsd','dsds','M','dsd','ghjk','bbbb',1,1)
+						 
 
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                           values ('cus22', 'Ruth', 'Solomon', 'F', '098703664', 'cmc', '2222',2)
 
-
+                           insert into customer(login_id) VALUEs ('cus22')
+                           insert into customer(login_id) VALUEs ('cus10')
 
 
 
 -- use master
 -- drop database car_rental_database
-select * from audit where (task like '%'+'c'+'%' and done_date like '%'+'c'+'%') order by done_date asc
 
-select CURRENT_TIMESTAMP
-
-select GETDATE()
 
 
 --Procedure to insert new Profile
 go
---drop procedure Insert_Profile
 CREATE PROCEDURE Insert_Profile
-  @login_id  varchar(200),
-   @first_name varchar(100), 
+    @login_id  varchar(200),
+    @first_name varchar(100), 
     @last_name varchar(100),
     @sex varchar(2),
     @phone_number varchar(100), 
@@ -170,4 +199,4 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            values (@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password ,@profile_type_id,@Activity )
 end
 
-select * from profile
+
