@@ -63,7 +63,7 @@ namespace Car_Rental_App
      
         private void settingbtn_Click_1(object sender, EventArgs e)
         {
-            Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control();
+            Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
             add_user_control_for_setting(s);
         }
 

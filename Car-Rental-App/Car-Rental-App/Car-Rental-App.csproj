@@ -94,6 +94,12 @@
     <Compile Include="AdminUserControl\SettingUserControl.Designer.cs">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUserControl\VehicleUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\VehicleUC.Designer.cs">
+      <DependentUpon>VehicleUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create_Account_Form.cs">
       <SubType>Form</SubType>
     </Compile>

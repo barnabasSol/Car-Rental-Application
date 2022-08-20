@@ -47,6 +47,8 @@
             // 
             this.auditdatagridview.AllowUserToAddRows = false;
             this.auditdatagridview.AllowUserToDeleteRows = false;
+            this.auditdatagridview.AllowUserToResizeColumns = false;
+            this.auditdatagridview.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.auditdatagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.auditdatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -71,8 +73,11 @@
             this.auditdatagridview.Name = "auditdatagridview";
             this.auditdatagridview.ReadOnly = true;
             this.auditdatagridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.auditdatagridview.RowHeadersVisible = false;
+            this.auditdatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.auditdatagridview.Size = new System.Drawing.Size(844, 194);
             this.auditdatagridview.TabIndex = 0;
+            this.auditdatagridview.SelectionChanged += new System.EventHandler(this.auditdatagridview_SelectionChanged);
             // 
             // panel1
             // 

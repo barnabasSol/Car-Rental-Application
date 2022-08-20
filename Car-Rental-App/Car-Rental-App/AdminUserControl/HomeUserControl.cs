@@ -60,5 +60,10 @@ namespace Car_Rental_App.AdminUserControl
             auditdatagridview.Columns[0].HeaderText = "Done Task";
             auditdatagridview.Columns[1].HeaderText = "Done Date";
         }
+
+        private void auditdatagridview_SelectionChanged(object sender, EventArgs e)
+        {
+            this.auditdatagridview.ClearSelection();
+        }
     }
 }

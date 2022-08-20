@@ -12,15 +12,18 @@ namespace Car_Rental_App
 {
     public partial class Setting_User_for_Renter_User_Control : UserControl
     {
-        public Setting_User_for_Renter_User_Control()
+        Renter_Form rf;
+        public Setting_User_for_Renter_User_Control(Renter_Form parentform)
         {
+            rf = parentform;
             InitializeComponent();
+
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)
         {
             LoginForm lg = new LoginForm();
-            Hide();
+            rf.Hide();
             lg.Show();
         }
     }

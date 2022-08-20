@@ -148,7 +148,8 @@ namespace Car_Rental_App.AdminUserControl
 
         private void savebtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("letto");
+            
+            MessageBox.Show("changes saved","confirmation",MessageBoxButtons.OK, MessageBoxIcon.Information);
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = Program.my_connection_string;
 

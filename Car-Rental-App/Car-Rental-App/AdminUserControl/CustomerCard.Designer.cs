@@ -38,7 +38,7 @@ namespace Car_Rental_App.AdminUserControl
             this.idtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnumtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.switch_status = new Bunifu.Framework.UI.BunifuSwitch();
-            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
+            this.ccardtransition = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
             this.scale = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -134,9 +134,9 @@ namespace Car_Rental_App.AdminUserControl
             this.switch_status.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.switch_status.Value = true;
             // 
-            // bunifuFormFadeTransition1
+            // ccardtransition
             // 
-            this.bunifuFormFadeTransition1.Delay = 1;
+            this.ccardtransition.Delay = 1;
             // 
             // bunifuCustomLabel3
             // 
@@ -343,7 +343,6 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuCustomLabel pnumtxt;
         private Bunifu.Framework.UI.BunifuImageButton minimizebtn;
         private Bunifu.Framework.UI.BunifuSwitch switch_status;
-        private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuSlider bunifuSlider1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
@@ -353,5 +352,6 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuCustomLabel replbl;
         private Bunifu.Framework.UI.BunifuCustomLabel addy;
         private Bunifu.Framework.UI.BunifuCustomLabel addresstxt;
+        public Bunifu.Framework.UI.BunifuFormFadeTransition ccardtransition;
     }
 }

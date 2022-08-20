@@ -25,6 +25,7 @@ namespace Car_Rental_App.AdminUserControl
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = Program.my_connection_string;
+            customer_search_panel.Controls.Clear();
 
             string commandText = "exec [search customer] @attribute";
             SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 100);
@@ -69,8 +70,13 @@ namespace Car_Rental_App.AdminUserControl
 
         private void searchcustomer_OnValueChanged_1(object sender, EventArgs e)
         {
-            customer_search_panel.Controls.Clear();
+            slow.Start();
+        }
+
+        private void slow_Tick(object sender, EventArgs e)
+        {
             search_customer(searchcustomer.Text);
+            slow.Stop();
         }
     }
 }

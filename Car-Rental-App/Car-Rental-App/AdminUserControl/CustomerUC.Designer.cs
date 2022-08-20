@@ -29,9 +29,11 @@ namespace Car_Rental_App.AdminUserControl
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customer_search_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchcustomer = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.slow = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +75,11 @@ namespace Car_Rental_App.AdminUserControl
             this.searchcustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchcustomer.OnValueChanged += new System.EventHandler(this.searchcustomer_OnValueChanged_1);
             // 
+            // slow
+            // 
+            this.slow.Interval = 300;
+            this.slow.Tick += new System.EventHandler(this.slow_Tick);
+            // 
             // CustomerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,5 +99,6 @@ namespace Car_Rental_App.AdminUserControl
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel customer_search_panel;
         private Bunifu.Framework.UI.BunifuMetroTextbox searchcustomer;
+        private System.Windows.Forms.Timer slow;
     }
 }
