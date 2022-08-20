@@ -22,14 +22,14 @@ namespace Car_Rental_App
         {
                 
         }
-        private void add_user_control(UserControl uc)
+        public  void add_user_control(UserControl uc)
         {
            uc.Dock = DockStyle.Fill;
             panel3.Controls.Clear();
             panel3.Controls.Add(uc);
 
         }
-        private void add_user_control_for_setting(UserControl uc)
+        public void add_user_control_for_setting(UserControl uc)
         {
             uc.Dock = DockStyle.Bottom;
             panel3.Controls.Clear();

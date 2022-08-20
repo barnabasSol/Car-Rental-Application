@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Car_Rental_App.RenterUserControl;
 
 namespace Car_Rental_App
 {
@@ -25,6 +26,45 @@ namespace Car_Rental_App
             LoginForm lg = new LoginForm();
             rf.Hide();
             lg.Show();
+        }
+
+       
+        private void deactivatebtn_MouseLeave(object sender, EventArgs e)
+        {
+            deactivatelbl.Visible = false;
+        }
+
+        private void resetpswbtn_MouseEnter(object sender, EventArgs e)
+        {
+            resetpswlbl.Visible = true;
+        }
+
+        private void resetpswbtn_MouseLeave(object sender, EventArgs e)
+        {
+            resetpswlbl.Visible = false;
+        }
+
+        private void deactivatebtn_MouseEnter(object sender, EventArgs e)
+        {
+          
+            deactivatelbl.Visible = true;
+        }
+
+        private void logoutbtn_MouseEnter(object sender, EventArgs e)
+        {
+            logoutlbl.Visible = true;
+        }
+
+        private void logoutbtn_MouseLeave(object sender, EventArgs e)
+        {
+            logoutlbl.Visible = false;
+        }
+
+        private void resetpswbtn_Click(object sender, EventArgs e)
+        {
+            ResetP l = new ResetP(rf);
+            
+            rf.add_user_control(l);
         }
     }
 }
