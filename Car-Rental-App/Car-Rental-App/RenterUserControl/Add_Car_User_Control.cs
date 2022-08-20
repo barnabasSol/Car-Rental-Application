@@ -16,5 +16,46 @@ namespace Car_Rental_App
         {
             InitializeComponent();
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            string current_State = label1.Text;
+            int num;
+            num=Int16.Parse(current_State);
+            if (num == 10)
+            {
+                num = num;
+                label1.Text=num.ToString();
+            }
+            else if(num >=1)
+            {
+                num = num + 1;
+                label1.Text = num.ToString();
+            }
+            
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            string current_State = label1.Text;
+            int num;
+            num = Int16.Parse(current_State);
+            if (num == 1)
+            {
+                num = num;
+                label1.Text = num.ToString();
+
+            }
+            else if (num > 1)
+            {
+                num = num - 1;
+                label1.Text = num.ToString();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

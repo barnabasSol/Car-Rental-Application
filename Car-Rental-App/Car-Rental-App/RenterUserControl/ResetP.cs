@@ -17,6 +17,7 @@ namespace Car_Rental_App.RenterUserControl
         bool eye2_clicked = true;
         bool eye3_clicked = true;
         Renter_Form renterForm;
+        Renter R = new Renter();
         public ResetP(Renter_Form renterForm)
         {
             InitializeComponent();
@@ -166,6 +167,52 @@ namespace Car_Rental_App.RenterUserControl
             else
             {
                 cnfrmtxt.LineFocusedColor = Color.Green;
+            }
+        }
+
+        private void backbtn_MouseEnter(object sender, EventArgs e)
+        {
+            Backlbl.Visible = true;
+        }
+
+        private void backbtn_MouseLeave(object sender, EventArgs e)
+        {
+            Backlbl.Visible = false;
+        }
+
+        private void resetbtn_Click(object sender, EventArgs e)
+        {
+            bool reset = true; 
+            if (String.IsNullOrEmpty(oldpswtxt.Text))
+            {
+                reset = false;
+                errorProvider1.SetError(oldpswtxt, "Empty field here");
+            }
+            if (String.IsNullOrEmpty(newpswtxt.Text))
+            {
+                reset=false;
+                errorProvider2.SetError(newpswtxt, "Empty field here");
+            }
+            if (String.IsNullOrEmpty(cnfrmtxt.Text)) {
+
+                reset=false;
+                errorProvider3.SetError(cnfrmtxt, "Empty field here");
+
+            }
+            if(cnfrmtxt.Text != newpswtxt.Text)
+            {
+                reset=false;
+                errorProvider4.SetError(cnfrmtxt, "new password doesn't match");
+            }
+            if (reset)
+            {
+                MessageBox.Show("You have Successfully changed your password");
+                R.reset_Password(Profile.current_userid, newpswtxt.Text);
+
+
+
+
+
             }
         }
     }

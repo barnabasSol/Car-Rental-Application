@@ -68,6 +68,7 @@
             this.Password_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.login_textbox = new System.Windows.Forms.TextBox();
             this.Create_your_Account_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider14)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // little_car
@@ -116,7 +118,7 @@
             // 
             this.Male_rb.AutoSize = true;
             this.Male_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
-            this.Male_rb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Male_rb.ForeColor = System.Drawing.Color.Black;
             this.Male_rb.Location = new System.Drawing.Point(310, 340);
             this.Male_rb.Name = "Male_rb";
             this.Male_rb.Size = new System.Drawing.Size(61, 22);
@@ -129,7 +131,7 @@
             // 
             this.Female_rb.AutoSize = true;
             this.Female_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
-            this.Female_rb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Female_rb.ForeColor = System.Drawing.Color.Black;
             this.Female_rb.Location = new System.Drawing.Point(434, 340);
             this.Female_rb.Name = "Female_rb";
             this.Female_rb.Size = new System.Drawing.Size(78, 22);
@@ -188,7 +190,7 @@
             // 
             this.First_Name_lbl.AutoSize = true;
             this.First_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
-            this.First_Name_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.First_Name_lbl.ForeColor = System.Drawing.Color.Black;
             this.First_Name_lbl.Location = new System.Drawing.Point(316, 216);
             this.First_Name_lbl.Name = "First_Name_lbl";
             this.First_Name_lbl.Size = new System.Drawing.Size(81, 18);
@@ -199,7 +201,7 @@
             // 
             this.Last_Name_lbl.AutoSize = true;
             this.Last_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
-            this.Last_Name_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Last_Name_lbl.ForeColor = System.Drawing.Color.Black;
             this.Last_Name_lbl.Location = new System.Drawing.Point(506, 216);
             this.Last_Name_lbl.Name = "Last_Name_lbl";
             this.Last_Name_lbl.Size = new System.Drawing.Size(80, 18);
@@ -345,88 +347,88 @@
             // Login_Id_lbl
             // 
             this.Login_Id_lbl.AutoSize = true;
-            this.Login_Id_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Login_Id_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Login_Id_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Id_lbl.ForeColor = System.Drawing.Color.Black;
             this.Login_Id_lbl.Location = new System.Drawing.Point(98, 124);
             this.Login_Id_lbl.Name = "Login_Id_lbl";
-            this.Login_Id_lbl.Size = new System.Drawing.Size(127, 32);
+            this.Login_Id_lbl.Size = new System.Drawing.Size(125, 31);
             this.Login_Id_lbl.TabIndex = 31;
             this.Login_Id_lbl.Text = "Login-Id :";
             // 
             // Name_lbl
             // 
             this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Name_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Name_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_lbl.ForeColor = System.Drawing.Color.Black;
             this.Name_lbl.Location = new System.Drawing.Point(115, 187);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(102, 32);
+            this.Name_lbl.Size = new System.Drawing.Size(103, 31);
             this.Name_lbl.TabIndex = 32;
             this.Name_lbl.Text = "Name :";
             // 
             // Phone_lbl
             // 
             this.Phone_lbl.AutoSize = true;
-            this.Phone_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Phone_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.Phone_lbl.Location = new System.Drawing.Point(110, 275);
+            this.Phone_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone_lbl.ForeColor = System.Drawing.Color.Black;
+            this.Phone_lbl.Location = new System.Drawing.Point(115, 266);
             this.Phone_lbl.Name = "Phone_lbl";
-            this.Phone_lbl.Size = new System.Drawing.Size(104, 32);
+            this.Phone_lbl.Size = new System.Drawing.Size(105, 31);
             this.Phone_lbl.TabIndex = 33;
             this.Phone_lbl.Text = "Phone :";
             // 
             // Address_lbl
             // 
             this.Address_lbl.AutoSize = true;
-            this.Address_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Address_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Address_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address_lbl.ForeColor = System.Drawing.Color.Black;
             this.Address_lbl.Location = new System.Drawing.Point(91, 414);
             this.Address_lbl.Name = "Address_lbl";
-            this.Address_lbl.Size = new System.Drawing.Size(126, 32);
+            this.Address_lbl.Size = new System.Drawing.Size(125, 31);
             this.Address_lbl.TabIndex = 34;
             this.Address_lbl.Text = "Address :";
             // 
             // Confrim_lbl
             // 
             this.Confrim_lbl.AutoSize = true;
-            this.Confrim_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Confrim_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.Confrim_lbl.Location = new System.Drawing.Point(751, 173);
+            this.Confrim_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confrim_lbl.ForeColor = System.Drawing.Color.Black;
+            this.Confrim_lbl.Location = new System.Drawing.Point(746, 171);
             this.Confrim_lbl.Name = "Confrim_lbl";
-            this.Confrim_lbl.Size = new System.Drawing.Size(122, 32);
+            this.Confrim_lbl.Size = new System.Drawing.Size(125, 31);
             this.Confrim_lbl.TabIndex = 35;
             this.Confrim_lbl.Text = "Confirm :";
             // 
             // Sex_lbl
             // 
             this.Sex_lbl.AutoSize = true;
-            this.Sex_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Sex_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Sex_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sex_lbl.ForeColor = System.Drawing.Color.Black;
             this.Sex_lbl.Location = new System.Drawing.Point(139, 340);
             this.Sex_lbl.Name = "Sex_lbl";
-            this.Sex_lbl.Size = new System.Drawing.Size(71, 32);
+            this.Sex_lbl.Size = new System.Drawing.Size(68, 31);
             this.Sex_lbl.TabIndex = 36;
             this.Sex_lbl.Text = "Sex :";
             // 
             // Account_lbl
             // 
             this.Account_lbl.AutoSize = true;
-            this.Account_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Account_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Account_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Account_lbl.ForeColor = System.Drawing.Color.Black;
             this.Account_lbl.Location = new System.Drawing.Point(91, 487);
             this.Account_lbl.Name = "Account_lbl";
-            this.Account_lbl.Size = new System.Drawing.Size(131, 32);
+            this.Account_lbl.Size = new System.Drawing.Size(133, 31);
             this.Account_lbl.TabIndex = 37;
             this.Account_lbl.Text = "Account :";
             // 
             // Password_lbl
             // 
             this.Password_lbl.AutoSize = true;
-            this.Password_lbl.Font = new System.Drawing.Font("Century Gothic", 14.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Password_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Password_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_lbl.ForeColor = System.Drawing.Color.Black;
             this.Password_lbl.Location = new System.Drawing.Point(728, 112);
             this.Password_lbl.Name = "Password_lbl";
-            this.Password_lbl.Size = new System.Drawing.Size(142, 32);
+            this.Password_lbl.Size = new System.Drawing.Size(143, 31);
             this.Password_lbl.TabIndex = 38;
             this.Password_lbl.Text = "Password :";
             // 
@@ -442,19 +444,28 @@
             // 
             this.Create_your_Account_lbl.AutoSize = true;
             this.Create_your_Account_lbl.Font = new System.Drawing.Font("Arial", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Create_your_Account_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.Create_your_Account_lbl.Location = new System.Drawing.Point(368, 22);
+            this.Create_your_Account_lbl.ForeColor = System.Drawing.Color.Black;
+            this.Create_your_Account_lbl.Location = new System.Drawing.Point(330, 7);
             this.Create_your_Account_lbl.Name = "Create_your_Account_lbl";
             this.Create_your_Account_lbl.Size = new System.Drawing.Size(384, 42);
             this.Create_your_Account_lbl.TabIndex = 39;
             this.Create_your_Account_lbl.Text = "Create your Account";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.panel1.Controls.Add(this.Create_your_Account_lbl);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1110, 97);
+            this.panel1.TabIndex = 40;
             // 
             // Create_Account_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 539);
-            this.Controls.Add(this.Create_your_Account_lbl);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Password_lbl);
             this.Controls.Add(this.Account_lbl);
             this.Controls.Add(this.Sex_lbl);
@@ -498,6 +509,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider14)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,5 +556,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel Phone_lbl;
         private System.Windows.Forms.TextBox login_textbox;
         private Bunifu.Framework.UI.BunifuCustomLabel Create_your_Account_lbl;
+        private System.Windows.Forms.Panel panel1;
     }
 }
