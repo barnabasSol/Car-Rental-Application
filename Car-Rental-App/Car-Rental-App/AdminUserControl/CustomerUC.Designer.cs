@@ -77,7 +77,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // slow
             // 
-            this.slow.Interval = 300;
+            this.slow.Interval = 200;
             this.slow.Tick += new System.EventHandler(this.slow_Tick);
             // 
             // CustomerUC

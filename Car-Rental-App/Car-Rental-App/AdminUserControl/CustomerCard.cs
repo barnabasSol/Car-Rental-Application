@@ -69,15 +69,16 @@ namespace Car_Rental_App.AdminUserControl
 
         private void expandbtn_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(428, 263);
             expandbtn.Visible = false;
+            this.Size = new Size(428, 263);
         }
 
         private void minimizebtn_Click(object sender, EventArgs e)
         {
             expandbtn.Visible = true;
-            this.Size = new Size(428, 121);
+            this.Size = new Size(428, 123);
         }
+       
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
         {
@@ -120,7 +121,6 @@ namespace Car_Rental_App.AdminUserControl
                 bunifuSlider1.IndicatorColor = Color.Red;
             }
             scale.Text = bunifuSlider1.Value.ToString();
-            scale.Text = bunifuSlider1.Value.ToString();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -142,7 +142,6 @@ namespace Car_Rental_App.AdminUserControl
             {
                 bunifuSlider1.IndicatorColor = Color.Red;
             }
-            scale.Text = bunifuSlider1.Value.ToString();
             scale.Text = bunifuSlider1.Value.ToString();
         }
 
@@ -177,6 +176,29 @@ namespace Car_Rental_App.AdminUserControl
                     command.ExecuteNonQuery();
                 }
             }
+            expandbtn.Visible = true;
+            this.Size = new Size(428, 123);
+        }
+
+        private void CustomerCard_Load(object sender, EventArgs e)
+        {
+            if (bunifuSlider1.Value == 5)
+            {
+                bunifuSlider1.IndicatorColor = Color.SeaGreen;
+            }
+            else if (bunifuSlider1.Value < 5 && bunifuSlider1.Value > 2)
+            {
+                bunifuSlider1.IndicatorColor = Color.Yellow;
+            }
+            else if (bunifuSlider1.Value > 5)
+            {
+                bunifuSlider1.IndicatorColor = Color.FromArgb(199, 92, 92);
+            }
+            else
+            {
+                bunifuSlider1.IndicatorColor = Color.Red;
+            }
+            scale.Text = bunifuSlider1.Value.ToString();
         }
     }
 }

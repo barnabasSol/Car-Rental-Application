@@ -73,6 +73,16 @@ namespace Car_Rental_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addcar {
+            get {
+                object obj = ResourceManager.GetObject("addcar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap administrator {
             get {
                 object obj = ResourceManager.GetObject("administrator", resourceCulture);
@@ -276,6 +286,16 @@ namespace Car_Rental_App.Properties {
         internal static System.Drawing.Bitmap Screenshot_2022_08_06_1845542 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2022-08-06 1845542", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchingcar {
+            get {
+                object obj = ResourceManager.GetObject("searchingcar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

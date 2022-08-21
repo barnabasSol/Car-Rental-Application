@@ -117,18 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="savebtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAoCAYAAADg1CgtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVHhe7dkxDoMwFETB3P+09gmIQEKCyASUwN9mimlS
-        P61t8mqtTZAgPmLER4z4iBEfMeIj5lJ8vffh7/CP0/iEx1MO4xMdd5lbGvXkzkeZzwDFR8wuPkctT9s2
-        ZvmIER/l1geI+IhZ4nPXo5rlI0p8xIiPGPERIz5ixEeM+IgRHzFLfD4yk2D5iLF8ROz+XhMg1cRHjDsf
-        peaRW4dOfJTanrDiI0Z8lBi9KQ7j8wDhDt86urR8QuQXZ904dokRHzHiI0Z8xIiPkDa9AbagpHaD9VqC
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

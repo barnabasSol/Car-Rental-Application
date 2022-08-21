@@ -174,6 +174,9 @@
     <EmbeddedResource Include="AdminUserControl\SettingUserControl.resx">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\VehicleUC.resx">
+      <DependentUpon>VehicleUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +245,7 @@
   <ItemGroup>
     <None Include="Resources\down-arrow.png" />
     <None Include="Resources\administrator.png" />
+    <None Include="Resources\addcar.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />
@@ -251,6 +255,7 @@
     <None Include="Resources\plus.png" />
     <None Include="Resources\user-search.png" />
     <Content Include="Resources\male3.png" />
+    <None Include="Resources\searchingcar.png" />
     <Content Include="Resources\visible.png" />
     <None Include="Resources\icons8-search-more-30.png" />
     <Content Include="Resources\icons8-settings-50.png" />

@@ -34,12 +34,12 @@ GO
 
 go
 
-create proc [search customer]
+alter proc [search customer]
 @searchby varchar(100)
 AS
 BEGIN
-select login_id, CONCAT(first_name, ' ', last_name) as full_name, sex, phone_number, home_address, activity, reputation from
-             customer_rep WHERE CONCAT(first_name, ' ', last_name) like '%'+@searchby+'%'
+select login_id, fullname, sex, phone_number, home_address, activity, reputation from
+             customer_rep WHERE fullname like '%'+@searchby+'%'
                                 or login_id like '%'+@searchby+'%'
                                 or phone_number like '%'+@searchby+'%'
                                 or home_address like '%'+@searchby+'%'
@@ -57,7 +57,7 @@ END
 go
 ----------------customer view-------------------------------------
 create view customer_rep as 
-    select profile.login_id, first_name, last_name, sex, phone_number, home_address, activity, reputation from profile
+    select profile.login_id, concat(first_name,' ',last_name) as fullname, sex, phone_number, home_address, activity, reputation from profile
     join customer on profile.login_id = customer.login_id where profile_type_id = 2
     ----------------------------------------------------------
 go
@@ -178,7 +178,7 @@ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_a
 
 -- use master
 -- drop database car_rental_database
-
+select * from customer_rep
 
 
 --Procedure to insert new Profile

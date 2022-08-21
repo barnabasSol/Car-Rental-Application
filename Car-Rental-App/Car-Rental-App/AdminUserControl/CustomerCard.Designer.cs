@@ -38,7 +38,6 @@ namespace Car_Rental_App.AdminUserControl
             this.idtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnumtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.switch_status = new Bunifu.Framework.UI.BunifuSwitch();
-            this.ccardtransition = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
             this.scale = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -51,6 +50,7 @@ namespace Car_Rental_App.AdminUserControl
             this.minimizebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.expandbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.gendericon = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).BeginInit();
@@ -133,10 +133,6 @@ namespace Car_Rental_App.AdminUserControl
             this.switch_status.TabStop = false;
             this.switch_status.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.switch_status.Value = true;
-            // 
-            // ccardtransition
-            // 
-            this.ccardtransition.Delay = 1;
             // 
             // bunifuCustomLabel3
             // 
@@ -294,6 +290,10 @@ namespace Car_Rental_App.AdminUserControl
             this.gendericon.TabIndex = 0;
             this.gendericon.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            // 
             // CustomerCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +321,7 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.gendericon);
             this.Name = "CustomerCard";
             this.Size = new System.Drawing.Size(428, 121);
+            this.Load += new System.EventHandler(this.CustomerCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).EndInit();
@@ -352,6 +353,6 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuCustomLabel replbl;
         private Bunifu.Framework.UI.BunifuCustomLabel addy;
         private Bunifu.Framework.UI.BunifuCustomLabel addresstxt;
-        public Bunifu.Framework.UI.BunifuFormFadeTransition ccardtransition;
+        private System.Windows.Forms.Timer timer1;
     }
 }

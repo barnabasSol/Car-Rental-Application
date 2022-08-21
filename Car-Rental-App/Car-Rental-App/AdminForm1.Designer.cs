@@ -54,26 +54,15 @@ namespace Car_Rental_App
             // 
             // idlbl
             // 
-            this.idlbl.AutoSize = true;
-            this.idlbl.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.idlbl, "idlbl");
             this.idlbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.idlbl.Location = new System.Drawing.Point(68, 30);
-            this.idlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idlbl.Name = "idlbl";
-            this.idlbl.Size = new System.Drawing.Size(100, 20);
-            this.idlbl.TabIndex = 5;
-            this.idlbl.Text = "id goes here";
             // 
             // fullnamelbl
             // 
-            this.fullnamelbl.AutoSize = true;
-            this.fullnamelbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.fullnamelbl, "fullnamelbl");
             this.fullnamelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fullnamelbl.Location = new System.Drawing.Point(69, 10);
             this.fullnamelbl.Name = "fullnamelbl";
-            this.fullnamelbl.Size = new System.Drawing.Size(113, 17);
-            this.fullnamelbl.TabIndex = 4;
-            this.fullnamelbl.Text = "name goes here";
             // 
             // panel1
             // 
@@ -82,30 +71,20 @@ namespace Car_Rental_App
             this.panel1.Controls.Add(this.fullnamelbl);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.little_car);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(844, 72);
-            this.panel1.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 57);
-            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // little_car
             // 
-            this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
-            this.little_car.Location = new System.Drawing.Point(768, 2);
-            this.little_car.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.little_car, "little_car");
             this.little_car.Name = "little_car";
-            this.little_car.Size = new System.Drawing.Size(65, 68);
-            this.little_car.TabIndex = 3;
             this.little_car.TabStop = false;
             // 
             // panel2
@@ -114,11 +93,8 @@ namespace Car_Rental_App
             this.panel2.Controls.Add(this.customerbtn);
             this.panel2.Controls.Add(this.settingbtn);
             this.panel2.Controls.Add(this.homebtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 72);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(844, 52);
-            this.panel2.TabIndex = 8;
             // 
             // vehiclebtn
             // 
@@ -128,21 +104,16 @@ namespace Car_Rental_App
             this.vehiclebtn.ActiveForecolor = System.Drawing.Color.White;
             this.vehiclebtn.ActiveLineColor = System.Drawing.SystemColors.Menu;
             this.vehiclebtn.BackColor = System.Drawing.SystemColors.Menu;
-            this.vehiclebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("vehiclebtn.BackgroundImage")));
+            resources.ApplyResources(this.vehiclebtn, "vehiclebtn");
             this.vehiclebtn.ButtonText = "Vehicle";
             this.vehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vehiclebtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vehiclebtn.ForeColor = System.Drawing.Color.Black;
             this.vehiclebtn.IdleBorderThickness = 1;
             this.vehiclebtn.IdleCornerRadius = 20;
             this.vehiclebtn.IdleFillColor = System.Drawing.SystemColors.Menu;
             this.vehiclebtn.IdleForecolor = System.Drawing.Color.Black;
             this.vehiclebtn.IdleLineColor = System.Drawing.SystemColors.Menu;
-            this.vehiclebtn.Location = new System.Drawing.Point(461, 6);
-            this.vehiclebtn.Margin = new System.Windows.Forms.Padding(5);
             this.vehiclebtn.Name = "vehiclebtn";
-            this.vehiclebtn.Size = new System.Drawing.Size(145, 42);
-            this.vehiclebtn.TabIndex = 10;
             this.vehiclebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vehiclebtn.Click += new System.EventHandler(this.vehiclebtn_Click);
             // 
@@ -154,21 +125,16 @@ namespace Car_Rental_App
             this.customerbtn.ActiveForecolor = System.Drawing.Color.White;
             this.customerbtn.ActiveLineColor = System.Drawing.Color.White;
             this.customerbtn.BackColor = System.Drawing.SystemColors.Menu;
-            this.customerbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customerbtn.BackgroundImage")));
+            resources.ApplyResources(this.customerbtn, "customerbtn");
             this.customerbtn.ButtonText = "Customer";
             this.customerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerbtn.ForeColor = System.Drawing.Color.Black;
             this.customerbtn.IdleBorderThickness = 1;
             this.customerbtn.IdleCornerRadius = 20;
             this.customerbtn.IdleFillColor = System.Drawing.SystemColors.Menu;
             this.customerbtn.IdleForecolor = System.Drawing.Color.Black;
             this.customerbtn.IdleLineColor = System.Drawing.SystemColors.Menu;
-            this.customerbtn.Location = new System.Drawing.Point(236, 5);
-            this.customerbtn.Margin = new System.Windows.Forms.Padding(5);
             this.customerbtn.Name = "customerbtn";
-            this.customerbtn.Size = new System.Drawing.Size(145, 42);
-            this.customerbtn.TabIndex = 10;
             this.customerbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customerbtn.Click += new System.EventHandler(this.customerbtn_Click);
             // 
@@ -176,13 +142,9 @@ namespace Car_Rental_App
             // 
             this.settingbtn.BackColor = System.Drawing.SystemColors.Menu;
             this.settingbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingbtn.Image = ((System.Drawing.Image)(resources.GetObject("settingbtn.Image")));
+            resources.ApplyResources(this.settingbtn, "settingbtn");
             this.settingbtn.ImageActive = null;
-            this.settingbtn.Location = new System.Drawing.Point(701, 6);
             this.settingbtn.Name = "settingbtn";
-            this.settingbtn.Size = new System.Drawing.Size(131, 41);
-            this.settingbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.settingbtn.TabIndex = 9;
             this.settingbtn.TabStop = false;
             this.settingbtn.Zoom = 10;
             this.settingbtn.Click += new System.EventHandler(this.settingbtn_Click);
@@ -191,13 +153,9 @@ namespace Car_Rental_App
             // 
             this.homebtn.BackColor = System.Drawing.SystemColors.Menu;
             this.homebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homebtn.Image = ((System.Drawing.Image)(resources.GetObject("homebtn.Image")));
+            resources.ApplyResources(this.homebtn, "homebtn");
             this.homebtn.ImageActive = null;
-            this.homebtn.Location = new System.Drawing.Point(12, 6);
             this.homebtn.Name = "homebtn";
-            this.homebtn.Size = new System.Drawing.Size(131, 41);
-            this.homebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.homebtn.TabIndex = 9;
             this.homebtn.TabStop = false;
             this.homebtn.Zoom = 10;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
@@ -205,38 +163,26 @@ namespace Car_Rental_App
             // mainpanel
             // 
             this.mainpanel.Controls.Add(this.pictureBox2);
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(0, 124);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.mainpanel, "mainpanel");
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(844, 340);
-            this.mainpanel.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.administrator;
-            this.pictureBox2.Location = new System.Drawing.Point(236, 17);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(382, 258);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // AdminForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(844, 464);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminForm1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
             this.Load += new System.EventHandler(this.AdminForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
