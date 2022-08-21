@@ -58,5 +58,18 @@ namespace Car_Rental_App
 
         }
 
+        public void reset_Password(string id, string new_password)
+        {
+            SqlConnection conn = new SqlConnection(Program.my_connection_string);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("reset_renter_password", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@login_id ",SqlDbType.VarChar).Value = id;
+            cmd.Parameters.AddWithValue("@new_password", SqlDbType.VarChar).Value = new_password;
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
     }
 }

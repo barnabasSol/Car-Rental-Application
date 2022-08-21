@@ -69,7 +69,7 @@ namespace Car_Rental_App
 
         private void settingbtn_MouseEnter(object sender, EventArgs e)
         {
-            
+            label2.Visible = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -111,6 +111,31 @@ namespace Car_Rental_App
             
             Add_Car_User_Control h = new Add_Car_User_Control();
             add_user_control(h);
+        }
+
+        private void bunifuImageButton3_MouseEnter(object sender, EventArgs e)
+        {
+            Add.Visible = true;
+        }
+
+        private void bunifuImageButton3_MouseLeave(object sender, EventArgs e)
+        {
+            Add.Visible = false;
+        }
+
+        private void bunifuImageButton4_MouseEnter(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+        }
+
+        private void bunifuImageButton4_MouseLeave(object sender, EventArgs e)
+        {
+            label1.Visible=false;
+        }
+
+        private void settingbtn_MouseLeave(object sender, EventArgs e)
+        {
+            label2.Visible = false;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetP));
             this.backbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.eyebtn = new Bunifu.Framework.UI.BunifuImageButton();
@@ -37,10 +38,19 @@
             this.newpswtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cnfrmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.resetbtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Backlbl = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.SuspendLayout();
             // 
             // backbtn
@@ -58,6 +68,8 @@
             this.backbtn.TabStop = false;
             this.backbtn.Zoom = 10;
             this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            this.backbtn.MouseEnter += new System.EventHandler(this.backbtn_MouseEnter);
+            this.backbtn.MouseLeave += new System.EventHandler(this.backbtn_MouseLeave);
             // 
             // eyebtn
             // 
@@ -65,7 +77,7 @@
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(354, 130);
+            this.eyebtn.Location = new System.Drawing.Point(249, 130);
             this.eyebtn.Margin = new System.Windows.Forms.Padding(4);
             this.eyebtn.Name = "eyebtn";
             this.eyebtn.Size = new System.Drawing.Size(57, 41);
@@ -82,7 +94,7 @@
             this.eyebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn2.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn2.Image")));
             this.eyebtn2.ImageActive = null;
-            this.eyebtn2.Location = new System.Drawing.Point(354, 213);
+            this.eyebtn2.Location = new System.Drawing.Point(249, 213);
             this.eyebtn2.Margin = new System.Windows.Forms.Padding(4);
             this.eyebtn2.Name = "eyebtn2";
             this.eyebtn2.Size = new System.Drawing.Size(57, 41);
@@ -99,7 +111,7 @@
             this.eyebtn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn3.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn3.Image")));
             this.eyebtn3.ImageActive = null;
-            this.eyebtn3.Location = new System.Drawing.Point(354, 305);
+            this.eyebtn3.Location = new System.Drawing.Point(249, 305);
             this.eyebtn3.Margin = new System.Windows.Forms.Padding(4);
             this.eyebtn3.Name = "eyebtn3";
             this.eyebtn3.Size = new System.Drawing.Size(57, 41);
@@ -122,7 +134,7 @@
             this.oldpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.oldpswtxt.LineThickness = 3;
-            this.oldpswtxt.Location = new System.Drawing.Point(453, 130);
+            this.oldpswtxt.Location = new System.Drawing.Point(363, 130);
             this.oldpswtxt.Margin = new System.Windows.Forms.Padding(5);
             this.oldpswtxt.Name = "oldpswtxt";
             this.oldpswtxt.Size = new System.Drawing.Size(427, 41);
@@ -144,7 +156,7 @@
             this.newpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.newpswtxt.LineThickness = 3;
-            this.newpswtxt.Location = new System.Drawing.Point(453, 213);
+            this.newpswtxt.Location = new System.Drawing.Point(363, 213);
             this.newpswtxt.Margin = new System.Windows.Forms.Padding(5);
             this.newpswtxt.Name = "newpswtxt";
             this.newpswtxt.Size = new System.Drawing.Size(427, 41);
@@ -166,7 +178,7 @@
             this.cnfrmtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.cnfrmtxt.LineThickness = 3;
-            this.cnfrmtxt.Location = new System.Drawing.Point(453, 305);
+            this.cnfrmtxt.Location = new System.Drawing.Point(363, 305);
             this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(5);
             this.cnfrmtxt.Name = "cnfrmtxt";
             this.cnfrmtxt.Size = new System.Drawing.Size(427, 41);
@@ -184,7 +196,7 @@
             this.resetbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.resetbtn.ActiveForecolor = System.Drawing.Color.White;
             this.resetbtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.resetbtn.BackColor = System.Drawing.Color.White;
+            this.resetbtn.BackColor = System.Drawing.SystemColors.Control;
             this.resetbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resetbtn.BackgroundImage")));
             this.resetbtn.ButtonText = "Reset";
             this.resetbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -201,11 +213,48 @@
             this.resetbtn.Size = new System.Drawing.Size(157, 39);
             this.resetbtn.TabIndex = 11;
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
+            // 
+            // Backlbl
+            // 
+            this.Backlbl.AutoSize = true;
+            this.Backlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backlbl.Location = new System.Drawing.Point(28, 184);
+            this.Backlbl.Name = "Backlbl";
+            this.Backlbl.Size = new System.Drawing.Size(52, 21);
+            this.Backlbl.TabIndex = 42;
+            this.Backlbl.Text = "Back";
+            this.Backlbl.Visible = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider3.ContainerControl = this;
+            this.errorProvider3.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider3.Icon")));
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider4.ContainerControl = this;
+            this.errorProvider4.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider4.Icon")));
             // 
             // ResetP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Backlbl);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.cnfrmtxt);
             this.Controls.Add(this.newpswtxt);
@@ -220,7 +269,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -234,5 +288,10 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox newpswtxt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox cnfrmtxt;
         private Bunifu.Framework.UI.BunifuThinButton2 resetbtn;
+        private System.Windows.Forms.Label Backlbl;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }
