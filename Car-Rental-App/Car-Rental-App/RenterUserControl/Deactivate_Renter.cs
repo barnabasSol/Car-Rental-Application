@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Car_Rental_App.Properties;
 
 namespace Car_Rental_App.RenterUserControl
 {
     public partial class Deactivate_Renter : UserControl
     {
+        bool eye_clicked = true;
         Renter_Form rh;
         public Deactivate_Renter(Renter_Form r)
         {
@@ -49,6 +51,48 @@ namespace Car_Rental_App.RenterUserControl
             else
             {
                 errorProvider1.SetError(password, "password incorrect");
+            }
+        }
+
+        private void eyebtn_Click(object sender, EventArgs e)
+        {
+            if (eye_clicked)
+            {
+                password.isPassword = false;
+                eyebtn.Image = Resources.visible;
+                eye_clicked = false;
+            }
+            else
+            {
+                password.isPassword = true;
+                eyebtn.Image = Resources.eye;
+                eye_clicked = true;
+            }
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            eyebtn.Visible = true;
+            if (password.Text == "enter your password")
+            {
+                password.Text = "";
+                password.ForeColor = Color.Black;
+                password.isPassword = true;
+            }
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+            if (password.Text == "")
+            {
+                eyebtn.Visible = false;
+                password.isPassword = false;
+                password.Text = "enter your password";
+                password.ForeColor = Color.Gray;
+            }
+            else
+            {
+                eyebtn.Visible = true;
             }
         }
     }

@@ -78,10 +78,12 @@
             this.password.TabIndex = 7;
             this.password.Text = "enter your password";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.password.Enter += new System.EventHandler(this.password_Enter);
+            this.password.Leave += new System.EventHandler(this.password_Leave);
             // 
             // eyebtn
             // 
-            this.eyebtn.BackColor = System.Drawing.SystemColors.Control;
+            this.eyebtn.BackColor = System.Drawing.Color.White;
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
@@ -94,6 +96,7 @@
             this.eyebtn.TabStop = false;
             this.eyebtn.Visible = false;
             this.eyebtn.Zoom = 10;
+            this.eyebtn.Click += new System.EventHandler(this.eyebtn_Click);
             // 
             // deactivatebtn
             // 
@@ -113,10 +116,10 @@
             this.deactivatebtn.IdleFillColor = System.Drawing.Color.White;
             this.deactivatebtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deactivatebtn.IdleLineColor = System.Drawing.Color.Black;
-            this.deactivatebtn.Location = new System.Drawing.Point(422, 282);
+            this.deactivatebtn.Location = new System.Drawing.Point(370, 297);
             this.deactivatebtn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.deactivatebtn.Name = "deactivatebtn";
-            this.deactivatebtn.Size = new System.Drawing.Size(197, 50);
+            this.deactivatebtn.Size = new System.Drawing.Size(157, 43);
             this.deactivatebtn.TabIndex = 9;
             this.deactivatebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deactivatebtn.Click += new System.EventHandler(this.deactivatebtn_Click);
@@ -142,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Backlbl);
             this.Controls.Add(this.deactivatebtn);
             this.Controls.Add(this.eyebtn);

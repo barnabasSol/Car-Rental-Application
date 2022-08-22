@@ -310,19 +310,17 @@
   </data>
   <data name="deactivatebtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMUAAAAyCAYAAADsrx9RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJzSURBVHhe7Z2hr4FRGIdFTRQ1Gk0zyRSbYhMEf4OmkfgP
-        NJNMsSk2QRBtik0xySQaTXzvfh/XvY7v3s55nu3Z7uaSzrPvO595T+RyuRgi/kgUiI5EgehIFIiORIHo
-        SBSIjv9GcTqdrN/vW6VSsVwuZ4lEwiKRCOLbqbWrNVwqlazX69nhcAhd8/LPKMbjcfBB1WrVRqORLRYL
-        2+/3BvCOaO1qDU8mE6vX68HaVhxha/8lChVUq9WsWCza8Xi8fyTAZ3E+n4M4CoWC7Xa7pwaeolAQ6XTa
-        BoPB/a0An81sNrNsNmubzSY8Cl0hCAJ8Q7dV2m+8RKE9hG6ZAHyk2Wxau93+iUJPmbTxYA8BvnK9Xi2T
-        ydhqtbpFoV24Nh0APtPtdq3RaNyi0LNbPaoC8Jn1eh08aAqiSCaTtt1u7y8B+IluoaLR6C2KWCwWPLcF
-        8J3gG3BFoT8AgCgAXiAKAAeiAHAgCgAHogBwIAoAB6IAcCAKAAeiAHAgCgAHogBwIAoAB6IAcCAKAAei
-        AHAgCgCHRxT6CZ5+igfgO48oNN6GObEAv6LQPE2NDwTwGQ3v0BCPIIpWqxVMSAPwGY2M1ejYIAoNl02l
-        UuwrwGvK5bINh8NbFFJXCl0xAHxEZ7DocCK18IhC82Q1eXm5XN7/DcAPNENZd0rfpxs9opAaLqshs0wL
-        BF9QEPl83qbT6aODpyjkfD4P5ml2Op372wA+E81P1hXidxDyJQqpWylNX1ZB2pEzoh8+BY2H1f5BZzlq
-        sHjYgZChUXyrgvSIKh6P377UQHxzNTdZG2qd+hu25uW/USD6KFEgOhIFoiNRIDoSBeKTF/sCtBmW74WH
-        OnwAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAJ0AAAArCAYAAABitYq+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH5SURBVHhe7dyrrmIxGEBhJBKJRCKRSCQSieQxcEgeA4lE
+        IpFIJBKJRCI7WYXuHMJl5kzor9aX7IRwLmql7d60tJIUzOgUzugUzugUzugUzugU7mN01+s1rdfrNJ1O
+        02g0Sr1eL7VaLS+vp4s2aGQymaTVapUul8u9omdvo9tut/kfERzh7Xa7dDqd7j+VHtEGjWw2mzSbzXI7
+        xPfKU3QUyh+Nx+N0Pp/v70q/86mjh+j4xcFg8LZQ6beYMYfD4cMs+RAdZRqcvo1pl/Ve0URHkQyFUg3z
+        +Twtl8v8OkfHXSoLP9dwqoXGWLodj8dbdEypTK1STYx0jHg5Op6tcKsr1XQ4HPJol6Pr9/t52JNqYopt
+        t9u36DqdzscnyNK35E8wygspgtEpnNEpnNEpnNEpnNEpnNEpnNEpnNEpnNEpXBMdn4fxuZhUWxMde+k8
+        dKMITXTsGGbnsFQTO5nY0ZSjK5vrpJrKZuEcHVMrBbquU01ls3CODovFIl9SDeWbItBExyjHMbH9fn9/
+        R/oODnwxk5aNwk10YKFXTuxI30BwDGacfS0eogMjHeGVM4rS/2L9xgj3Mzg8RQemWu5mKZQ7Ds/D6l8x
+        hZb1GzcOr87evIyuoFBucbvd7u2hnpfXXy4OeZVv+nrnY3RSDUancEancEancEanYCn9ARKQB2EemOEc
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

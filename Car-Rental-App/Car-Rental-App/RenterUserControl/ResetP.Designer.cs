@@ -193,10 +193,10 @@
             // 
             this.resetbtn.ActiveBorderThickness = 1;
             this.resetbtn.ActiveCornerRadius = 20;
-            this.resetbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.resetbtn.ActiveFillColor = System.Drawing.Color.Red;
             this.resetbtn.ActiveForecolor = System.Drawing.Color.White;
-            this.resetbtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.resetbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.resetbtn.ActiveLineColor = System.Drawing.Color.White;
+            this.resetbtn.BackColor = System.Drawing.Color.White;
             this.resetbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resetbtn.BackgroundImage")));
             this.resetbtn.ButtonText = "Reset";
             this.resetbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -207,10 +207,10 @@
             this.resetbtn.IdleFillColor = System.Drawing.Color.White;
             this.resetbtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.resetbtn.IdleLineColor = System.Drawing.Color.Black;
-            this.resetbtn.Location = new System.Drawing.Point(489, 373);
+            this.resetbtn.Location = new System.Drawing.Point(382, 369);
             this.resetbtn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.resetbtn.Name = "resetbtn";
-            this.resetbtn.Size = new System.Drawing.Size(157, 39);
+            this.resetbtn.Size = new System.Drawing.Size(157, 43);
             this.resetbtn.TabIndex = 11;
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
@@ -254,6 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Backlbl);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.cnfrmtxt);
