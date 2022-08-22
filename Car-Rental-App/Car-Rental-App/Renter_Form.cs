@@ -61,16 +61,7 @@ namespace Car_Rental_App
         }
 
      
-        private void settingbtn_Click_1(object sender, EventArgs e)
-        {
-            Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
-            add_user_control_for_setting(s);
-        }
-
-        private void settingbtn_MouseEnter(object sender, EventArgs e)
-        {
-            label2.Visible = true;
-        }
+     
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -106,34 +97,52 @@ namespace Car_Rental_App
 
         
 
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
+      
+      
+
+     
+       
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
             Add_Car_User_Control h = new Add_Car_User_Control();
             add_user_control(h);
         }
 
-        private void bunifuImageButton3_MouseEnter(object sender, EventArgs e)
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
             Add.Visible = true;
         }
 
-        private void bunifuImageButton3_MouseLeave(object sender, EventArgs e)
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
+
             Add.Visible = false;
         }
 
-        private void bunifuImageButton4_MouseEnter(object sender, EventArgs e)
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
             label1.Visible = true;
         }
 
-        private void bunifuImageButton4_MouseLeave(object sender, EventArgs e)
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            label1.Visible=false;
+
+            label1.Visible = false;
         }
 
-        private void settingbtn_MouseLeave(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
+            add_user_control_for_setting(s);
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             label2.Visible = false;
         }

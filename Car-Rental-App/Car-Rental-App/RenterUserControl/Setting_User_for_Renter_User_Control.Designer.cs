@@ -90,6 +90,7 @@
             this.deactivatebtn.TabIndex = 37;
             this.deactivatebtn.TabStop = false;
             this.deactivatebtn.Zoom = 10;
+            this.deactivatebtn.Click += new System.EventHandler(this.deactivatebtn_Click);
             this.deactivatebtn.MouseEnter += new System.EventHandler(this.deactivatebtn_MouseEnter);
             this.deactivatebtn.MouseLeave += new System.EventHandler(this.deactivatebtn_MouseLeave);
             // 

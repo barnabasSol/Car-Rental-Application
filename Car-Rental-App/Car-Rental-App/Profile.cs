@@ -171,6 +171,29 @@ namespace Car_Rental_App
             }
         }
 
+        public bool validate_password_for_renter(string loginid, string oldpsw)
+        {
+            string command = "Select password from profile where login_id=@loginid";
+            
+            using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
+            {
+                conn.Open();
+                SqlCommand cmd=new SqlCommand(command, conn);
+                cmd.Parameters.Add(new SqlParameter("@loginid", System.Data.SqlDbType.VarChar, 200)).Value = loginid;
+                cmd.Prepare();
+                string check = (string)cmd.ExecuteScalar();
+                if (check == oldpsw)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+        }
+
         public bool validate_password(string loginid, string oldpsw)
         {
             SqlConnection conn = new SqlConnection();

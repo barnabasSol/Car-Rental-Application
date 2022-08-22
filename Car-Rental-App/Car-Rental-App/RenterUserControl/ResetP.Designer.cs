@@ -59,7 +59,7 @@
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
-            this.backbtn.Location = new System.Drawing.Point(4, 89);
+            this.backbtn.Location = new System.Drawing.Point(0, 4);
             this.backbtn.Margin = new System.Windows.Forms.Padding(4);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(104, 82);
@@ -219,7 +219,7 @@
             // 
             this.Backlbl.AutoSize = true;
             this.Backlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backlbl.Location = new System.Drawing.Point(28, 184);
+            this.Backlbl.Location = new System.Drawing.Point(20, 90);
             this.Backlbl.Name = "Backlbl";
             this.Backlbl.Size = new System.Drawing.Size(52, 21);
             this.Backlbl.TabIndex = 42;
