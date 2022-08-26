@@ -66,5 +66,11 @@ namespace Car_Rental_App
             
             rf.add_user_control(l);
         }
+
+        private void deactivatebtn_Click(object sender, EventArgs e)
+        {
+            Deactivate_Renter l = new Deactivate_Renter(rf);
+            rf.add_user_control(l);
+        }
     }
 }

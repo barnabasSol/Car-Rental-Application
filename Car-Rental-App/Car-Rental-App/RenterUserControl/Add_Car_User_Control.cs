@@ -56,5 +56,10 @@ namespace Car_Rental_App
         {
 
         }
+
+        private void bunifuCustomLabel9_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("   10  🡆  Excellent Condition \n 9-8  🡆  Good Condition \n 7-6  🡆  Average Condition \n 5-4  🡆  Restorable\n 3-1  🡆  Only the parts", bunifuCustomLabel9);
+        }
     }
 }

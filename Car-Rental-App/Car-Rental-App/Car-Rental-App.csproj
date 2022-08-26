@@ -139,6 +139,12 @@
     <Compile Include="RenterUserControl\Add_Car_User_Control.Designer.cs">
       <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterUserControl\Deactivate_Renter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\Deactivate_Renter.Designer.cs">
+      <DependentUpon>Deactivate_Renter.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterUserControl\ResetP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Add_Car_User_Control.resx">
       <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Deactivate_Renter.resx">
+      <DependentUpon>Deactivate_Renter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\ResetP.resx">
       <DependentUpon>ResetP.cs</DependentUpon>
