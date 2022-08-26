@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminClass.cs" />
+    <Compile Include="AdminUserControl\AddVehicleUCcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\AddVehicleUCcs.Designer.cs">
+      <DependentUpon>AddVehicleUCcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserControl\CustomerCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\AddVehicleUCcs.resx">
+      <DependentUpon>AddVehicleUCcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\CustomerCard.resx">
       <DependentUpon>CustomerCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +259,7 @@
     <None Include="Resources\down-arrow.png" />
     <None Include="Resources\administrator.png" />
     <None Include="Resources\addcar.png" />
+    <None Include="Resources\add.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />
@@ -260,6 +270,7 @@
     <None Include="Resources\user-search.png" />
     <Content Include="Resources\male3.png" />
     <None Include="Resources\searchingcar.png" />
+    <None Include="Resources\undo-circular-arrow.png" />
     <Content Include="Resources\visible.png" />
     <None Include="Resources\icons8-search-more-30.png" />
     <Content Include="Resources\icons8-settings-50.png" />

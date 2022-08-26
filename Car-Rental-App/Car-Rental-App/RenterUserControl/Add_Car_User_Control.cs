@@ -44,7 +44,6 @@ namespace Car_Rental_App
             {
                 num = num;
                 label1.Text = num.ToString();
-
             }
             else if (num > 1)
             {

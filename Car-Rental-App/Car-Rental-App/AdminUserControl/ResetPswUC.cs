@@ -179,7 +179,7 @@ namespace Car_Rental_App.AdminUserControl
         private void resetbtn_Click(object sender, EventArgs e)
         {
             if (cnfrmtxt.Text!=newpswtxt.Text)
-                MessageBox.Show("new password doesn't match");
+                MessageBox.Show("new password doesn't match", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (!p.validate_password(Profile.current_userid, oldpswtxt.Text))
                 errorProvider1.SetError(oldpswtxt, "old password isn't correct");
             else
@@ -188,7 +188,7 @@ namespace Car_Rental_App.AdminUserControl
                 oldpswtxt.Text = "";
                 newpswtxt.Text = "";
                 cnfrmtxt.Text = "";
-                MessageBox.Show("successfuly reset");
+                MessageBox.Show("successfully reset", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

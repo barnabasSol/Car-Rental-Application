@@ -31,6 +31,7 @@ namespace Car_Rental_App.AdminUserControl
         {
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.addvehiclebtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.vpanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,7 @@ namespace Car_Rental_App.AdminUserControl
             this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton1.Image = global::Car_Rental_App.Properties.Resources.searchingcar;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 69);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(42, 64);
             this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(61, 63);
@@ -56,7 +57,7 @@ namespace Car_Rental_App.AdminUserControl
             this.addvehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addvehiclebtn.Image = global::Car_Rental_App.Properties.Resources.addcar;
             this.addvehiclebtn.ImageActive = null;
-            this.addvehiclebtn.Location = new System.Drawing.Point(24, 193);
+            this.addvehiclebtn.Location = new System.Drawing.Point(42, 203);
             this.addvehiclebtn.Margin = new System.Windows.Forms.Padding(2);
             this.addvehiclebtn.Name = "addvehiclebtn";
             this.addvehiclebtn.Size = new System.Drawing.Size(61, 63);
@@ -64,11 +65,23 @@ namespace Car_Rental_App.AdminUserControl
             this.addvehiclebtn.TabIndex = 4;
             this.addvehiclebtn.TabStop = false;
             this.addvehiclebtn.Zoom = 10;
+            this.addvehiclebtn.Click += new System.EventHandler(this.addvehiclebtn_Click);
+            // 
+            // vpanel
+            // 
+            this.vpanel.AutoScroll = true;
+            this.vpanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.vpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vpanel.Location = new System.Drawing.Point(120, 0);
+            this.vpanel.Name = "vpanel";
+            this.vpanel.Size = new System.Drawing.Size(611, 340);
+            this.vpanel.TabIndex = 5;
             // 
             // VehicleUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.vpanel);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.addvehiclebtn);
             this.Name = "VehicleUC";
@@ -83,5 +96,6 @@ namespace Car_Rental_App.AdminUserControl
 
         private Bunifu.Framework.UI.BunifuImageButton addvehiclebtn;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Panel vpanel;
     }
 }

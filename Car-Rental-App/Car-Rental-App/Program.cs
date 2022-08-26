@@ -12,7 +12,7 @@ namespace Car_Rental_App
 
         public static string my_connection_string = "Data Source=barney\\SQLEXPRESS;" +
                                                     "Initial Catalog=car_rental_database;" +
-                                                    "Integrated Security=SSPI;";
+                                                    "Integrated Security=true;";
         [STAThread]
         static void Main()
         {

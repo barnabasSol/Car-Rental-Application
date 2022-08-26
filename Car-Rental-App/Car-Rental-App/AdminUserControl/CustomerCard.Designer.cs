@@ -44,13 +44,13 @@ namespace Car_Rental_App.AdminUserControl
             this.replbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.addy = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.addresstxt = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.minimizebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.expandbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.gendericon = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).BeginInit();
@@ -198,6 +198,10 @@ namespace Car_Rental_App.AdminUserControl
             this.addresstxt.TabIndex = 1;
             this.addresstxt.Text = "address goes here";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            // 
             // savebtn
             // 
             this.savebtn.ActiveBorderThickness = 1;
@@ -289,10 +293,6 @@ namespace Car_Rental_App.AdminUserControl
             this.gendericon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gendericon.TabIndex = 0;
             this.gendericon.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 200;
             // 
             // CustomerCard
             // 

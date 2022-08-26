@@ -3,12 +3,11 @@ create database car_rental_database;
 GO
 
 use car_rental_database;
-
 GO
 
 create table profile_type(
     prof_id int primary key,
-    profile_type_name varchar(100) not null
+    profile_type_name varchar(100) not null 
 )
 
 create table profile(
@@ -34,7 +33,8 @@ GO
 
 go
 
-alter proc [search customer]
+
+create proc [search customer]
 @searchby varchar(100)
 AS
 BEGIN
@@ -45,7 +45,12 @@ select login_id, fullname, sex, phone_number, home_address, activity, reputation
                                 or home_address like '%'+@searchby+'%'
 
 END
+
+
 GO
+
+
+
 create proc[update customer change by admin]
 @customerid varchar(100), @activity int, @rep int
 as 
@@ -86,11 +91,11 @@ create table [admin](
      car_model varchar(100) not null,
      car_color varchar(50) not null,
      car_status TINYINT not null,
-     car_condition varchar(100) not null, /*new column*/
+     car_condition int not null, /*new column*/
      rep_min_req int not null,
      price_per_hour money not null,
      car_branch nvarchar(100), 
-     renter_login_id varchar(200) default 'company'''+'s',
+     login_id varchar(200),
      CONSTRAINT fk_renter_id FOREIGN KEY(renter_login_id) REFERENCES profile(login_id),
      CONSTRAINT fk_car_branch FOREIGN KEY(car_branch) REFERENCES branch(branch_address)
   )
@@ -107,6 +112,7 @@ create table rental(
     return_date date not null,
     paid_amount money,
     payment_id int,
+    vehicle_return_status int,   /*new column*/
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id),
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id)
 )
@@ -127,8 +133,23 @@ create table rented_cars(
 create table [audit] (
     admin_id varchar(200),
     task varchar(1000),
-    done_date date
+    done_date DATETIME
 )
+GO
+------------------ view -------------------------
+
+go
+
+create trigger [audit crud trigger for admin]
+on cars
+for insert, update, DELETE
+AS
+BEGIN
+declare @
+IF (select count(*) from inserted)>0 and (select COUNT(*) from deleted) = 0 and (select )
+    INSERT into [audit] VALUES  
+
+END
 
 
 GO
@@ -153,16 +174,16 @@ END
 go
 
 
-insert into audit values('adm10', 'inserted something', '2000-08-13'),
+insert into audit values
                         ('adm10', 'deleted something', CURRENT_TIMESTAMP),
                         ('adm10', 'updated something', CURRENT_TIMESTAMP)
 
+
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
-                               (3, 'renter'),
-                               (4, 'company')
+                               (3, 'renter')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
-                           values ('company'''+'s', 'null', 'null', 'n/a', 'null', 'null', 'null', 4),
+                           values
                            ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
 						   
@@ -178,7 +199,6 @@ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_a
 
 -- use master
 -- drop database car_rental_database
-select * from customer_rep
 
 
 --Procedure to insert new Profile

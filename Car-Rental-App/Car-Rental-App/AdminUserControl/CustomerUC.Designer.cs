@@ -50,7 +50,7 @@ namespace Car_Rental_App.AdminUserControl
             // customer_search_panel
             // 
             this.customer_search_panel.AutoScroll = true;
-            this.customer_search_panel.BackColor = System.Drawing.SystemColors.Control;
+            this.customer_search_panel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.customer_search_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.customer_search_panel.Location = new System.Drawing.Point(391, 0);
             this.customer_search_panel.Name = "customer_search_panel";

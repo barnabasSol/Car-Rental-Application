@@ -47,7 +47,7 @@ namespace Car_Rental_App.AdminUserControl
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
-            this.backbtn.Location = new System.Drawing.Point(15, 14);
+            this.backbtn.Location = new System.Drawing.Point(36, 14);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(78, 67);
             this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

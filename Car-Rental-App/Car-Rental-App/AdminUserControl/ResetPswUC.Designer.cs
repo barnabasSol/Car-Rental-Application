@@ -34,17 +34,17 @@ namespace Car_Rental_App.AdminUserControl
             this.oldpswtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.newpswtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cnfrmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.eyebtn2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.eyebtn3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.eyebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.backbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.resetbtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // oldpswtxt
@@ -55,9 +55,9 @@ namespace Car_Rental_App.AdminUserControl
             this.oldpswtxt.HintForeColor = System.Drawing.Color.Empty;
             this.oldpswtxt.HintText = "";
             this.oldpswtxt.isPassword = false;
-            this.oldpswtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.oldpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.oldpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
+            this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.oldpswtxt.LineThickness = 3;
             this.oldpswtxt.Location = new System.Drawing.Point(281, 65);
             this.oldpswtxt.Margin = new System.Windows.Forms.Padding(4);
@@ -77,9 +77,9 @@ namespace Car_Rental_App.AdminUserControl
             this.newpswtxt.HintForeColor = System.Drawing.Color.Empty;
             this.newpswtxt.HintText = "";
             this.newpswtxt.isPassword = false;
-            this.newpswtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.newpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.newpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
+            this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.newpswtxt.LineThickness = 3;
             this.newpswtxt.Location = new System.Drawing.Point(281, 132);
             this.newpswtxt.Margin = new System.Windows.Forms.Padding(4);
@@ -99,9 +99,9 @@ namespace Car_Rental_App.AdminUserControl
             this.cnfrmtxt.HintForeColor = System.Drawing.Color.Empty;
             this.cnfrmtxt.HintText = "";
             this.cnfrmtxt.isPassword = false;
-            this.cnfrmtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.cnfrmtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.cnfrmtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
+            this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.cnfrmtxt.LineThickness = 3;
             this.cnfrmtxt.Location = new System.Drawing.Point(281, 202);
             this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(4);
@@ -113,6 +113,10 @@ namespace Car_Rental_App.AdminUserControl
             this.cnfrmtxt.OnValueChanged += new System.EventHandler(this.cnfrmtxt_OnValueChanged);
             this.cnfrmtxt.Enter += new System.EventHandler(this.cnfrmtxt_Enter);
             this.cnfrmtxt.Leave += new System.EventHandler(this.cnfrmtxt_Leave);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // eyebtn2
             // 
@@ -203,10 +207,6 @@ namespace Car_Rental_App.AdminUserControl
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // ResetPswUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,11 +221,11 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.resetbtn);
             this.Name = "ResetPswUC";
             this.Size = new System.Drawing.Size(844, 340);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

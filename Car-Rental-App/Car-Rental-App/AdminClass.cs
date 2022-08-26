@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 
 namespace Car_Rental_App
 {
+    
     class AdminClass
     {
         public string task { get; set; }
@@ -32,8 +33,6 @@ namespace Car_Rental_App
         {
             audit_list.Clear();
             string commandText = order;
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = Program.my_connection_string;
             if (string.IsNullOrEmpty(commandText))
             {
                 commandText = "select task, done_date from audit where admin_id=" + "\'" + Profile.current_userid + "\'";
@@ -42,7 +41,7 @@ namespace Car_Rental_App
             {
                  commandText = order;
             }
-            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
@@ -52,7 +51,7 @@ namespace Car_Rental_App
                         while (reader.Read())
                         {
                             string task = reader[0].ToString();
-                            string done_date = reader[1].ToString();
+                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd    HH:mm:ss");
                             AdminClass a = new AdminClass(task, done_date);
                             audit_list.Add(a);
                         }
@@ -86,7 +85,7 @@ namespace Car_Rental_App
                         while (reader.Read())
                         {
                             string task = reader[0].ToString();
-                            string done_date = reader[1].ToString();
+                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd HH:mm");
                             AdminClass a = new AdminClass(task, done_date);
                             srch_list.Add(a);
                         }

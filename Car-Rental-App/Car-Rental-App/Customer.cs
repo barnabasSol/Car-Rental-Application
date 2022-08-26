@@ -55,7 +55,6 @@ namespace Car_Rental_App
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             conn.Close ();
-
         }
         
     }
