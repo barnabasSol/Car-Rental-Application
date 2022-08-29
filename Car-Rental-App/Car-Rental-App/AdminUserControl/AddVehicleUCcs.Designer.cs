@@ -247,7 +247,7 @@ namespace Car_Rental_App.AdminUserControl
             this.addbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.addbtn.ActiveForecolor = System.Drawing.Color.White;
             this.addbtn.ActiveLineColor = System.Drawing.Color.White;
-            this.addbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.addbtn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.addbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addbtn.BackgroundImage")));
             this.addbtn.ButtonText = "Add";
             this.addbtn.Cursor = System.Windows.Forms.Cursors.Hand;

@@ -47,9 +47,10 @@ namespace Car_Rental_App.AdminUserControl
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
-            this.backbtn.Location = new System.Drawing.Point(36, 14);
+            this.backbtn.Location = new System.Drawing.Point(27, 11);
+            this.backbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(104, 82);
+            this.backbtn.Size = new System.Drawing.Size(78, 67);
             this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backbtn.TabIndex = 3;
             this.backbtn.TabStop = false;
@@ -74,10 +75,10 @@ namespace Car_Rental_App.AdminUserControl
             this.deactivatebtn.IdleFillColor = System.Drawing.Color.White;
             this.deactivatebtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deactivatebtn.IdleLineColor = System.Drawing.Color.Black;
-            this.deactivatebtn.Location = new System.Drawing.Point(453, 238);
-            this.deactivatebtn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.deactivatebtn.Location = new System.Drawing.Point(340, 193);
+            this.deactivatebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.deactivatebtn.Name = "deactivatebtn";
-            this.deactivatebtn.Size = new System.Drawing.Size(197, 50);
+            this.deactivatebtn.Size = new System.Drawing.Size(148, 41);
             this.deactivatebtn.TabIndex = 5;
             this.deactivatebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deactivatebtn.Click += new System.EventHandler(this.deactivatebtn_Click);
@@ -88,10 +89,9 @@ namespace Car_Rental_App.AdminUserControl
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(287, 154);
-            this.eyebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eyebtn.Location = new System.Drawing.Point(215, 125);
             this.eyebtn.Name = "eyebtn";
-            this.eyebtn.Size = new System.Drawing.Size(57, 41);
+            this.eyebtn.Size = new System.Drawing.Size(43, 33);
             this.eyebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyebtn.TabIndex = 7;
             this.eyebtn.TabStop = false;
@@ -108,13 +108,13 @@ namespace Car_Rental_App.AdminUserControl
             this.password.HintText = "";
             this.password.isPassword = false;
             this.password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.password.LineIdleColor = System.Drawing.Color.DarkGray;
+            this.password.LineIdleColor = System.Drawing.Color.Gray;
             this.password.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.password.LineThickness = 3;
-            this.password.Location = new System.Drawing.Point(353, 154);
-            this.password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.password.Location = new System.Drawing.Point(265, 125);
+            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(427, 41);
+            this.password.Size = new System.Drawing.Size(320, 33);
             this.password.TabIndex = 6;
             this.password.Text = "enter your password";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -127,15 +127,14 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // DeactivateAccountUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.eyebtn);
             this.Controls.Add(this.password);
             this.Controls.Add(this.deactivatebtn);
             this.Controls.Add(this.backbtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DeactivateAccountUC";
-            this.Size = new System.Drawing.Size(1125, 418);
+            this.Size = new System.Drawing.Size(844, 340);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

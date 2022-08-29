@@ -59,10 +59,9 @@
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
-            this.backbtn.Location = new System.Drawing.Point(0, 4);
-            this.backbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.backbtn.Location = new System.Drawing.Point(0, 3);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(104, 82);
+            this.backbtn.Size = new System.Drawing.Size(78, 67);
             this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backbtn.TabIndex = 3;
             this.backbtn.TabStop = false;
@@ -77,10 +76,9 @@
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(249, 130);
-            this.eyebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.eyebtn.Location = new System.Drawing.Point(187, 106);
             this.eyebtn.Name = "eyebtn";
-            this.eyebtn.Size = new System.Drawing.Size(57, 41);
+            this.eyebtn.Size = new System.Drawing.Size(43, 33);
             this.eyebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyebtn.TabIndex = 5;
             this.eyebtn.TabStop = false;
@@ -94,10 +92,9 @@
             this.eyebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn2.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn2.Image")));
             this.eyebtn2.ImageActive = null;
-            this.eyebtn2.Location = new System.Drawing.Point(249, 213);
-            this.eyebtn2.Margin = new System.Windows.Forms.Padding(4);
+            this.eyebtn2.Location = new System.Drawing.Point(187, 173);
             this.eyebtn2.Name = "eyebtn2";
-            this.eyebtn2.Size = new System.Drawing.Size(57, 41);
+            this.eyebtn2.Size = new System.Drawing.Size(43, 33);
             this.eyebtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyebtn2.TabIndex = 6;
             this.eyebtn2.TabStop = false;
@@ -111,10 +108,9 @@
             this.eyebtn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn3.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn3.Image")));
             this.eyebtn3.ImageActive = null;
-            this.eyebtn3.Location = new System.Drawing.Point(249, 305);
-            this.eyebtn3.Margin = new System.Windows.Forms.Padding(4);
+            this.eyebtn3.Location = new System.Drawing.Point(187, 248);
             this.eyebtn3.Name = "eyebtn3";
-            this.eyebtn3.Size = new System.Drawing.Size(57, 41);
+            this.eyebtn3.Size = new System.Drawing.Size(43, 33);
             this.eyebtn3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyebtn3.TabIndex = 7;
             this.eyebtn3.TabStop = false;
@@ -131,13 +127,13 @@
             this.oldpswtxt.HintText = "";
             this.oldpswtxt.isPassword = false;
             this.oldpswtxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.oldpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
+            this.oldpswtxt.LineIdleColor = System.Drawing.Color.Gray;
             this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.oldpswtxt.LineThickness = 3;
-            this.oldpswtxt.Location = new System.Drawing.Point(363, 130);
-            this.oldpswtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.oldpswtxt.Location = new System.Drawing.Point(272, 106);
+            this.oldpswtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.oldpswtxt.Name = "oldpswtxt";
-            this.oldpswtxt.Size = new System.Drawing.Size(427, 41);
+            this.oldpswtxt.Size = new System.Drawing.Size(320, 33);
             this.oldpswtxt.TabIndex = 8;
             this.oldpswtxt.Text = "enter old password here";
             this.oldpswtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -153,13 +149,13 @@
             this.newpswtxt.HintText = "";
             this.newpswtxt.isPassword = false;
             this.newpswtxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.newpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
+            this.newpswtxt.LineIdleColor = System.Drawing.Color.Gray;
             this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.newpswtxt.LineThickness = 3;
-            this.newpswtxt.Location = new System.Drawing.Point(363, 213);
-            this.newpswtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.newpswtxt.Location = new System.Drawing.Point(272, 173);
+            this.newpswtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newpswtxt.Name = "newpswtxt";
-            this.newpswtxt.Size = new System.Drawing.Size(427, 41);
+            this.newpswtxt.Size = new System.Drawing.Size(320, 33);
             this.newpswtxt.TabIndex = 9;
             this.newpswtxt.Text = "enter new password here";
             this.newpswtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -175,13 +171,13 @@
             this.cnfrmtxt.HintText = "";
             this.cnfrmtxt.isPassword = false;
             this.cnfrmtxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.cnfrmtxt.LineIdleColor = System.Drawing.Color.DarkGray;
+            this.cnfrmtxt.LineIdleColor = System.Drawing.Color.Gray;
             this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.Maroon;
             this.cnfrmtxt.LineThickness = 3;
-            this.cnfrmtxt.Location = new System.Drawing.Point(363, 305);
-            this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.cnfrmtxt.Location = new System.Drawing.Point(272, 248);
+            this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cnfrmtxt.Name = "cnfrmtxt";
-            this.cnfrmtxt.Size = new System.Drawing.Size(427, 41);
+            this.cnfrmtxt.Size = new System.Drawing.Size(320, 33);
             this.cnfrmtxt.TabIndex = 10;
             this.cnfrmtxt.Text = "confirm password";
             this.cnfrmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -207,10 +203,10 @@
             this.resetbtn.IdleFillColor = System.Drawing.Color.White;
             this.resetbtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.resetbtn.IdleLineColor = System.Drawing.Color.Black;
-            this.resetbtn.Location = new System.Drawing.Point(382, 369);
-            this.resetbtn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.resetbtn.Location = new System.Drawing.Point(286, 300);
+            this.resetbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.resetbtn.Name = "resetbtn";
-            this.resetbtn.Size = new System.Drawing.Size(157, 43);
+            this.resetbtn.Size = new System.Drawing.Size(118, 35);
             this.resetbtn.TabIndex = 11;
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
@@ -219,9 +215,10 @@
             // 
             this.Backlbl.AutoSize = true;
             this.Backlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backlbl.Location = new System.Drawing.Point(20, 90);
+            this.Backlbl.Location = new System.Drawing.Point(15, 73);
+            this.Backlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Backlbl.Name = "Backlbl";
-            this.Backlbl.Size = new System.Drawing.Size(52, 21);
+            this.Backlbl.Size = new System.Drawing.Size(39, 17);
             this.Backlbl.TabIndex = 42;
             this.Backlbl.Text = "Back";
             this.Backlbl.Visible = false;
@@ -252,7 +249,7 @@
             // 
             // ResetP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Backlbl);
@@ -264,8 +261,9 @@
             this.Controls.Add(this.eyebtn2);
             this.Controls.Add(this.eyebtn);
             this.Controls.Add(this.backbtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ResetP";
-            this.Size = new System.Drawing.Size(1125, 418);
+            this.Size = new System.Drawing.Size(844, 340);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn2)).EndInit();

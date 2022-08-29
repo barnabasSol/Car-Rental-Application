@@ -35,7 +35,7 @@ namespace Car_Rental_App.AdminUserControl
         private void logoutbtn_Click(object sender, EventArgs e)
         {
             LoginForm lg = new LoginForm();
-            settingform.Hide();
+            settingform.Close();
             lg.Show();
         }
 
