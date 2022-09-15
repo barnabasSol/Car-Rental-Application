@@ -3,7 +3,10 @@ create database car_rental_database;
 GO
 
 use car_rental_database;
+
 GO
+
+select * from profile
 
 create table profile_type(
     prof_id int primary key,
@@ -31,8 +34,6 @@ create table customer(
 
 GO
 
-go
-
 
 create proc [search customer]
 @searchby varchar(100)
@@ -45,8 +46,6 @@ select login_id, fullname, sex, phone_number, home_address, activity, reputation
                                 or home_address like '%'+@searchby+'%'
 
 END
-
-
 GO
 
 
@@ -65,7 +64,22 @@ create view customer_rep as
     select profile.login_id, concat(first_name,' ',last_name) as fullname, sex, phone_number, home_address, activity, reputation from profile
     join customer on profile.login_id = customer.login_id where profile_type_id = 2
     ----------------------------------------------------------
-go
+
+GO
+alter trigger [set customer rep trigger]
+on profile 
+for insert 
+as 
+begin
+declare @cusid varchar(100)
+set @cusid = (select login_id from inserted)
+if (select profile_type_id from inserted)=2
+    BEGIN
+        insert into customer(login_id) values (@cusid)
+    END
+END
+
+GO
 
 
 create table branch(
@@ -96,7 +110,7 @@ create table [admin](
      price_per_hour money not null,
      car_branch nvarchar(100), 
      login_id varchar(200),
-     CONSTRAINT fk_renter_id FOREIGN KEY(renter_login_id) REFERENCES profile(login_id),
+     CONSTRAINT fk_renter_id FOREIGN KEY(login_id) REFERENCES profile(login_id),
      CONSTRAINT fk_car_branch FOREIGN KEY(car_branch) REFERENCES branch(branch_address)
   )
 
@@ -140,16 +154,16 @@ GO
 
 go
 
-create trigger [audit crud trigger for admin]
-on cars
-for insert, update, DELETE
-AS
-BEGIN
-declare @
-IF (select count(*) from inserted)>0 and (select COUNT(*) from deleted) = 0 and (select )
-    INSERT into [audit] VALUES  
+-- create trigger [audit crud trigger for admin]
+-- on cars
+-- for insert, update, DELETE
+-- AS
+-- BEGIN
+-- declare @
+-- IF (select count(*) from inserted)>0 and (select COUNT(*) from deleted) = 0 and (select )
+--     INSERT into [audit] VALUES  
 
-END
+-- END
 
 
 GO
@@ -190,12 +204,10 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
 						 
 
 insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                           values ('cus22', 'Ruth', 'Solomon', 'F', '098703664', 'cmc', '2222',2)
-
-                           insert into customer(login_id) VALUEs ('cus22')
-                           insert into customer(login_id) VALUEs ('cus10')
+                           values ('cus87', 'Ruth', 'Solomon', 'F', '0938023321', 'cmc', '2222',2)
 
 
+select * from profile
 
 -- use master
 -- drop database car_rental_database
