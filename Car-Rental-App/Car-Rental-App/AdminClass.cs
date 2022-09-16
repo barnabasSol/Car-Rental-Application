@@ -85,7 +85,7 @@ namespace Car_Rental_App
                         while (reader.Read())
                         {
                             string task = reader[0].ToString();
-                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd HH:mm");
+                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd    HH:mm:ss");
                             AdminClass a = new AdminClass(task, done_date);
                             srch_list.Add(a);
                         }

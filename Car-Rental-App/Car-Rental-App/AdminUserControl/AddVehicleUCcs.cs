@@ -22,8 +22,6 @@ namespace Car_Rental_App.AdminUserControl
 
         }
 
-     
-
         private void lptxt_Enter(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(lptxt.Text) || lptxt.Text == "enter license plate")
@@ -49,7 +47,6 @@ namespace Car_Rental_App.AdminUserControl
                 cnametxt.Text = "";
                 cnametxt.ForeColor = Color.Black;
             }
-
         }
 
         private void cnametxt_Leave(object sender, EventArgs e)
@@ -77,7 +74,6 @@ namespace Car_Rental_App.AdminUserControl
                 ctypetxt.Text = "enter car type";
                 ctypetxt.ForeColor = Color.Gray;
             }
-
         }
 
         private void cmodeltxt_Enter(object sender, EventArgs e)

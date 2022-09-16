@@ -57,7 +57,7 @@ namespace Car_Rental_App.AdminUserControl
                             if (reader[5].ToString()=="0")
                                    cc.switch_status_m = false;
                             else
-                            {
+                            { 
                                 cc.switch_status_m = true;
                             }
                             cc.rep_indicator = int.Parse(reader[6].ToString());

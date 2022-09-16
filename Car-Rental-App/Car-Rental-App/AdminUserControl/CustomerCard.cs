@@ -79,7 +79,6 @@ namespace Car_Rental_App.AdminUserControl
             this.Size = new Size(428, 123);
         }
        
-
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
         {
             if (bunifuSlider1.Value == 5)
@@ -100,7 +99,6 @@ namespace Car_Rental_App.AdminUserControl
             }
             scale.Text = bunifuSlider1.Value.ToString();
         }
-
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             bunifuSlider1.Value += 1;
@@ -149,8 +147,6 @@ namespace Car_Rental_App.AdminUserControl
         {
             
             MessageBox.Show("changes saved","confirmation",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
 
             string commandText = "exec [update customer change by admin] @loginid, @activity, @rep";
             SqlParameter id_param = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
@@ -164,7 +160,7 @@ namespace Car_Rental_App.AdminUserControl
             {
                 activ_par.Value = 0;
             }
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {

@@ -35,10 +35,8 @@ namespace Car_Rental_App
         public bool valdation(string login_id)
         {
             bool valdation1 = false;
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
             string commandText = "select login_id from profile ";
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
@@ -54,7 +52,6 @@ namespace Car_Rental_App
                             }
                         }
                     }
-                    connection.Close();
                 }
             }
             return valdation1;
@@ -92,10 +89,8 @@ namespace Car_Rental_App
         public bool is_admin(string login_id, string password)
         {
             bool isAdmin = false;
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
             string commandText = "select login_id, password from profile where profile_type_id=1";
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
@@ -111,7 +106,6 @@ namespace Car_Rental_App
                             }
                         }
                     }
-                    connection.Close();
                 }
             }
             return isAdmin;
@@ -121,10 +115,8 @@ namespace Car_Rental_App
         public bool is_renter(string login_id, string password)
         {
             bool isRenter = false;
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
             string commandText = "select login_id, password from profile where profile_type_id=3";
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
@@ -140,7 +132,6 @@ namespace Car_Rental_App
                             }
                         }
                     }
-                    connection.Close();
                 }
             }
             return isRenter;
@@ -149,10 +140,8 @@ namespace Car_Rental_App
         public string get_full_name(string login_id)
         {
             string full_name = "";
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
             string commandText = "select first_name, last_name from profile where login_id=" + "\'"+login_id+"\'";
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
@@ -164,8 +153,6 @@ namespace Car_Rental_App
                             full_name = reader[0].ToString() + " " + reader[1].ToString();
                         }
                     }
-
-                    connection.Close();
                 }
                 return full_name;
             }
@@ -179,7 +166,7 @@ namespace Car_Rental_App
             {
                 conn.Open();
                 SqlCommand cmd=new SqlCommand(command, conn);
-                cmd.Parameters.Add(new SqlParameter("@loginid", System.Data.SqlDbType.VarChar, 200)).Value = loginid;
+                cmd.Parameters.Add(new SqlParameter("@loginid", SqlDbType.VarChar, 200)).Value = loginid;
                 cmd.Prepare();
                 string check = (string)cmd.ExecuteScalar();
                 if (check == oldpsw)
@@ -196,12 +183,10 @@ namespace Car_Rental_App
 
         public bool validate_password(string loginid, string oldpsw)
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
             string query = "select password from profile where login_id=@loginid";
             SqlParameter lid_par = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
             lid_par.Value = loginid;
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -225,15 +210,12 @@ namespace Car_Rental_App
 
         public void reset_admin_password(string loginid, string newpsw)
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Program.my_connection_string;
-
             string commandText = "exec [reset_admin_password] @loginid, @newpsw";
             SqlParameter idparam = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
             SqlParameter new_psw_param = new SqlParameter("@newpsw", SqlDbType.VarChar, 100);
             idparam.Value = loginid;
             new_psw_param.Value = newpsw;
-            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {

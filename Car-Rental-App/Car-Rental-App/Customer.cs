@@ -12,8 +12,6 @@ namespace Car_Rental_App
     {
 
 
-      
-
 
         public void insert()
         {
