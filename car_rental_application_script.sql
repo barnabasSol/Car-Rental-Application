@@ -209,4 +209,17 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            values (@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password ,@profile_type_id,@Activity )
 end
 
+create proc [reset_renter_password]
+@login_id varchar(200),@new_password  varchar(100)
+as
+begin
+Update profile
+set password=@new_password
+where login_id=@login_id
+
+end
+--drop proc reset_renter_password
+
+
+go
 
