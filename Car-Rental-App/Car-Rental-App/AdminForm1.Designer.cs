@@ -83,9 +83,11 @@ namespace Car_Rental_App
             // 
             // little_car
             // 
+            this.little_car.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.little_car, "little_car");
             this.little_car.Name = "little_car";
             this.little_car.TabStop = false;
+            this.little_car.Click += new System.EventHandler(this.little_car_Click);
             // 
             // panel2
             // 

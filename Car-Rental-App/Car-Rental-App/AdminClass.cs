@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Sql;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Car_Rental_App
@@ -51,7 +52,7 @@ namespace Car_Rental_App
                         while (reader.Read())
                         {
                             string task = reader[0].ToString();
-                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd    HH:mm:ss");
+                            string done_date = reader[1].ToString();
                             AdminClass a = new AdminClass(task, done_date);
                             audit_list.Add(a);
                         }
@@ -69,28 +70,29 @@ namespace Car_Rental_App
         public void search_item(string item)
         {
             srch_list.Clear();
-            string commandText = item;
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = Program.my_connection_string;
-            commandText = "select task, done_date from audit where (admin_id=" + "\'" +
-                Profile.current_userid + "\') and (task like " + "\'" + "%" + "\'+" + "\'" + item + "\'" +
-                "+\'" + "%" + "\' or done_date like " + "\'" + "%" + "\'+" + "\'" + item + "\'" + "+\'" + "%" + "\')";
-            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            string commandText = "[search audit] @item, @admid";
+            SqlParameter param_item = new SqlParameter("@item", SqlDbType.VarChar, 1000);
+            SqlParameter param_admid = new SqlParameter("@admid", SqlDbType.VarChar, 100);
+            param_item.Value = item;
+            param_admid.Value = Profile.current_userid;
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
                 {
                     connection.Open();
+                    command.Parameters.Add(param_item);
+                    command.Parameters.Add(param_admid);
+                    command.Prepare();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             string task = reader[0].ToString();
-                            string done_date = DateTime.Parse(reader[1].ToString()).ToString("yyyy-MM-dd    HH:mm:ss");
+                            string done_date = reader[1].ToString();
                             AdminClass a = new AdminClass(task, done_date);
                             srch_list.Add(a);
                         }
                     }
-                    connection.Close();
                 }
             }
         }

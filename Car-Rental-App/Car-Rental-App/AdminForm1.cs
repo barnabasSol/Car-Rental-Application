@@ -86,5 +86,10 @@ namespace Car_Rental_App
             vehiclebtn.IdleForecolor = Color.Black;
             vehiclebtn.IdleLineColor = Color.FromArgb(0xF0F0F0);
         }
+
+        private void little_car_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

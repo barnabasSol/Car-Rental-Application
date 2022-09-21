@@ -169,6 +169,7 @@
     <Compile Include="reusable component\InputField.Designer.cs">
       <DependentUpon>InputField.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleValidation.cs" />
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </EmbeddedResource>

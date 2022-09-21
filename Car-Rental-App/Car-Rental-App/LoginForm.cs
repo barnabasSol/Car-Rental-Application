@@ -27,7 +27,6 @@ namespace Car_Rental_App
             errorProvider2.SetError(login_idtxt, null);
 
             if (p.is_customer(login_idtxt.Text, password_txt.Text)){
-                //the customer form goes here
                 Profile.current_userid = login_idtxt.Text;
                 MessageBox.Show("customer here");
             }

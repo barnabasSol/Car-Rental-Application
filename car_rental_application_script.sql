@@ -44,8 +44,9 @@ select login_id, fullname, sex, phone_number, home_address, activity, reputation
                                 or home_address like '%'+@searchby+'%'
 
 END
-GO
 
+
+GO
 
 
 create proc[update customer change by admin]
@@ -88,8 +89,8 @@ create table [admin](
     login_id varchar(200), 
     salary money,
     branch_loc nvarchar(100),
-    CONSTRAINT fk_br_adm FOREIGN KEY(branch_loc) REFERENCES branch(branch_address),
-    constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id)
+    CONSTRAINT fk_br_adm FOREIGN KEY(branch_loc) REFERENCES branch(branch_address) on update cascade,
+    constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id) on UPDATE cascade
 )
 
  create table cars(
@@ -100,15 +101,29 @@ create table [admin](
      car_capacity int not null,
      car_model varchar(100) not null,
      car_color varchar(50) not null,
-     car_status TINYINT not null,
+     car_status TINYINT,
      car_condition int not null, /*new column*/
      rep_min_req int not null,
-     price_per_hour money not null,
+     price_per_hour Decimal(18, 8) not null,
      car_branch nvarchar(100), 
      login_id varchar(200),
      CONSTRAINT fk_renter_id FOREIGN KEY(login_id) REFERENCES profile(login_id) on update cascade,
      CONSTRAINT fk_car_branch FOREIGN KEY(car_branch) REFERENCES branch(branch_address) on update CASCADE
   )
+
+  GO
+   create proc [insert cars by admin]
+   @lp VARCHAR(200), @cname varchar(100), @ctype varchar(100), @ccapacity int,
+   @cmodel varchar(100), @ccolor VARCHAR(20), @ccondition int, @rep int, @pph Decimal(18,8), @admid varchar(50) 
+   as 
+   BEGIN
+   declare @cbranch NVARCHAR(100)
+   select @cbranch = branch_loc from admin where login_id = @admid
+   insert into cars values (@lp,'verified', @cname, @ctype, @ccapacity, @cmodel, @ccolor,1 ,@ccondition, @rep, @pph, @cbranch, @admid)
+   END
+
+
+  GO
 
 create table payment(
     payment_id int PRIMARY KEY, 
@@ -146,6 +161,14 @@ create table [audit] (
     done_date DATETIME
 )
 
+go
+
+create proc [search audit]
+@item varchar(1000), @adminid varchar(100) 
+as 
+begin
+select task, done_date from [audit] where task LIKE '%'+@item+'%' or done_date LIKE '%'+@item+'%'
+end
 
 
 GO
@@ -169,7 +192,6 @@ END
 
 go
 
-
 insert into [audit] values
                         ('adm10', 'deleted something', CURRENT_TIMESTAMP),
                         ('adm10', 'updated something', CURRENT_TIMESTAMP)
@@ -183,13 +205,11 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
 						   
-						 
 
 insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
 
--- use master
--- drop database car_rental_database
+
 
 --Procedure to insert new Profile
 go
@@ -209,4 +229,25 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            values (@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password ,@profile_type_id,@Activity )
 end
 
+GO
 
+------trigger to keep track of the stats of the brances
+create trigger [updare branch stats] on cars
+for insert 
+as 
+begin
+declare @branch varchar(200)
+set @branch = (select car_branch FROM inserted)
+update branch set branch_vehicles_amount+=1 where branch_address=@branch
+end
+
+
+-- use master
+-- drop database car_rental_database
+
+-- select * from cars
+
+
+-- insert into admin values('adm10', 10000.00, 'cmc');
+
+-- insert into branch values ('cmc', 0, 0);

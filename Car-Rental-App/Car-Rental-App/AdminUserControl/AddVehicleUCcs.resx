@@ -121,14 +121,24 @@
   <data name="addbtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIkAAAAoCAYAAADKZNmCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVHhe7dpBCoMwFEDB3v+Y6j1aIlhaMb4DOIsBFXc+
-        fgLmta7rG+6IhCQSkkhIIiGJhCQSUkaybdvlc57DJOFrNhBEQhIJSSRcGkvPsiz7tUi4NUIRCVMjkDFR
-        RELaI/ldf+DMJCGJhCQSkkhIIiGJhCQSkkhIIiGJhCQSpv5+8B0355dg+E4SkTBjuSGJhPQXyXGmxNkS
-        fk0niVA4TCOxkX2Wu+9tT0ISCUkkJJGQREISCWF9fwDApEjWh5sSvAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJFSURBVHhe7dshz0FRHMfx20RNEzVNI5liBJvAeAsEU0zy
+        DjQSyRRTbIJNEG2CYBNsiinifQf/Z79z5z7Mn9Pv+YXP9oTDE+539557/a/n+74Q/cJIyIqRkBUjIStG
+        QlaMhKx+RvJ4PGQ6nUq1WpVcLifJZFI8z6MIwLHEMS2XyzIej+V2u6kNwNdIlsul+aJKpSKj0UgWi4Xs
+        93u53+8UATiWOKaTyURqtZo51jjOWgsfkaCoRqMh+Xxejsej+g8oes7ns9TrdSkUCnK5XN6aeIsEgaTT
+        aRkOh+oXUfTNZjPJZDJyOp30SHAGYSCEyxD2Kx+RYA+CS4z2IXJPu92WwWDwHwnuYrBx4R6Enq7Xq9l6
+        HA6HIBLcAmGHqy0md/X7fel0OkEkuFfGrZC2kNy12WzM2cREkkqlZLfbqQvJXbjkxGKxIJJ4PG7uk7WF
+        5DbzhBaR4A9tAREjIStGQlaMhKwYCVkxErJiJGQVRoIHJnhwoi0it4WR4Mc9Tp2RJowE00gYNtEWkbvw
+        Uw1+sjGRYG6g1WqpC8ldGEBrNptBJBhVQzHcl9CrYrEo8/k8iAR6vZ50u111MbkHk/N4lQZthJFgOg1z
+        javVSv0QuQMTiriyPN/FCSMBjKphyISzJe5CINlsVtbrddjFWySw3W5NKBhd076EogvTiTiDvAYCH5EA
+        Lj2YbURR2OFyQDq6MGyG/Qfe1CyVSurrnmokTygKt0CJRCJ4qEKRg6lEbFDxzrfWAPyMhAgYCVkxErJi
+        JGTFSMjClz+mNB3oZc8lJQAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
   <data name="errorProvider1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3022,4 +3032,10 @@
         AMADAADAAwAA4AcAAPgfAAD//wAA
 </value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>244, 17</value>
+  </metadata>
 </root>

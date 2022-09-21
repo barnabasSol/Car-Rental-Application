@@ -34,16 +34,26 @@ namespace Car_Rental_App.AdminUserControl
             this.title = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lptxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cnametxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.ctypetxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.carcapacitytxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cmodeltxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.ccolortxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.cconditiontxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pphtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.undobtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.addbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.cartype_cbox = new System.Windows.Forms.ComboBox();
+            this.cartypelbl = new System.Windows.Forms.Label();
+            this.car_capacitylbl = new System.Windows.Forms.Label();
+            this.ccapacity_cbox = new System.Windows.Forms.ComboBox();
+            this.carcolorlbl = new System.Windows.Forms.Label();
+            this.ccolor_cbox = new System.Windows.Forms.ComboBox();
+            this.conditionlbl = new System.Windows.Forms.Label();
+            this.car_condition_slider = new Bunifu.Framework.UI.BunifuSlider();
+            this.car_rep_slider = new Bunifu.Framework.UI.BunifuSlider();
+            this.car_rep = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.ccondition_valuelbl = new System.Windows.Forms.Label();
+            this.repvaluelbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.undobtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +79,7 @@ namespace Car_Rental_App.AdminUserControl
             this.lptxt.LineIdleColor = System.Drawing.Color.DimGray;
             this.lptxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.lptxt.LineThickness = 3;
-            this.lptxt.Location = new System.Drawing.Point(102, 57);
+            this.lptxt.Location = new System.Drawing.Point(103, 39);
             this.lptxt.Margin = new System.Windows.Forms.Padding(4);
             this.lptxt.Name = "lptxt";
             this.lptxt.Size = new System.Drawing.Size(320, 33);
@@ -91,7 +101,7 @@ namespace Car_Rental_App.AdminUserControl
             this.cnametxt.LineIdleColor = System.Drawing.Color.DimGray;
             this.cnametxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.cnametxt.LineThickness = 3;
-            this.cnametxt.Location = new System.Drawing.Point(102, 107);
+            this.cnametxt.Location = new System.Drawing.Point(102, 93);
             this.cnametxt.Margin = new System.Windows.Forms.Padding(4);
             this.cnametxt.Name = "cnametxt";
             this.cnametxt.Size = new System.Drawing.Size(320, 33);
@@ -100,48 +110,6 @@ namespace Car_Rental_App.AdminUserControl
             this.cnametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.cnametxt.Enter += new System.EventHandler(this.cnametxt_Enter);
             this.cnametxt.Leave += new System.EventHandler(this.cnametxt_Leave);
-            // 
-            // ctypetxt
-            // 
-            this.ctypetxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ctypetxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.ctypetxt.ForeColor = System.Drawing.Color.Gray;
-            this.ctypetxt.HintForeColor = System.Drawing.Color.Empty;
-            this.ctypetxt.HintText = "";
-            this.ctypetxt.isPassword = false;
-            this.ctypetxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.ctypetxt.LineIdleColor = System.Drawing.Color.DimGray;
-            this.ctypetxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.ctypetxt.LineThickness = 3;
-            this.ctypetxt.Location = new System.Drawing.Point(102, 161);
-            this.ctypetxt.Margin = new System.Windows.Forms.Padding(4);
-            this.ctypetxt.Name = "ctypetxt";
-            this.ctypetxt.Size = new System.Drawing.Size(320, 33);
-            this.ctypetxt.TabIndex = 8;
-            this.ctypetxt.Text = "enter car type";
-            this.ctypetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ctypetxt.Enter += new System.EventHandler(this.ctypetxt_Enter);
-            this.ctypetxt.Leave += new System.EventHandler(this.ctypetxt_Leave);
-            // 
-            // carcapacitytxt
-            // 
-            this.carcapacitytxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.carcapacitytxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.carcapacitytxt.ForeColor = System.Drawing.Color.Gray;
-            this.carcapacitytxt.HintForeColor = System.Drawing.Color.Empty;
-            this.carcapacitytxt.HintText = "";
-            this.carcapacitytxt.isPassword = false;
-            this.carcapacitytxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.carcapacitytxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.carcapacitytxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.carcapacitytxt.LineThickness = 3;
-            this.carcapacitytxt.Location = new System.Drawing.Point(102, 216);
-            this.carcapacitytxt.Margin = new System.Windows.Forms.Padding(4);
-            this.carcapacitytxt.Name = "carcapacitytxt";
-            this.carcapacitytxt.Size = new System.Drawing.Size(320, 33);
-            this.carcapacitytxt.TabIndex = 8;
-            this.carcapacitytxt.Text = "enter car capacity";
-            this.carcapacitytxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // cmodeltxt
             // 
@@ -155,7 +123,7 @@ namespace Car_Rental_App.AdminUserControl
             this.cmodeltxt.LineIdleColor = System.Drawing.Color.DimGray;
             this.cmodeltxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.cmodeltxt.LineThickness = 3;
-            this.cmodeltxt.Location = new System.Drawing.Point(102, 272);
+            this.cmodeltxt.Location = new System.Drawing.Point(102, 266);
             this.cmodeltxt.Margin = new System.Windows.Forms.Padding(4);
             this.cmodeltxt.Name = "cmodeltxt";
             this.cmodeltxt.Size = new System.Drawing.Size(320, 33);
@@ -164,48 +132,6 @@ namespace Car_Rental_App.AdminUserControl
             this.cmodeltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.cmodeltxt.Enter += new System.EventHandler(this.cmodeltxt_Enter);
             this.cmodeltxt.Leave += new System.EventHandler(this.cmodeltxt_Leave);
-            // 
-            // ccolortxt
-            // 
-            this.ccolortxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ccolortxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.ccolortxt.ForeColor = System.Drawing.Color.Gray;
-            this.ccolortxt.HintForeColor = System.Drawing.Color.Empty;
-            this.ccolortxt.HintText = "";
-            this.ccolortxt.isPassword = false;
-            this.ccolortxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
-            this.ccolortxt.LineIdleColor = System.Drawing.Color.DimGray;
-            this.ccolortxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
-            this.ccolortxt.LineThickness = 3;
-            this.ccolortxt.Location = new System.Drawing.Point(102, 329);
-            this.ccolortxt.Margin = new System.Windows.Forms.Padding(4);
-            this.ccolortxt.Name = "ccolortxt";
-            this.ccolortxt.Size = new System.Drawing.Size(320, 33);
-            this.ccolortxt.TabIndex = 8;
-            this.ccolortxt.Text = "enter car color";
-            this.ccolortxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ccolortxt.Enter += new System.EventHandler(this.ccolortxt_Enter);
-            this.ccolortxt.Leave += new System.EventHandler(this.ccolortxt_Leave);
-            // 
-            // cconditiontxt
-            // 
-            this.cconditiontxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cconditiontxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cconditiontxt.ForeColor = System.Drawing.Color.Gray;
-            this.cconditiontxt.HintForeColor = System.Drawing.Color.Empty;
-            this.cconditiontxt.HintText = "";
-            this.cconditiontxt.isPassword = false;
-            this.cconditiontxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.cconditiontxt.LineIdleColor = System.Drawing.Color.DimGray;
-            this.cconditiontxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.cconditiontxt.LineThickness = 3;
-            this.cconditiontxt.Location = new System.Drawing.Point(102, 383);
-            this.cconditiontxt.Margin = new System.Windows.Forms.Padding(4);
-            this.cconditiontxt.Name = "cconditiontxt";
-            this.cconditiontxt.Size = new System.Drawing.Size(320, 33);
-            this.cconditiontxt.TabIndex = 8;
-            this.cconditiontxt.Text = "car condition";
-            this.cconditiontxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // pphtxt
             // 
@@ -219,26 +145,29 @@ namespace Car_Rental_App.AdminUserControl
             this.pphtxt.LineIdleColor = System.Drawing.Color.DimGray;
             this.pphtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.pphtxt.LineThickness = 3;
-            this.pphtxt.Location = new System.Drawing.Point(102, 437);
+            this.pphtxt.Location = new System.Drawing.Point(102, 491);
             this.pphtxt.Margin = new System.Windows.Forms.Padding(4);
             this.pphtxt.Name = "pphtxt";
             this.pphtxt.Size = new System.Drawing.Size(320, 33);
             this.pphtxt.TabIndex = 8;
             this.pphtxt.Text = "price per hour";
             this.pphtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.pphtxt.Enter += new System.EventHandler(this.pphtxt_Enter);
+            this.pphtxt.Leave += new System.EventHandler(this.pphtxt_Leave);
             // 
-            // bunifuImageButton1
+            // undobtn
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bunifuImageButton1.Image = global::Car_Rental_App.Properties.Resources.undo_circular_arrow;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(322, 508);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 41);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 13;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.undobtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.undobtn.Image = global::Car_Rental_App.Properties.Resources.undo_circular_arrow;
+            this.undobtn.ImageActive = null;
+            this.undobtn.Location = new System.Drawing.Point(304, 532);
+            this.undobtn.Name = "undobtn";
+            this.undobtn.Size = new System.Drawing.Size(43, 41);
+            this.undobtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.undobtn.TabIndex = 13;
+            this.undobtn.TabStop = false;
+            this.undobtn.Visible = false;
+            this.undobtn.Zoom = 10;
             // 
             // addbtn
             // 
@@ -247,7 +176,7 @@ namespace Car_Rental_App.AdminUserControl
             this.addbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.addbtn.ActiveForecolor = System.Drawing.Color.White;
             this.addbtn.ActiveLineColor = System.Drawing.Color.White;
-            this.addbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.addbtn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.addbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addbtn.BackgroundImage")));
             this.addbtn.ButtonText = "Add";
             this.addbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -257,8 +186,8 @@ namespace Car_Rental_App.AdminUserControl
             this.addbtn.IdleCornerRadius = 20;
             this.addbtn.IdleFillColor = System.Drawing.SystemColors.ControlLight;
             this.addbtn.IdleForecolor = System.Drawing.Color.Black;
-            this.addbtn.IdleLineColor = System.Drawing.SystemColors.ControlLight;
-            this.addbtn.Location = new System.Drawing.Point(165, 509);
+            this.addbtn.IdleLineColor = System.Drawing.Color.Black;
+            this.addbtn.Location = new System.Drawing.Point(160, 533);
             this.addbtn.Margin = new System.Windows.Forms.Padding(5);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(137, 40);
@@ -271,25 +200,184 @@ namespace Car_Rental_App.AdminUserControl
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // cartype_cbox
+            // 
+            this.cartype_cbox.FormattingEnabled = true;
+            this.cartype_cbox.Items.AddRange(new object[] {
+            "coupe",
+            "hatchback",
+            "minivan",
+            "sports car",
+            "van",
+            "supercar",
+            "bus",
+            "other"});
+            this.cartype_cbox.Location = new System.Drawing.Point(102, 166);
+            this.cartype_cbox.Name = "cartype_cbox";
+            this.cartype_cbox.Size = new System.Drawing.Size(320, 21);
+            this.cartype_cbox.TabIndex = 14;
+            // 
+            // cartypelbl
+            // 
+            this.cartypelbl.AutoSize = true;
+            this.cartypelbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartypelbl.Location = new System.Drawing.Point(99, 142);
+            this.cartypelbl.Name = "cartypelbl";
+            this.cartypelbl.Size = new System.Drawing.Size(61, 17);
+            this.cartypelbl.TabIndex = 15;
+            this.cartypelbl.Text = "car type:";
+            // 
+            // car_capacitylbl
+            // 
+            this.car_capacitylbl.AutoSize = true;
+            this.car_capacitylbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.car_capacitylbl.Location = new System.Drawing.Point(99, 206);
+            this.car_capacitylbl.Name = "car_capacitylbl";
+            this.car_capacitylbl.Size = new System.Drawing.Size(88, 17);
+            this.car_capacitylbl.TabIndex = 17;
+            this.car_capacitylbl.Text = "car capacity:";
+            // 
+            // ccapacity_cbox
+            // 
+            this.ccapacity_cbox.FormattingEnabled = true;
+            this.ccapacity_cbox.Items.AddRange(new object[] {
+            "2 seats",
+            "4 seats",
+            "8 seats",
+            "12 seats",
+            "24 seats"});
+            this.ccapacity_cbox.Location = new System.Drawing.Point(102, 230);
+            this.ccapacity_cbox.Name = "ccapacity_cbox";
+            this.ccapacity_cbox.Size = new System.Drawing.Size(320, 21);
+            this.ccapacity_cbox.TabIndex = 16;
+            // 
+            // carcolorlbl
+            // 
+            this.carcolorlbl.AutoSize = true;
+            this.carcolorlbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carcolorlbl.Location = new System.Drawing.Point(99, 312);
+            this.carcolorlbl.Name = "carcolorlbl";
+            this.carcolorlbl.Size = new System.Drawing.Size(65, 17);
+            this.carcolorlbl.TabIndex = 19;
+            this.carcolorlbl.Text = "car color:";
+            // 
+            // ccolor_cbox
+            // 
+            this.ccolor_cbox.FormattingEnabled = true;
+            this.ccolor_cbox.Items.AddRange(new object[] {
+            "gray",
+            "silver",
+            "black",
+            "red",
+            "yellow",
+            "orange",
+            "other"});
+            this.ccolor_cbox.Location = new System.Drawing.Point(102, 336);
+            this.ccolor_cbox.Name = "ccolor_cbox";
+            this.ccolor_cbox.Size = new System.Drawing.Size(320, 21);
+            this.ccolor_cbox.TabIndex = 18;
+            // 
+            // conditionlbl
+            // 
+            this.conditionlbl.AutoSize = true;
+            this.conditionlbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conditionlbl.Location = new System.Drawing.Point(99, 373);
+            this.conditionlbl.Name = "conditionlbl";
+            this.conditionlbl.Size = new System.Drawing.Size(91, 17);
+            this.conditionlbl.TabIndex = 19;
+            this.conditionlbl.Text = "car condition:";
+            // 
+            // car_condition_slider
+            // 
+            this.car_condition_slider.BackColor = System.Drawing.Color.Transparent;
+            this.car_condition_slider.BackgroudColor = System.Drawing.Color.DarkGray;
+            this.car_condition_slider.BorderRadius = 0;
+            this.car_condition_slider.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.car_condition_slider.Location = new System.Drawing.Point(103, 393);
+            this.car_condition_slider.MaximumValue = 10;
+            this.car_condition_slider.Name = "car_condition_slider";
+            this.car_condition_slider.Size = new System.Drawing.Size(320, 30);
+            this.car_condition_slider.TabIndex = 20;
+            this.car_condition_slider.Value = 0;
+            this.car_condition_slider.ValueChanged += new System.EventHandler(this.car_condition_slider_ValueChanged);
+            this.car_condition_slider.MouseHover += new System.EventHandler(this.car_condition_slider_MouseHover);
+            // 
+            // car_rep_slider
+            // 
+            this.car_rep_slider.BackColor = System.Drawing.Color.Transparent;
+            this.car_rep_slider.BackgroudColor = System.Drawing.Color.DarkGray;
+            this.car_rep_slider.BorderRadius = 0;
+            this.car_rep_slider.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.car_rep_slider.Location = new System.Drawing.Point(103, 451);
+            this.car_rep_slider.MaximumValue = 10;
+            this.car_rep_slider.Name = "car_rep_slider";
+            this.car_rep_slider.Size = new System.Drawing.Size(320, 30);
+            this.car_rep_slider.TabIndex = 20;
+            this.car_rep_slider.Value = 0;
+            this.car_rep_slider.ValueChanged += new System.EventHandler(this.car_Rep_slider_ValueChanged);
+            // 
+            // car_rep
+            // 
+            this.car_rep.AutoSize = true;
+            this.car_rep.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.car_rep.Location = new System.Drawing.Point(100, 426);
+            this.car_rep.Name = "car_rep";
+            this.car_rep.Size = new System.Drawing.Size(110, 17);
+            this.car_rep.TabIndex = 19;
+            this.car_rep.Text = "car minimum rep:";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipTitle = "hint:";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // ccondition_valuelbl
+            // 
+            this.ccondition_valuelbl.AutoSize = true;
+            this.ccondition_valuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccondition_valuelbl.Location = new System.Drawing.Point(445, 396);
+            this.ccondition_valuelbl.Name = "ccondition_valuelbl";
+            this.ccondition_valuelbl.Size = new System.Drawing.Size(14, 15);
+            this.ccondition_valuelbl.TabIndex = 21;
+            this.ccondition_valuelbl.Text = "0";
+            // 
+            // repvaluelbl
+            // 
+            this.repvaluelbl.AutoSize = true;
+            this.repvaluelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repvaluelbl.Location = new System.Drawing.Point(445, 454);
+            this.repvaluelbl.Name = "repvaluelbl";
+            this.repvaluelbl.Size = new System.Drawing.Size(14, 15);
+            this.repvaluelbl.TabIndex = 21;
+            this.repvaluelbl.Text = "0";
+            // 
             // AddVehicleUCcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.repvaluelbl);
+            this.Controls.Add(this.ccondition_valuelbl);
+            this.Controls.Add(this.car_rep_slider);
+            this.Controls.Add(this.car_condition_slider);
+            this.Controls.Add(this.car_rep);
+            this.Controls.Add(this.conditionlbl);
+            this.Controls.Add(this.carcolorlbl);
+            this.Controls.Add(this.ccolor_cbox);
+            this.Controls.Add(this.car_capacitylbl);
+            this.Controls.Add(this.ccapacity_cbox);
+            this.Controls.Add(this.cartypelbl);
+            this.Controls.Add(this.cartype_cbox);
+            this.Controls.Add(this.undobtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.pphtxt);
-            this.Controls.Add(this.cconditiontxt);
-            this.Controls.Add(this.ccolortxt);
             this.Controls.Add(this.cmodeltxt);
-            this.Controls.Add(this.carcapacitytxt);
-            this.Controls.Add(this.ctypetxt);
             this.Controls.Add(this.cnametxt);
             this.Controls.Add(this.lptxt);
             this.Controls.Add(this.title);
             this.Name = "AddVehicleUCcs";
             this.Size = new System.Drawing.Size(550, 578);
             this.Load += new System.EventHandler(this.AddVehicleUCcs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.undobtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,14 +389,24 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuCustomLabel title;
         private Bunifu.Framework.UI.BunifuMaterialTextbox lptxt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox cnametxt;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox ctypetxt;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox carcapacitytxt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox cmodeltxt;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox ccolortxt;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox cconditiontxt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox pphtxt;
         private Bunifu.Framework.UI.BunifuThinButton2 addbtn;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton undobtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cartype_cbox;
+        private System.Windows.Forms.Label cartypelbl;
+        private System.Windows.Forms.Label carcolorlbl;
+        private System.Windows.Forms.ComboBox ccolor_cbox;
+        private System.Windows.Forms.Label car_capacitylbl;
+        private System.Windows.Forms.ComboBox ccapacity_cbox;
+        private Bunifu.Framework.UI.BunifuSlider car_condition_slider;
+        private System.Windows.Forms.Label conditionlbl;
+        private Bunifu.Framework.UI.BunifuSlider car_rep_slider;
+        private System.Windows.Forms.Label car_rep;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Label repvaluelbl;
+        private System.Windows.Forms.Label ccondition_valuelbl;
     }
 }
