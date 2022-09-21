@@ -42,6 +42,7 @@ select login_id, fullname, sex, phone_number, home_address, activity, reputation
                                 or login_id like '%'+@searchby+'%'
                                 or phone_number like '%'+@searchby+'%'
                                 or home_address like '%'+@searchby+'%'
+                                order by fullname
 
 END
 
@@ -202,14 +203,14 @@ insert into profile_type values(1, 'admin'),
                                (3, 'renter')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
                            values
-                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2),
+                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
 						   
 
 insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
-
-
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                           values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
 
 --Procedure to insert new Profile
 go
