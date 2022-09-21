@@ -232,6 +232,21 @@ end
 
 GO
 
+
+create proc [reset_renter_password]
+@login_id varchar(200),@new_password  varchar(100)
+as
+begin
+Update profile
+set password=@new_password
+where login_id=@login_id
+
+end
+--drop proc reset_renter_password
+
+
+go
+
 ------trigger to keep track of the stats of the brances
 create trigger [updare branch stats] on cars
 for insert 
