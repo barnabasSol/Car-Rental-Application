@@ -125,10 +125,13 @@
   <data name="idlbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 11.25pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="idlbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="idlbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 30</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="idlbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
@@ -159,6 +162,9 @@
   <data name="fullnamelbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
   </data>
+  <data name="fullnamelbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="fullnamelbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>69, 10</value>
   </data>
@@ -182,6 +188,9 @@
   </data>
   <data name="&gt;&gt;fullnamelbl.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 8</value>
@@ -242,6 +251,9 @@
         m3LajRvxh3GiAcQVvuPMPDEYg5oxFg/rTIOKWARi4Y4hSfB5NyeBQsFzI8BuzRxepRjOveOzOIzSbZBI
         L3ARmASwy+DSPIJ/4zEok45mfaXq/+btbbOqqn8BOsej7lVYCUkAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="little_car.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="little_car.Location" type="System.Drawing.Point, System.Drawing">
     <value>768, 4</value>
@@ -394,6 +406,9 @@
         M38DdM3Fk/BY42AAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="settingbtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="settingbtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>701, 6</value>
   </data>
@@ -429,6 +444,9 @@
         l3WQ9ZyXdZD1nJd1kPWcl3WQ9ZyXdZD1nJfb2E6x0J6QtoUOhRQL7QlpasqUJL9XZs1dDJsWqwAAAABJ
         RU5ErkJggg==
 </value>
+  </data>
+  <data name="homebtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="homebtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 6</value>
@@ -478,8 +496,11 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 17</value>
+    <value>229, 42</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 258</value>
@@ -512,7 +533,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="mainpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 340</value>
+    <value>844, 393</value>
   </data>
   <data name="mainpanel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -536,7 +557,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>844, 464</value>
+    <value>844, 517</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

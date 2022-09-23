@@ -66,29 +66,17 @@ create view customer_rep as
     ----------------------------------------------------------
 
 GO
-create trigger [set customer rep trigger]
-on profile 
-for insert 
-as 
-begin
-declare @cusid varchar(100)
-set @cusid = (select login_id from inserted)
-if exists (select profile_type_id from inserted where profile_type_id=2)
-        insert into customer(login_id) values (@cusid)
-END
-
-GO
 
 
 create table branch(
     branch_address nvarchar(100) primary key,
-    branch_vehicles_amount int not null,
+    branch_vehicles_amount int,
     branch_rating decimal(2,1)
 )
 
 create table [admin](
     login_id varchar(200), 
-    salary money,
+    salary_per_month money,
     branch_loc nvarchar(100),
     CONSTRAINT fk_br_adm FOREIGN KEY(branch_loc) REFERENCES branch(branch_address) on update cascade,
     constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id) on UPDATE cascade
@@ -105,7 +93,7 @@ create table [admin](
      car_status TINYINT,
      car_condition int not null, /*new column*/
      rep_min_req int not null,
-     price_per_hour Decimal(18, 8) not null,
+     price_per_hour Decimal(18, 2) not null,
      car_branch nvarchar(100), 
      login_id varchar(200),
      CONSTRAINT fk_renter_id FOREIGN KEY(login_id) REFERENCES profile(login_id) on update cascade,
@@ -138,7 +126,9 @@ create table rental(
     return_date date not null,
     paid_amount money,
     payment_id int,
+    branch_loc NVARCHAR(100),  /*new column*/
     vehicle_return_status int,   /*new column*/
+    CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE
 )
@@ -146,12 +136,12 @@ create table rental(
 
   create table car_reviews(
        rent_id VARCHAR(200),
-       car_rating int default 0,
+       car_rating decimal(2,1) default 0,
        constraint fk_rnt_id FOREIGN KEY (rent_id) REFERENCES rental(rent_id) on update CASCADE
   )
 
 create table rented_cars(
-    r_id VARCHAR(200) PRIMARY KEY,
+    r_id VARCHAR(200),
     license_plate_no varchar(200)
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
     CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade
@@ -161,6 +151,7 @@ create table [audit] (
     task varchar(1000),
     done_date DATETIME
 )
+
 
 go
 
@@ -197,6 +188,7 @@ insert into [audit] values
                         ('adm10', 'deleted something', CURRENT_TIMESTAMP),
                         ('adm10', 'updated something', CURRENT_TIMESTAMP)
 
+insert into branch values ('summit', 0, null), ('cmc', 0, null), ('hayat', 0, null)
 
 insert into profile_type values(1, 'admin'),
                                (2, 'customer'),
@@ -206,12 +198,29 @@ insert into profile(login_id, first_name, last_name, sex, phone_number, home_add
                            ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
                            ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
 						   
+insert into admin values('adm10', 10000, 'cmc')
 
-insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                           values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
-insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                           values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+insert into payment values(1, 'credit card')
 
+go
+
+ create trigger [set customer rep trigger]
+ on profile 
+ for insert 
+ as 
+ begin
+ declare @cusid varchar(100)
+ set @cusid = (select login_id from inserted)
+ if exists (select profile_type_id from inserted where profile_type_id=2)
+         insert into customer(login_id) values (@cusid)
+ END
+
+ go
+
+ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
+ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
 --Procedure to insert new Profile
 go
 CREATE PROCEDURE Insert_Profile
@@ -242,13 +251,19 @@ set password=@new_password
 where login_id=@login_id
 
 end
---drop proc reset_renter_password
+GO
 
+create PROC [undo added vehicle]
+@lp VARCHAR(200)
+AS
+BEGIN
+DELETE from cars where license_plate_no=@lp
+END
 
 go
 
 ------trigger to keep track of the stats of the brances
-create trigger [updare branch stats] on cars
+create trigger [update branch stats] on cars
 for insert 
 as 
 begin
@@ -257,12 +272,44 @@ set @branch = (select car_branch FROM inserted)
 update branch set branch_vehicles_amount+=1 where branch_address=@branch
 end
 
+go
 
--- use master
--- drop database car_rental_database
+create trigger [update reviews on branches] on car_reviews
+for insert 
+AS
+BEGIN
+declare @branch nvarchar(100)
+declare @newrating Decimal(18, 8)
+declare @temp_table table(
+		average_rating Decimal(18,8),
+		b_location nvarchar(100)
+)
+declare cur_branches cursor 
+for select branch_address from branch
+open cur_branches
+fetch next from cur_branches into @branch
+insert @temp_table
+	select avg(car_reviews.car_rating) as avgrating, rental.branch_loc as [location] from
+	rental join car_reviews on rental.rent_id = car_reviews.rent_id where branch_loc=@branch group by branch_loc
+while @@FETCH_STATUS=0
+	begin
+		set @newrating = (select average_rating from @temp_table)
+		update branch set branch_rating = @newrating where branch_address=@branch
+		fetch next from cur_branches into @branch
+		delete from @temp_table
+		insert @temp_table
+			select avg(car_reviews.car_rating) as avgrating, rental.branch_loc as [location] from
+			rental join car_reviews on rental.rent_id = car_reviews.rent_id where branch_loc=@branch group by branch_loc
+	end
+	close cur_branches
+	deallocate cur_branches
+END
 
--- select * from cars
+ GO
 
+
+ --use master
+ --drop database car_rental_database
 
 -- insert into admin values('adm10', 10000.00, 'cmc');
 

@@ -104,6 +104,18 @@
     <Compile Include="AdminUserControl\SettingUserControl.Designer.cs">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUserControl\VehicleCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\VehicleCard.Designer.cs">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\VehicleListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\VehicleListUC.Designer.cs">
+      <DependentUpon>VehicleListUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserControl\VehicleUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +206,12 @@
     <EmbeddedResource Include="AdminUserControl\SettingUserControl.resx">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\VehicleCard.resx">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\VehicleListUC.resx">
+      <DependentUpon>VehicleListUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\VehicleUC.resx">
       <DependentUpon>VehicleUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +288,8 @@
     <None Include="Resources\administrator.png" />
     <None Include="Resources\addcar.png" />
     <None Include="Resources\add.png" />
+    <None Include="Resources\car.png" />
+    <None Include="Resources\car %281%29.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />
@@ -281,6 +301,7 @@
     <Content Include="Resources\male3.png" />
     <None Include="Resources\searchingcar.png" />
     <None Include="Resources\undo-circular-arrow.png" />
+    <None Include="Resources\sports-car.png" />
     <Content Include="Resources\visible.png" />
     <None Include="Resources\icons8-search-more-30.png" />
     <Content Include="Resources\icons8-settings-50.png" />

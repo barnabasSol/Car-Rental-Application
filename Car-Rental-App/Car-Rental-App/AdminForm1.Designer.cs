@@ -33,23 +33,23 @@ namespace Car_Rental_App
             this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.little_car = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.mainpanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.vehiclebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.customerbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.homebtn = new Bunifu.Framework.UI.BunifuImageButton();
-            this.mainpanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.little_car = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).BeginInit();
             this.mainpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             this.SuspendLayout();
             // 
             // idlbl
@@ -74,21 +74,6 @@ namespace Car_Rental_App
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // little_car
-            // 
-            this.little_car.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.little_car, "little_car");
-            this.little_car.Name = "little_car";
-            this.little_car.TabStop = false;
-            this.little_car.Click += new System.EventHandler(this.little_car_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.vehiclebtn);
@@ -97,6 +82,19 @@ namespace Car_Rental_App
             this.panel2.Controls.Add(this.homebtn);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // mainpanel
+            // 
+            this.mainpanel.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.mainpanel, "mainpanel");
+            this.mainpanel.Name = "mainpanel";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.administrator;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // vehiclebtn
             // 
@@ -162,18 +160,20 @@ namespace Car_Rental_App
             this.homebtn.Zoom = 10;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
-            // mainpanel
+            // pictureBox1
             // 
-            this.mainpanel.Controls.Add(this.pictureBox2);
-            resources.ApplyResources(this.mainpanel, "mainpanel");
-            this.mainpanel.Name = "mainpanel";
+            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.administrator_2_48;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // little_car
             // 
-            this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.administrator;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.little_car.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.little_car, "little_car");
+            this.little_car.Name = "little_car";
+            this.little_car.TabStop = false;
+            this.little_car.Click += new System.EventHandler(this.little_car_Click);
             // 
             // AdminForm1
             // 
@@ -188,13 +188,13 @@ namespace Car_Rental_App
             this.Load += new System.EventHandler(this.AdminForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).EndInit();
             this.mainpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homebtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.little_car)).EndInit();
             this.ResumeLayout(false);
 
         }

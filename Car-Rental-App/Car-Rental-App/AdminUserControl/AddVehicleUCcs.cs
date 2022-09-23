@@ -13,6 +13,9 @@ namespace Car_Rental_App.AdminUserControl
 {
     public partial class AddVehicleUCcs : UserControl
     {
+        private string temp_lp;
+        private bool undo_btn_clicked = false;
+        List<string> temp_old_data = new List<string>();
         public AddVehicleUCcs()
         {
             InitializeComponent();
@@ -134,7 +137,8 @@ namespace Car_Rental_App.AdminUserControl
             if (all_safe)
             {
                 undobtn.Visible = true;
-                int car_capacity = 0;
+                temp_lp = lptxt.Text;
+                int car_capacity;
                 if (int.TryParse(cartype_cbox.Text, out int result1) == true)
                 {
                     car_capacity = int.Parse(cartype_cbox.Text);
@@ -144,10 +148,51 @@ namespace Car_Rental_App.AdminUserControl
                       string[] temp = ccapacity_cbox.Text.Split(' ');
                       car_capacity = int.Parse(temp[0]);
                 }
-                addVehicle(lptxt.Text, cnametxt.Text, cartype_cbox.Text, car_capacity, cmodeltxt.Text, ccolor_cbox.Text, car_condition_slider.Value, car_rep_slider.Value, decimal.Parse(pphtxt.Text), Profile.current_userid);
+                addVehicle(lptxt.Text, cnametxt.Text, cartype_cbox.Text, car_capacity,
+                    cmodeltxt.Text, ccolor_cbox.Text, car_condition_slider.Value, car_rep_slider.Value,
+                    decimal.Parse(pphtxt.Text), Profile.current_userid);
                 MessageBox.Show("successfully added", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                clear_content();
             }
+        }
+
+        void undo(string license_plate_no)
+        {
+
+            string query = "[undo added vehicle] @lp";
+            SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
+            lp_param.Value = license_plate_no;
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    command.Parameters.Add(lp_param);
+                    command.Prepare();
+                    command.ExecuteNonQuery();
+                }
+            }
+
+        }
+
+        private void undobtn_Click(object sender, EventArgs e)
+        {
+            undo_btn_clicked = true;
+
+            undo(temp_lp);
+        }
+
+        void clear_content()
+        {
+            lptxt.Text = "";
+            cnametxt.Text = "";
+            cartype_cbox.Text = "";
+            ccapacity_cbox.Text = "";
+            cmodeltxt.Text = "";
+            ccolor_cbox.Text = "";
+            car_condition_slider.Value = 0;
+            car_rep_slider.Value = 0;
+            pphtxt.Text = "";
         }
 
         public void addVehicle (string lp, string cname, string ctype, int ccapacity, string cmodel, string ccolor, int ccondition, int rep, Decimal pph, string adminid)
@@ -162,7 +207,6 @@ namespace Car_Rental_App.AdminUserControl
             SqlParameter ccondition_param = new SqlParameter("@ccondition", SqlDbType.Int, 100);
             SqlParameter rep_param = new SqlParameter("@rep", SqlDbType.Int, 100);
             SqlParameter pph_param = new SqlParameter("@pph", SqlDbType.Decimal, 18);
-
             SqlParameter admid_param = new SqlParameter("@admid", SqlDbType.VarChar, 100);
 
             lp_param.Value = lp;
@@ -191,7 +235,7 @@ namespace Car_Rental_App.AdminUserControl
                         command.Parameters.Add(rep_param);
                         command.Parameters.Add(pph_param);
                         command.Parameters["@pph"].Precision = 18;
-                        command.Parameters["@pph"].Scale = 8;
+                        command.Parameters["@pph"].Scale = 2;
                         command.Parameters.Add(admid_param);
                         command.Prepare();
                         command.ExecuteNonQuery();
@@ -280,5 +324,6 @@ namespace Car_Rental_App.AdminUserControl
                 pphtxt.ForeColor = Color.Black;
             }
         }
+
     }
 }

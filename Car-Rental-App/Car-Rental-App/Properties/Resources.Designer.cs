@@ -113,6 +113,26 @@ namespace Car_Rental_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car {
+            get {
+                object obj = ResourceManager.GetObject("car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car__1_ {
+            get {
+                object obj = ResourceManager.GetObject("car (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap down_arrow {
             get {
                 object obj = ResourceManager.GetObject("down-arrow", resourceCulture);
@@ -306,6 +326,16 @@ namespace Car_Rental_App.Properties {
         internal static System.Drawing.Bitmap searchingcar {
             get {
                 object obj = ResourceManager.GetObject("searchingcar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sports_car {
+            get {
+                object obj = ResourceManager.GetObject("sports-car", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

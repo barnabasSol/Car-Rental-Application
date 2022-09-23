@@ -63,7 +63,7 @@ namespace Car_Rental_App
             bool isCustomer = false;
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = Program.my_connection_string;
-            string commandText = "select login_id, password from profile where profile_type_id=2";
+            string commandText = "select login_id, password from profile where profile_type_id=2 and activity=1";
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
@@ -89,7 +89,7 @@ namespace Car_Rental_App
         public bool is_admin(string login_id, string password)
         {
             bool isAdmin = false;
-            string commandText = "select login_id, password from profile where profile_type_id=1";
+            string commandText = "select login_id, password from profile where profile_type_id=1 and activity=1";
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))
@@ -115,7 +115,7 @@ namespace Car_Rental_App
         public bool is_renter(string login_id, string password)
         {
             bool isRenter = false;
-            string commandText = "select login_id, password from profile where profile_type_id=3";
+            string commandText = "select login_id, password from profile where profile_type_id=3 and activity=1";
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(commandText, connection))

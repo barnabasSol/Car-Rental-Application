@@ -27,8 +27,24 @@ namespace Car_Rental_App.AdminUserControl
 
         private void addvehiclebtn_Click(object sender, EventArgs e)
         {
+            searchv.Visible = false;
+            srchimg.Visible = false;
             AddVehicleUCcs av = new AddVehicleUCcs();
             add_user_control(av);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            searchv.Visible = true;
+            srchimg.Visible = true;
+            VehicleListUC vc = new VehicleListUC();
+            vpanel.Controls.Clear();
+            vpanel.Controls.Add(vc);
+        }
+
+        private void searchv_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
