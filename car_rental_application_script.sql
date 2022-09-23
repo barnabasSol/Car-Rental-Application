@@ -32,6 +32,21 @@ create table customer(
 
 GO
 
+create proc auto_Generate  @AdmID char(6) = 'adm000'
+as
+begin
+DECLARE @nextNumber int =0 
+SELECT @nextNumber = CAST( SubString( @AdmID, 4, 3) AS INT )
+SET @nextNumber = @nextNumber + 1
+SELECT CONCAT ('adm'
+, CASE
+WHEN @nextNumber < 10 THEN '00'
+WHEN @nextNumber < 100 THEN '0'
+ELSE ''
+END
+, CAST( @nextNumber AS char(3)) )
+
+End
 
 create proc [search customer]
 @searchby varchar(100)
