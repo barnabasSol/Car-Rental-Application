@@ -162,6 +162,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // cartype_cbox
             // 
+            this.cartype_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cartype_cbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cartype_cbox.FormattingEnabled = true;
             this.cartype_cbox.Items.AddRange(new object[] {
             "coupe",
@@ -223,6 +225,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // ccolor_cbox
             // 
+            this.ccolor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ccolor_cbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ccolor_cbox.FormattingEnabled = true;
             this.ccolor_cbox.Items.AddRange(new object[] {
             "gray",

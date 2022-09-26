@@ -29,31 +29,20 @@ namespace Car_Rental_App.AdminUserControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.allcarspanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // allcarspanel
-            // 
-            this.allcarspanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allcarspanel.Location = new System.Drawing.Point(0, 0);
-            this.allcarspanel.Name = "allcarspanel";
-            this.allcarspanel.Size = new System.Drawing.Size(550, 578);
-            this.allcarspanel.TabIndex = 0;
-            // 
-            // VehicleCard
+            // VehicleListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.allcarspanel);
-            this.Name = "VehicleCard";
-            this.Size = new System.Drawing.Size(550, 578);
+            this.Name = "VehicleListUC";
+            this.Size = new System.Drawing.Size(576, 561);
+            this.Load += new System.EventHandler(this.VehicleListUC_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel allcarspanel;
     }
 }

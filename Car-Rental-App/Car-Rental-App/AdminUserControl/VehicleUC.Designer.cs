@@ -29,55 +29,71 @@ namespace Car_Rental_App.AdminUserControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.vpanel = new System.Windows.Forms.Panel();
-            this.searchv = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.srchimg = new System.Windows.Forms.PictureBox();
+            this.filterbycbox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flbl = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.addvehiclebtn = new Bunifu.Framework.UI.BunifuImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).BeginInit();
+            this.searchvtxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.vpanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.srchimg = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).BeginInit();
             this.SuspendLayout();
             // 
-            // vpanel
+            // filterbycbox
             // 
-            this.vpanel.AutoScroll = true;
-            this.vpanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.vpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vpanel.Location = new System.Drawing.Point(127, 59);
-            this.vpanel.Name = "vpanel";
-            this.vpanel.Size = new System.Drawing.Size(611, 337);
-            this.vpanel.TabIndex = 5;
+            this.filterbycbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterbycbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.filterbycbox.FormattingEnabled = true;
+            this.filterbycbox.Items.AddRange(new object[] {
+            "verified",
+            "unverified",
+            "car condition (asc)",
+            "car condition (desc)",
+            "price (asc)",
+            "price (desc)"});
+            this.filterbycbox.Location = new System.Drawing.Point(5, 115);
+            this.filterbycbox.Name = "filterbycbox";
+            this.filterbycbox.Size = new System.Drawing.Size(126, 21);
+            this.filterbycbox.TabIndex = 11;
+            this.filterbycbox.Visible = false;
+            this.filterbycbox.SelectedIndexChanged += new System.EventHandler(this.filterbycbox_SelectedIndexChanged);
             // 
-            // searchv
+            // panel1
             // 
-            this.searchv.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
-            this.searchv.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchv.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
-            this.searchv.BorderThickness = 3;
-            this.searchv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchv.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.searchv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchv.isPassword = false;
-            this.searchv.Location = new System.Drawing.Point(220, 8);
-            this.searchv.Margin = new System.Windows.Forms.Padding(4);
-            this.searchv.Name = "searchv";
-            this.searchv.Size = new System.Drawing.Size(370, 44);
-            this.searchv.TabIndex = 9;
-            this.searchv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.searchv.Visible = false;
-            this.searchv.OnValueChanged += new System.EventHandler(this.searchv_OnValueChanged);
+            this.panel1.Controls.Add(this.flbl);
+            this.panel1.Controls.Add(this.filterbycbox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(710, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(134, 396);
+            this.panel1.TabIndex = 12;
             // 
-            // srchimg
+            // flbl
             // 
-            this.srchimg.Image = global::Car_Rental_App.Properties.Resources.icons8_search_30;
-            this.srchimg.Location = new System.Drawing.Point(593, 14);
-            this.srchimg.Name = "srchimg";
-            this.srchimg.Size = new System.Drawing.Size(40, 32);
-            this.srchimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.srchimg.TabIndex = 10;
-            this.srchimg.TabStop = false;
-            this.srchimg.Visible = false;
+            this.flbl.AutoSize = true;
+            this.flbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flbl.Location = new System.Drawing.Point(36, 83);
+            this.flbl.Name = "flbl";
+            this.flbl.Size = new System.Drawing.Size(55, 17);
+            this.flbl.TabIndex = 30;
+            this.flbl.Text = "filter by:";
+            this.flbl.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.addvehiclebtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 396);
+            this.panel2.TabIndex = 13;
             // 
             // bunifuImageButton1
             // 
@@ -85,7 +101,7 @@ namespace Car_Rental_App.AdminUserControl
             this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton1.Image = global::Car_Rental_App.Properties.Resources.searchingcar;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(43, 86);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(41, 73);
             this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(61, 63);
@@ -101,7 +117,7 @@ namespace Car_Rental_App.AdminUserControl
             this.addvehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addvehiclebtn.Image = global::Car_Rental_App.Properties.Resources.addcar;
             this.addvehiclebtn.ImageActive = null;
-            this.addvehiclebtn.Location = new System.Drawing.Point(43, 278);
+            this.addvehiclebtn.Location = new System.Drawing.Point(41, 248);
             this.addvehiclebtn.Margin = new System.Windows.Forms.Padding(2);
             this.addvehiclebtn.Name = "addvehiclebtn";
             this.addvehiclebtn.Size = new System.Drawing.Size(61, 63);
@@ -111,20 +127,64 @@ namespace Car_Rental_App.AdminUserControl
             this.addvehiclebtn.Zoom = 10;
             this.addvehiclebtn.Click += new System.EventHandler(this.addvehiclebtn_Click);
             // 
+            // searchvtxt
+            // 
+            this.searchvtxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.searchvtxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.searchvtxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.searchvtxt.BorderThickness = 3;
+            this.searchvtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchvtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.searchvtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.searchvtxt.isPassword = false;
+            this.searchvtxt.Location = new System.Drawing.Point(217, 2);
+            this.searchvtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.searchvtxt.Name = "searchvtxt";
+            this.searchvtxt.Size = new System.Drawing.Size(370, 44);
+            this.searchvtxt.TabIndex = 14;
+            this.searchvtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchvtxt.Visible = false;
+            this.searchvtxt.OnValueChanged += new System.EventHandler(this.searchvtxt_OnValueChanged);
+            // 
+            // vpanel
+            // 
+            this.vpanel.AutoScroll = true;
+            this.vpanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.vpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vpanel.Location = new System.Drawing.Point(110, 60);
+            this.vpanel.Name = "vpanel";
+            this.vpanel.Size = new System.Drawing.Size(600, 336);
+            this.vpanel.TabIndex = 16;
+            // 
+            // srchimg
+            // 
+            this.srchimg.Image = global::Car_Rental_App.Properties.Resources.icons8_search_30;
+            this.srchimg.Location = new System.Drawing.Point(596, 8);
+            this.srchimg.Name = "srchimg";
+            this.srchimg.Size = new System.Drawing.Size(40, 32);
+            this.srchimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.srchimg.TabIndex = 15;
+            this.srchimg.TabStop = false;
+            this.srchimg.Visible = false;
+            // 
             // VehicleUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.srchimg);
-            this.Controls.Add(this.searchv);
             this.Controls.Add(this.vpanel);
-            this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.addvehiclebtn);
+            this.Controls.Add(this.srchimg);
+            this.Controls.Add(this.searchvtxt);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "VehicleUC";
             this.Size = new System.Drawing.Size(844, 396);
-            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,8 +193,12 @@ namespace Car_Rental_App.AdminUserControl
 
         private Bunifu.Framework.UI.BunifuImageButton addvehiclebtn;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.Panel vpanel;
-        private Bunifu.Framework.UI.BunifuMetroTextbox searchv;
+        private System.Windows.Forms.ComboBox filterbycbox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox searchvtxt;
         private System.Windows.Forms.PictureBox srchimg;
+        private System.Windows.Forms.FlowLayoutPanel vpanel;
+        private System.Windows.Forms.Label flbl;
     }
 }

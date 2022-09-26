@@ -48,6 +48,8 @@ END
 
 End
 
+GO
+
 create proc [search customer]
 @searchby varchar(100)
 AS
@@ -142,7 +144,6 @@ create table rental(
     paid_amount money,
     payment_id int,
     branch_loc NVARCHAR(100),  /*new column*/
-    vehicle_return_status int,   /*new column*/
     CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE
@@ -320,7 +321,50 @@ while @@FETCH_STATUS=0
 	deallocate cur_branches
 END
 
- GO
+GO
+create view vcc_view 
+as
+select  cars.license_plate_no, car_name, car_type, verification, car_status, car_condition c_login_id from
+cars
+full join (select rental.c_login_id, license_plate_no from rented_cars right join
+rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
+
+go
+
+create proc [vehicle card content] 
+AS
+begin 
+select * from vcc_view
+END
+
+GO
+
+create PROC [disable car]
+@lp varchar(200)
+AS
+BEGIN
+update cars set car_status=0 where license_plate_no=@lp;
+END
+
+GO
+
+create PROC [enable car]
+@lp varchar(200)
+AS
+BEGIN
+update cars set car_status=1 where license_plate_no=@lp;
+END
+
+GO
+
+create proc [delete car]
+@lp VARCHAR(200)
+AS
+BEGIN
+    delete from cars where license_plate_no = @lp
+END
+
+
 
 
  --use master
@@ -329,3 +373,5 @@ END
 -- insert into admin values('adm10', 10000.00, 'cmc');
 
 -- insert into branch values ('cmc', 0, 0);
+select * from cars
+

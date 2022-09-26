@@ -135,6 +135,12 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditVehicleForm.Designer.cs">
+      <DependentUpon>EditVehicleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,11 @@
     <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Renter.cs" />
     <Compile Include="RenterUserControl\Add_Car_User_Control.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +192,7 @@
     <Compile Include="reusable component\InputField.Designer.cs">
       <DependentUpon>InputField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleValidation.cs" />
     <EmbeddedResource Include="AdminForm1.resx">
       <DependentUpon>AdminForm1.cs</DependentUpon>
@@ -218,6 +230,9 @@
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditVehicleForm.resx">
+      <DependentUpon>EditVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,11 +263,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -290,6 +300,8 @@
     <None Include="Resources\add.png" />
     <None Include="Resources\car.png" />
     <None Include="Resources\car %281%29.png" />
+    <None Include="Resources\available.png" />
+    <None Include="Resources\block.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />
@@ -302,6 +314,12 @@
     <None Include="Resources\searchingcar.png" />
     <None Include="Resources\undo-circular-arrow.png" />
     <None Include="Resources\sports-car.png" />
+    <None Include="Resources\verified.png" />
+    <None Include="Resources\unverified.png" />
+    <None Include="Resources\unavailable%282%29.jpg" />
+    <None Include="Resources\unavailable.png" />
+    <None Include="Resources\nulluser.png" />
+    <None Include="Resources\user.png" />
     <Content Include="Resources\visible.png" />
     <None Include="Resources\icons8-search-more-30.png" />
     <Content Include="Resources\icons8-settings-50.png" />

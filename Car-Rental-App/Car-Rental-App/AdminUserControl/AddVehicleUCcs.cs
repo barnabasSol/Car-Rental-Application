@@ -14,8 +14,6 @@ namespace Car_Rental_App.AdminUserControl
     public partial class AddVehicleUCcs : UserControl
     {
         private string temp_lp;
-        private bool undo_btn_clicked = false;
-        List<string> temp_old_data = new List<string>();
         public AddVehicleUCcs()
         {
             InitializeComponent();
@@ -177,7 +175,6 @@ namespace Car_Rental_App.AdminUserControl
 
         private void undobtn_Click(object sender, EventArgs e)
         {
-            undo_btn_clicked = true;
 
             undo(temp_lp);
         }

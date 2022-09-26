@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Car_Rental_App.AdminUserControl
@@ -17,6 +18,13 @@ namespace Car_Rental_App.AdminUserControl
             InitializeComponent();
         }
 
+        private void VehicleListUC_Load(object sender, EventArgs e)
+        {
+           // allcarspanel.Controls.Clear();
 
+        }
+
+        
     }
+    
 }
