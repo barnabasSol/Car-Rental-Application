@@ -324,9 +324,17 @@ END
 GO
 create view vcc_view 
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, car_condition c_login_id from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id from
 cars
 full join (select rental.c_login_id, license_plate_no from rented_cars right join
+rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
+
+go
+create view srch_view
+as
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition from
+cars
+full join (select rental.c_login_id, license_plate_no from rented_cars join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
 
 go
@@ -364,6 +372,55 @@ BEGIN
     delete from cars where license_plate_no = @lp
 END
 
+go
+
+alter proc [search car for admin]
+@attribute varchar(200), @filter varchar(100)
+as
+begin 
+if @filter='none'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%')
+end
+
+else if @filter='verified'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='verified'
+end
+
+else if @filter='unverified'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified'
+end
+
+else if @filter='car condition (asc)'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition asc
+end
+
+else if @filter='car condition (desc)'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition desc
+end
+
+else if @filter='price (asc)'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour asc
+end
+
+else if @filter='price (desc)'
+begin
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour desc
+end
+end
+
 
 
 
@@ -373,5 +430,12 @@ END
 -- insert into admin values('adm10', 10000.00, 'cmc');
 
 -- insert into branch values ('cmc', 0, 0);
-select * from cars
+select * from vcc_view
+select * from vcc_view where (license_plate_no like '%'+'audi'+'%' or
+car_name like '%'+'audi'+'%' or car_type='audi')  and (verification='verified')
 
+go
+
+declare @attribute varchar(200) = 'k'
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified'
