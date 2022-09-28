@@ -158,10 +158,12 @@ create table rental(
 
 create table rented_cars(
     r_id VARCHAR(200),
-    license_plate_no varchar(200)
+    license_plate_no varchar(200),
+    return_status VARCHAR(100) default 'unreturned',
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
-    CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade
+    CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade,
 )
+drop table rented_cars
 create table [audit] (
     admin_id varchar(200),
     task varchar(1000),
@@ -324,25 +326,27 @@ END
 GO
 create view vcc_view 
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status from
 cars
-full join (select rental.c_login_id, license_plate_no from rented_cars right join
+full join (select rental.c_login_id, license_plate_no, return_status from rented_cars right join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
 
 go
+
 create view srch_view
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition, firsttable.return_status from
 cars
-full join (select rental.c_login_id, license_plate_no from rented_cars join
+full join (select rental.c_login_id, license_plate_no, return_status from rented_cars join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
+
 
 go
 
 create proc [vehicle card content] 
 AS
 begin 
-select * from vcc_view
+select * from rented_cars
 END
 
 GO
@@ -374,7 +378,7 @@ END
 
 go
 
-alter proc [search car for admin]
+create proc [search car for admin]
 @attribute varchar(200), @filter varchar(100)
 as
 begin 
@@ -421,21 +425,10 @@ begin
 end
 end
 
-
-
-
  --use master
  --drop database car_rental_database
 
 -- insert into admin values('adm10', 10000.00, 'cmc');
 
 -- insert into branch values ('cmc', 0, 0);
-select * from vcc_view
-select * from vcc_view where (license_plate_no like '%'+'audi'+'%' or
-car_name like '%'+'audi'+'%' or car_type='audi')  and (verification='verified')
 
-go
-
-declare @attribute varchar(200) = 'k'
-	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified'

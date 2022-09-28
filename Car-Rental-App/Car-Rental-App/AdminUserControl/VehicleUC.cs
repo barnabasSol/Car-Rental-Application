@@ -72,10 +72,9 @@ namespace Car_Rental_App.AdminUserControl
                             else
                             {
                                 vc.vstatus = Properties.Resources.unverified;
-                                vc.deletebtn = true;
                             }
 
-                            if (reader[4].ToString() == "1")
+                            if (reader[4].ToString() == "1" && reader[6].ToString() == "returned")
                                 vc.status = Properties.Resources.available;
                             else
                                 vc.status = Properties.Resources.unavailable;
@@ -83,21 +82,15 @@ namespace Car_Rental_App.AdminUserControl
                                 vc.btnstatus = "Disable";
                             else
                                 vc.btnstatus = "Enable";
-                            if (reader[5].ToString() == "")
+                            if (reader[6].ToString()=="returned")
                             {
                                 vc.currentcus = "not in use";
                                 vc.setcurrentuserimg = Properties.Resources.nulluser;
                             }
-                            else if (reader[5].ToString() != "" && reader[4].ToString()=="1")
+                            else 
                             {
-                                vc.currentcus = "not in use";
-                                vc.setcurrentuserimg = Properties.Resources.nulluser;
-                                
-                            }
-                            else
-                            {
+                                vc.freebtn = true;
                                 vc.currentcus = reader[5].ToString();
-                                vc.setcurrentuserimg = Properties.Resources.user;
                             }
                             vpanel.Controls.Add(vc);
                         }
@@ -106,18 +99,14 @@ namespace Car_Rental_App.AdminUserControl
             }
         }
 
-        private void searchv_OnValueChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         void search_vehicle(string attribute, string srchfilter)
         {
             string query = "[search car for admin] @attribute, @filter";
             SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 200);
             SqlParameter filter_param = new SqlParameter("@filter", SqlDbType.VarChar, 100);
-            filter_param.Value = srchfilter;
             attribute_param.Value = attribute;
+            filter_param.Value = srchfilter;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -143,7 +132,6 @@ namespace Car_Rental_App.AdminUserControl
                             else
                             {
                                 vc.vstatus = Properties.Resources.unverified;
-                                vc.deletebtn = true;
                             }
 
                             if (reader[4].ToString() == "1")
@@ -154,23 +142,19 @@ namespace Car_Rental_App.AdminUserControl
                                 vc.btnstatus = "Disable";
                             else
                                 vc.btnstatus = "Enable";
-                            if (reader[5].ToString() == "")
+                            if (reader[8].ToString() == "returned")
                             {
                                 vc.currentcus = "not in use";
                                 vc.setcurrentuserimg = Properties.Resources.nulluser;
-                            }
-                            else if (reader[5].ToString() != "" && reader[4].ToString() == "1")
-                            {
-                                vc.currentcus = "not in use";
-                                vc.setcurrentuserimg = Properties.Resources.nulluser;
-
+                                vpanel.Controls.Remove(vc);
                             }
                             else
                             {
+                                vc.freebtn = true;
                                 vc.currentcus = reader[5].ToString();
                                 vc.setcurrentuserimg = Properties.Resources.user;
+                                vpanel.Controls.Add(vc);
                             }
-                            vpanel.Controls.Add(vc);
                         }
                     }
                     
@@ -188,10 +172,14 @@ namespace Car_Rental_App.AdminUserControl
             {
                 filter = "none";
             }
+            vpanel.Controls.Clear();
+            search_vehicle("", filter);
+
         }
 
         private void searchvtxt_OnValueChanged(object sender, EventArgs e)
         {
+            filter = filterbycbox.Text;
             if (filter == "")
             {
                 filter = "none";
