@@ -71,5 +71,46 @@ namespace Car_Rental_App
             conn.Close();
         }
 
+        public void addcar(string license_plate_no,string car_name,string car_type,int car_capacity,string car_model, string car_color, int car_condition, string car_branch ,double price,string current_loginid )
+        {
+           
+            
+                
+                SqlConnection conn = new SqlConnection(Program.my_connection_string);
+                conn.Open();
+            
+            try
+            { 
+                
+
+                SqlCommand cmd = new SqlCommand("insert_car", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@license_plate_no", SqlDbType.VarChar).Value = license_plate_no;
+                cmd.Parameters.AddWithValue("@car_name", SqlDbType.VarChar).Value = car_name;
+                cmd.Parameters.AddWithValue("@car_type", SqlDbType.VarChar).Value = car_type;
+                cmd.Parameters.AddWithValue("@car_capacity", SqlDbType.Int).Value = car_capacity;
+                cmd.Parameters.AddWithValue("@car_model", SqlDbType.VarChar).Value = car_model;
+                cmd.Parameters.AddWithValue("@car_color", SqlDbType.VarChar).Value = car_color;
+                cmd.Parameters.AddWithValue("@car_condition", SqlDbType.Int).Value = car_condition;
+                cmd.Parameters.AddWithValue("@car_branch", SqlDbType.NVarChar).Value = car_branch;
+                cmd.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = price;
+                cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = current_loginid;
+                cmd.Parameters.AddWithValue("@rep_min_req", SqlDbType.VarChar).Value = 5;
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            
+                conn.Close();
+            }
+            
+            catch (System.Data.SqlClient.SqlException) {
+
+                Console.WriteLine("Car Branch you have inserted does ");
+                
+            
+            
+            
+            };
+        }
+
     }
 }
