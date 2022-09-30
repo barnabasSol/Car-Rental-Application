@@ -78,9 +78,7 @@ namespace Car_Rental_App
                 
                 SqlConnection conn = new SqlConnection(Program.my_connection_string);
                 conn.Open();
-            
-            try
-            { 
+           
                 
 
                 SqlCommand cmd = new SqlCommand("insert_car", conn);
@@ -102,15 +100,8 @@ namespace Car_Rental_App
                 conn.Close();
             }
             
-            catch (System.Data.SqlClient.SqlException) {
-
-                Console.WriteLine("Car Branch you have inserted does ");
-                
-            
-            
-            
-            };
-        }
+           
+        
 
     }
 }
