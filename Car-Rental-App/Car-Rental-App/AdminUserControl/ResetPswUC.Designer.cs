@@ -59,7 +59,7 @@ namespace Car_Rental_App.AdminUserControl
             this.oldpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.oldpswtxt.LineThickness = 3;
-            this.oldpswtxt.Location = new System.Drawing.Point(281, 65);
+            this.oldpswtxt.Location = new System.Drawing.Point(247, 64);
             this.oldpswtxt.Margin = new System.Windows.Forms.Padding(4);
             this.oldpswtxt.Name = "oldpswtxt";
             this.oldpswtxt.Size = new System.Drawing.Size(320, 33);
@@ -81,7 +81,7 @@ namespace Car_Rental_App.AdminUserControl
             this.newpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.newpswtxt.LineThickness = 3;
-            this.newpswtxt.Location = new System.Drawing.Point(281, 132);
+            this.newpswtxt.Location = new System.Drawing.Point(247, 131);
             this.newpswtxt.Margin = new System.Windows.Forms.Padding(4);
             this.newpswtxt.Name = "newpswtxt";
             this.newpswtxt.Size = new System.Drawing.Size(320, 33);
@@ -103,7 +103,7 @@ namespace Car_Rental_App.AdminUserControl
             this.cnfrmtxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
             this.cnfrmtxt.LineThickness = 3;
-            this.cnfrmtxt.Location = new System.Drawing.Point(281, 202);
+            this.cnfrmtxt.Location = new System.Drawing.Point(247, 201);
             this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(4);
             this.cnfrmtxt.Name = "cnfrmtxt";
             this.cnfrmtxt.Size = new System.Drawing.Size(320, 33);
@@ -124,7 +124,7 @@ namespace Car_Rental_App.AdminUserControl
             this.eyebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn2.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn2.Image")));
             this.eyebtn2.ImageActive = null;
-            this.eyebtn2.Location = new System.Drawing.Point(231, 132);
+            this.eyebtn2.Location = new System.Drawing.Point(197, 131);
             this.eyebtn2.Name = "eyebtn2";
             this.eyebtn2.Size = new System.Drawing.Size(43, 33);
             this.eyebtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,7 +140,7 @@ namespace Car_Rental_App.AdminUserControl
             this.eyebtn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn3.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn3.Image")));
             this.eyebtn3.ImageActive = null;
-            this.eyebtn3.Location = new System.Drawing.Point(231, 202);
+            this.eyebtn3.Location = new System.Drawing.Point(197, 201);
             this.eyebtn3.Name = "eyebtn3";
             this.eyebtn3.Size = new System.Drawing.Size(43, 33);
             this.eyebtn3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,7 +156,7 @@ namespace Car_Rental_App.AdminUserControl
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(231, 65);
+            this.eyebtn.Location = new System.Drawing.Point(197, 64);
             this.eyebtn.Name = "eyebtn";
             this.eyebtn.Size = new System.Drawing.Size(43, 33);
             this.eyebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,10 +199,10 @@ namespace Car_Rental_App.AdminUserControl
             this.resetbtn.IdleFillColor = System.Drawing.Color.White;
             this.resetbtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.resetbtn.IdleLineColor = System.Drawing.Color.Black;
-            this.resetbtn.Location = new System.Drawing.Point(364, 260);
+            this.resetbtn.Location = new System.Drawing.Point(330, 253);
             this.resetbtn.Margin = new System.Windows.Forms.Padding(5);
             this.resetbtn.Name = "resetbtn";
-            this.resetbtn.Size = new System.Drawing.Size(118, 32);
+            this.resetbtn.Size = new System.Drawing.Size(118, 38);
             this.resetbtn.TabIndex = 1;
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);

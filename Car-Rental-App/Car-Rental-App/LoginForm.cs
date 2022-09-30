@@ -16,8 +16,8 @@ namespace Car_Rental_App
         {
             InitializeComponent();
         }
-     
 
+        
         Profile p = new Profile();
 
         private void login_btn_Click(object sender, EventArgs e)
@@ -28,6 +28,7 @@ namespace Car_Rental_App
 
             if (p.is_customer(login_idtxt.Text, password_txt.Text)){
                 Profile.current_userid = login_idtxt.Text;
+                
                 MessageBox.Show("customer here");
             }
             else if (p.is_admin(login_idtxt.Text, password_txt.Text))
@@ -88,7 +89,8 @@ namespace Car_Rental_App
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            
+            login_idtxt.Text = "adm10";
+            password_txt.Text = "2222";
         }
 
         private void password_txt_TextChanged(object sender, EventArgs e)
