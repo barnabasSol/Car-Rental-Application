@@ -1,15 +1,17 @@
 create database car_rental_database;
-
 GO
 
 use car_rental_database;
 
 GO
-
+--use master
+--drop database car_rental_database
 create table profile_type(
     prof_id int primary key,
     profile_type_name varchar(100) not null 
 )
+go
+
 
 create table profile(
     login_id  varchar(200) primary key,
@@ -98,6 +100,7 @@ create table [admin](
     CONSTRAINT fk_br_adm FOREIGN KEY(branch_loc) REFERENCES branch(branch_address) on update cascade,
     constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id) on UPDATE cascade
 )
+go
 
  create table cars(
      license_plate_no varchar(200) primary key, 
@@ -138,16 +141,20 @@ create table payment(
 create table rental(
     rent_id VARCHAR(200) PRIMARY KEY,
     c_login_id varchar(200),
+	renter_login_id varchar(200),
     rental_date date not null,
     total_vehicles int not null,  /*new column*/
     return_date date not null,
     paid_amount money,
     payment_id int,
-    branch_loc NVARCHAR(100),  /*new column*/
+    branch_loc NVARCHAR(100),/*new column*/
+	license_plate_no_rental varchar(200)
     CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
-    CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE
+    CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE,
+	CONSTRAINT fk FOREIGN KEY(license_plate_no_rental) REFERENCES cars(license_plate_no),
 )
+
 
 
   create table car_reviews(
@@ -157,8 +164,8 @@ create table rental(
   )
 
 create table rented_cars(
-    r_id VARCHAR(200),
-    license_plate_no varchar(200)
+    r_id varchar(200),
+    license_plate_no varchar(200),
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
     CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade
 )
@@ -211,11 +218,19 @@ insert into profile_type values(1, 'admin'),
                                (3, 'renter')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
                            values
-                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
-                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
-						   
-insert into admin values('adm10', 10000, 'cmc')
-
+                           ('rntr11', 'Abel', 'yohannes', 'M', '0945117271', 'hayat', '0000',3)
+insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
+                           values
+                           ('rntr12', 'Kidus', 'paulos', 'M', '0911123456', 'hayat', '0000',3)
+insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
+                           values
+                           ('rntr13', 'Nathnael', 'Tsegaye', 'M', '0960017873', 'hayat', '0000',3)
+                           
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
+ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+                          
 insert into payment values(1, 'credit card')
 
 go
@@ -233,10 +248,7 @@ go
 
  go
 
- insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
- insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                            values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+
 --Procedure to insert new Profile
 go
 CREATE PROCEDURE Insert_Profile
@@ -325,6 +337,7 @@ GO
 create view vcc_view 
 as
 select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id from
+
 cars
 full join (select rental.c_login_id, license_plate_no from rented_cars right join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
@@ -374,7 +387,7 @@ END
 
 go
 
-alter proc [search car for admin]
+create proc [search car for admin]
 @attribute varchar(200), @filter varchar(100)
 as
 begin 
@@ -424,6 +437,7 @@ end
 
 
 
+
  --use master
  --drop database car_rental_database
 
@@ -439,3 +453,213 @@ go
 declare @attribute varchar(200) = 'k'
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified'
+
+
+
+
+	
+create function return_name(@c_login_id varchar(200))
+returns varchar(200)
+as
+
+begin
+declare @name varchar(200)
+
+select @name=first_name from profile where login_id=@c_login_id 
+return @name
+	
+
+end
+
+
+go
+
+create Function Earnings(@renter_id varchar(200))
+returns table
+as
+
+return(
+select license_plate_no, 
+		car_name, 
+		car_color, 
+		car_branch, 
+		dbo.return_name(c_login_id) as firstname,
+		rental_date,
+		total_vehicles,
+		return_date,
+		paid_amount
+		from rental join cars on rental.license_plate_no_rental=cars.license_plate_no
+		where renter_login_id = @renter_id 
+	
+		
+)  
+go
+
+
+
+
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('11111','Pickup','Full-size pickup trucks',5,'Blue','New',10,5,20,'summit','rntr11')
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('22222','HatchBack','Maruti Alto K10 LXi (Petrol)',4,'Red','New',10,5,15,'hayat','rntr11')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('33333','Toyota','Toyota Camry',4,'Red','New',10,5,15,'hayat','rntr12')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('44444','BMW',' 3 Series GT',4,'Red','New',10,5,30,'hayat','rntr12')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('55555','Ford',' F-350',6,'White','New',10,5,25,'hayat','rntr13')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,5,50,'Summit','rntr13')
+
+
+
+
+
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(1,'cus10','rntr13','2001-10-5',2,'2001-10-8',50000,'hayat','55555')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(2,'cus10','rntr11','2006-10-5',2,'2006-10-7',90000,'hayat','11111')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(3,'cus10','rntr12','2010-10-5',2,'2010-10-8',10000,'hayat','33333')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(4,'cus10','rntr12','2011-10-5',2,'2011-10-6',60000,'hayat','44444')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(5,'cus21','rntr13','2012-09-5',2,'2012-09-6',51000,'hayat','66666')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(6,'cus21','rntr11','2015-09-5',2,'2015-09-6',51000,'hayat','11111')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+,license_plate_no_rental) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat','22222')
+
+
+
+
+select * from profile
+select * from rental
+select * from cars
+
+select * from Earnings('rntr12')
