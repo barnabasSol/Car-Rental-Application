@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Car_Rental_App.RenterUserControl;
 
 namespace Car_Rental_App
 {
@@ -146,6 +147,12 @@ namespace Car_Rental_App
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             label2.Visible = false;
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            Earnings earnings = new Earnings();
+            add_user_control(earnings);
         }
     }
 }
