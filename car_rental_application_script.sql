@@ -474,7 +474,7 @@ end
 
 go
 
-create Function Earnings(@renter_id varchar(200))
+alter Function Earnings(@renter_id varchar(200))
 returns table
 as
 
@@ -487,7 +487,8 @@ select license_plate_no,
 		rental_date,
 		total_vehicles,
 		return_date,
-		paid_amount
+		paid_amount,
+		paid_amount*DATEDIFF(dd,rental_date,return_date)*total_vehicles as Total_amount
 		from rental join cars on rental.license_plate_no_rental=cars.license_plate_no
 		where renter_login_id = @renter_id 
 	
@@ -497,7 +498,7 @@ go
 
 
 
-
+select DATEDIFF(dd,getdate(),'2022-10-02')
 
 
 insert into cars (license_plate_no,
@@ -662,4 +663,22 @@ select * from profile
 select * from rental
 select * from cars
 
-select * from Earnings('rntr12')
+select * from Earnings('rntr11')
+go
+
+create function Total_Earings(@renter_login_id varchar(200))
+returns money
+as
+begin
+declare @earnings money
+
+set @earnings=(select SUM(total_amount) from Earnings(@renter_login_id))
+
+
+return @earnings
+
+end
+
+
+
+select dbo.Total_Earings('rntr11')
