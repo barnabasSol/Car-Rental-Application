@@ -154,7 +154,7 @@ namespace Car_Rental_App.AdminUserControl
             this.free_btn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.free_btn.BackColor = System.Drawing.Color.White;
             this.free_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("free_btn.BackgroundImage")));
-            this.free_btn.ButtonText = "Free Car";
+            this.free_btn.ButtonText = "Free Vehicle";
             this.free_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.free_btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.free_btn.ForeColor = System.Drawing.Color.SeaGreen;
@@ -163,10 +163,10 @@ namespace Car_Rental_App.AdminUserControl
             this.free_btn.IdleFillColor = System.Drawing.Color.White;
             this.free_btn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.free_btn.IdleLineColor = System.Drawing.Color.Black;
-            this.free_btn.Location = new System.Drawing.Point(315, 127);
+            this.free_btn.Location = new System.Drawing.Point(315, 126);
             this.free_btn.Margin = new System.Windows.Forms.Padding(5);
             this.free_btn.Name = "free_btn";
-            this.free_btn.Size = new System.Drawing.Size(98, 41);
+            this.free_btn.Size = new System.Drawing.Size(112, 41);
             this.free_btn.TabIndex = 11;
             this.free_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.free_btn.Visible = false;
@@ -221,7 +221,7 @@ namespace Car_Rental_App.AdminUserControl
             // vstatusimg
             // 
             this.vstatusimg.Image = global::Car_Rental_App.Properties.Resources.unverified;
-            this.vstatusimg.Location = new System.Drawing.Point(504, 23);
+            this.vstatusimg.Location = new System.Drawing.Point(512, 23);
             this.vstatusimg.Name = "vstatusimg";
             this.vstatusimg.Size = new System.Drawing.Size(50, 45);
             this.vstatusimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -234,7 +234,7 @@ namespace Car_Rental_App.AdminUserControl
             this.edit_vehicle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_vehicle.Image = ((System.Drawing.Image)(resources.GetObject("edit_vehicle.Image")));
             this.edit_vehicle.ImageActive = null;
-            this.edit_vehicle.Location = new System.Drawing.Point(507, 152);
+            this.edit_vehicle.Location = new System.Drawing.Point(515, 149);
             this.edit_vehicle.Margin = new System.Windows.Forms.Padding(2);
             this.edit_vehicle.Name = "edit_vehicle";
             this.edit_vehicle.Size = new System.Drawing.Size(52, 41);
@@ -259,7 +259,7 @@ namespace Car_Rental_App.AdminUserControl
             this.undofreebtn.BackColor = System.Drawing.Color.White;
             this.undofreebtn.Image = global::Car_Rental_App.Properties.Resources.undo_circular_arrow;
             this.undofreebtn.ImageActive = null;
-            this.undofreebtn.Location = new System.Drawing.Point(415, 134);
+            this.undofreebtn.Location = new System.Drawing.Point(432, 133);
             this.undofreebtn.Name = "undofreebtn";
             this.undofreebtn.Size = new System.Drawing.Size(34, 28);
             this.undofreebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,7 +293,7 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.edit_vehicle);
             this.Controls.Add(this.pictureBox1);
             this.Name = "VehicleCard";
-            this.Size = new System.Drawing.Size(567, 198);
+            this.Size = new System.Drawing.Size(573, 198);
             this.Load += new System.EventHandler(this.VehicleCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.currentuserimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusimg)).EndInit();

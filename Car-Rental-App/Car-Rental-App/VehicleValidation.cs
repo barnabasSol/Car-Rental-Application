@@ -60,7 +60,6 @@ namespace Car_Rental_App
         public int is_unique_for_edit(string license_plate_no)
         {
             int x = 0;
-            bool is_unique = true;
             string query = "select license_plate_no from cars";
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
@@ -81,7 +80,6 @@ namespace Car_Rental_App
             }
             return x;
         }
-
 
     }
 }

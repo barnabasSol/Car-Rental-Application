@@ -168,6 +168,7 @@ namespace Car_Rental_App.AdminUserControl
         private void free_btn_Click(object sender, EventArgs e)
         {
             enable_car();
+            free_btn.ButtonText = "Freed!";
             undofreebtn.Visible = true;
             update_return_status(lplbl.Text);
         }
@@ -175,6 +176,7 @@ namespace Car_Rental_App.AdminUserControl
         private void undofreebtn_Click(object sender, EventArgs e)
         {
             disable_car();
+            free_btn.ButtonText = "Free Vehicle";
             string query = "update rented_cars set return_status= 'unreturned' where license_plate_no=@lp";
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
             lp_param.Value = lplbl.Text;

@@ -56,9 +56,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="XanderUI">
-      <HintPath>..\..\..\..\..\Downloads\codeinpc.comXanderUI_DLL\XanderUI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminClass.cs" />
@@ -109,12 +106,6 @@
     </Compile>
     <Compile Include="AdminUserControl\VehicleCard.Designer.cs">
       <DependentUpon>VehicleCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUserControl\VehicleListUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUserControl\VehicleListUC.Designer.cs">
-      <DependentUpon>VehicleListUC.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminUserControl\VehicleUC.cs">
       <SubType>UserControl</SubType>
@@ -220,9 +211,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\VehicleCard.resx">
       <DependentUpon>VehicleCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUserControl\VehicleListUC.resx">
-      <DependentUpon>VehicleListUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\VehicleUC.resx">
       <DependentUpon>VehicleUC.cs</DependentUpon>

@@ -32,24 +32,6 @@ create table customer(
 
 GO
 
-create proc auto_Generate  @AdmID char(6) = 'adm000'
-as
-begin
-DECLARE @nextNumber int =0 
-SELECT @nextNumber = CAST( SubString( @AdmID, 4, 3) AS INT )
-SET @nextNumber = @nextNumber + 1
-SELECT CONCAT ('adm'
-, CASE
-WHEN @nextNumber < 10 THEN '00'
-WHEN @nextNumber < 100 THEN '0'
-ELSE ''
-END
-, CAST( @nextNumber AS char(3)) )
-
-End
-
-GO
-
 create proc [search customer]
 @searchby varchar(100)
 AS
@@ -68,14 +50,24 @@ GO
 
 
 create proc[update customer change by admin]
-@customerid varchar(100), @activity int, @rep int
+@customerid varchar(100), @activity int, @rep int, @admid varchar(200)
 as 
 BEGIN
+declare @priorvalue varchar(200) = (select activity as VARCHAR from profile where login_id = @customerid)
+declare @priorvaluerep int = (select reputation from customer where login_id = @customerid)
 update profile set activity=@activity where login_id=@customerid
 update customer set reputation=@rep where login_id=@customerid
-END
+if @priorvalue != @activity and @activity=0
+    insert into [audit] values (@admid, 'you deactivated '+@customerid+''''+'s '+'customer account', getdate())
+else if @priorvalue != @activity and @activity=1
+    insert into [audit] values (@admid, 'you activated '+@customerid+''''+'s '+'customer account', getdate())
 
+if @priorvaluerep != @rep
+    insert into [audit] values
+     (@admid, 'you changed reputation of customer - '+@customerid+'  from  '+cast(@priorvaluerep as varchar)+'  to  '+cast(@rep as varchar), GETDATE())
+END
 go
+
 ----------------customer view-------------------------------------
 create view customer_rep as 
     select profile.login_id, concat(first_name,' ',last_name) as fullname, sex, phone_number, home_address, activity, reputation from profile
@@ -126,6 +118,7 @@ create table [admin](
    declare @cbranch NVARCHAR(100)
    select @cbranch = branch_loc from admin where login_id = @admid
    insert into cars values (@lp,'verified', @cname, @ctype, @ccapacity, @cmodel, @ccolor,1 ,@ccondition, @rep, @pph, @cbranch, @admid)
+   insert into [audit] values (@admid, 'you added a new vehicle with license plate  -  '+@lp, GETDATE())
    END
 
 
@@ -149,12 +142,11 @@ create table rental(
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE
 )
 
-
-  create table car_reviews(
+create table car_reviews(
        rent_id VARCHAR(200),
        car_rating decimal(2,1) default 0,
        constraint fk_rnt_id FOREIGN KEY (rent_id) REFERENCES rental(rent_id) on update CASCADE
-  )
+)
 
 create table rented_cars(
     r_id VARCHAR(200),
@@ -163,7 +155,6 @@ create table rented_cars(
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
     CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade,
 )
-drop table rented_cars
 create table [audit] (
     admin_id varchar(200),
     task varchar(1000),
@@ -247,7 +238,7 @@ CREATE PROCEDURE Insert_Profile
     @last_name varchar(100),
     @sex varchar(2),
     @phone_number varchar(100), 
-    @home_address varchar(100) , 
+    @home_address varchar(100), 
     @password varchar(100) ,
     @profile_type_id int,
 	@Activity int
@@ -280,7 +271,7 @@ END
 
 go
 
-------trigger to keep track of the stats of the brances
+------triggers to keep track of the stats of the brances
 create trigger [update branch stats] on cars
 for insert 
 as 
@@ -290,6 +281,32 @@ set @branch = (select car_branch FROM inserted)
 update branch set branch_vehicles_amount+=1 where branch_address=@branch
 end
 
+go 
+
+create trigger [update branch stats of deleted vehicles tr]
+on cars 
+for delete 
+AS
+BEGIN
+declare @admid varchar(200) = (select login_id from deleted)
+declare @lp varchar(50) = (select license_plate_no from deleted)
+declare @branchloc nvarchar(100) = (select car_branch from deleted)
+update branch set branch_vehicles_amount-=1 where branch_address=@branchloc
+insert into [audit] values (@admid, 'you deleted a vehicle with license plate  -  '+@lp, GETDATE())
+END
+
+go
+
+create trigger [limit deleting vehicles]
+on cars 
+for delete
+AS
+BEGIN
+declare @amount int = (select COUNT(*) from deleted)
+if @amount>1
+    ROLLBACK TRANSACTION
+END
+
 go
 
 create trigger [update reviews on branches] on car_reviews
@@ -297,7 +314,7 @@ for insert
 AS
 BEGIN
 declare @branch nvarchar(100)
-declare @newrating Decimal(18, 8)
+declare @newrating Decimal(18, 2)
 declare @temp_table table(
 		average_rating Decimal(18,8),
 		b_location nvarchar(100)
@@ -324,6 +341,7 @@ while @@FETCH_STATUS=0
 END
 
 GO
+
 create view vcc_view 
 as
 select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status from
@@ -346,7 +364,7 @@ go
 create proc [vehicle card content] 
 AS
 begin 
-select * from rented_cars
+select * from vcc_view
 END
 
 GO
@@ -423,7 +441,10 @@ begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour desc
 end
-end
+    end
+
+
+GO
 
  --use master
  --drop database car_rental_database

@@ -15,6 +15,8 @@ namespace Car_Rental_App.AdminUserControl
     {
         private string filter = "";
         AdminForm1 vehicleform;
+        List<VehicleCard> tempvcardlist = new List<VehicleCard>();
+
         public VehicleUC(AdminForm1 parentform)
         {
             vehicleform = parentform;
@@ -39,6 +41,7 @@ namespace Car_Rental_App.AdminUserControl
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            tempvcardlist.Clear();
             vpanel.Controls.Clear();
             flbl.Visible = true;
             filterbycbox.Visible = true;
@@ -74,7 +77,7 @@ namespace Car_Rental_App.AdminUserControl
                                 vc.vstatus = Properties.Resources.unverified;
                             }
 
-                            if (reader[4].ToString() == "1" && reader[6].ToString() == "returned")
+                            if (reader[4].ToString() == "1")
                                 vc.status = Properties.Resources.available;
                             else
                                 vc.status = Properties.Resources.unavailable;
@@ -82,7 +85,7 @@ namespace Car_Rental_App.AdminUserControl
                                 vc.btnstatus = "Disable";
                             else
                                 vc.btnstatus = "Enable";
-                            if (reader[6].ToString()=="returned")
+                            if (reader[6].ToString()=="returned" || reader[6].ToString() == "")
                             {
                                 vc.currentcus = "not in use";
                                 vc.setcurrentuserimg = Properties.Resources.nulluser;
@@ -93,6 +96,7 @@ namespace Car_Rental_App.AdminUserControl
                                 vc.currentcus = reader[5].ToString();
                             }
                             vpanel.Controls.Add(vc);
+                            tempvcardlist.Add(vc);
                         }
                     }
                 }
@@ -100,7 +104,7 @@ namespace Car_Rental_App.AdminUserControl
         }
 
 
-        void search_vehicle(string attribute, string srchfilter)
+        void filter_vehicles(string attribute, string srchfilter)
         {
             string query = "[search car for admin] @attribute, @filter";
             SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 200);
@@ -133,37 +137,33 @@ namespace Car_Rental_App.AdminUserControl
                             {
                                 vc.vstatus = Properties.Resources.unverified;
                             }
-
                             if (reader[4].ToString() == "1")
+                            {
                                 vc.status = Properties.Resources.available;
-                            else
-                                vc.status = Properties.Resources.unavailable;
-                            if (reader[4].ToString() == "1")
                                 vc.btnstatus = "Disable";
+                            }
                             else
+                            {
+                                vc.status = Properties.Resources.unavailable;
                                 vc.btnstatus = "Enable";
-                            if (reader[8].ToString() == "returned")
+                            }
+                            if (reader[8].ToString() == "returned" || reader[5].ToString() == "")
                             {
                                 vc.currentcus = "not in use";
                                 vc.setcurrentuserimg = Properties.Resources.nulluser;
-                                vpanel.Controls.Remove(vc);
                             }
                             else
                             {
                                 vc.freebtn = true;
                                 vc.currentcus = reader[5].ToString();
                                 vc.setcurrentuserimg = Properties.Resources.user;
-                                vpanel.Controls.Add(vc);
                             }
+                                vpanel.Controls.Add(vc);
                         }
                     }
-                    
                 }
             }
-
         }
-
-   
 
         private void filterbycbox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -173,19 +173,27 @@ namespace Car_Rental_App.AdminUserControl
                 filter = "none";
             }
             vpanel.Controls.Clear();
-            search_vehicle("", filter);
+            filter_vehicles("", filter);
 
         }
 
-        private void searchvtxt_OnValueChanged(object sender, EventArgs e)
+        private void searchvtxt_OnValueChanged_1(object sender, EventArgs e)
         {
-            filter = filterbycbox.Text;
-            if (filter == "")
+                vpanel.Controls.Clear();
+                search_vehicle(searchvtxt.Text);
+        }
+
+        private void search_vehicle(string attribute)
+        {
+            foreach (var card in tempvcardlist)
             {
-                filter = "none";
+                if (card.licensep.Contains(attribute) || card.car_name.Contains(attribute) ||
+                    card.car_type.Contains(attribute) || (card.currentcus.Contains(attribute)
+                    && card.freebtn==true))
+                {
+                    vpanel.Controls.Add(card);
+                }
             }
-            vpanel.Controls.Clear();
-            search_vehicle(searchvtxt.Text, filter);
         }
     }
 }

@@ -78,5 +78,10 @@ namespace Car_Rental_App.AdminUserControl
             search_customer(searchcustomer.Text);
             slow.Stop();
         }
+
+        private void searchcustomer_Enter(object sender, EventArgs e)
+        {
+            search_customer(searchcustomer.Text);
+        }
     }
 }
