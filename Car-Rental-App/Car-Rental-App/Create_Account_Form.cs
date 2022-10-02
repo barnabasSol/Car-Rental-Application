@@ -32,9 +32,10 @@ namespace Car_Rental_App
 
             Profile p = new Profile();
 
+           
 
             Regex r = new Regex(@"^[0-9]{3}[0-9]{3}[0-9]{4}$");
-            Regex r1 = new Regex(@"^[A-Z]{1}[a-z]{1,100}$");
+            Regex r1 = new Regex(@"^[a-zA-z]{1,100}$");
             Boolean t = true;
 
             if (String.IsNullOrEmpty(login_textbox.Text))
@@ -65,7 +66,7 @@ namespace Car_Rental_App
             if (!(r1.IsMatch(First_Name_textBox.Text)))
             {
 
-                errorProvider2.SetError(First_Name_textBox, "First Letter must be Capital ");
+                errorProvider2.SetError(First_Name_textBox, "you must enter  letter only ");
 
                 t = false;
 
@@ -79,7 +80,7 @@ namespace Car_Rental_App
 
             if (!(r1.IsMatch(Last_Name_textBox.Text)))
             {
-                errorProvider12.SetError(Last_Name_textBox, "First Letter must be Capital ");
+                errorProvider12.SetError(Last_Name_textBox, "you must enter  letter only ");
                 t = false;
 
             }
@@ -247,7 +248,7 @@ namespace Car_Rental_App
                     // obj1.insert(); insert by prepapred statment
                     obj1.insert_By_Sp();
 
-
+                    
                 }
 
 

@@ -40,22 +40,43 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.login_textbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.LicensePlateno_textbox = new System.Windows.Forms.TextBox();
+            this.CarName_txtbox = new System.Windows.Forms.TextBox();
+            this.Price_txtbox = new System.Windows.Forms.TextBox();
+            this.CarBranch_txtbox = new System.Windows.Forms.TextBox();
+            this.CarColor_txtbox = new System.Windows.Forms.TextBox();
+            this.CarModel_txtbox = new System.Windows.Forms.TextBox();
+            this.CarCapacity_txtbox = new System.Windows.Forms.TextBox();
+            this.CarType_txtbox = new System.Windows.Forms.TextBox();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.CarCondition_lbl = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -141,7 +162,7 @@
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(386, 166);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(399, 241);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(219, 31);
             this.bunifuCustomLabel10.TabIndex = 16;
@@ -152,7 +173,7 @@
             this.bunifuCustomLabel11.AutoSize = true;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(433, 240);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(433, 176);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(172, 31);
             this.bunifuCustomLabel11.TabIndex = 17;
@@ -168,70 +189,70 @@
             this.bunifuCustomLabel12.Size = new System.Drawing.Size(0, 32);
             this.bunifuCustomLabel12.TabIndex = 18;
             // 
-            // login_textbox
+            // LicensePlateno_textbox
             // 
-            this.login_textbox.BackColor = System.Drawing.Color.White;
-            this.login_textbox.ForeColor = System.Drawing.Color.Black;
-            this.login_textbox.Location = new System.Drawing.Point(250, 98);
-            this.login_textbox.Name = "login_textbox";
-            this.login_textbox.Size = new System.Drawing.Size(117, 22);
-            this.login_textbox.TabIndex = 31;
+            this.LicensePlateno_textbox.BackColor = System.Drawing.Color.White;
+            this.LicensePlateno_textbox.ForeColor = System.Drawing.Color.Black;
+            this.LicensePlateno_textbox.Location = new System.Drawing.Point(250, 98);
+            this.LicensePlateno_textbox.Name = "LicensePlateno_textbox";
+            this.LicensePlateno_textbox.Size = new System.Drawing.Size(117, 22);
+            this.LicensePlateno_textbox.TabIndex = 31;
             // 
-            // textBox1
+            // CarName_txtbox
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(250, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 22);
-            this.textBox1.TabIndex = 32;
+            this.CarName_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarName_txtbox.Location = new System.Drawing.Point(250, 176);
+            this.CarName_txtbox.Name = "CarName_txtbox";
+            this.CarName_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarName_txtbox.TabIndex = 32;
             // 
-            // textBox2
+            // Price_txtbox
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(634, 250);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 22);
-            this.textBox2.TabIndex = 33;
+            this.Price_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.Price_txtbox.Location = new System.Drawing.Point(634, 250);
+            this.Price_txtbox.Name = "Price_txtbox";
+            this.Price_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.Price_txtbox.TabIndex = 33;
             // 
-            // textBox3
+            // CarBranch_txtbox
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(634, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 22);
-            this.textBox3.TabIndex = 34;
+            this.CarBranch_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarBranch_txtbox.Location = new System.Drawing.Point(634, 176);
+            this.CarBranch_txtbox.Name = "CarBranch_txtbox";
+            this.CarBranch_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarBranch_txtbox.TabIndex = 34;
             // 
-            // textBox7
+            // CarColor_txtbox
             // 
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(250, 461);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 22);
-            this.textBox7.TabIndex = 38;
+            this.CarColor_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarColor_txtbox.Location = new System.Drawing.Point(250, 461);
+            this.CarColor_txtbox.Name = "CarColor_txtbox";
+            this.CarColor_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarColor_txtbox.TabIndex = 38;
             // 
-            // textBox8
+            // CarModel_txtbox
             // 
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(250, 393);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(117, 22);
-            this.textBox8.TabIndex = 39;
+            this.CarModel_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarModel_txtbox.Location = new System.Drawing.Point(250, 393);
+            this.CarModel_txtbox.Name = "CarModel_txtbox";
+            this.CarModel_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarModel_txtbox.TabIndex = 39;
             // 
-            // textBox9
+            // CarCapacity_txtbox
             // 
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(250, 320);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(117, 22);
-            this.textBox9.TabIndex = 40;
+            this.CarCapacity_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarCapacity_txtbox.Location = new System.Drawing.Point(250, 320);
+            this.CarCapacity_txtbox.Name = "CarCapacity_txtbox";
+            this.CarCapacity_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarCapacity_txtbox.TabIndex = 40;
             // 
-            // textBox10
+            // CarType_txtbox
             // 
-            this.textBox10.ForeColor = System.Drawing.Color.Black;
-            this.textBox10.Location = new System.Drawing.Point(250, 250);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(117, 22);
-            this.textBox10.TabIndex = 41;
+            this.CarType_txtbox.ForeColor = System.Drawing.Color.Black;
+            this.CarType_txtbox.Location = new System.Drawing.Point(250, 250);
+            this.CarType_txtbox.Name = "CarType_txtbox";
+            this.CarType_txtbox.Size = new System.Drawing.Size(117, 22);
+            this.CarType_txtbox.TabIndex = 41;
             // 
             // bunifuCards1
             // 
@@ -239,17 +260,18 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.White;
-            this.bunifuCards1.Controls.Add(this.label1);
+            this.bunifuCards1.Controls.Add(this.bunifuThinButton21);
+            this.bunifuCards1.Controls.Add(this.CarCondition_lbl);
             this.bunifuCards1.Controls.Add(this.bunifuImageButton2);
             this.bunifuCards1.Controls.Add(this.bunifuImageButton1);
-            this.bunifuCards1.Controls.Add(this.textBox10);
-            this.bunifuCards1.Controls.Add(this.textBox9);
-            this.bunifuCards1.Controls.Add(this.textBox8);
-            this.bunifuCards1.Controls.Add(this.textBox7);
-            this.bunifuCards1.Controls.Add(this.textBox3);
-            this.bunifuCards1.Controls.Add(this.textBox2);
-            this.bunifuCards1.Controls.Add(this.textBox1);
-            this.bunifuCards1.Controls.Add(this.login_textbox);
+            this.bunifuCards1.Controls.Add(this.CarType_txtbox);
+            this.bunifuCards1.Controls.Add(this.CarCapacity_txtbox);
+            this.bunifuCards1.Controls.Add(this.CarModel_txtbox);
+            this.bunifuCards1.Controls.Add(this.CarColor_txtbox);
+            this.bunifuCards1.Controls.Add(this.CarBranch_txtbox);
+            this.bunifuCards1.Controls.Add(this.Price_txtbox);
+            this.bunifuCards1.Controls.Add(this.CarName_txtbox);
+            this.bunifuCards1.Controls.Add(this.LicensePlateno_textbox);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel12);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel11);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel10);
@@ -268,16 +290,42 @@
             this.bunifuCards1.Size = new System.Drawing.Size(885, 514);
             this.bunifuCards1.TabIndex = 32;
             // 
-            // label1
+            // bunifuThinButton21
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(690, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 36);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Red;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Add";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(526, 362);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(92, 52);
+            this.bunifuThinButton21.TabIndex = 48;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
+            // CarCondition_lbl
+            // 
+            this.CarCondition_lbl.AutoSize = true;
+            this.CarCondition_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CarCondition_lbl.Location = new System.Drawing.Point(690, 101);
+            this.CarCondition_lbl.Name = "CarCondition_lbl";
+            this.CarCondition_lbl.Size = new System.Drawing.Size(32, 36);
+            this.CarCondition_lbl.TabIndex = 47;
+            this.CarCondition_lbl.Text = "1";
+            this.CarCondition_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // bunifuImageButton2
             // 
@@ -307,6 +355,66 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider3.ContainerControl = this;
+            this.errorProvider3.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider3.Icon")));
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider4.ContainerControl = this;
+            this.errorProvider4.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider4.Icon")));
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider5.ContainerControl = this;
+            this.errorProvider5.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider5.Icon")));
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider6.ContainerControl = this;
+            this.errorProvider6.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider6.Icon")));
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider7.ContainerControl = this;
+            this.errorProvider7.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider7.Icon")));
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider8.ContainerControl = this;
+            this.errorProvider8.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider8.Icon")));
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider9.ContainerControl = this;
+            this.errorProvider9.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider9.Icon")));
+            // 
+            // errorProvider10
+            // 
+            this.errorProvider10.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider10.ContainerControl = this;
+            this.errorProvider10.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider10.Icon")));
+            // 
             // Add_Car_User_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,6 +426,16 @@
             this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,18 +452,29 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private System.Windows.Forms.TextBox login_textbox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox LicensePlateno_textbox;
+        private System.Windows.Forms.TextBox CarName_txtbox;
+        private System.Windows.Forms.TextBox Price_txtbox;
+        private System.Windows.Forms.TextBox CarBranch_txtbox;
+        private System.Windows.Forms.TextBox CarColor_txtbox;
+        private System.Windows.Forms.TextBox CarModel_txtbox;
+        private System.Windows.Forms.TextBox CarCapacity_txtbox;
+        private System.Windows.Forms.TextBox CarType_txtbox;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CarCondition_lbl;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
+        private System.Windows.Forms.ErrorProvider errorProvider10;
     }
 }

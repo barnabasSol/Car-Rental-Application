@@ -1,15 +1,17 @@
 create database car_rental_database;
-
 GO
 
 use car_rental_database;
 
 GO
-
+--use master
+--drop database car_rental_database
 create table profile_type(
     prof_id int primary key,
     profile_type_name varchar(100) not null 
 )
+go
+
 
 create table profile(
     login_id  varchar(200) primary key,
@@ -90,6 +92,7 @@ create table [admin](
     CONSTRAINT fk_br_adm FOREIGN KEY(branch_loc) REFERENCES branch(branch_address) on update cascade,
     constraint fk_ad_id foreign key(login_id) REFERENCES profile(login_id) on UPDATE cascade
 )
+go
 
  create table cars(
      license_plate_no varchar(200) primary key, 
@@ -131,18 +134,24 @@ create table payment(
 create table rental(
     rent_id VARCHAR(200) PRIMARY KEY,
     c_login_id varchar(200),
+	renter_login_id varchar(200),
     rental_date date not null,
     total_vehicles int not null,  /*new column*/
     return_date date not null,
     paid_amount money,
     payment_id int,
-    branch_loc NVARCHAR(100),  /*new column*/
+    branch_loc NVARCHAR(100),/*new column*/
+	license_plate_no_rental varchar(200)
     CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
-    CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE
+    CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE,
+	CONSTRAINT fk FOREIGN KEY(license_plate_no_rental) REFERENCES cars(license_plate_no),
 )
 
 create table car_reviews(
+
+
+  create table car_reviews(
        rent_id VARCHAR(200),
        car_rating decimal(2,1) default 0,
        constraint fk_rnt_id FOREIGN KEY (rent_id) REFERENCES rental(rent_id) on update CASCADE
@@ -204,11 +213,19 @@ insert into profile_type values(1, 'admin'),
                                (3, 'renter')
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
                            values
-                           ('rntr10', 'Nathnael', 'lastname', 'M', '097426534', 'hayat', '0000',3),
-                           ('adm10', 'Barnabas', 'Solomon', 'M', '09093664', 'cmc', '2222',1)
-						   
-insert into admin values('adm10', 10000, 'cmc')
-
+                           ('rntr11', 'Abel', 'yohannes', 'M', '0945117271', 'hayat', '0000',3)
+insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
+                           values
+                           ('rntr12', 'Kidus', 'paulos', 'M', '0911123456', 'hayat', '0000',3)
+insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id)
+                           values
+                           ('rntr13', 'Nathnael', 'Tsegaye', 'M', '0960017873', 'hayat', '0000',3)
+                           
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
+ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+                          
 insert into payment values(1, 'credit card')
 
 go
@@ -226,10 +243,7 @@ go
 
  go
 
- insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                            values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
- insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                            values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+
 --Procedure to insert new Profile
 go
 CREATE PROCEDURE Insert_Profile
@@ -445,6 +459,7 @@ end
 
 
 GO
+
 
  --use master
  --drop database car_rental_database
