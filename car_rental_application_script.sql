@@ -34,6 +34,24 @@ create table customer(
 
 GO
 
+create proc auto_Generate  @AdmID char(6) = 'adm000'
+as
+begin
+DECLARE @nextNumber int =0 
+SELECT @nextNumber = CAST( SubString( @AdmID, 4, 3) AS INT )
+SET @nextNumber = @nextNumber + 1
+SELECT CONCAT ('adm'
+, CASE
+WHEN @nextNumber < 10 THEN '00'
+WHEN @nextNumber < 100 THEN '0'
+ELSE ''
+END
+, CAST( @nextNumber AS char(3)) )
+
+End
+
+GO
+
 create proc [search customer]
 @searchby varchar(100)
 AS
@@ -52,24 +70,14 @@ GO
 
 
 create proc[update customer change by admin]
-@customerid varchar(100), @activity int, @rep int, @admid varchar(200)
+@customerid varchar(100), @activity int, @rep int
 as 
 BEGIN
-declare @priorvalue varchar(200) = (select activity as VARCHAR from profile where login_id = @customerid)
-declare @priorvaluerep int = (select reputation from customer where login_id = @customerid)
 update profile set activity=@activity where login_id=@customerid
 update customer set reputation=@rep where login_id=@customerid
-if @priorvalue != @activity and @activity=0
-    insert into [audit] values (@admid, 'you deactivated '+@customerid+''''+'s '+'customer account', getdate())
-else if @priorvalue != @activity and @activity=1
-    insert into [audit] values (@admid, 'you activated '+@customerid+''''+'s '+'customer account', getdate())
-
-if @priorvaluerep != @rep
-    insert into [audit] values
-     (@admid, 'you changed reputation of customer - '+@customerid+'  from  '+cast(@priorvaluerep as varchar)+'  to  '+cast(@rep as varchar), GETDATE())
 END
-go
 
+go
 ----------------customer view-------------------------------------
 create view customer_rep as 
     select profile.login_id, concat(first_name,' ',last_name) as fullname, sex, phone_number, home_address, activity, reputation from profile
@@ -121,7 +129,6 @@ go
    declare @cbranch NVARCHAR(100)
    select @cbranch = branch_loc from admin where login_id = @admid
    insert into cars values (@lp,'verified', @cname, @ctype, @ccapacity, @cmodel, @ccolor,1 ,@ccondition, @rep, @pph, @cbranch, @admid)
-   insert into [audit] values (@admid, 'you added a new vehicle with license plate  -  '+@lp, GETDATE())
    END
 
 
@@ -141,28 +148,26 @@ create table rental(
     paid_amount money,
     payment_id int,
     branch_loc NVARCHAR(100),/*new column*/
-	license_plate_no_rental varchar(200)
     CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE,
-	CONSTRAINT fk FOREIGN KEY(license_plate_no_rental) REFERENCES cars(license_plate_no),
+
 )
 
-create table car_reviews(
 
 
   create table car_reviews(
        rent_id VARCHAR(200),
        car_rating decimal(2,1) default 0,
        constraint fk_rnt_id FOREIGN KEY (rent_id) REFERENCES rental(rent_id) on update CASCADE
-)
+  )
 
 create table rented_cars(
-    r_id VARCHAR(200),
+    r_id varchar(200),
     license_plate_no varchar(200),
-    return_status VARCHAR(100) default 'unreturned',
+	return_status VARCHAR(100) default 'unreturned',
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
-    CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade,
+    CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade
 )
 create table [audit] (
     admin_id varchar(200),
@@ -252,7 +257,7 @@ CREATE PROCEDURE Insert_Profile
     @last_name varchar(100),
     @sex varchar(2),
     @phone_number varchar(100), 
-    @home_address varchar(100), 
+    @home_address varchar(100) , 
     @password varchar(100) ,
     @profile_type_id int,
 	@Activity int
@@ -285,7 +290,7 @@ END
 
 go
 
-------triggers to keep track of the stats of the brances
+------trigger to keep track of the stats of the brances
 create trigger [update branch stats] on cars
 for insert 
 as 
@@ -295,8 +300,7 @@ set @branch = (select car_branch FROM inserted)
 update branch set branch_vehicles_amount+=1 where branch_address=@branch
 end
 
-go 
-
+go
 create trigger [update branch stats of deleted vehicles tr]
 on cars 
 for delete 
@@ -322,13 +326,12 @@ if @amount>1
 END
 
 go
-
 create trigger [update reviews on branches] on car_reviews
 for insert 
 AS
 BEGIN
 declare @branch nvarchar(100)
-declare @newrating Decimal(18, 2)
+declare @newrating Decimal(18, 8)
 declare @temp_table table(
 		average_rating Decimal(18,8),
 		b_location nvarchar(100)
@@ -355,23 +358,21 @@ while @@FETCH_STATUS=0
 END
 
 GO
-
 create view vcc_view 
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id from
+
 cars
-full join (select rental.c_login_id, license_plate_no, return_status from rented_cars right join
+full join (select rental.c_login_id, license_plate_no from rented_cars right join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
 
 go
-
 create view srch_view
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition, firsttable.return_status from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition from
 cars
-full join (select rental.c_login_id, license_plate_no, return_status from rented_cars join
+full join (select rental.c_login_id, license_plate_no from rented_cars join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
-
 
 go
 
@@ -455,16 +456,238 @@ begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour desc
 end
-    end
+end
 
 
-GO
 
 
- --use master
- --drop database car_rental_database
 
--- insert into admin values('adm10', 10000.00, 'cmc');
+select * from vcc_view
+select * from vcc_view where (license_plate_no like '%'+'audi'+'%' or
+car_name like '%'+'audi'+'%' or car_type='audi')  and (verification='verified')
 
--- insert into branch values ('cmc', 0, 0);
+go
 
+declare @attribute varchar(200) = 'k'
+	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified'
+
+
+
+
+go
+create function return_name(@c_login_id varchar(200))
+returns varchar(200)
+as
+
+begin
+declare @name varchar(200)
+
+select @name=first_name from profile where login_id=@c_login_id 
+return @name
+	
+
+end
+
+
+go
+
+create Function Earnings(@renter_id varchar(200))
+returns table
+as
+
+return(
+select rented_cars.license_plate_no, 
+		car_name, 
+		car_color, 
+		car_branch, 
+		dbo.return_name(c_login_id) as firstname,
+		rental_date,
+		total_vehicles,
+		return_date,
+		paid_amount
+		from rental join rented_cars on rental.rent_id=rented_cars.r_id
+		join cars on cars.license_plate_no=rented_cars.license_plate_no
+		where renter_login_id = @renter_id 
+	
+		
+)  
+go
+create function Total_Earings(@renter_login_id varchar(200))
+returns money
+as
+begin
+declare @earnings money
+
+set @earnings=(select SUM(paid_amount) from Earnings(@renter_login_id))
+
+
+return @earnings
+
+end
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('11111','Pickup','Full-size pickup trucks',5,'Blue','New',10,5,20,'summit','rntr11')
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('22222','HatchBack','Maruti Alto K10 LXi (Petrol)',4,'Red','New',10,5,15,'hayat','rntr11')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('33333','Toyota','Toyota Camry',4,'Red','New',10,5,15,'hayat','rntr12')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('44444','BMW',' 3 Series GT',4,'Red','New',10,5,30,'hayat','rntr12')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('55555','Ford',' F-350',6,'White','New',10,5,25,'hayat','rntr13')
+
+
+insert into cars (license_plate_no,
+car_name,
+car_type,
+car_capacity,
+car_color,
+car_model,
+car_condition,
+rep_min_req,
+price_per_hour,
+car_branch,
+login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,5,50,'Summit','rntr13')
+
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(1,'cus10','rntr13','2001-10-5',2,'2001-10-8',50000,'hayat')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(2,'cus10','rntr11','2006-10-5',2,'2006-10-7',90000,'hayat')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(3,'cus10','rntr12','2010-10-5',2,'2010-10-8',10000,'hayat')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(4,'cus10','rntr12','2011-10-5',2,'2011-10-6',60000,'hayat')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(5,'cus21','rntr13','2012-09-5',2,'2012-09-6',51000,'hayat')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(6,'cus21','rntr11','2015-09-5',2,'2015-09-6',51000,'hayat')
+
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat')
+
+
+insert into  rented_cars (r_id,license_plate_no) values(1,'55555')
+
+insert into  rented_cars (r_id,license_plate_no) values(2,'11111')
+
+insert into  rented_cars (r_id,license_plate_no) values(3,'33333')
+
+insert into  rented_cars (r_id,license_plate_no) values(4,'44444')
+
+insert into  rented_cars (r_id,license_plate_no) values(5,'66666')
+
+insert into  rented_cars (r_id,license_plate_no) values(6,'11111')
+
+insert into  rented_cars (r_id,license_plate_no) values(7,'22222')
