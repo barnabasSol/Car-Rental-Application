@@ -77,6 +77,7 @@ namespace Car_Rental_App.RenterUserControl
             {
                 password.Text = "";
                 password.ForeColor = Color.Black;
+              
                 password.isPassword = true;
             }
         }
@@ -94,6 +95,11 @@ namespace Car_Rental_App.RenterUserControl
             {
                 eyebtn.Visible = true;
             }
+        }
+
+        private void Deactivate_Renter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

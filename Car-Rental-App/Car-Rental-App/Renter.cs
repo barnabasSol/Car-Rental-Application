@@ -99,9 +99,28 @@ namespace Car_Rental_App
             
                 conn.Close();
             }
-            
-           
-        
+
+        public void Edit_Renter_Account(string NLogin_id,string FirstName,string LastName,string Phone,string Address,string sex,string currentuserid)
+        {
+            SqlConnection conn = new SqlConnection(Program.my_connection_string);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("Edit_renter_Account", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = NLogin_id;
+            cmd.Parameters.AddWithValue("@First_Name", SqlDbType.VarChar).Value = FirstName;
+            cmd.Parameters.AddWithValue("@Last_Name", SqlDbType.VarChar).Value = LastName;
+            cmd.Parameters.AddWithValue("@phone", SqlDbType.VarChar).Value = Phone;
+            cmd.Parameters.AddWithValue("@homeaddress", SqlDbType.VarChar).Value = Address;
+            cmd.Parameters.AddWithValue("@sex", SqlDbType.VarChar).Value = sex;
+            cmd.Parameters.AddWithValue("@currentuserid ", SqlDbType.VarChar).Value = currentuserid;
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+
 
     }
 }
