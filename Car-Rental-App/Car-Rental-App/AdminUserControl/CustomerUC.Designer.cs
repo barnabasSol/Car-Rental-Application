@@ -74,6 +74,7 @@ namespace Car_Rental_App.AdminUserControl
             this.searchcustomer.TabIndex = 7;
             this.searchcustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchcustomer.OnValueChanged += new System.EventHandler(this.searchcustomer_OnValueChanged_1);
+            this.searchcustomer.Enter += new System.EventHandler(this.searchcustomer_Enter);
             // 
             // slow
             // 

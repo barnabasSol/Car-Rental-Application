@@ -148,11 +148,10 @@ create table rental(
     paid_amount money,
     payment_id int,
     branch_loc NVARCHAR(100),/*new column*/
-	license_plate_no_rental varchar(200)
     CONSTRAINT fk_bloc FOREIGN KEY (branch_loc) REFERENCES branch(branch_address) on update cascade,
     CONSTRAINT fk_cid FOREIGN KEY(c_login_id) REFERENCES profile(login_id) on update cascade,
     CONSTRAINT fk_pmnt_id FOREIGN KEY(payment_id) REFERENCES payment(payment_id) on update CASCADE,
-	CONSTRAINT fk FOREIGN KEY(license_plate_no_rental) REFERENCES cars(license_plate_no),
+
 )
 
 
@@ -166,6 +165,7 @@ create table rental(
 create table rented_cars(
     r_id varchar(200),
     license_plate_no varchar(200),
+	return_status VARCHAR(100) default 'unreturned',
     CONSTRAINT fk_r_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
     CONSTRAINT fk_lp_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade
 )
@@ -301,7 +301,31 @@ update branch set branch_vehicles_amount+=1 where branch_address=@branch
 end
 
 go
+create trigger [update branch stats of deleted vehicles tr]
+on cars 
+for delete 
+AS
+BEGIN
+declare @admid varchar(200) = (select login_id from deleted)
+declare @lp varchar(50) = (select license_plate_no from deleted)
+declare @branchloc nvarchar(100) = (select car_branch from deleted)
+update branch set branch_vehicles_amount-=1 where branch_address=@branchloc
+insert into [audit] values (@admid, 'you deleted a vehicle with license plate  -  '+@lp, GETDATE())
+END
 
+go
+
+create trigger [limit deleting vehicles]
+on cars 
+for delete
+AS
+BEGIN
+declare @amount int = (select COUNT(*) from deleted)
+if @amount>1
+    ROLLBACK TRANSACTION
+END
+
+go
 create trigger [update reviews on branches] on car_reviews
 for insert 
 AS
@@ -438,12 +462,6 @@ end
 
 
 
- --use master
- --drop database car_rental_database
-
--- insert into admin values('adm10', 10000.00, 'cmc');
-
--- insert into branch values ('cmc', 0, 0);
 select * from vcc_view
 select * from vcc_view where (license_plate_no like '%'+'audi'+'%' or
 car_name like '%'+'audi'+'%' or car_type='audi')  and (verification='verified')
@@ -457,7 +475,7 @@ declare @attribute varchar(200) = 'k'
 
 
 
-	
+go
 create function return_name(@c_login_id varchar(200))
 returns varchar(200)
 as
@@ -474,12 +492,12 @@ end
 
 go
 
-alter Function Earnings(@renter_id varchar(200))
+create Function Earnings(@renter_id varchar(200))
 returns table
 as
 
 return(
-select license_plate_no, 
+select rented_cars.license_plate_no, 
 		car_name, 
 		car_color, 
 		car_branch, 
@@ -487,19 +505,26 @@ select license_plate_no,
 		rental_date,
 		total_vehicles,
 		return_date,
-		paid_amount,
-		paid_amount*DATEDIFF(dd,rental_date,return_date)*total_vehicles as Total_amount
-		from rental join cars on rental.license_plate_no_rental=cars.license_plate_no
+		paid_amount
+		from rental join rented_cars on rental.rent_id=rented_cars.r_id
+		join cars on cars.license_plate_no=rented_cars.license_plate_no
 		where renter_login_id = @renter_id 
 	
 		
 )  
 go
+create function Total_Earings(@renter_login_id varchar(200))
+returns money
+as
+begin
+declare @earnings money
+
+set @earnings=(select SUM(paid_amount) from Earnings(@renter_login_id))
 
 
+return @earnings
 
-select DATEDIFF(dd,getdate(),'2022-10-02')
-
+end
 
 insert into cars (license_plate_no,
 car_name,
@@ -579,8 +604,25 @@ login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,
 
 
 
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(1,'cus10','rntr13','2001-10-5',2,'2001-10-8',50000,'hayat')
 
-
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(2,'cus10','rntr11','2006-10-5',2,'2006-10-7',90000,'hayat')
 
 
 insert into rental (rent_id
@@ -591,17 +633,7 @@ insert into rental (rent_id
 ,return_date
 ,paid_amount
 ,branch_loc
-,license_plate_no_rental) values(1,'cus10','rntr13','2001-10-5',2,'2001-10-8',50000,'hayat','55555')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-,license_plate_no_rental) values(2,'cus10','rntr11','2006-10-5',2,'2006-10-7',90000,'hayat','11111')
+) values(3,'cus10','rntr12','2010-10-5',2,'2010-10-8',10000,'hayat')
 
 
 insert into rental (rent_id
@@ -612,7 +644,27 @@ insert into rental (rent_id
 ,return_date
 ,paid_amount
 ,branch_loc
-,license_plate_no_rental) values(3,'cus10','rntr12','2010-10-5',2,'2010-10-8',10000,'hayat','33333')
+) values(4,'cus10','rntr12','2011-10-5',2,'2011-10-6',60000,'hayat')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(5,'cus21','rntr13','2012-09-5',2,'2012-09-6',51000,'hayat')
+
+insert into rental (rent_id
+,c_login_id
+,renter_login_id
+,rental_date
+,total_vehicles
+,return_date
+,paid_amount
+,branch_loc
+) values(6,'cus21','rntr11','2015-09-5',2,'2015-09-6',51000,'hayat')
 
 
 insert into rental (rent_id
@@ -623,62 +675,19 @@ insert into rental (rent_id
 ,return_date
 ,paid_amount
 ,branch_loc
-,license_plate_no_rental) values(4,'cus10','rntr12','2011-10-5',2,'2011-10-6',60000,'hayat','44444')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-,license_plate_no_rental) values(5,'cus21','rntr13','2012-09-5',2,'2012-09-6',51000,'hayat','66666')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-,license_plate_no_rental) values(6,'cus21','rntr11','2015-09-5',2,'2015-09-6',51000,'hayat','11111')
+) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat')
 
 
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-,license_plate_no_rental) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat','22222')
+insert into  rented_cars (r_id,license_plate_no) values(1,'55555')
 
+insert into  rented_cars (r_id,license_plate_no) values(2,'11111')
 
+insert into  rented_cars (r_id,license_plate_no) values(3,'33333')
 
+insert into  rented_cars (r_id,license_plate_no) values(4,'44444')
 
-select * from profile
-select * from rental
-select * from cars
+insert into  rented_cars (r_id,license_plate_no) values(5,'66666')
 
-select * from Earnings('rntr11')
-go
+insert into  rented_cars (r_id,license_plate_no) values(6,'11111')
 
-create function Total_Earings(@renter_login_id varchar(200))
-returns money
-as
-begin
-declare @earnings money
-
-set @earnings=(select SUM(total_amount) from Earnings(@renter_login_id))
-
-
-return @earnings
-
-end
-
-
-
-select dbo.Total_Earings('rntr11')
+insert into  rented_cars (r_id,license_plate_no) values(7,'22222')

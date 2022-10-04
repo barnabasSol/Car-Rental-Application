@@ -16,12 +16,13 @@ namespace Car_Rental_App.AdminUserControl
         private string _license_plate;
         private string _car_name;
         private string _car_type;
-        private bool _deletebtn;
+        private bool _freebtn;
         private Image _vstatus;
         private string _btnstatus;
         private Image _status;
         private Image _currentuserimg;
         private string _curcustomer;
+
 
         public VehicleCard()
         {
@@ -57,10 +58,10 @@ namespace Car_Rental_App.AdminUserControl
             get { return _car_type; }
             set { _car_type = value; ctypelbl.Text = value; }
         }
-        public bool deletebtn
+        public bool freebtn
         {
-            get { return _deletebtn; }
-            set { _deletebtn = value; delete_btn.Visible = value; }
+            get { return _freebtn; }
+            set { _freebtn = value; free_btn.Visible = value; }
         }
         public Image vstatus
         {
@@ -137,13 +138,47 @@ namespace Car_Rental_App.AdminUserControl
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void update_return_status(string lp)
+        {
+            string query = "update rented_cars set return_status= 'returned' where license_plate_no=@lp";
+            SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
+            lp_param.Value = lp;
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    command.Parameters.Add(lp_param);
+                    command.Prepare();
+                    command.ExecuteNonQuery();
+                }
+            }
 
         }
 
-        private void delete_btn_Click(object sender, EventArgs e)
+       
+        private void edit_vehicle_Click(object sender, EventArgs e)
         {
-            string query = "[delete car] @lp";
-            SqlParameter lp_param = new SqlParameter("lp", SqlDbType.VarChar, 200);
+            EditVehicleForm ev = new EditVehicleForm(lplbl.Text);
+            ev.Show();
+        }
+
+        private void free_btn_Click(object sender, EventArgs e)
+        {
+            enable_car();
+            free_btn.ButtonText = "Freed!";
+            undofreebtn.Visible = true;
+            update_return_status(lplbl.Text);
+        }
+
+        private void undofreebtn_Click(object sender, EventArgs e)
+        {
+            disable_car();
+            free_btn.ButtonText = "Free Vehicle";
+            string query = "update rented_cars set return_status= 'unreturned' where license_plate_no=@lp";
+            SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
             lp_param.Value = lplbl.Text;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
@@ -155,13 +190,7 @@ namespace Car_Rental_App.AdminUserControl
                     command.ExecuteNonQuery();
                 }
             }
-            Controls.Remove(this);
         }
 
-        private void edit_vehicle_Click(object sender, EventArgs e)
-        {
-            EditVehicleForm ev = new EditVehicleForm(lplbl.Text);
-            ev.Show();
-        }
     }
 }

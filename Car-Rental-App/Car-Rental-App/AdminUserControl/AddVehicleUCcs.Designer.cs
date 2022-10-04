@@ -293,7 +293,6 @@ namespace Car_Rental_App.AdminUserControl
             // toolTip1
             // 
             this.toolTip1.ToolTipTitle = "hint:";
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // ccondition_valuelbl
             // 

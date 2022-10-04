@@ -146,7 +146,7 @@ namespace Car_Rental_App.AdminUserControl
                       string[] temp = ccapacity_cbox.Text.Split(' ');
                       car_capacity = int.Parse(temp[0]);
                 }
-                addVehicle(lptxt.Text, cnametxt.Text, cartype_cbox.Text, car_capacity,
+                add_vehicle(lptxt.Text, cnametxt.Text, cartype_cbox.Text, car_capacity,
                     cmodeltxt.Text, ccolor_cbox.Text, car_condition_slider.Value, car_rep_slider.Value,
                     decimal.Parse(pphtxt.Text), Profile.current_userid);
                 MessageBox.Show("successfully added", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -170,7 +170,6 @@ namespace Car_Rental_App.AdminUserControl
                     command.ExecuteNonQuery();
                 }
             }
-
         }
 
         private void undobtn_Click(object sender, EventArgs e)
@@ -183,16 +182,18 @@ namespace Car_Rental_App.AdminUserControl
         {
             lptxt.Text = "";
             cnametxt.Text = "";
-            cartype_cbox.Text = "";
-            ccapacity_cbox.Text = "";
+            cartype_cbox.Text = null;
+            ccapacity_cbox.Text = null;
+            ccondition_valuelbl.Text = "0";
+            repvaluelbl.Text = "0";
             cmodeltxt.Text = "";
-            ccolor_cbox.Text = "";
+            ccolor_cbox.Text = null;
             car_condition_slider.Value = 0;
             car_rep_slider.Value = 0;
             pphtxt.Text = "";
         }
 
-        public void addVehicle (string lp, string cname, string ctype, int ccapacity, string cmodel, string ccolor, int ccondition, int rep, Decimal pph, string adminid)
+        public void add_vehicle (string lp, string cname, string ctype, int ccapacity, string cmodel, string ccolor, int ccondition, int rep, Decimal pph, string adminid)
         {
             string query = "[insert cars by admin] @lp, @cname, @ctype, @ccapacity, @cmodel, @ccolor, @ccondition, @rep, @pph, @admid";
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
@@ -282,12 +283,6 @@ namespace Car_Rental_App.AdminUserControl
             return false;
         }
 
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
         private void car_condition_slider_ValueChanged(object sender, EventArgs e)
         {
             ccondition_valuelbl.Text = car_condition_slider.Value.ToString();
@@ -312,7 +307,6 @@ namespace Car_Rental_App.AdminUserControl
             }
         }
 
-
         private void pphtxt_Enter(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(pphtxt.Text) || pphtxt.Text == "price per hour")
@@ -321,6 +315,5 @@ namespace Car_Rental_App.AdminUserControl
                 pphtxt.ForeColor = Color.Black;
             }
         }
-
     }
 }

@@ -121,18 +121,18 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="delete_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="free_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGIAAAApCAYAAADOOvyhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHbSURBVGhD7ZqtrgIxEEZXIpFIJBKJRCKRSB4Dh+QxkEgk
-        EolEIpFIJHJuTndnczfAhtwLZcR3kiZk+RE9zEzbaWEiBBIRBIkIgkQEQSKCIBFBaBVxu91ss9nYbDaz
-        8Xhs/X7fiqLQeHEwX8zbdDq19Xpt1+u1mtl7norY7Xbph5CAjP1+b+fzuXpXvALzxbxtt1ubz+dpPhHy
-        iDsRWONLk8nELpdL9VS8g7a5bYjgg8Ph8Kk18R7INqPRqJFhGiKwJQl5IGVRP5xaBJYIGZGPxWJhq9Uq
-        vU4iWB1RSFQT8sK8UwpOp1MpgnREWhL5ISKIjCSCdS5LLJGf4/GYoiKJGAwGKTxEfkhPnU6nFNHtdlt3
-        feKzpJ24vxDfQyKCIBFBkIggSEQQJCIIEhEEiQhCLYKdHTs88R1qEZy8qg36PWoR9CHoR4j8cMbHWV8S
-        4UexIj/egkgiSEtYUZ3Ij7cgkghYLpdpiHz4nTGoRRANNLMPh0P1RHwS2tJkIW8/1CKAwuE9VPE5kMCf
-        npscTkMEEBHI8NsF4r1QD4iE3xLgTgSQplhFYY2qrtsd/4P04/WA4vyoG/pQhIM1lla9Xq/cdGj8adCK
-        9jvEz2gVIfIhEUGQiCBIRBAkIgRmP4Jr6DGso9XAAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAHAAAAApCAYAAADtYa10AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHZSURBVHhe7ZuhrsJAEEUrkUgkEolEIpFIJJ+BQ/IZSCQS
+        iUQikUgkEjkvZ+k2rwHq3mNvck+ySVOgYk9mZrc7VGGksUBxLFAcCxTHAsWxQHE6BT4ej9jtdrFYLGI6
+        ncZwOIyqqjz+eDDPzPd8Po/tdhv3+7028spHgYfDIT0IeUg8Ho9xvV7rT81fwjwz3/v9PpbLZfKAyHe8
+        CMQ2P5rNZnG73eq75pt0OWkJ5Ivj8fijbfNdyIqTyaSVCVsCsWx5ZUNqpT5mGoHYJURN+axWq9hsNuk6
+        CWS1SaF0zdMAX5S6y+XyFEjaJH0aHYhAIjEJZL/BktXocD6fUxQmgaPRKIWj0YE02uv1ngL7/X7nbt+U
+        SXpzky+MHhYojgWKY4HiWKA4FiiOBYpjgeI0AtnRs7M3WjQCOYlwu4QejUDOATkPNDrw7pp32ElgPpow
+        OuQjwCSQ9IlN10Ed8hFgEgjr9ToNUz65VxcagUQfzTKn06m+Y0qEtheyZT7+awQChTH3WpjyQB5BRmda
+        piUQiEAk5q4nUwbUOyLvtzx4EQikU1al2Ga1426170CazPWORcu7rom3AjPYZqk6GAyem0aPfx20uuT/
+        pnyiU6ApHwsUxwLFsUBxLFCaiB9WGYQUxIFaxgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="carstatusbtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

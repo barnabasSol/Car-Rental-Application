@@ -146,19 +146,20 @@ namespace Car_Rental_App.AdminUserControl
         private void savebtn_Click(object sender, EventArgs e)
         {
             
-            MessageBox.Show("changes saved","confirmation",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            string commandText = "exec [update customer change by admin] @loginid, @activity, @rep";
+            string commandText = "exec [update customer change by admin] @loginid, @activity, @rep, @admid";
             SqlParameter id_param = new SqlParameter("@loginid", SqlDbType.VarChar, 100);
-            SqlParameter rep_par = new SqlParameter("@rep", SqlDbType.Int, 0);
-            SqlParameter activ_par = new SqlParameter("@activity", SqlDbType.Int, 0);
+            SqlParameter rep_param = new SqlParameter("@rep", SqlDbType.Int, 0);
+            SqlParameter activ_param = new SqlParameter("@activity", SqlDbType.Int, 0);
+            SqlParameter admid_param = new SqlParameter("@admid", SqlDbType.VarChar, 200);
+            admid_param.Value = Profile.current_userid;
             id_param.Value = idtxt.Text;
-            rep_par.Value = bunifuSlider1.Value;
+            rep_param.Value = bunifuSlider1.Value;
             if (switch_status.Value == true)
-                activ_par.Value = 1;
+                activ_param.Value = 1;
             else
             {
-                activ_par.Value = 0;
+                activ_param.Value = 0;
             }
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
@@ -166,14 +167,16 @@ namespace Car_Rental_App.AdminUserControl
                 {
                     connection.Open();
                     command.Parameters.Add(id_param);
-                    command.Parameters.Add(rep_par);
-                    command.Parameters.Add(activ_par);
+                    command.Parameters.Add(rep_param);
+                    command.Parameters.Add(activ_param);
+                    command.Parameters.Add(admid_param);
                     command.Prepare();
                     command.ExecuteNonQuery();
                 }
             }
             expandbtn.Visible = true;
             this.Size = new Size(428, 123);
+            MessageBox.Show("changes saved","confirmation",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void CustomerCard_Load(object sender, EventArgs e)
