@@ -27,7 +27,7 @@ namespace Car_Rental_App.AdminUserControl
             conn.ConnectionString = Program.my_connection_string;
             customer_search_panel.Controls.Clear();
 
-            string commandText = "exec [search customer] @attribute";
+            string commandText = "[search customer] @attribute";
             SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 100);
             attribute_param.Value = attribute;
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))

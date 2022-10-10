@@ -52,12 +52,16 @@ namespace Car_Rental_App.AdminUserControl
 
         private void addVehicleCards()
         {
-            string query = "[vehicle card content]";
+            string query = "exec [vehicle card content] @aid";
+            SqlParameter aid_param = new SqlParameter("@aid", SqlDbType.VarChar, 200);
+            aid_param.Value = Profile.current_userid;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
+                    command.Parameters.Add(aid_param);
+                    command.Prepare();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -106,9 +110,11 @@ namespace Car_Rental_App.AdminUserControl
 
         void filter_vehicles(string attribute, string srchfilter)
         {
-            string query = "[search car for admin] @attribute, @filter";
+            string query = "[search car for admin] @attribute, @filter, @admid";
             SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 200);
             SqlParameter filter_param = new SqlParameter("@filter", SqlDbType.VarChar, 100);
+            SqlParameter admid_param = new SqlParameter("@admid", SqlDbType.VarChar, 200);
+            admid_param.Value = Profile.current_userid;
             attribute_param.Value = attribute;
             filter_param.Value = srchfilter;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
@@ -118,6 +124,7 @@ namespace Car_Rental_App.AdminUserControl
                     connection.Open();
                     command.Parameters.Add(attribute_param);
                     command.Parameters.Add(filter_param);
+                    command.Parameters.Add(admid_param);
                     command.Prepare();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {

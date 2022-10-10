@@ -29,11 +29,6 @@ namespace Car_Rental_App.RenterUserControl
                 sd.Fill(ds,"Earnings(" + "\'" + Profile.current_userid + "\')");
                 dataGridView1.DataSource = ds.Tables["Earnings(" + "\'" + Profile.current_userid + "\')"];
 
-
-
-               
-
-
             }
 
             using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
@@ -48,7 +43,6 @@ namespace Car_Rental_App.RenterUserControl
 
             }
 
-                
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Car_Rental_App.AdminUserControl
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
             this.backbtn.Location = new System.Drawing.Point(27, 11);
-            this.backbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backbtn.Margin = new System.Windows.Forms.Padding(2);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(78, 67);
             this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +76,7 @@ namespace Car_Rental_App.AdminUserControl
             this.deactivatebtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deactivatebtn.IdleLineColor = System.Drawing.Color.Black;
             this.deactivatebtn.Location = new System.Drawing.Point(340, 193);
-            this.deactivatebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.deactivatebtn.Margin = new System.Windows.Forms.Padding(5);
             this.deactivatebtn.Name = "deactivatebtn";
             this.deactivatebtn.Size = new System.Drawing.Size(148, 41);
             this.deactivatebtn.TabIndex = 5;
@@ -107,12 +107,12 @@ namespace Car_Rental_App.AdminUserControl
             this.password.HintForeColor = System.Drawing.Color.Empty;
             this.password.HintText = "";
             this.password.isPassword = false;
-            this.password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.password.LineIdleColor = System.Drawing.Color.Gray;
-            this.password.LineMouseHoverColor = System.Drawing.Color.Maroon;
+            this.password.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.password.LineThickness = 3;
             this.password.Location = new System.Drawing.Point(265, 125);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(320, 33);
             this.password.TabIndex = 6;

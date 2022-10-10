@@ -55,9 +55,9 @@ namespace Car_Rental_App.AdminUserControl
             this.oldpswtxt.HintForeColor = System.Drawing.Color.Empty;
             this.oldpswtxt.HintText = "";
             this.oldpswtxt.isPassword = false;
-            this.oldpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.oldpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.oldpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.oldpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.oldpswtxt.LineThickness = 3;
             this.oldpswtxt.Location = new System.Drawing.Point(247, 64);
             this.oldpswtxt.Margin = new System.Windows.Forms.Padding(4);
@@ -77,9 +77,9 @@ namespace Car_Rental_App.AdminUserControl
             this.newpswtxt.HintForeColor = System.Drawing.Color.Empty;
             this.newpswtxt.HintText = "";
             this.newpswtxt.isPassword = false;
-            this.newpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.newpswtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.newpswtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.newpswtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.newpswtxt.LineThickness = 3;
             this.newpswtxt.Location = new System.Drawing.Point(247, 131);
             this.newpswtxt.Margin = new System.Windows.Forms.Padding(4);
@@ -99,9 +99,9 @@ namespace Car_Rental_App.AdminUserControl
             this.cnfrmtxt.HintForeColor = System.Drawing.Color.Empty;
             this.cnfrmtxt.HintText = "";
             this.cnfrmtxt.isPassword = false;
-            this.cnfrmtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.cnfrmtxt.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.cnfrmtxt.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(135)))));
+            this.cnfrmtxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.cnfrmtxt.LineThickness = 3;
             this.cnfrmtxt.Location = new System.Drawing.Point(247, 201);
             this.cnfrmtxt.Margin = new System.Windows.Forms.Padding(4);
