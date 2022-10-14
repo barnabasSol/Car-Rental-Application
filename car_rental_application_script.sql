@@ -67,6 +67,8 @@ END
 
 
 GO
+select * from profile
+
 
 
 create proc[update customer change by admin]
@@ -230,6 +232,11 @@ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_a
                             values ('cus21', 'Ruth', 'Solomon', 'F', '09789786', 'cmc', '2222',2)
  insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
                             values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
+							
+
+
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values ('adm21', 'Barnabas', 'Solomon', 'M', '09780786', 'cmc', '2222',1)
                           
 insert into payment values(1, 'credit card')
 
@@ -269,7 +276,25 @@ end
 
 GO
 
+create proc Edit_renter_Account @login_id varchar(200),@First_Name varchar(100),@Last_Name varchar(100),@phone varchar(100),@homeaddress varchar(100),@sex varchar(3),@currentuserid varchar(200)
 
+as
+
+
+begin
+update profile
+set login_id=@login_id,
+first_name=@First_Name,
+last_name=@Last_Name,
+sex=@sex,
+phone_number=@phone,
+home_address=@homeaddress
+where login_id=@currentuserid
+
+end
+select * from profile
+
+go
 create proc [reset_renter_password]
 @login_id varchar(200),@new_password  varchar(100)
 as
@@ -604,6 +629,10 @@ login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,
 
 
 
+
+
+
+
 insert into rental (rent_id
 ,c_login_id
 ,renter_login_id
@@ -677,7 +706,39 @@ insert into rental (rent_id
 ,branch_loc
 ) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat')
 
+go
+select * from cars
+create proc insert_car
 
+@license_plate_no varchar(200),
+@car_name varchar(100),
+@car_type varchar(100),
+@car_capacity int,
+@car_model varchar(100),
+@car_color varchar(50),
+@car_condition int,
+@car_branch varchar(100),
+@price decimal(18,2),
+@login_id varchar(200),
+@rep_min_req int
+as
+
+begin
+insert into cars(license_plate_no,car_name,car_type,car_capacity,car_model,car_color,car_condition,
+car_branch,price_per_hour,login_id,rep_min_req) values(
+@license_plate_no ,
+@car_name ,
+@car_type ,
+@car_capacity ,
+@car_model ,
+@car_color ,
+@car_condition ,
+@car_branch ,
+@price,
+@login_id ,
+@rep_min_req)
+end
+go
 insert into  rented_cars (r_id,license_plate_no) values(1,'55555')
 
 insert into  rented_cars (r_id,license_plate_no) values(2,'11111')
@@ -691,3 +752,15 @@ insert into  rented_cars (r_id,license_plate_no) values(5,'66666')
 insert into  rented_cars (r_id,license_plate_no) values(6,'11111')
 
 insert into  rented_cars (r_id,license_plate_no) values(7,'22222')
+
+
+
+select * from rental
+select * from admin
+
+select * from branch
+select * from car_reviews
+select * from customer
+select * from payment
+ 
+select * from profile

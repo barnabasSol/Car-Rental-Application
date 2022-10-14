@@ -30,22 +30,12 @@ namespace Car_Rental_App.AdminUserControl
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customer_search_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchcustomer = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.slow = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.user_search;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // customer_search_panel
             // 
@@ -80,6 +70,16 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.slow.Interval = 200;
             this.slow.Tick += new System.EventHandler(this.slow_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.user_search;
+            this.pictureBox1.Location = new System.Drawing.Point(160, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // CustomerUC
             // 

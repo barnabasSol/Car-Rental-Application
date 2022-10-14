@@ -90,18 +90,20 @@
             // First_Name_textBox
             // 
             this.First_Name_textBox.ForeColor = System.Drawing.Color.Black;
-            this.First_Name_textBox.Location = new System.Drawing.Point(285, 187);
+            this.First_Name_textBox.Location = new System.Drawing.Point(214, 152);
+            this.First_Name_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.First_Name_textBox.Name = "First_Name_textBox";
-            this.First_Name_textBox.Size = new System.Drawing.Size(138, 22);
+            this.First_Name_textBox.Size = new System.Drawing.Size(104, 20);
             this.First_Name_textBox.TabIndex = 14;
             this.First_Name_textBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Phone_textBox
             // 
             this.Phone_textBox.ForeColor = System.Drawing.Color.Black;
-            this.Phone_textBox.Location = new System.Drawing.Point(285, 275);
+            this.Phone_textBox.Location = new System.Drawing.Point(214, 223);
+            this.Phone_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Phone_textBox.Name = "Phone_textBox";
-            this.Phone_textBox.Size = new System.Drawing.Size(138, 22);
+            this.Phone_textBox.Size = new System.Drawing.Size(104, 20);
             this.Phone_textBox.TabIndex = 15;
             // 
             // Male_rb
@@ -109,9 +111,10 @@
             this.Male_rb.AutoSize = true;
             this.Male_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
             this.Male_rb.ForeColor = System.Drawing.Color.Black;
-            this.Male_rb.Location = new System.Drawing.Point(310, 340);
+            this.Male_rb.Location = new System.Drawing.Point(232, 276);
+            this.Male_rb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Male_rb.Name = "Male_rb";
-            this.Male_rb.Size = new System.Drawing.Size(61, 22);
+            this.Male_rb.Size = new System.Drawing.Size(53, 19);
             this.Male_rb.TabIndex = 16;
             this.Male_rb.TabStop = true;
             this.Male_rb.Text = "Male";
@@ -122,9 +125,10 @@
             this.Female_rb.AutoSize = true;
             this.Female_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
             this.Female_rb.ForeColor = System.Drawing.Color.Black;
-            this.Female_rb.Location = new System.Drawing.Point(434, 340);
+            this.Female_rb.Location = new System.Drawing.Point(326, 276);
+            this.Female_rb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Female_rb.Name = "Female_rb";
-            this.Female_rb.Size = new System.Drawing.Size(78, 22);
+            this.Female_rb.Size = new System.Drawing.Size(67, 19);
             this.Female_rb.TabIndex = 17;
             this.Female_rb.TabStop = true;
             this.Female_rb.Text = "Female";
@@ -133,47 +137,53 @@
             // Address_textBox
             // 
             this.Address_textBox.ForeColor = System.Drawing.Color.Black;
-            this.Address_textBox.Location = new System.Drawing.Point(285, 423);
+            this.Address_textBox.Location = new System.Drawing.Point(214, 344);
+            this.Address_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Address_textBox.Name = "Address_textBox";
-            this.Address_textBox.Size = new System.Drawing.Size(138, 22);
+            this.Address_textBox.Size = new System.Drawing.Size(104, 20);
             this.Address_textBox.TabIndex = 18;
             // 
             // Account_CBox
             // 
+            this.Account_CBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Account_CBox.ForeColor = System.Drawing.Color.Black;
             this.Account_CBox.FormattingEnabled = true;
             this.Account_CBox.Items.AddRange(new object[] {
             "Customer",
             "Renter"});
-            this.Account_CBox.Location = new System.Drawing.Point(285, 487);
+            this.Account_CBox.Location = new System.Drawing.Point(214, 396);
+            this.Account_CBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Account_CBox.Name = "Account_CBox";
-            this.Account_CBox.Size = new System.Drawing.Size(138, 24);
+            this.Account_CBox.Size = new System.Drawing.Size(104, 21);
             this.Account_CBox.TabIndex = 19;
             // 
             // Password_Textbox
             // 
             this.Password_Textbox.ForeColor = System.Drawing.Color.Black;
-            this.Password_Textbox.Location = new System.Drawing.Point(902, 112);
+            this.Password_Textbox.Location = new System.Drawing.Point(676, 91);
+            this.Password_Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Password_Textbox.Name = "Password_Textbox";
             this.Password_Textbox.PasswordChar = '●';
-            this.Password_Textbox.Size = new System.Drawing.Size(138, 22);
+            this.Password_Textbox.Size = new System.Drawing.Size(104, 20);
             this.Password_Textbox.TabIndex = 20;
             // 
             // Confirm_TextBox
             // 
             this.Confirm_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Confirm_TextBox.Location = new System.Drawing.Point(902, 180);
+            this.Confirm_TextBox.Location = new System.Drawing.Point(676, 146);
+            this.Confirm_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Confirm_TextBox.Name = "Confirm_TextBox";
             this.Confirm_TextBox.PasswordChar = '●';
-            this.Confirm_TextBox.Size = new System.Drawing.Size(138, 22);
+            this.Confirm_TextBox.Size = new System.Drawing.Size(104, 20);
             this.Confirm_TextBox.TabIndex = 21;
             // 
             // Last_Name_textBox
             // 
             this.Last_Name_textBox.ForeColor = System.Drawing.Color.Black;
-            this.Last_Name_textBox.Location = new System.Drawing.Point(478, 187);
+            this.Last_Name_textBox.Location = new System.Drawing.Point(358, 152);
+            this.Last_Name_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Last_Name_textBox.Name = "Last_Name_textBox";
-            this.Last_Name_textBox.Size = new System.Drawing.Size(138, 22);
+            this.Last_Name_textBox.Size = new System.Drawing.Size(104, 20);
             this.Last_Name_textBox.TabIndex = 22;
             // 
             // First_Name_lbl
@@ -181,9 +191,10 @@
             this.First_Name_lbl.AutoSize = true;
             this.First_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
             this.First_Name_lbl.ForeColor = System.Drawing.Color.Black;
-            this.First_Name_lbl.Location = new System.Drawing.Point(316, 216);
+            this.First_Name_lbl.Location = new System.Drawing.Point(237, 176);
+            this.First_Name_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.First_Name_lbl.Name = "First_Name_lbl";
-            this.First_Name_lbl.Size = new System.Drawing.Size(81, 18);
+            this.First_Name_lbl.Size = new System.Drawing.Size(67, 15);
             this.First_Name_lbl.TabIndex = 23;
             this.First_Name_lbl.Text = "First Name";
             // 
@@ -192,9 +203,10 @@
             this.Last_Name_lbl.AutoSize = true;
             this.Last_Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
             this.Last_Name_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Last_Name_lbl.Location = new System.Drawing.Point(506, 216);
+            this.Last_Name_lbl.Location = new System.Drawing.Point(380, 176);
+            this.Last_Name_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Last_Name_lbl.Name = "Last_Name_lbl";
-            this.Last_Name_lbl.Size = new System.Drawing.Size(80, 18);
+            this.Last_Name_lbl.Size = new System.Drawing.Size(67, 15);
             this.Last_Name_lbl.TabIndex = 24;
             this.Last_Name_lbl.Text = "Last Name";
             // 
@@ -287,9 +299,10 @@
             this.Login_Id_lbl.AutoSize = true;
             this.Login_Id_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_Id_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Login_Id_lbl.Location = new System.Drawing.Point(98, 124);
+            this.Login_Id_lbl.Location = new System.Drawing.Point(74, 101);
+            this.Login_Id_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Login_Id_lbl.Name = "Login_Id_lbl";
-            this.Login_Id_lbl.Size = new System.Drawing.Size(125, 31);
+            this.Login_Id_lbl.Size = new System.Drawing.Size(97, 23);
             this.Login_Id_lbl.TabIndex = 31;
             this.Login_Id_lbl.Text = "Login-Id :";
             // 
@@ -298,9 +311,10 @@
             this.Name_lbl.AutoSize = true;
             this.Name_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Name_lbl.Location = new System.Drawing.Point(115, 187);
+            this.Name_lbl.Location = new System.Drawing.Point(86, 152);
+            this.Name_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(103, 31);
+            this.Name_lbl.Size = new System.Drawing.Size(82, 23);
             this.Name_lbl.TabIndex = 32;
             this.Name_lbl.Text = "Name :";
             // 
@@ -309,9 +323,10 @@
             this.Phone_lbl.AutoSize = true;
             this.Phone_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Phone_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Phone_lbl.Location = new System.Drawing.Point(115, 266);
+            this.Phone_lbl.Location = new System.Drawing.Point(86, 216);
+            this.Phone_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Phone_lbl.Name = "Phone_lbl";
-            this.Phone_lbl.Size = new System.Drawing.Size(105, 31);
+            this.Phone_lbl.Size = new System.Drawing.Size(83, 23);
             this.Phone_lbl.TabIndex = 33;
             this.Phone_lbl.Text = "Phone :";
             // 
@@ -320,9 +335,10 @@
             this.Address_lbl.AutoSize = true;
             this.Address_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Address_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Address_lbl.Location = new System.Drawing.Point(91, 414);
+            this.Address_lbl.Location = new System.Drawing.Point(68, 336);
+            this.Address_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address_lbl.Name = "Address_lbl";
-            this.Address_lbl.Size = new System.Drawing.Size(125, 31);
+            this.Address_lbl.Size = new System.Drawing.Size(99, 23);
             this.Address_lbl.TabIndex = 34;
             this.Address_lbl.Text = "Address :";
             // 
@@ -331,9 +347,10 @@
             this.Confrim_lbl.AutoSize = true;
             this.Confrim_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Confrim_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Confrim_lbl.Location = new System.Drawing.Point(746, 171);
+            this.Confrim_lbl.Location = new System.Drawing.Point(560, 139);
+            this.Confrim_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Confrim_lbl.Name = "Confrim_lbl";
-            this.Confrim_lbl.Size = new System.Drawing.Size(125, 31);
+            this.Confrim_lbl.Size = new System.Drawing.Size(96, 23);
             this.Confrim_lbl.TabIndex = 35;
             this.Confrim_lbl.Text = "Confirm :";
             // 
@@ -342,9 +359,10 @@
             this.Sex_lbl.AutoSize = true;
             this.Sex_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sex_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Sex_lbl.Location = new System.Drawing.Point(139, 340);
+            this.Sex_lbl.Location = new System.Drawing.Point(104, 276);
+            this.Sex_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Sex_lbl.Name = "Sex_lbl";
-            this.Sex_lbl.Size = new System.Drawing.Size(68, 31);
+            this.Sex_lbl.Size = new System.Drawing.Size(54, 23);
             this.Sex_lbl.TabIndex = 36;
             this.Sex_lbl.Text = "Sex :";
             // 
@@ -353,9 +371,10 @@
             this.Account_lbl.AutoSize = true;
             this.Account_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Account_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Account_lbl.Location = new System.Drawing.Point(91, 487);
+            this.Account_lbl.Location = new System.Drawing.Point(68, 396);
+            this.Account_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Account_lbl.Name = "Account_lbl";
-            this.Account_lbl.Size = new System.Drawing.Size(133, 31);
+            this.Account_lbl.Size = new System.Drawing.Size(106, 23);
             this.Account_lbl.TabIndex = 37;
             this.Account_lbl.Text = "Account :";
             // 
@@ -364,28 +383,31 @@
             this.Password_lbl.AutoSize = true;
             this.Password_lbl.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Password_lbl.Location = new System.Drawing.Point(728, 112);
+            this.Password_lbl.Location = new System.Drawing.Point(546, 91);
+            this.Password_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password_lbl.Name = "Password_lbl";
-            this.Password_lbl.Size = new System.Drawing.Size(143, 31);
+            this.Password_lbl.Size = new System.Drawing.Size(114, 23);
             this.Password_lbl.TabIndex = 38;
             this.Password_lbl.Text = "Password :";
             // 
             // login_textbox
             // 
             this.login_textbox.ForeColor = System.Drawing.Color.Black;
-            this.login_textbox.Location = new System.Drawing.Point(285, 124);
+            this.login_textbox.Location = new System.Drawing.Point(214, 101);
+            this.login_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.login_textbox.Name = "login_textbox";
-            this.login_textbox.Size = new System.Drawing.Size(138, 22);
+            this.login_textbox.Size = new System.Drawing.Size(104, 20);
             this.login_textbox.TabIndex = 13;
             // 
             // Create_your_Account_lbl
             // 
             this.Create_your_Account_lbl.AutoSize = true;
             this.Create_your_Account_lbl.Font = new System.Drawing.Font("Arial", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Create_your_Account_lbl.ForeColor = System.Drawing.Color.Black;
-            this.Create_your_Account_lbl.Location = new System.Drawing.Point(330, 7);
+            this.Create_your_Account_lbl.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Create_your_Account_lbl.Location = new System.Drawing.Point(248, 6);
+            this.Create_your_Account_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Create_your_Account_lbl.Name = "Create_your_Account_lbl";
-            this.Create_your_Account_lbl.Size = new System.Drawing.Size(384, 42);
+            this.Create_your_Account_lbl.Size = new System.Drawing.Size(309, 34);
             this.Create_your_Account_lbl.TabIndex = 39;
             this.Create_your_Account_lbl.Text = "Create your Account";
             // 
@@ -393,9 +415,11 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.Create_your_Account_lbl);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1110, 97);
+            this.panel1.Size = new System.Drawing.Size(831, 79);
             this.panel1.TabIndex = 40;
             // 
             // bunifuThinButton22
@@ -416,10 +440,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(756, 414);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(567, 336);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(92, 52);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(69, 42);
             this.bunifuThinButton22.TabIndex = 30;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -442,10 +466,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(584, 414);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(438, 336);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(92, 52);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(69, 42);
             this.bunifuThinButton21.TabIndex = 29;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
@@ -453,18 +477,17 @@
             // little_car
             // 
             this.little_car.Image = ((System.Drawing.Image)(resources.GetObject("little_car.Image")));
-            this.little_car.Location = new System.Drawing.Point(1019, 457);
-            this.little_car.Margin = new System.Windows.Forms.Padding(4);
+            this.little_car.Location = new System.Drawing.Point(764, 371);
             this.little_car.Name = "little_car";
-            this.little_car.Size = new System.Drawing.Size(89, 82);
+            this.little_car.Size = new System.Drawing.Size(67, 67);
             this.little_car.TabIndex = 3;
             this.little_car.TabStop = false;
             // 
             // Create_Account_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 539);
+            this.ClientSize = new System.Drawing.Size(831, 438);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Password_lbl);
             this.Controls.Add(this.Account_lbl);
@@ -491,6 +514,7 @@
             this.Controls.Add(this.little_car);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Create_Account_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent a car";

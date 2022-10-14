@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
@@ -83,6 +83,12 @@
     <Compile Include="AdminUserControl\DeactivateAccountUC.Designer.cs">
       <DependentUpon>DeactivateAccountUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUserControl\EditAdminAccountUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\EditAdminAccountUC.Designer.cs">
+      <DependentUpon>EditAdminAccountUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserControl\HomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     <Compile Include="AdminUserControl\SettingUserControl.Designer.cs">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUserControl\StatsCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\StatsCard.Designer.cs">
+      <DependentUpon>StatsCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserControl\VehicleCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +124,13 @@
     </Compile>
     <Compile Include="AdminUserControl\VehicleUC.Designer.cs">
       <DependentUpon>VehicleUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.cs" />
+    <Compile Include="BranchStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchStats.Designer.cs">
+      <DependentUpon>BranchStats.cs</DependentUpon>
     </Compile>
     <Compile Include="Create_Account_Form.cs">
       <SubType>Form</SubType>
@@ -125,6 +144,24 @@
     </Compile>
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.Designer.cs">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.Designer.cs">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_form.Designer.cs">
+      <DependentUpon>Customer_form.cs</DependentUpon>
     </Compile>
     <Compile Include="EditVehicleForm.cs">
       <SubType>Form</SubType>
@@ -218,6 +255,9 @@
     <EmbeddedResource Include="AdminUserControl\DeactivateAccountUC.resx">
       <DependentUpon>DeactivateAccountUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\EditAdminAccountUC.resx">
+      <DependentUpon>EditAdminAccountUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,14 +267,29 @@
     <EmbeddedResource Include="AdminUserControl\SettingUserControl.resx">
       <DependentUpon>SettingUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\StatsCard.resx">
+      <DependentUpon>StatsCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\VehicleCard.resx">
       <DependentUpon>VehicleCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\VehicleUC.resx">
       <DependentUpon>VehicleUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BranchStats.resx">
+      <DependentUpon>BranchStats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\BrowseVehicles.resx">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\VehicleCard.resx">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_form.resx">
+      <DependentUpon>Customer_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditVehicleForm.resx">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
@@ -317,6 +372,7 @@
     <None Include="Resources\car %281%29.png" />
     <None Include="Resources\available.png" />
     <None Include="Resources\block.png" />
+    <None Include="Resources\company.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />
@@ -335,6 +391,7 @@
     <None Include="Resources\unavailable.png" />
     <None Include="Resources\nulluser.png" />
     <None Include="Resources\user.png" />
+    <None Include="Resources\star.png" />
     <Content Include="Resources\visible.png" />
     <None Include="Resources\icons8-search-more-30.png" />
     <Content Include="Resources\icons8-settings-50.png" />

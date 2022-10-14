@@ -89,7 +89,8 @@ namespace Car_Rental_App
 
         private void little_car_Click(object sender, EventArgs e)
         {
-
+            BranchStats br = new BranchStats();
+            br.Show();
         }
     }
 }
