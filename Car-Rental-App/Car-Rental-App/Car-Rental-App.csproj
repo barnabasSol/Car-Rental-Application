@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
@@ -145,6 +145,24 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.Designer.cs">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.Designer.cs">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_form.Designer.cs">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +269,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\BrowseVehicles.resx">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\VehicleCard.resx">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_form.resx">
+      <DependentUpon>Customer_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditVehicleForm.resx">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
