@@ -40,29 +40,20 @@ namespace Car_Rental_App.RenterUserControl
             Regex r = new Regex(@"^[0-9]{3}[0-9]{3}[0-9]{4}$");
             Regex r1 = new Regex(@"^[a-zA-z]{1,100}$");
             Boolean t = true;
-            if (String.IsNullOrEmpty(LoginIdTxt.Texts))
-            {
-                t = false;
-                errorProvider1.SetError(LoginIdTxt, "Login Id is required");
+            
 
-
-            }
-
-            else
-            {
-                errorProvider1.Clear();
-            }
+            
             if (String.IsNullOrEmpty(FirstNameTxt.Texts))
             {
                 t=false;
-                errorProvider2.SetError(FirstNameTxt, "First Name is required");
+                errorProvider2.SetError(FirstNameTxt, "Enter your old First Name ");
 
             }
             else { errorProvider2.Clear(); }
             if (String.IsNullOrEmpty(LastNameTxt.Texts))
             {
                 t = false;
-                errorProvider3.SetError(LastNameTxt, "Last Name is required");
+                errorProvider3.SetError(LastNameTxt, "Enter your old Last Name");
 
             }
             else { errorProvider3.Clear(); }
@@ -70,7 +61,7 @@ namespace Car_Rental_App.RenterUserControl
             if (String.IsNullOrEmpty(PhoneTxt.Texts))
             {
                 t = false;
-                errorProvider4.SetError(PhoneTxt, "Phone Number is required");
+                errorProvider4.SetError(PhoneTxt, "Enter your old Phone Number");
 
             }
             else { errorProvider4.Clear(); }
@@ -78,7 +69,7 @@ namespace Car_Rental_App.RenterUserControl
             if (String.IsNullOrEmpty(AddressTxt.Texts))
             {
                 t = false;
-                errorProvider5.SetError(AddressTxt, "Address is required");
+                errorProvider5.SetError(AddressTxt, "Enter your old Address");
 
             }
             else { errorProvider5.Clear(); }
@@ -138,17 +129,6 @@ namespace Car_Rental_App.RenterUserControl
 
             }
 
-            if (p.valdation(LoginIdTxt.Texts))
-            {
-
-                t = false;
-                errorProvider10.SetError(LoginIdTxt, " Login Id  already extits in the database");
-
-            }
-            else
-            {
-                errorProvider10.Clear();
-            }
 
             if (t)
             {
@@ -161,7 +141,7 @@ namespace Car_Rental_App.RenterUserControl
                male = Male_rb.Text;
                 female = Female_rb.Text;
                 
-                ry.login_id= LoginIdTxt.Texts;
+             
                 ry.first_name = FirstNameTxt.Texts;
                 ry.last_name = LastNameTxt.Texts;
                ry.phone = PhoneTxt.Texts;
@@ -177,7 +157,7 @@ namespace Car_Rental_App.RenterUserControl
                 }
 
 
-                ry.Edit_Renter_Account(ry.login_id, ry.first_name, ry.last_name, ry.phone, ry.home_adress, ry.sex, Profile.current_userid);
+                ry.Edit_Renter_Account(ry.first_name, ry.last_name, ry.phone, ry.home_adress, ry.sex, Profile.current_userid);
 
 
 
@@ -189,16 +169,9 @@ namespace Car_Rental_App.RenterUserControl
         }
 
 
-        private void LoginIdTxt_Enter(object sender, EventArgs e)
-        {
-            LoginIdTxt.BorderColor = Color.Aqua;
-        }
+       
 
-        private void LoginIdTxt_Leave(object sender, EventArgs e)
-        {
-            LoginIdTxt.BorderColor = Color.Black;
-        }
-
+       
         private void FirstNameTxt_Enter(object sender, EventArgs e)
         {
             FirstNameTxt.BorderColor = Color.Aqua;

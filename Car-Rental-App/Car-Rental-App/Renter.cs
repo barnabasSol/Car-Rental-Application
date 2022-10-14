@@ -100,14 +100,13 @@ namespace Car_Rental_App
                 conn.Close();
             }
 
-        public void Edit_Renter_Account(string NLogin_id,string FirstName,string LastName,string Phone,string Address,string sex,string currentuserid)
+        public void Edit_Renter_Account(string FirstName,string LastName,string Phone,string Address,string sex,string currentuserid)
         {
             SqlConnection conn = new SqlConnection(Program.my_connection_string);
             conn.Open();
             SqlCommand cmd = new SqlCommand("Edit_renter_Account", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = NLogin_id;
             cmd.Parameters.AddWithValue("@First_Name", SqlDbType.VarChar).Value = FirstName;
             cmd.Parameters.AddWithValue("@Last_Name", SqlDbType.VarChar).Value = LastName;
             cmd.Parameters.AddWithValue("@phone", SqlDbType.VarChar).Value = Phone;
@@ -119,7 +118,19 @@ namespace Car_Rental_App
             conn.Close();
 
         }
+        public void Deactivate_Renter_Account(string currentuserid)
+        {
+            SqlConnection conn = new SqlConnection(Program.my_connection_string);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("deactivate_renter_account", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.AddWithValue("@renterid", SqlDbType.VarChar).Value = currentuserid;
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
 
 
     }

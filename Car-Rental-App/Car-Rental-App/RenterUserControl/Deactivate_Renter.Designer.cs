@@ -30,44 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Deactivate_Renter));
-            this.password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Backlbl = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.deactivatebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.eyebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.backbtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.password = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
             this.SuspendLayout();
             // 
-            // password
-            // 
-            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.password.ForeColor = System.Drawing.Color.Gray;
-            this.password.HintForeColor = System.Drawing.Color.Empty;
-            this.password.HintText = "";
-            this.password.isPassword = false;
-            this.password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.password.LineIdleColor = System.Drawing.Color.Gray;
-            this.password.LineMouseHoverColor = System.Drawing.Color.Maroon;
-            this.password.LineThickness = 3;
-            this.password.Location = new System.Drawing.Point(349, 190);
-            this.password.Margin = new System.Windows.Forms.Padding(5);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(427, 41);
-            this.password.TabIndex = 7;
-            this.password.Text = "enter your password";
-            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.password.Enter += new System.EventHandler(this.password_Enter);
-            this.password.Leave += new System.EventHandler(this.password_Leave);
-            // 
             // Backlbl
             // 
             this.Backlbl.AutoSize = true;
             this.Backlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backlbl.Location = new System.Drawing.Point(23, 103);
+            this.Backlbl.Location = new System.Drawing.Point(27, 102);
             this.Backlbl.Name = "Backlbl";
             this.Backlbl.Size = new System.Drawing.Size(52, 21);
             this.Backlbl.TabIndex = 43;
@@ -84,7 +62,7 @@
             // 
             this.deactivatebtn.ActiveBorderThickness = 1;
             this.deactivatebtn.ActiveCornerRadius = 20;
-            this.deactivatebtn.ActiveFillColor = System.Drawing.Color.Red;
+            this.deactivatebtn.ActiveFillColor = System.Drawing.Color.RoyalBlue;
             this.deactivatebtn.ActiveForecolor = System.Drawing.Color.White;
             this.deactivatebtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.deactivatebtn.BackColor = System.Drawing.Color.White;
@@ -98,7 +76,7 @@
             this.deactivatebtn.IdleFillColor = System.Drawing.Color.White;
             this.deactivatebtn.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deactivatebtn.IdleLineColor = System.Drawing.Color.Black;
-            this.deactivatebtn.Location = new System.Drawing.Point(371, 297);
+            this.deactivatebtn.Location = new System.Drawing.Point(278, 279);
             this.deactivatebtn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.deactivatebtn.Name = "deactivatebtn";
             this.deactivatebtn.Size = new System.Drawing.Size(157, 43);
@@ -112,7 +90,7 @@
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
-            this.eyebtn.Location = new System.Drawing.Point(259, 190);
+            this.eyebtn.Location = new System.Drawing.Point(199, 196);
             this.eyebtn.Margin = new System.Windows.Forms.Padding(4);
             this.eyebtn.Name = "eyebtn";
             this.eyebtn.Size = new System.Drawing.Size(57, 41);
@@ -129,7 +107,7 @@
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
-            this.backbtn.Location = new System.Drawing.Point(4, 17);
+            this.backbtn.Location = new System.Drawing.Point(0, 16);
             this.backbtn.Margin = new System.Windows.Forms.Padding(4);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(104, 82);
@@ -141,20 +119,38 @@
             this.backbtn.MouseEnter += new System.EventHandler(this.backbtn_MouseEnter);
             this.backbtn.MouseLeave += new System.EventHandler(this.backbtn_MouseLeave);
             // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.SystemColors.Window;
+            this.password.BorderColor = System.Drawing.Color.Black;
+            this.password.BorderSize = 2;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.password.ForeColor = System.Drawing.Color.DimGray;
+            this.password.Location = new System.Drawing.Point(278, 202);
+            this.password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.password.Name = "password";
+            this.password.Padding = new System.Windows.Forms.Padding(7);
+            this.password.PasswordChar = false;
+            this.password.Size = new System.Drawing.Size(427, 35);
+            this.password.TabIndex = 44;
+            this.password.Texts = "enter your password";
+            this.password.UnderlinedStlye = true;
+            this.password.Enter += new System.EventHandler(this.password_Enter);
+            this.password.Leave += new System.EventHandler(this.password_Leave);
+            // 
             // Deactivate_Renter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.password);
             this.Controls.Add(this.Backlbl);
             this.Controls.Add(this.deactivatebtn);
             this.Controls.Add(this.eyebtn);
-            this.Controls.Add(this.password);
             this.Controls.Add(this.backbtn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Deactivate_Renter";
             this.Size = new System.Drawing.Size(1125, 418);
-            this.Load += new System.EventHandler(this.Deactivate_Renter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
@@ -166,10 +162,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuImageButton backbtn;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox password;
         private Bunifu.Framework.UI.BunifuImageButton eyebtn;
         private Bunifu.Framework.UI.BunifuThinButton2 deactivatebtn;
         private System.Windows.Forms.Label Backlbl;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private UnderLined_TextBox password;
     }
 }
