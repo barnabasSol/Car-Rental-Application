@@ -145,6 +145,12 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUserControl\AccountSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\AccountSettings.Designer.cs">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUserControl\BrowseVehicles.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\AccountSettings.resx">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUserControl\BrowseVehicles.resx">
       <DependentUpon>BrowseVehicles.cs</DependentUpon>

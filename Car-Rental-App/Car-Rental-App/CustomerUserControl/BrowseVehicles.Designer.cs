@@ -37,6 +37,7 @@
             this.btnFinalize = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.pnlLeft.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlRight.SuspendLayout();
@@ -60,7 +61,7 @@
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSearch.Location = new System.Drawing.Point(3, 59);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.pnlSearch.Size = new System.Drawing.Size(415, 356);
             this.pnlSearch.TabIndex = 1;
             // 
@@ -100,7 +101,7 @@
             this.pnlSelected.Location = new System.Drawing.Point(0, 59);
             this.pnlSelected.Name = "pnlSelected";
             this.pnlSelected.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlSelected.Size = new System.Drawing.Size(360, 359);
+            this.pnlSelected.Size = new System.Drawing.Size(420, 359);
             this.pnlSelected.TabIndex = 1;
             // 
             // btnFinalize
@@ -124,13 +125,13 @@
             this.btnFinalize.IconVisible = true;
             this.btnFinalize.IconZoom = 90D;
             this.btnFinalize.IsTab = false;
-            this.btnFinalize.Location = new System.Drawing.Point(56, 5);
+            this.btnFinalize.Location = new System.Drawing.Point(228, 5);
             this.btnFinalize.Name = "btnFinalize";
             this.btnFinalize.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btnFinalize.OnHovercolor = System.Drawing.Color.Brown;
             this.btnFinalize.OnHoverTextColor = System.Drawing.Color.White;
             this.btnFinalize.selected = false;
-            this.btnFinalize.Size = new System.Drawing.Size(241, 48);
+            this.btnFinalize.Size = new System.Drawing.Size(132, 48);
             this.btnFinalize.TabIndex = 2;
             this.btnFinalize.Text = "Finalize Purchase";
             this.btnFinalize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,17 +145,31 @@
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(424, 0);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(360, 418);
+            this.pnlRight.Size = new System.Drawing.Size(420, 418);
             this.pnlRight.TabIndex = 2;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bunifuDatepicker1);
             this.panel1.Controls.Add(this.btnFinalize);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 59);
+            this.panel1.Size = new System.Drawing.Size(420, 59);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(3, 5);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(219, 47);
+            this.bunifuDatepicker1.TabIndex = 3;
+            this.bunifuDatepicker1.Value = new System.DateTime(2022, 10, 13, 19, 9, 51, 276);
             // 
             // BrowseVehicles
             // 
@@ -163,7 +178,7 @@
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlRight);
             this.Name = "BrowseVehicles";
-            this.Size = new System.Drawing.Size(784, 418);
+            this.Size = new System.Drawing.Size(844, 418);
             this.Load += new System.EventHandler(this.BrowseVehicles_Load);
             this.pnlLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -183,5 +198,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnFinalize;
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
     }
 }

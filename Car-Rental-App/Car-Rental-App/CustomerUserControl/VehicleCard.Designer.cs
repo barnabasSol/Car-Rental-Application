@@ -35,16 +35,16 @@
             this.lblprice = new System.Windows.Forms.Label();
             this.lblcondition = new System.Windows.Forms.Label();
             this.lblmodel = new System.Windows.Forms.Label();
-            this.lblcolor = new System.Windows.Forms.Label();
             this.lblcapacity = new System.Windows.Forms.Label();
             this.button1 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pnlColor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Car_Rental_App.Properties.Resources.sports_car;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,7 +55,7 @@
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(81, 4);
+            this.lblname.Location = new System.Drawing.Point(3, 0);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(59, 20);
             this.lblname.TabIndex = 1;
@@ -64,7 +64,7 @@
             // lbltype
             // 
             this.lbltype.AutoSize = true;
-            this.lbltype.Location = new System.Drawing.Point(82, 24);
+            this.lbltype.Location = new System.Drawing.Point(79, 44);
             this.lbltype.Name = "lbltype";
             this.lbltype.Size = new System.Drawing.Size(35, 13);
             this.lbltype.TabIndex = 2;
@@ -73,7 +73,7 @@
             // lblprice
             // 
             this.lblprice.AutoSize = true;
-            this.lblprice.Location = new System.Drawing.Point(82, 50);
+            this.lblprice.Location = new System.Drawing.Point(299, 5);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(35, 13);
             this.lblprice.TabIndex = 3;
@@ -82,7 +82,7 @@
             // lblcondition
             // 
             this.lblcondition.AutoSize = true;
-            this.lblcondition.Location = new System.Drawing.Point(82, 37);
+            this.lblcondition.Location = new System.Drawing.Point(79, 58);
             this.lblcondition.Name = "lblcondition";
             this.lblcondition.Size = new System.Drawing.Size(35, 13);
             this.lblcondition.TabIndex = 4;
@@ -91,26 +91,17 @@
             // lblmodel
             // 
             this.lblmodel.AutoSize = true;
-            this.lblmodel.Location = new System.Drawing.Point(218, 63);
+            this.lblmodel.Location = new System.Drawing.Point(4, 20);
             this.lblmodel.Name = "lblmodel";
             this.lblmodel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblmodel.Size = new System.Drawing.Size(35, 13);
             this.lblmodel.TabIndex = 5;
             this.lblmodel.Text = "label1";
             // 
-            // lblcolor
-            // 
-            this.lblcolor.AutoSize = true;
-            this.lblcolor.Location = new System.Drawing.Point(82, 63);
-            this.lblcolor.Name = "lblcolor";
-            this.lblcolor.Size = new System.Drawing.Size(35, 13);
-            this.lblcolor.TabIndex = 6;
-            this.lblcolor.Text = "label1";
-            // 
             // lblcapacity
             // 
             this.lblcapacity.AutoSize = true;
-            this.lblcapacity.Location = new System.Drawing.Point(221, 49);
+            this.lblcapacity.Location = new System.Drawing.Point(79, 71);
             this.lblcapacity.Name = "lblcapacity";
             this.lblcapacity.Size = new System.Drawing.Size(35, 13);
             this.lblcapacity.TabIndex = 7;
@@ -134,21 +125,31 @@
             this.button1.IdleFillColor = System.Drawing.Color.White;
             this.button1.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.button1.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.button1.Location = new System.Drawing.Point(221, 0);
+            this.button1.Location = new System.Drawing.Point(289, 71);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 39);
+            this.button1.Size = new System.Drawing.Size(45, 39);
             this.button1.TabIndex = 9;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pnlColor
+            // 
+            this.pnlColor.BackColor = System.Drawing.Color.Black;
+            this.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlColor.Location = new System.Drawing.Point(82, 87);
+            this.pnlColor.Name = "pnlColor";
+            this.pnlColor.Size = new System.Drawing.Size(28, 21);
+            this.pnlColor.TabIndex = 10;
             // 
             // VehicleCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pnlColor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblcapacity);
-            this.Controls.Add(this.lblcolor);
             this.Controls.Add(this.lblmodel);
             this.Controls.Add(this.lblcondition);
             this.Controls.Add(this.lblprice);
@@ -156,7 +157,7 @@
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.pictureBox1);
             this.Name = "VehicleCard";
-            this.Size = new System.Drawing.Size(286, 80);
+            this.Size = new System.Drawing.Size(344, 113);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,8 +172,8 @@
         private System.Windows.Forms.Label lblprice;
         private System.Windows.Forms.Label lblcondition;
         private System.Windows.Forms.Label lblmodel;
-        private System.Windows.Forms.Label lblcolor;
         private System.Windows.Forms.Label lblcapacity;
         private Bunifu.Framework.UI.BunifuThinButton2 button1;
+        private System.Windows.Forms.Panel pnlColor;
     }
 }

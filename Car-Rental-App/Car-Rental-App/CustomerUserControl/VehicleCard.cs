@@ -76,7 +76,7 @@ namespace Car_Rental_App.CustomerUserControl
         public string color
         {
             get { return _color; }
-            set { _color = value; lblcolor.Text = value; }
+            set { _color = value; pnlColor.BackColor = Color.FromName(value); }
         }
         private string _capacity;
 
