@@ -159,6 +159,7 @@
             this.settingbtn.TabIndex = 9;
             this.settingbtn.TabStop = false;
             this.settingbtn.Zoom = 10;
+            this.settingbtn.Click += new System.EventHandler(this.settingbtn_Click);
             // 
             // homebtn
             // 

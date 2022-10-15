@@ -13,7 +13,7 @@ namespace Car_Rental_App.CustomerUserControl
         {
             InitializeComponent();
         }
-        public static Dictionary<int, Vehicle> vehicles = new Dictionary<int, Vehicle>();
+        public Dictionary<int, Vehicle> vehicles = new Dictionary<int, Vehicle>();
         private void BrowseVehicles_Load(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(Program.my_connection_string))
