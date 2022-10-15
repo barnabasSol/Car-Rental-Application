@@ -208,6 +208,12 @@
     <Compile Include="RenterUserControl\Earnings.Designer.cs">
       <DependentUpon>Earnings.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterUserControl\Edit_Account_Rentercs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\Edit_Account_Rentercs.Designer.cs">
+      <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterUserControl\ResetP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,12 @@
     </Compile>
     <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.Designer.cs">
       <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterUserControl\UnderLined_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\UnderLined_TextBox.Designer.cs">
+      <DependentUpon>UnderLined_TextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Renter_Form.cs">
       <SubType>Form</SubType>
@@ -308,11 +320,17 @@
     <EmbeddedResource Include="RenterUserControl\Earnings.resx">
       <DependentUpon>Earnings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Edit_Account_Rentercs.resx">
+      <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\ResetP.resx">
       <DependentUpon>ResetP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Setting_User_for_Renter_User_Control.resx">
       <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\UnderLined_TextBox.resx">
+      <DependentUpon>UnderLined_TextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Renter_Form.resx">
       <DependentUpon>Renter_Form.cs</DependentUpon>

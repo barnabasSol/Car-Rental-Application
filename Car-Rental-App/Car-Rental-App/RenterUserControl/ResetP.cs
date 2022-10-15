@@ -30,145 +30,12 @@ namespace Car_Rental_App.RenterUserControl
             renterForm.add_user_control_for_setting(setting_User_For_Renter_User_Control);
         }
 
-        private void oldpswtxt_Enter(object sender, EventArgs e)
-        {
-            eyebtn.Visible = true;
-            if (oldpswtxt.Text == "enter old password here")
-            {
-                oldpswtxt.Text = "";
-                oldpswtxt.ForeColor = Color.Black;
-                oldpswtxt.isPassword = true;
-            }
-        }
+      
+     
 
-        private void oldpswtxt_Leave(object sender, EventArgs e)
-        {
 
-            if (oldpswtxt.Text == "")
-            {
-                eyebtn.Visible = false;
-                oldpswtxt.isPassword = false;
-                oldpswtxt.Text = "enter old password here";
-                oldpswtxt.ForeColor = Color.Gray;
-            }
-            else
-            {
-                eyebtn.Visible = true;
-            }
-        }
 
-        private void newpswtxt_Enter(object sender, EventArgs e)
-        {
-            eyebtn2.Visible = true;
-            if (newpswtxt.Text == "enter new password here")
-            {
-                newpswtxt.Text = "";
-                newpswtxt.ForeColor = Color.Black;
-                newpswtxt.isPassword = true;
-            }
-        }
 
-        private void newpswtxt_Leave(object sender, EventArgs e)
-        {
-            if (newpswtxt.Text == "")
-            {
-                eyebtn2.Visible = false;
-                newpswtxt.isPassword = false;
-                newpswtxt.Text = "enter new password here";
-                newpswtxt.ForeColor = Color.Gray;
-            }
-            else
-            {
-                eyebtn2.Visible = true;
-            }
-        }
-
-        private void cnfrmtxt_Enter(object sender, EventArgs e)
-        {
-            eyebtn3.Visible = true;
-            if (cnfrmtxt.Text == "confirm password")
-            {
-                cnfrmtxt.Text = "";
-                cnfrmtxt.ForeColor = Color.Black;
-                cnfrmtxt.isPassword = true;
-            }
-        }
-
-        private void cnfrmtxt_Leave(object sender, EventArgs e)
-        {
-            if (cnfrmtxt.Text == "")
-            {
-                eyebtn3.Visible = false;
-                cnfrmtxt.isPassword = false;
-                cnfrmtxt.Text = "confirm password";
-                cnfrmtxt.ForeColor = Color.Gray;
-            }
-            else
-            {
-                eyebtn2.Visible = true;
-            }
-        }
-
-        private void eyebtn_Click(object sender, EventArgs e)
-        {
-            if (eye1_clicked)
-            {
-                oldpswtxt.isPassword = false;
-                eyebtn.Image = Resources.visible;
-                eye1_clicked = false;
-            }
-            else
-            {
-                oldpswtxt.isPassword = true;
-                eyebtn.Image = Resources.eye;
-                eye1_clicked = true;
-            }
-        }
-
-        private void eyebtn2_Click(object sender, EventArgs e)
-        {
-
-            if (eye2_clicked)
-            {
-                newpswtxt.isPassword = false;
-                eyebtn2.Image = Resources.visible;
-                eye2_clicked = false;
-            }
-            else
-            {
-                newpswtxt.isPassword = true;
-                eyebtn2.Image = Resources.eye;
-                eye2_clicked = true;
-            }
-        }
-
-        private void eyebtn3_Click(object sender, EventArgs e)
-        {
-            if (eye3_clicked)
-            {
-                cnfrmtxt.isPassword = false;
-                eyebtn3.Image = Resources.visible;
-                eye3_clicked = false;
-            }
-            else
-            {
-                cnfrmtxt.isPassword = true;
-                eyebtn3.Image = Resources.eye;
-                eye3_clicked = true;
-            }
-        }
-
-        private void cnfrmtxt_OnValueChanged(object sender, EventArgs e)
-        {
-            if (newpswtxt.Text != cnfrmtxt.Text)
-            {
-                cnfrmtxt.LineFocusedColor = Color.Red;
-            }
-            else
-            {
-                cnfrmtxt.LineFocusedColor = Color.Green;
-            }
-        }
 
         private void backbtn_MouseEnter(object sender, EventArgs e)
         {
@@ -183,23 +50,23 @@ namespace Car_Rental_App.RenterUserControl
         private void resetbtn_Click(object sender, EventArgs e)
         {
             bool reset = true; 
-            if (String.IsNullOrEmpty(oldpswtxt.Text))
+            if (String.IsNullOrEmpty(oldpswtxt.Texts))
             {
                 reset = false;
                 errorProvider1.SetError(oldpswtxt, "Empty field here");
             }
-            if (String.IsNullOrEmpty(newpswtxt.Text))
+            if (String.IsNullOrEmpty(newpswtxt.Texts))
             {
                 reset=false;
                 errorProvider2.SetError(newpswtxt, "Empty field here");
             }
-            if (String.IsNullOrEmpty(cnfrmtxt.Text)) {
+            if (String.IsNullOrEmpty(cnfrmtxt.Texts)) {
 
                 reset=false;
                 errorProvider3.SetError(cnfrmtxt, "Empty field here");
 
             }
-            if(cnfrmtxt.Text != newpswtxt.Text)
+            if(cnfrmtxt.Texts != newpswtxt.Texts)
             {
                 reset=false;
                 errorProvider4.SetError(cnfrmtxt, "new password doesn't match");
@@ -207,12 +74,144 @@ namespace Car_Rental_App.RenterUserControl
             if (reset)
             {
                 MessageBox.Show("You have Successfully changed your password");
-                R.reset_Password(Profile.current_userid, newpswtxt.Text);
+                R.reset_Password(Profile.current_userid, newpswtxt.Texts);
 
 
 
 
 
+            }
+        }
+
+        private void oldpswtxt_Enter(object sender, EventArgs e)
+        {
+            eyebtn.Visible = true;
+            if(oldpswtxt.Texts=="enter old password here")
+            {
+                oldpswtxt.Texts = "";
+                oldpswtxt.PasswordChar = true;
+                oldpswtxt.BorderColor = Color.Aqua;
+
+            }
+        }
+
+        private void oldpswtxt_Leave(object sender, EventArgs e)
+        {
+            if (oldpswtxt.Texts == "")
+            {
+                oldpswtxt.Texts = "enter old password here";
+                oldpswtxt.PasswordChar = false;
+                oldpswtxt.BorderColor = Color.Black;
+            }
+            else
+            {
+                eyebtn.Visible = true;
+            }
+        }
+
+        private void newpswtxt_Enter(object sender, EventArgs e)
+        {
+            eyebtn2.Visible = true;
+            if(newpswtxt.Texts=="enter new password here")
+            {
+                newpswtxt.Texts ="";
+                newpswtxt.PasswordChar = true;
+                newpswtxt.BorderColor = Color.Aqua;
+
+            }
+        }
+
+        private void newpswtxt_Leave(object sender, EventArgs e)
+        {
+            if (newpswtxt.Texts == "")
+            {
+                eyebtn2.Visible = false;
+                newpswtxt.Texts = "enter new password here";
+                newpswtxt.PasswordChar = false;
+                newpswtxt.BorderColor = Color.Black;
+
+            }
+            else
+            {
+                eyebtn2.Visible = true;
+
+            }
+        }
+
+        private void cnfrmtxt_Enter(object sender, EventArgs e)
+        {
+            eyebtn3.Visible = true;
+            if(cnfrmtxt.Texts=="confirm password")
+            {
+                cnfrmtxt.Texts = "";
+                cnfrmtxt.PasswordChar = true;
+                cnfrmtxt.BorderColor = Color.Aqua;
+            }
+
+        }
+
+        private void cnfrmtxt_Leave(object sender, EventArgs e)
+        {
+            if (cnfrmtxt.Texts == "")
+            {
+                eyebtn3.Visible= false;
+                cnfrmtxt.Texts = "confirm password";
+                cnfrmtxt.PasswordChar = false;
+                cnfrmtxt.BorderColor = Color.Black;
+            }
+            else
+            {
+                eyebtn3.Visible=true;
+            }
+
+        }
+
+        private void eyebtn_Click(object sender, EventArgs e)
+        {
+            if (eye1_clicked)
+            {
+                oldpswtxt.PasswordChar=false;
+                eyebtn.Image = Resources.visible;
+                eye1_clicked = false;
+            }
+            else
+            {
+                oldpswtxt.PasswordChar = true;
+                eyebtn.Image = Resources.eye;
+                eye1_clicked = true;
+            }
+        }
+
+        private void eyebtn2_Click(object sender, EventArgs e)
+        {
+            if (eye2_clicked)
+            {
+                newpswtxt.PasswordChar = false;
+                eyebtn2.Image = Resources.visible;
+                eye2_clicked = false;
+            }
+            else
+            {
+                newpswtxt.PasswordChar = true;
+                eyebtn2.Image = Resources.eye;
+                eye2_clicked = true;
+            }
+
+        }
+
+        private void eyebtn3_Click(object sender, EventArgs e)
+        {
+            if (eye3_clicked)
+            {
+                cnfrmtxt.PasswordChar = false;
+                eyebtn3.Image = Resources.visible;
+                eye3_clicked = false;
+            }
+            else
+            {
+                cnfrmtxt.PasswordChar = true;
+                eyebtn3.Image = Resources.eye;
+                eye3_clicked = true;
             }
         }
     }

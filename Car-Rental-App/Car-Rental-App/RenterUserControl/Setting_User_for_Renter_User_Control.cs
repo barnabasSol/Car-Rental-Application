@@ -72,5 +72,24 @@ namespace Car_Rental_App
             Deactivate_Renter l = new Deactivate_Renter(rf);
             rf.add_user_control(l);
         }
+
+        private void bunifuImageButton1_MouseEnter(object sender, EventArgs e)
+        {
+            Edit_Button.Visible = true;
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Edit_Account_Rentercs o = new Edit_Account_Rentercs(rf);
+            rf.add_user_control(o);
+
+
+        }
+
+        private void bunifuImageButton1_MouseLeave(object sender, EventArgs e)
+        {
+            Edit_Button.Visible=false;  
+        }
     }
 }
