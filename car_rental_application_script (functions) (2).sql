@@ -10,31 +10,6 @@ as return (
 				> cars.rep_min_req
 		and verification = 'verified'
 )
-go
-
-create function [change password]
-(
-	@cusid varchar(200),
-	@oldp varchar(100),
-	@newp varchar(100),
-	@conp varchar(100)
-)
-returns varchar(MAX)
-as begin
-	declare @message varchar(MAX)
-	if(@newp != @conp)
-		set @message = 'Passwords do not match'
-	else if (@oldp = @newp)
-		set @message = 'Old password can not be new password'
-	else
-		begin
-		update profile 
-		set profile.password = @newp
-		where profile.login_id = @cusid
-		set @message = 'Password successfuly changed'
-	end
-	return @message
-end 
 
 go
 create function [generate rentid]

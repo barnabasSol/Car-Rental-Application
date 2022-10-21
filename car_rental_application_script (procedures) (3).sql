@@ -1,6 +1,9 @@
+use car_rental_database;
+
+GO
+
 create proc[update customer change by admin]
 @customerid varchar(100), @activity int, @rep int, @admid varchar(200)
-with encryption
 as 
 BEGIN
 	declare @priorvalue varchar(200) = (select activity as VARCHAR from profile where login_id = @customerid)
@@ -21,8 +24,6 @@ GO
 
 create proc [search customer]
 @searchby varchar(100)
-with encryption
-
 AS
 BEGIN
 select login_id, fullname, sex, phone_number, home_address, activity, reputation from
@@ -37,7 +38,6 @@ END
 
 go
 ---nati--------------------------
-
 create proc insert_car
 
 @license_plate_no varchar(200),
@@ -51,7 +51,6 @@ create proc insert_car
 @price decimal(18,2),
 @login_id varchar(200),
 @rep_min_req int
-with encryption 
 as
 
 begin
@@ -76,10 +75,10 @@ go
 
 
 GO
+
 create proc [insert cars by admin]
 @lp VARCHAR(200), @cname varchar(100), @ctype varchar(100), @ccapacity int,
-@cmodel varchar(100), @ccolor VARCHAR(20), @ccondition int, @rep int, @pph Decimal(18,8), @admid varchar(50)
-with encryption
+@cmodel varchar(100), @ccolor VARCHAR(20), @ccondition int, @rep int, @pph Decimal(18,8), @admid varchar(50) 
 as 
 BEGIN
 declare @cbranch NVARCHAR(100)
@@ -92,7 +91,6 @@ GO
 
 create proc [search audit]
 @item varchar(1000), @adminid varchar(100) 
-with encryption
 as 
 begin
 select task, done_date from [audit] where task LIKE '%'+@item+'%' or done_date LIKE '%'+@item+'%'
@@ -102,7 +100,6 @@ GO
 
 create proc [reset_admin_password]
 @admid varchar(100), @newpsw varchar(100)
-with encryption
 as 
 BEGIN
 update [profile] set [password]=@newpsw where login_id = @admid
@@ -111,7 +108,6 @@ END
 GO
 
 create proc [get branch stats]
-with encryption
 AS
 BEGIN
 select branch_address, branch_vehicles_amount, branch_rating, available_count from branch join 
@@ -123,7 +119,6 @@ go
 
 create proc [search car for admin]
 @attribute varchar(200), @filter varchar(100), @admid varchar(200)
-with encryption 
 as
 begin 
 if @filter='none'
@@ -173,7 +168,6 @@ GO
 
 create PROC [disable car]
 @lp varchar(200)
-with encryption
 AS
 BEGIN
 update cars set car_status=0 where license_plate_no=@lp;
@@ -183,16 +177,15 @@ GO
 
 create PROC [enable car]
 @lp varchar(200)
-with encryption
 AS
 BEGIN
 update cars set car_status=1 where license_plate_no=@lp;
 END
 
 GO
+
 create proc [delete car]
 @lp VARCHAR(200)
-with encryption
 AS
 BEGIN
     delete from cars where license_plate_no = @lp
@@ -202,28 +195,26 @@ go
 
 create proc [vehicle card content] 
 @admid varchar(200)
-with encryption
 AS
 begin 
 select * from vcc_view where login_id = @admid
 END
+
 GO
 
 create proc [reset_renter_password]
 @login_id varchar(200),@new_password  varchar(100)
-with encryption
 as
-
 begin
 Update profile
 set password=@new_password
 where login_id=@login_id
 end
+
 GO
 
 create PROC [undo added vehicle]
 @lp VARCHAR(200)
-with encryption
 AS
 BEGIN
 DELETE from cars where license_plate_no=@lp
@@ -233,14 +224,12 @@ go
 
 create proc [deactivate_admin_account]
 @admid varchar(100), @newpsw varchar(100)
-with encryption
 as 
 BEGIN
 update [profile] set [activity]=0 where login_id = @admid
 END
 
 go
-
 CREATE PROCEDURE Insert_Profile
     @login_id  varchar(200),
     @first_name varchar(100), 
@@ -251,7 +240,6 @@ CREATE PROCEDURE Insert_Profile
     @password varchar(100) ,
     @profile_type_id int,
 	@Activity int
-	with encryption
 as
 begin
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id,activity)
@@ -260,10 +248,11 @@ end
 
 
 go
-
 create proc Edit_renter_Account @First_Name varchar(100),@Last_Name varchar(100),@phone varchar(100),@homeaddress varchar(100),@sex varchar(3),@currentuserid varchar(200)
-with encryption
+
 as
+
+
 begin
 update profile
 set first_name=@First_Name,
@@ -274,17 +263,49 @@ home_address=@homeaddress
 where login_id=@currentuserid
 
 end
-go
 
 create proc deactivate_renter_account
 @renterid varchar(100)
-with encryption
 as 
 BEGIN
 update [profile] set [activity]=0 where login_id = @renterid
 END
 
 go
+
+--NATE------------------------------------------------------------
+go
+
+create procedure [change password]
+(
+	@cusid varchar(200),
+	@oldp varchar(100),
+	@newp varchar(100),
+	@conp varchar(100),
+	@out varchar(100) output
+)
+as begin
+	declare @message varchar(MAX)
+	if(@newp != @conp)
+		set @message = 'Passwords do not match'
+	else if (@oldp = @newp)
+		set @message = 'Old password can not be new password'
+	else
+		begin
+		update profile 
+		set profile.password = @newp
+		where profile.login_id = @cusid
+		set @message = 'Password successfuly changed'
+	end
+	set @out = @message
+end 
+
+
+
+
+
+
+
 
 
 
