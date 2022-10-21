@@ -14,11 +14,11 @@ namespace Car_Rental_App.CustomerUserControl
 {
     public partial class AccountSettings : UserControl
     {
-        Customer_form parent;
+        Customer_form s_usercontrol;
         public AccountSettings(Customer_form parent)
         {
             InitializeComponent();
-            this.parent = parent;
+            s_usercontrol = parent;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Car_Rental_App.CustomerUserControl
         private void btnlogout_Click(object sender, EventArgs e)
         {
             LoginForm lg = new LoginForm();
-            parent.Close();
+            s_usercontrol.Close();
             lg.Show();
         }
     }
