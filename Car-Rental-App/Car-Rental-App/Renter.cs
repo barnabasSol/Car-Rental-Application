@@ -68,7 +68,6 @@ namespace Car_Rental_App
                     Console.WriteLine(transaction.IsolationLevel);
                     SqlCommand cmd = new SqlCommand("Insert_Profile", conn,transaction);
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = login_id;
                     cmd.Parameters.AddWithValue("@first_name", SqlDbType.VarChar).Value = first_name;
                     cmd.Parameters.AddWithValue("@last_name", SqlDbType.VarChar).Value = last_name;
