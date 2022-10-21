@@ -174,7 +174,7 @@ namespace Car_Rental_App.RenterUserControl
        
         private void FirstNameTxt_Enter(object sender, EventArgs e)
         {
-            FirstNameTxt.BorderColor = Color.Aqua;
+            FirstNameTxt.BorderColor = Color.IndianRed;
         }
 
         private void FirstNameTxt_Leave(object sender, EventArgs e)
@@ -184,7 +184,7 @@ namespace Car_Rental_App.RenterUserControl
 
         private void LastNameTxt_Enter(object sender, EventArgs e)
         {
-            LastNameTxt.BorderColor = Color.Aqua;
+            LastNameTxt.BorderColor = Color.IndianRed;
         }
 
         private void LastNameTxt_Leave(object sender, EventArgs e)
@@ -194,7 +194,7 @@ namespace Car_Rental_App.RenterUserControl
 
         private void AddressTxt_Enter(object sender, EventArgs e)
         {
-            AddressTxt.BorderColor = Color.Aqua;
+            AddressTxt.BorderColor = Color.IndianRed;
         }
 
         private void AddressTxt_Leave(object sender, EventArgs e)
@@ -209,7 +209,7 @@ namespace Car_Rental_App.RenterUserControl
 
         private void PhoneTxt_Enter(object sender, EventArgs e)
         {
-            PhoneTxt.BorderColor = Color.Aqua;
+            PhoneTxt.BorderColor = Color.IndianRed;
         }
 
         private void backbtn_MouseEnter(object sender, EventArgs e)

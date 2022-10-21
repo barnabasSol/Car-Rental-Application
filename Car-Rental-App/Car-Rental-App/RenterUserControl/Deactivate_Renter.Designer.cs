@@ -62,15 +62,15 @@
             // 
             this.deactivatebtn.ActiveBorderThickness = 1;
             this.deactivatebtn.ActiveCornerRadius = 20;
-            this.deactivatebtn.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.deactivatebtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.deactivatebtn.ActiveForecolor = System.Drawing.Color.White;
-            this.deactivatebtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.deactivatebtn.ActiveLineColor = System.Drawing.Color.IndianRed;
             this.deactivatebtn.BackColor = System.Drawing.Color.White;
             this.deactivatebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deactivatebtn.BackgroundImage")));
             this.deactivatebtn.ButtonText = "Deactivate";
             this.deactivatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deactivatebtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deactivatebtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.deactivatebtn.ForeColor = System.Drawing.Color.Black;
             this.deactivatebtn.IdleBorderThickness = 1;
             this.deactivatebtn.IdleCornerRadius = 20;
             this.deactivatebtn.IdleFillColor = System.Drawing.Color.White;

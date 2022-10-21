@@ -68,7 +68,7 @@ namespace Car_Rental_App.RenterUserControl
             {
                 password.Texts = "";
                 password.PasswordChar = true;
-                password.BorderColor = Color.Aqua;
+                password.BorderColor = Color.IndianRed;
 
             }
         }

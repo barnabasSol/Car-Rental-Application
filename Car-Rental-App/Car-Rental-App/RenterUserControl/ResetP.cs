@@ -90,7 +90,7 @@ namespace Car_Rental_App.RenterUserControl
             {
                 oldpswtxt.Texts = "";
                 oldpswtxt.PasswordChar = true;
-                oldpswtxt.BorderColor = Color.Aqua;
+                oldpswtxt.BorderColor = Color.IndianRed;
 
             }
         }
@@ -116,7 +116,7 @@ namespace Car_Rental_App.RenterUserControl
             {
                 newpswtxt.Texts ="";
                 newpswtxt.PasswordChar = true;
-                newpswtxt.BorderColor = Color.Aqua;
+                newpswtxt.BorderColor = Color.IndianRed;
 
             }
         }
@@ -145,7 +145,7 @@ namespace Car_Rental_App.RenterUserControl
             {
                 cnfrmtxt.Texts = "";
                 cnfrmtxt.PasswordChar = true;
-                cnfrmtxt.BorderColor = Color.Aqua;
+                cnfrmtxt.BorderColor = Color.IndianRed;
             }
 
         }

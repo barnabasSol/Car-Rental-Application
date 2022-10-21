@@ -10,6 +10,24 @@ as return (
 				> cars.rep_min_req
 		and verification = 'verified'
 )
+
+go
+create function [generate rentid]
+()
+returns varchar(5)
+as begin
+	declare @id varchar(5)
+	if (select count(*) from rental) < 1 
+		set @id = 'r0001'
+	else
+		set @id = 'r' + (format((cast(substring((select top 1 rent_id from rental order by rent_id desc), 2, 4) as int) + 1), 'D4'))
+	return @id
+end
+
+
+
+
+
 --Nati-----------------------------------
 create function return_name(@c_login_id varchar(200))
 returns varchar(200)

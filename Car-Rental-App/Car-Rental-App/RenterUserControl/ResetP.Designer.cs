@@ -126,7 +126,7 @@
             // 
             this.resetbtn.ActiveBorderThickness = 1;
             this.resetbtn.ActiveCornerRadius = 20;
-            this.resetbtn.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.resetbtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.resetbtn.ActiveForecolor = System.Drawing.Color.White;
             this.resetbtn.ActiveLineColor = System.Drawing.Color.White;
             this.resetbtn.BackColor = System.Drawing.Color.White;
@@ -134,7 +134,7 @@
             this.resetbtn.ButtonText = "Reset";
             this.resetbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetbtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.resetbtn.ForeColor = System.Drawing.Color.Black;
             this.resetbtn.IdleBorderThickness = 1;
             this.resetbtn.IdleCornerRadius = 20;
             this.resetbtn.IdleFillColor = System.Drawing.Color.White;
