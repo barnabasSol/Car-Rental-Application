@@ -143,7 +143,6 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.logoutbtn);
             this.Name = "SettingUserControl";
             this.Size = new System.Drawing.Size(844, 340);
-            this.Load += new System.EventHandler(this.SettingUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deactivatebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resetpswbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutbtn)).EndInit();
