@@ -42,6 +42,6 @@ namespace Car_Rental_App.AdminUserControl
             get { return _rating; }
             set { _rating = value; ratinglbl.Text = value; }
         }
-
+   
     }
 }
