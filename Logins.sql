@@ -57,3 +57,4 @@ grant select on branch to renters
 grant select on customer to customers
 grant select on payment to customers
 grant select on rental to customers
+grant select on cars to customers

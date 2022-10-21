@@ -17,14 +17,44 @@ GO
 GO
 
 ------triggers to keep track of the stats of the brances
-create trigger [update branch stats] on cars
+create trigger [update branch stats of added vehicles] on cars
 for insert 
 as 
 begin
-declare @branch varchar(200)
-set @branch = (select car_branch FROM inserted)
-update branch set branch_vehicles_amount+=1 where branch_address=@branch
-end
+declare @admid varchar(200)
+declare @lp varchar(50)
+declare @temptb table (
+	 tempid int IDENTITY,
+	 lp varchar(200), 
+     ver varchar(20),
+     car_name varchar(100), 
+     car_type varchar(100),
+     car_capacity int,
+     car_model varchar(100),
+     car_color varchar(50),
+     car_status TINYINT,
+     car_condition int, /*new column*/
+     rep_min_req int,
+     price_per_hour Decimal(18, 2),
+     car_branch nvarchar(100), 
+     login_id varchar(200)
+ )
+ insert @temptb (lp, ver, car_name, car_type, car_capacity, car_model, car_color, car_status, car_condition, rep_min_req, price_per_hour, car_branch, login_id)
+ select * from inserted
+ declare @newamnt int
+ declare @i int = 1
+ while  @i <= (select top 1 tempid from @temptb order by tempid DESC)
+	BEGIN
+	 set @newamnt = (select COUNT(*) from @temptb where car_branch = (select car_branch from @temptb where tempid=@i))
+	 update branch set branch_vehicles_amount += @newamnt where branch_address = (select car_branch from @temptb where tempid=@i)
+	 set @admid = (select login_id from @temptb where tempid=@i)
+	 set @lp = (select lp from @temptb where tempid=@i)
+	 if exists (select login_id from profile where profile_type_id=1 and login_id = @admid)
+	 	insert into [audit] values (@admid, 'you added a vehicle with license plate  -  '+@lp, GETDATE())
+	 set @i += 1
+	END
+END
+
 
 GO
 
@@ -33,23 +63,38 @@ on cars
 for delete 
 AS
 BEGIN
-declare @admid varchar(200) = (select login_id from deleted)
-declare @lp varchar(50) = (select license_plate_no from deleted)
-declare @branchloc nvarchar(100) = (select car_branch from deleted)
-update branch set branch_vehicles_amount-=1 where branch_address=@branchloc
-insert into [audit] values (@admid, 'you deleted a vehicle with license plate  -  '+@lp, GETDATE())
-END
-
-GO
-
-create trigger [limit deleting vehicles]
-on cars 
-for delete
-AS
-BEGIN
-declare @amount int = (select COUNT(*) from deleted)
-if @amount>1
-    ROLLBACK TRANSACTION
+declare @admid varchar(200)
+declare @lp varchar(50)
+declare @temptb table (
+	 tempid int IDENTITY,
+	 lp varchar(200), 
+     ver varchar(20),
+     car_name varchar(100), 
+     car_type varchar(100),
+     car_capacity int,
+     car_model varchar(100),
+     car_color varchar(50),
+     car_status TINYINT,
+     car_condition int, /*new column*/
+     rep_min_req int,
+     price_per_hour Decimal(18, 2),
+     car_branch nvarchar(100), 
+     login_id varchar(200)
+ )
+ insert @temptb (lp, ver, car_name, car_type, car_capacity, car_model, car_color, car_status, car_condition, rep_min_req, price_per_hour, car_branch, login_id)
+ select * from deleted
+ declare @newamnt int
+ declare @i int = 1
+ while  @i <= (select top 1 tempid from @temptb order by tempid DESC)
+	BEGIN
+	 set @newamnt = (select COUNT(*) from @temptb where car_branch = (select car_branch from @temptb where tempid=@i))
+	 update branch set branch_vehicles_amount -= @newamnt where branch_address = (select car_branch from @temptb where tempid=@i)
+	 set @admid = (select login_id from @temptb where tempid=@i)
+	 set @lp = (select lp from @temptb where tempid=@i)
+	 if exists (select login_id from profile where profile_type_id=1 and login_id = @admid)
+	 	insert into [audit] values (@admid, 'you deleted a vehicle with license plate  -  '+@lp, GETDATE())
+	 set @i += 1
+	END
 END
 
 GO

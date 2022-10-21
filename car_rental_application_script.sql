@@ -707,7 +707,6 @@ insert into rental (rent_id
 ) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat')
 
 go
-select * from cars
 create proc insert_car
 
 @license_plate_no varchar(200),
@@ -722,7 +721,6 @@ create proc insert_car
 @login_id varchar(200),
 @rep_min_req int
 as
-
 begin
 insert into cars(license_plate_no,car_name,car_type,car_capacity,car_model,car_color,car_condition,
 car_branch,price_per_hour,login_id,rep_min_req) values(

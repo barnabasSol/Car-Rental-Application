@@ -2,6 +2,7 @@ use car_rental_database;
 
 GO
 
+----customer proc------
 create proc[update customer change by admin]
 @customerid varchar(100), @activity int, @rep int, @admid varchar(200)
 as 
@@ -35,8 +36,10 @@ select login_id, fullname, sex, phone_number, home_address, activity, reputation
 
 END
 
+----customer proc------
 
 GO
+
 
 create proc [insert cars by admin]
 @lp VARCHAR(200), @cname varchar(100), @ctype varchar(100), @ccapacity int,
@@ -46,7 +49,6 @@ BEGIN
 declare @cbranch NVARCHAR(100)
 select @cbranch = branch_loc from admin where login_id = @admid
 insert into cars values (@lp,'verified', @cname, @ctype, @ccapacity, @cmodel, @ccolor,1 ,@ccondition, @rep, @pph, @cbranch, @admid)
-insert into [audit] values (@admid, 'you added a new vehicle with license plate  -  '+@lp, GETDATE())
 END
 
 GO
@@ -83,45 +85,46 @@ create proc [search car for admin]
 @attribute varchar(200), @filter varchar(100), @admid varchar(200)
 as
 begin 
+declare @admloc varchar(200) = (select branch_loc from admin where login_id=@admid)
 if @filter='none'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and login_id = @admid 
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and car_branch = @admloc 
 end
 
 else if @filter='verified'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='verified' and login_id = @admid
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='verified' and car_branch = @admloc 
 end
 
 else if @filter='unverified'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified' and login_id = @admid
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified' and car_branch = @admloc 
 end
 
 else if @filter='car condition (asc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch = @admloc  and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition asc
 end
 
 else if @filter='car condition (desc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch = @admloc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition desc
 end
 
 else if @filter='price (asc)'
 begin
-	select * from srch_view where login_id = @admid  and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch = @admloc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour asc
 end
 
 else if @filter='price (desc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch = @admloc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour desc
 end
     end
@@ -159,7 +162,8 @@ create proc [vehicle card content]
 @admid varchar(200)
 AS
 begin 
-select * from vcc_view where login_id = @admid
+declare @adm_branch varchar(200) = (select branch_loc from admin where login_id=@admid) 
+select * from vcc_view where car_branch = @adm_branch
 END
 
 GO
