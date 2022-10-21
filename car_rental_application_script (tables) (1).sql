@@ -1,3 +1,4 @@
+
 create database car_rental_database;
 
 GO

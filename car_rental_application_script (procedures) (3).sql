@@ -252,6 +252,8 @@ end
 
 
 go
+
+
 create proc Edit_renter_Account @First_Name varchar(100),@Last_Name varchar(100),@phone varchar(100),@homeaddress varchar(100),@sex varchar(3),@currentuserid varchar(200)
 
 as
@@ -267,6 +269,8 @@ home_address=@homeaddress
 where login_id=@currentuserid
 
 end
+
+GO
 
 create proc deactivate_renter_account
 @renterid varchar(100)
