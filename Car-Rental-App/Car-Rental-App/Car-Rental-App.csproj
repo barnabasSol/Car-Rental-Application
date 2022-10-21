@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
@@ -145,6 +145,30 @@
     <Compile Include="AdminForm1.Designer.cs">
       <DependentUpon>AdminForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUserControl\AccountSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\AccountSettings.Designer.cs">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\BrowseVehicles.Designer.cs">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\VehicleCard.Designer.cs">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_form.Designer.cs">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +208,12 @@
     <Compile Include="RenterUserControl\Earnings.Designer.cs">
       <DependentUpon>Earnings.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterUserControl\Edit_Account_Rentercs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\Edit_Account_Rentercs.Designer.cs">
+      <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterUserControl\ResetP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +225,12 @@
     </Compile>
     <Compile Include="RenterUserControl\Setting_User_for_Renter_User_Control.Designer.cs">
       <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterUserControl\UnderLined_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\UnderLined_TextBox.Designer.cs">
+      <DependentUpon>UnderLined_TextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Renter_Form.cs">
       <SubType>Form</SubType>
@@ -252,6 +288,18 @@
     <EmbeddedResource Include="Create_Account_Form.resx">
       <DependentUpon>Create_Account_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\AccountSettings.resx">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\BrowseVehicles.resx">
+      <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\VehicleCard.resx">
+      <DependentUpon>VehicleCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_form.resx">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditVehicleForm.resx">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,11 +320,17 @@
     <EmbeddedResource Include="RenterUserControl\Earnings.resx">
       <DependentUpon>Earnings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Edit_Account_Rentercs.resx">
+      <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\ResetP.resx">
       <DependentUpon>ResetP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Setting_User_for_Renter_User_Control.resx">
       <DependentUpon>Setting_User_for_Renter_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\UnderLined_TextBox.resx">
+      <DependentUpon>UnderLined_TextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Renter_Form.resx">
       <DependentUpon>Renter_Form.cs</DependentUpon>

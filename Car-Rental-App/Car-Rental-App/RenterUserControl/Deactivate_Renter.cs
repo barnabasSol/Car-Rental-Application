@@ -40,10 +40,11 @@ namespace Car_Rental_App.RenterUserControl
         private void deactivatebtn_Click(object sender, EventArgs e)
         {
             Profile p = new Profile();
-            if (p.validate_password_for_renter(Profile.current_userid, password.Text))
+            if (p.validate_password_for_renter(Profile.current_userid, password.Texts))
             {
 
-
+                Renter r = new Renter();
+                r.Deactivate_Renter_Account(Profile.current_userid);
                 LoginForm loginForm = new LoginForm();
                 rh.Hide();
                 loginForm.Show();
@@ -54,45 +55,50 @@ namespace Car_Rental_App.RenterUserControl
             }
         }
 
-        private void eyebtn_Click(object sender, EventArgs e)
-        {
-            if (eye_clicked)
-            {
-                password.isPassword = false;
-                eyebtn.Image = Resources.visible;
-                eye_clicked = false;
-            }
-            else
-            {
-                password.isPassword = true;
-                eyebtn.Image = Resources.eye;
-                eye_clicked = true;
-            }
-        }
+        
 
+       
+
+       
+    
         private void password_Enter(object sender, EventArgs e)
         {
-            eyebtn.Visible = true;
-            if (password.Text == "enter your password")
+            eyebtn.Visible=true;
+            if(password.Texts=="enter your password")
             {
-                password.Text = "";
-                password.ForeColor = Color.Black;
-                password.isPassword = true;
+                password.Texts = "";
+                password.PasswordChar = true;
+                password.BorderColor = Color.Aqua;
+
             }
         }
 
         private void password_Leave(object sender, EventArgs e)
         {
-            if (password.Text == "")
+            if (password.Texts == "")
             {
                 eyebtn.Visible = false;
-                password.isPassword = false;
-                password.Text = "enter your password";
-                password.ForeColor = Color.Gray;
+                password.Texts = "enter your password";
+                password.PasswordChar = false;
+                password.BorderColor = Color.Black;
+            }
+        }
+
+        private void eyebtn_Click(object sender, EventArgs e)
+        {
+            if (eye_clicked)
+            {
+                password.PasswordChar = false;
+                eyebtn.Image = Resources.visible;
+                eye_clicked= false;
+
             }
             else
             {
-                eyebtn.Visible = true;
+                password.PasswordChar=true;
+                eyebtn.Image = Resources.eye;
+                eye_clicked = true;
+
             }
         }
     }

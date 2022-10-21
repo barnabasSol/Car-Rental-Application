@@ -38,6 +38,44 @@ END
 
 ----customer proc------
 
+go
+---nati--------------------------
+create proc insert_car
+
+@license_plate_no varchar(200),
+@car_name varchar(100),
+@car_type varchar(100),
+@car_capacity int,
+@car_model varchar(100),
+@car_color varchar(50),
+@car_condition int,
+@car_branch varchar(100),
+@price decimal(18,2),
+@login_id varchar(200),
+@rep_min_req int
+as
+
+begin
+insert into cars(license_plate_no,car_name,car_type,car_capacity,car_model,car_color,car_condition,
+car_branch,price_per_hour,login_id,rep_min_req) values(
+@license_plate_no ,
+@car_name ,
+@car_type ,
+@car_capacity ,
+@car_model ,
+@car_color ,
+@car_condition ,
+@car_branch ,
+@price,
+@login_id ,
+@rep_min_req)
+end
+go
+
+
+
+
+
 GO
 
 
@@ -211,6 +249,38 @@ begin
 insert into profile(login_id, first_name, last_name, sex, phone_number, home_address, [password], profile_type_id,activity)
                            values (@login_id,@first_name,@last_name,@sex,@phone_number,@home_address,@password ,@profile_type_id,@Activity )
 end
+
+
+go
+create proc Edit_renter_Account @First_Name varchar(100),@Last_Name varchar(100),@phone varchar(100),@homeaddress varchar(100),@sex varchar(3),@currentuserid varchar(200)
+
+as
+
+
+begin
+update profile
+set first_name=@First_Name,
+last_name=@Last_Name,
+sex=@sex,
+phone_number=@phone,
+home_address=@homeaddress
+where login_id=@currentuserid
+
+end
+
+create proc deactivate_renter_account
+@renterid varchar(100)
+as 
+BEGIN
+update [profile] set [activity]=0 where login_id = @renterid
+END
+
+go
+
+
+
+
+
 
 
 
