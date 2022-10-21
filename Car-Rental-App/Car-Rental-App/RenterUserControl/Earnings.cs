@@ -21,14 +21,30 @@ namespace Car_Rental_App.RenterUserControl
         private void Earnings_Load(object sender, EventArgs e)
         {
 
-            using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
-            {
-                string commandText="select * from Earnings(" + "\'" + Profile.current_userid + "\')";
-                SqlDataAdapter sd = new SqlDataAdapter(commandText, conn);
-                DataSet ds = new DataSet();
-                sd.Fill(ds,"Earnings(" + "\'" + Profile.current_userid + "\')");
-                dataGridView1.DataSource = ds.Tables["Earnings(" + "\'" + Profile.current_userid + "\')"];
 
+            string commandText = "select * from Earnings(" + "\'" + Profile.current_userid + "\')";
+
+             using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
+            {
+
+                conn.Open();
+                SqlCommand cmd =new SqlCommand(commandText, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                int r = 0;
+                while (reader.Read())
+                {
+                    dataGridView1.Rows.Add(1);
+                    dataGridView1[0,r].Value = reader["license_plate_no"].ToString();
+                    dataGridView1[1,r].Value = reader["car_name"].ToString();
+                    dataGridView1[2,r].Value = reader["car_branch"].ToString();
+                    dataGridView1[3,r].Value = reader["firstname"].ToString();
+                    dataGridView1[4,r].Value = reader["rental_date"].ToString();
+                    dataGridView1[5,r].Value = reader["total_vehicles"].ToString();
+                    dataGridView1[6,r].Value = reader["return_date"].ToString();
+                    dataGridView1[7,r].Value = reader["paid_amount"].ToString();
+                    
+                    r++;
+                }
             }
 
             using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
@@ -36,12 +52,13 @@ namespace Car_Rental_App.RenterUserControl
                 conn.Open();
                 string command = "select dbo.Total_Earings(" + "\'" + Profile.current_userid + "\')";
 
-                SqlCommand cmd =  new SqlCommand(command, conn);
-                Decimal total_Amount=(Decimal)cmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand(command, conn);
+                Decimal total_Amount = (Decimal)cmd.ExecuteScalar();
                 Total_Amount_number.Text = total_Amount.ToString();
                 conn.Close();
 
             }
+
 
         }
     }
