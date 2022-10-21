@@ -191,9 +191,9 @@
             // 
             this.saveeditbtn.ActiveBorderThickness = 1;
             this.saveeditbtn.ActiveCornerRadius = 20;
-            this.saveeditbtn.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.saveeditbtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.saveeditbtn.ActiveForecolor = System.Drawing.Color.White;
-            this.saveeditbtn.ActiveLineColor = System.Drawing.Color.White;
+            this.saveeditbtn.ActiveLineColor = System.Drawing.Color.IndianRed;
             this.saveeditbtn.BackColor = System.Drawing.Color.White;
             this.saveeditbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveeditbtn.BackgroundImage")));
             this.saveeditbtn.ButtonText = "Save Changes";
