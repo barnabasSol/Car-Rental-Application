@@ -97,6 +97,13 @@ namespace Car_Rental_App
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
+            Chart chart = new Chart();
+            add_user_control(chart);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
             Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
             add_user_control_for_setting(s);
         }

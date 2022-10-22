@@ -46,7 +46,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century", 20.2F);
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(107, 377);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(227, 438);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(254, 40);
             this.bunifuCustomLabel1.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             this.Total_Amount_number.AutoSize = true;
             this.Total_Amount_number.Font = new System.Drawing.Font("Century", 20.2F);
-            this.Total_Amount_number.Location = new System.Drawing.Point(390, 377);
+            this.Total_Amount_number.Location = new System.Drawing.Point(512, 438);
             this.Total_Amount_number.Name = "Total_Amount_number";
             this.Total_Amount_number.Size = new System.Drawing.Size(36, 40);
             this.Total_Amount_number.TabIndex = 4;
@@ -64,6 +64,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -76,12 +77,12 @@
             this.Column7,
             this.Column8});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(926, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(895, 373);
             this.dataGridView1.TabIndex = 5;
             // 
             // Column1
@@ -89,56 +90,48 @@
             this.Column1.HeaderText = "Column1";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Column2";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Column3";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Column4";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Column5";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Column6";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Column7";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 80;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Column8";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 105;
             // 
             // Earnings
             // 
@@ -149,9 +142,9 @@
             this.Controls.Add(this.Total_Amount_number);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "Earnings";
-            this.Size = new System.Drawing.Size(929, 574);
+            this.Size = new System.Drawing.Size(898, 498);
             this.Load += new System.EventHandler(this.Earnings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.EarningsDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
