@@ -21,7 +21,6 @@ namespace Car_Rental_App.RenterUserControl
         private void Earnings_Load(object sender, EventArgs e)
         {
 
-
             string commandText = "select * from Earnings(" + "\'" + Profile.current_userid + "\')";
 
              using (SqlConnection conn = new SqlConnection(Program.my_connection_string))

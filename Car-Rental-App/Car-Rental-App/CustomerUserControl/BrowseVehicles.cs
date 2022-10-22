@@ -4,18 +4,24 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Schema;
+
 namespace Car_Rental_App.CustomerUserControl
 {
 
     public partial class BrowseVehicles : UserControl
     {
+        public Dictionary<int, Vehicle> vehicles;
+
         public BrowseVehicles()
         {
             InitializeComponent();
+            vehicles = new Dictionary<int, Vehicle>();
         }
-        public Dictionary<int, Vehicle> vehicles = new Dictionary<int, Vehicle>();
         private void BrowseVehicles_Load(object sender, EventArgs e)
         {
+            datePicker.MinDate = System.DateTime.Now;
+            datePicker.MaxDate = System.DateTime.Now.AddMonths(1);
             using (SqlConnection con = new SqlConnection(Program.my_connection_string))
             {
                 string query = "select * from [get available vehicles] ('" + Profile.current_userid + "')";
@@ -71,24 +77,19 @@ namespace Car_Rental_App.CustomerUserControl
             }
         }
 
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-            var search_term = bunifuMaterialTextbox1.Text;
-            filterSearch(search_term);
-        }
 
         public void selectCar(int index)
         {
             vehicles[index].Selected = true;
             updateSelected();
-            filterSearch(bunifuMaterialTextbox1.Text);
+            filterSearch(searchField.text);
             Console.WriteLine($"Selected {index}");
         }
         public void unselectCar(int index)
         {
             vehicles[index].Selected = false;
             updateSelected();
-            filterSearch(bunifuMaterialTextbox1.Text);
+            filterSearch(searchField.text);
         }
         private void updateSelected ()
         {
@@ -113,7 +114,20 @@ namespace Car_Rental_App.CustomerUserControl
             }
         }
 
-       
+        private void searchField_OnTextChange(object sender, EventArgs e)
+        {
+            var search_term = searchField.text;
+            filterSearch(search_term);
+        }
+
+        private void btnFinalize_Click(object sender, EventArgs e)
+        {
+            int payment = DateTime.Now.CompareTo(datePicker.Value); 
+            using (SqlConnection con = new SqlConnection(Program.my_connection_string))
+            {
+                //TODO: add vehicles mnamn
+            }
+        }
     }
     public class Vehicle
     {

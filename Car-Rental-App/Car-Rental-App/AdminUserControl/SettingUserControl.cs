@@ -25,18 +25,14 @@ namespace Car_Rental_App.AdminUserControl
         }
 
 
-        private void SettingUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
 
         private void logoutbtn_Click(object sender, EventArgs e)
         {
             LoginForm lg = new LoginForm();
-            settingform.Close();
             lg.Show();
+            settingform.Close();
         }
 
         private void logoutbtn_MouseHover(object sender, EventArgs e)

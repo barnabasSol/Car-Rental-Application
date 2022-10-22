@@ -273,6 +273,33 @@ END
 
 go
 
+--NATE------------------------------------------------------------
+go
+
+create procedure [change password]
+(
+	@cusid varchar(200),
+	@oldp varchar(100),
+	@newp varchar(100),
+	@conp varchar(100),
+	@out varchar(100) output
+)
+as begin
+	declare @message varchar(MAX)
+	if(@newp != @conp)
+		set @message = 'Passwords do not match'
+	else if (@oldp = @newp)
+		set @message = 'Old password can not be new password'
+	else
+		begin
+		update profile 
+		set profile.password = @newp
+		where profile.login_id = @cusid
+		set @message = 'Password successfuly changed'
+	end
+	set @out = @message
+end 
+
 
 
 

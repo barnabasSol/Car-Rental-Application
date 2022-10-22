@@ -32,12 +32,13 @@
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.searchField = new Bunifu.Framework.UI.BunifuTextbox();
             this.pnlSelected = new System.Windows.Forms.FlowLayoutPanel();
             this.btnFinalize = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.pnlLeft.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlRight.SuspendLayout();
@@ -67,32 +68,26 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel3.Controls.Add(this.searchField);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(415, 56);
             this.panel3.TabIndex = 0;
             // 
-            // bunifuMaterialTextbox1
+            // searchField
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(34, 16);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(336, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 0;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            this.searchField.BackColor = System.Drawing.SystemColors.Control;
+            this.searchField.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchField.BackgroundImage")));
+            this.searchField.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.searchField.Icon = ((System.Drawing.Image)(resources.GetObject("searchField.Icon")));
+            this.searchField.Location = new System.Drawing.Point(48, 4);
+            this.searchField.Name = "searchField";
+            this.searchField.Size = new System.Drawing.Size(254, 46);
+            this.searchField.TabIndex = 0;
+            this.searchField.text = "";
+            this.searchField.OnTextChange += new System.EventHandler(this.searchField_OnTextChange);
             // 
             // pnlSelected
             // 
@@ -125,7 +120,7 @@
             this.btnFinalize.IconVisible = true;
             this.btnFinalize.IconZoom = 90D;
             this.btnFinalize.IsTab = false;
-            this.btnFinalize.Location = new System.Drawing.Point(228, 5);
+            this.btnFinalize.Location = new System.Drawing.Point(268, 8);
             this.btnFinalize.Name = "btnFinalize";
             this.btnFinalize.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btnFinalize.OnHovercolor = System.Drawing.Color.Brown;
@@ -137,6 +132,7 @@
             this.btnFinalize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinalize.Textcolor = System.Drawing.Color.White;
             this.btnFinalize.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalize.Click += new System.EventHandler(this.btnFinalize_Click);
             // 
             // pnlRight
             // 
@@ -150,7 +146,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuDatepicker1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.datePicker);
             this.panel1.Controls.Add(this.btnFinalize);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -158,18 +155,25 @@
             this.panel1.Size = new System.Drawing.Size(420, 59);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuDatepicker1
+            // label1
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(3, 5);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(219, 47);
-            this.bunifuDatepicker1.TabIndex = 3;
-            this.bunifuDatepicker1.Value = new System.DateTime(2022, 10, 13, 19, 9, 51, 276);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Return Date";
+            // 
+            // datePicker
+            // 
+            this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.datePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.Location = new System.Drawing.Point(3, 30);
+            this.datePicker.MinDate = new System.DateTime(2022, 10, 20, 0, 0, 0, 0);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(259, 23);
+            this.datePicker.TabIndex = 3;
             // 
             // BrowseVehicles
             // 
@@ -184,6 +188,7 @@
             this.panel3.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -192,12 +197,13 @@
 
         private System.Windows.Forms.Panel pnlLeft;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.FlowLayoutPanel pnlSearch;
         private System.Windows.Forms.FlowLayoutPanel pnlSelected;
         private Bunifu.Framework.UI.BunifuFlatButton btnFinalize;
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuTextbox searchField;
     }
 }

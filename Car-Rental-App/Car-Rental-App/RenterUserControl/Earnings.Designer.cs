@@ -151,7 +151,7 @@
             this.Name = "Earnings";
             this.Size = new System.Drawing.Size(929, 574);
             this.Load += new System.EventHandler(this.Earnings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EarningsDataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
