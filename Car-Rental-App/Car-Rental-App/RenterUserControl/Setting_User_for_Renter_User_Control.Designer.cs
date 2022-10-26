@@ -78,7 +78,7 @@
             // 
             // deactivatebtn
             // 
-            this.deactivatebtn.BackColor = System.Drawing.Color.White;
+            this.deactivatebtn.BackColor = System.Drawing.SystemColors.Control;
             this.deactivatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deactivatebtn.Image = ((System.Drawing.Image)(resources.GetObject("deactivatebtn.Image")));
             this.deactivatebtn.ImageActive = null;
@@ -96,7 +96,7 @@
             // 
             // resetpswbtn
             // 
-            this.resetpswbtn.BackColor = System.Drawing.Color.White;
+            this.resetpswbtn.BackColor = System.Drawing.SystemColors.Control;
             this.resetpswbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetpswbtn.Image = ((System.Drawing.Image)(resources.GetObject("resetpswbtn.Image")));
             this.resetpswbtn.ImageActive = null;
@@ -114,7 +114,7 @@
             // 
             // logoutbtn
             // 
-            this.logoutbtn.BackColor = System.Drawing.Color.White;
+            this.logoutbtn.BackColor = System.Drawing.SystemColors.Control;
             this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutbtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutbtn.Image")));
             this.logoutbtn.ImageActive = null;
@@ -132,7 +132,7 @@
             // 
             // bunifuImageButton1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;

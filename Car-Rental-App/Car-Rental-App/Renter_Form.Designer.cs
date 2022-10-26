@@ -38,8 +38,8 @@
             this.pictureBox3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -63,6 +63,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.idlbl);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Location = new System.Drawing.Point(218, 0);
@@ -96,10 +97,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.IndianRed;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(216, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -110,7 +111,7 @@
             this.fullnamelbl.BackColor = System.Drawing.Color.IndianRed;
             this.fullnamelbl.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullnamelbl.ForeColor = System.Drawing.Color.Black;
-            this.fullnamelbl.Location = new System.Drawing.Point(72, 67);
+            this.fullnamelbl.Location = new System.Drawing.Point(55, 68);
             this.fullnamelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fullnamelbl.Name = "fullnamelbl";
             this.fullnamelbl.Size = new System.Drawing.Size(46, 17);
@@ -170,25 +171,6 @@
             this.panel1.Size = new System.Drawing.Size(220, 539);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.FlatAppearance.BorderSize = 0;
-            this.pictureBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pictureBox4.ForeColor = System.Drawing.Color.Black;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 216);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.pictureBox4.Size = new System.Drawing.Size(220, 60);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.Text = "     Revenue";
-            this.pictureBox4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pictureBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.pictureBox4.UseVisualStyleBackColor = true;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
-            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -208,11 +190,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.FlatAppearance.BorderSize = 0;
+            this.pictureBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox4.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 216);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.pictureBox4.Size = new System.Drawing.Size(220, 60);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.Text = "     Revenue";
+            this.pictureBox4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.pictureBox4.UseVisualStyleBackColor = true;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
             // Renter_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1106, 539);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -221,7 +222,7 @@
             this.MaximizeBox = false;
             this.Name = "Renter_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Renter_Form";
+            this.Text = "Renter";
             this.Load += new System.EventHandler(this.Renter_Form_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

@@ -21,7 +21,9 @@ namespace Car_Rental_App.RenterUserControl
         {
             fillchart();
         }
-        private void fillchart()
+        
+          
+            private void fillchart()
         {
            
             SqlConnection conn = new SqlConnection(Program.my_connection_string);

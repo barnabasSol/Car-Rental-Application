@@ -65,7 +65,7 @@ namespace Car_Rental_App
           
                 try
                 {
-                    Console.WriteLine(transaction.IsolationLevel);
+                    //Console.WriteLine(transaction.IsolationLevel);
                     SqlCommand cmd = new SqlCommand("Insert_Profile", conn,transaction);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -153,12 +153,13 @@ namespace Car_Rental_App
                     cmd.Parameters.AddWithValue("@rep_min_req", SqlDbType.VarChar).Value = 5;
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
-                    transaction.Commit();
+                   transaction.Commit();
                 }
-                catch(SqlException e)
+                catch(Exception e)
                 {
                     transaction.Rollback();
                     Console.WriteLine("Transaction Rollback");
+                    
                 }
                 finally
                 {

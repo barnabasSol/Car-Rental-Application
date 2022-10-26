@@ -87,49 +87,49 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Column1";
+            this.Column1.HeaderText = "License Plate";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Column2";
+            this.Column2.HeaderText = "Car Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Column3";
+            this.Column3.HeaderText = "Car Branch";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Column4";
+            this.Column4.HeaderText = "Customer Name";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Column5";
+            this.Column5.HeaderText = "Rental Date";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Column6";
+            this.Column6.HeaderText = "Total Vehicles";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Column7";
+            this.Column7.HeaderText = "Return Date";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Column8";
+            this.Column8.HeaderText = "Paid Amount";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             // 

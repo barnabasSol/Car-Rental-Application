@@ -171,7 +171,7 @@
             // 
             // backbtn
             // 
-            this.backbtn.BackColor = System.Drawing.Color.White;
+            this.backbtn.BackColor = System.Drawing.SystemColors.Control;
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
@@ -194,7 +194,7 @@
             this.saveeditbtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.saveeditbtn.ActiveForecolor = System.Drawing.Color.White;
             this.saveeditbtn.ActiveLineColor = System.Drawing.Color.IndianRed;
-            this.saveeditbtn.BackColor = System.Drawing.Color.White;
+            this.saveeditbtn.BackColor = System.Drawing.SystemColors.Control;
             this.saveeditbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveeditbtn.BackgroundImage")));
             this.saveeditbtn.ButtonText = "Save Changes";
             this.saveeditbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -286,7 +286,7 @@
             // 
             // PhoneTxt
             // 
-            this.PhoneTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.PhoneTxt.BackColor = System.Drawing.SystemColors.Control;
             this.PhoneTxt.BorderColor = System.Drawing.Color.Black;
             this.PhoneTxt.BorderSize = 2;
             this.PhoneTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -305,7 +305,7 @@
             // 
             // LastNameTxt
             // 
-            this.LastNameTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.LastNameTxt.BackColor = System.Drawing.SystemColors.Control;
             this.LastNameTxt.BorderColor = System.Drawing.Color.Black;
             this.LastNameTxt.BorderSize = 2;
             this.LastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -324,7 +324,7 @@
             // 
             // AddressTxt
             // 
-            this.AddressTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.AddressTxt.BackColor = System.Drawing.SystemColors.Control;
             this.AddressTxt.BorderColor = System.Drawing.Color.Black;
             this.AddressTxt.BorderSize = 2;
             this.AddressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -343,7 +343,7 @@
             // 
             // FirstNameTxt
             // 
-            this.FirstNameTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.FirstNameTxt.BackColor = System.Drawing.SystemColors.Control;
             this.FirstNameTxt.BorderColor = System.Drawing.Color.Black;
             this.FirstNameTxt.BorderSize = 2;
             this.FirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -365,7 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.PhoneTxt);
             this.Controls.Add(this.LastNameTxt);
             this.Controls.Add(this.AddressTxt);
