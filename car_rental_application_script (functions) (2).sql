@@ -1,14 +1,17 @@
+use car_rental_database;
 -- NATE -----------------------------------
+
 GO
-CREATE function [get available vehicles]
+create function [get available vehicles]
 	(@id varchar(20))
 returns table
 as return ( 
-	select license_plate_no, car_name, car_type, car_capacity, car_model, car_color, car_condition, price_per_hour from cars 
+	select license_plate_no, car_name, car_type, car_capacity, car_model, car_color, car_condition, price_per_hour, car_branch from cars 
 	where (select customer.reputation from customer 
 				where customer.login_id = @id)
 				> cars.rep_min_req
 		and verification = 'verified'
+		and car_status=1
 )
 
 go
@@ -24,9 +27,7 @@ as begin
 	return @id
 end
 
-
-
-
+GO
 
 --Nati-----------------------------------
 create function return_name(@c_login_id varchar(200))
@@ -59,7 +60,7 @@ select rented_cars.license_plate_no,
 		paid_amount
 		from rental join rented_cars on rental.rent_id=rented_cars.r_id
 		join cars on cars.license_plate_no=rented_cars.license_plate_no
-		where renter_login_id = @renter_id 
+		where login_id = @renter_id 
 	
 		
 )  
@@ -87,8 +88,19 @@ returns table
 as
 return(
 
-
 select count (*) as [Number of User by Profile type]  from profile  group by profile_type_id 
 
 )
 go
+create function [generate admid]
+()
+returns varchar(5)
+as begin
+	declare @id varchar(5)
+	if (select count(*) from profile where profile_type_id=1) < 1 
+		set @id = 'a0001'
+	else
+		set @id = 'a' + (format((cast(substring((select top 1 login_id from profile order by login_id desc), 2, 4) as int) + 1), 'D4'))
+	return @id
+end
+
