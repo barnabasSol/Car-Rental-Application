@@ -125,6 +125,7 @@ namespace Car_Rental_App.CustomerUserControl
             int payment = DateTime.Now.CompareTo(datePicker.Value); 
             using (SqlConnection con = new SqlConnection(Program.my_connection_string))
             {
+
                 //TODO: add vehicles mnamn
             }
         }

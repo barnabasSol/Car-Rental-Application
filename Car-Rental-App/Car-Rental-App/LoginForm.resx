@@ -124,6 +124,21 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAKoAAAAoCAYAAABuDmFRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVHhe7dy9SiNRGIfxvVDxgxg/QMUqWKQQQSwEb0DQ
+        SrwDwcLGIiYzavwq3Cy46C4blqjkDt7Nf4aNhrymMs458BS/ak4mzcNk5mTO+dbtdg0IHaEiCoSKKBAq
+        okCoiAKhIgojQ33tdOzx5MRut7asubZmycKCnU1MAJ9CPamrm40Nezw+tpd22+1QPgz1d61myfy8JbOz
+        VnO+BPhMjV5nydyc/Tw6cnscClVV321vW1IuuycExkmxXlWr9vz0NNDlQKiK9HxlxepTU+5JgK+SLi9b
+        5+HBD1VXUiJFKHT/OhRqdk/Kzz0CkpRK1jo4eAtVT/d6cPIGA0VSl3/v7/NQNTWgpy5vIFCoyUlr7e3l
+        oWoeyx0EBOBidTUPNV1acgcAIaj3rqpZqI2ZGXcAEIosVO8AEBJCRRQIFVEgVESBUBEFQkUUCBVRyELV
+        hKp3EAhFFipLTBC6LFS9Ue0dBEKgv/izUH8cHvI3KoJ1t7OTh6pX/rVWxRsEFEkv8/86Pc1Dldb+vjVK
+        JXcwUIT69LTdbm4OLkXRW/6XlYr7AaAI6eJif61/P1TRK/8pMwAIgJag/EnTfpsDoUq72cyXTPcuu94J
+        gHFSd7qSvo9UhkIV3QZ83921BqtS8UW0G4925bleX3e39nFD/U9Va2qAhX8YJ02Nan8z7XPmdSgjQwVC
+        QaiIAqEiCoSKKBAqItC1f65Xgb+LqoLUAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="little_car.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

@@ -1,4 +1,3 @@
-
 create database car_rental_database;
 
 GO
@@ -26,7 +25,7 @@ create table profile(
     activity tinyint default 1,
     constraint fk_profile_id foreign key (profile_type_id) REFERENCES profile_type(prof_id) on update cascade
 )
-
+select * from rented_cars
 GO
 
 create table customer(
@@ -87,9 +86,9 @@ GO
 create table rental(
     rent_id VARCHAR(200) PRIMARY KEY,
     c_login_id varchar(200),
-    rental_date date not null,
+    rental_date datetime not null,
     total_vehicles int not null,  /*new column*/
-    return_date date not null,
+    return_date datetime not null,
     paid_amount money,
     payment_id int,
     branch_loc NVARCHAR(100),  /*new column*/
@@ -143,4 +142,8 @@ cars
 full join (select rental.c_login_id, license_plate_no, return_status from rented_cars join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
 
+GO
 
+create view customer_rep as
+select profile.login_id, first_name+' '+last_name as full_name, sex, phone_number, home_address, activity, reputation from profile
+join customer on profile.login_id=customer.login_id

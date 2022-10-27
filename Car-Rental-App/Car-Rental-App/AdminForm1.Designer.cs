@@ -41,15 +41,12 @@ namespace Car_Rental_App
             this.settingbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.homebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homebtn)).BeginInit();
-            this.mainpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // idlbl
@@ -128,7 +125,7 @@ namespace Car_Rental_App
             this.customerbtn.ActiveLineColor = System.Drawing.Color.White;
             this.customerbtn.BackColor = System.Drawing.SystemColors.Menu;
             resources.ApplyResources(this.customerbtn, "customerbtn");
-            this.customerbtn.ButtonText = "Customer";
+            this.customerbtn.ButtonText = "User Client";
             this.customerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerbtn.ForeColor = System.Drawing.Color.Black;
             this.customerbtn.IdleBorderThickness = 1;
@@ -164,16 +161,9 @@ namespace Car_Rental_App
             // 
             // mainpanel
             // 
-            this.mainpanel.Controls.Add(this.pictureBox2);
+            this.mainpanel.BackColor = System.Drawing.SystemColors.Menu;
             resources.ApplyResources(this.mainpanel, "mainpanel");
             this.mainpanel.Name = "mainpanel";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Car_Rental_App.Properties.Resources.administrator;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
             // 
             // AdminForm1
             // 
@@ -194,8 +184,6 @@ namespace Car_Rental_App
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.settingbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homebtn)).EndInit();
-            this.mainpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +200,5 @@ namespace Car_Rental_App
         private Bunifu.Framework.UI.BunifuThinButton2 vehiclebtn;
         private Bunifu.Framework.UI.BunifuImageButton settingbtn;
         private System.Windows.Forms.Panel mainpanel;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

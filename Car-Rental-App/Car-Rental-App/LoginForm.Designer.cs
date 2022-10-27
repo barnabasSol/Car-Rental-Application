@@ -43,6 +43,7 @@ namespace Car_Rental_App
             this.login_idtxt = new System.Windows.Forms.TextBox();
             this.pswlbl = new System.Windows.Forms.Label();
             this.loginidlbl = new System.Windows.Forms.Label();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
@@ -74,7 +75,7 @@ namespace Car_Rental_App
             // login_btn
             // 
             this.login_btn.ForeColor = System.Drawing.Color.Black;
-            this.login_btn.Location = new System.Drawing.Point(597, 250);
+            this.login_btn.Location = new System.Drawing.Point(479, 315);
             this.login_btn.Margin = new System.Windows.Forms.Padding(4);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(75, 23);
@@ -171,12 +172,38 @@ namespace Car_Rental_App
             this.loginidlbl.Text = "Login-ID:";
             this.loginidlbl.UseCompatibleTextRendering = true;
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Login";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(550, 243);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(170, 40);
+            this.bunifuThinButton21.TabIndex = 10;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(831, 438);
+            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.create_here_lbl);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.dhaalbl);
@@ -219,6 +246,7 @@ namespace Car_Rental_App
         private System.Windows.Forms.TextBox login_idtxt;
         private System.Windows.Forms.Label pswlbl;
         private System.Windows.Forms.Label loginidlbl;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
 

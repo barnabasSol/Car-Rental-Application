@@ -32,7 +32,7 @@ namespace Car_Rental_App
             this.password = password;
         }
 
-        public bool valdation(string login_id)
+        public bool login_id_exists(string login_id)
         {
             bool valdation1 = false;
             string commandText = "select login_id from profile ";

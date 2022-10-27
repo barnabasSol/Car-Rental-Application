@@ -45,12 +45,14 @@ namespace Car_Rental_App.AdminUserControl
             this.addy = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.addresstxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.minimizebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.expandbtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.gendericon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).BeginInit();
@@ -202,6 +204,19 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.timer1.Interval = 200;
             // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuImageButton3.Image = global::Car_Rental_App.Properties.Resources.edit;
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(383, 7);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(47, 40);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 12;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
             // savebtn
             // 
             this.savebtn.ActiveBorderThickness = 1;
@@ -300,6 +315,7 @@ namespace Car_Rental_App.AdminUserControl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.scale);
             this.Controls.Add(this.bunifuImageButton2);
@@ -320,8 +336,9 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.gendericon);
             this.Name = "CustomerCard";
-            this.Size = new System.Drawing.Size(428, 121);
+            this.Size = new System.Drawing.Size(438, 263);
             this.Load += new System.EventHandler(this.CustomerCard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).EndInit();
@@ -354,5 +371,6 @@ namespace Car_Rental_App.AdminUserControl
         private Bunifu.Framework.UI.BunifuCustomLabel addy;
         private Bunifu.Framework.UI.BunifuCustomLabel addresstxt;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
     }
 }

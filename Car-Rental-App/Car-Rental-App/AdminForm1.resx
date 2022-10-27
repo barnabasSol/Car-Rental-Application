@@ -130,10 +130,13 @@
     <value>NoControl</value>
   </data>
   <data name="idlbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 37</value>
+    <value>68, 30</value>
+  </data>
+  <data name="idlbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="idlbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>100, 20</value>
   </data>
   <data name="idlbl.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -163,13 +166,10 @@
     <value>NoControl</value>
   </data>
   <data name="fullnamelbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 12</value>
-  </data>
-  <data name="fullnamelbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>69, 10</value>
   </data>
   <data name="fullnamelbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
+    <value>113, 17</value>
   </data>
   <data name="fullnamelbl.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -189,17 +189,65 @@
   <data name="&gt;&gt;fullnamelbl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;little_car.Name" xml:space="preserve">
+    <value>little_car</value>
+  </data>
+  <data name="&gt;&gt;little_car.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;little_car.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;little_car.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>844, 72</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 10</value>
+    <value>9, 8</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 70</value>
+    <value>55, 57</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -256,13 +304,13 @@
     <value>NoControl</value>
   </data>
   <data name="little_car.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1024, 5</value>
+    <value>768, 4</value>
   </data>
   <data name="little_car.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="little_car.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 84</value>
+    <value>65, 68</value>
   </data>
   <data name="little_car.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -279,54 +327,27 @@
   <data name="&gt;&gt;little_car.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 89</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="vehiclebtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMEAAAA0CAYAAAAzHVw2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADuSURBVHhe7dwxEkNQFEDR7H+1rEDCjBkyhDbuKU6jftf/
-        r+A1DMMEZSIgTwTkiYA8EZAnAvJuRTCO4+FzeILLCATA051GYPh5mnmmj+baTkDOdwgiIG8XgSsQFdtZ
-        dxKQJwKy1kVZBOQtEdgFqHISwIcIyBMBeSIgTwTkiYA8EZAnAvJEQJ4IyBMBeSIgTwTkiYA8EZAnAvJE
-        QJ4IyBMBeSIgb4nAh/aUOQnIcxKQtvvlihCoEgF5dgKS5pf++uIXAUnbm48IyBMBKUe772kEFmWe5Nc8
-        3zoJBME/u5pf1yHyRECeCMgTAXkiIG6Y3u4MWBNEPbEiAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAJEAAAAqCAYAAACz1bmVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVHhe7dlBDoJAEABB//9aeAEGExMwKLjtzTrUhSud
+        mUn2Nk3TAoWIyEREJiIyEZGJiOxSRPM8H36H1WlEAuLM24jEw6u1iaMu3ER87TUkEZHtIrLCuGrbiklE
+        JiKGPQ9tEZE9InILMcok4idERCYiMhGRiYhMRGQiIhMRmYjIRET2iMizB4VJRGYSkeweYIXEKBGRuYkY
+        sg6d5+AREUO2m0tEZCLiK0e389uIHNpsferh0iQS1H87+//WGZmIyEREJiIyERFNyx1bXJ/ozSxjsAAA
+        AABJRU5ErkJggg==
 </value>
   </data>
   <data name="vehiclebtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 12pt</value>
   </data>
   <data name="vehiclebtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>615, 7</value>
+    <value>461, 6</value>
   </data>
   <data name="vehiclebtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 6, 7, 6</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="vehiclebtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 52</value>
+    <value>145, 42</value>
   </data>
   <data name="vehiclebtn.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -345,25 +366,25 @@
   </data>
   <data name="customerbtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMEAAAA0CAYAAAAzHVw2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADuSURBVHhe7dwxEkNQFEDR7H+1rEDCjBkyhDbuKU6jftf/
-        r+A1DMMEZSIgTwTkiYA8EZAnAvJuRTCO4+FzeILLCATA051GYPh5mnmmj+baTkDOdwgiIG8XgSsQFdtZ
-        dxKQJwKy1kVZBOQtEdgFqHISwIcIyBMBeSIgTwTkiYA8EZAnAvJEQJ4IyBMBeSIgTwTkiYA8EZAnAvJE
-        QJ4IyBMBeSIgb4nAh/aUOQnIcxKQtvvlihCoEgF5dgKS5pf++uIXAUnbm48IyBMBKUe772kEFmWe5Nc8
-        3zoJBME/u5pf1yHyRECeCMgTAXkiIG6Y3u4MWBNEPbEiAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAJEAAAAqCAYAAACz1bmVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVHhe7dlBDoJAEABB//9aeAEGExMwKLjtzTrUhSud
+        mUn2Nk3TAoWIyEREJiIyEZGJiOxSRPM8H36H1WlEAuLM24jEw6u1iaMu3ER87TUkEZHtIrLCuGrbiklE
+        JiKGPQ9tEZE9InILMcok4idERCYiMhGRiYhMRGQiIhMRmYjIRET2iMizB4VJRGYSkeweYIXEKBGRuYkY
+        sg6d5+AREUO2m0tEZCLiK0e389uIHNpsferh0iQS1H87+//WGZmIyEREJiIyERFNyx1bXJ/ozSxjsAAA
+        AABJRU5ErkJggg==
 </value>
   </data>
   <data name="customerbtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 12pt</value>
   </data>
   <data name="customerbtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 6</value>
+    <value>236, 5</value>
   </data>
   <data name="customerbtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 6, 7, 6</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="customerbtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 52</value>
+    <value>145, 42</value>
   </data>
   <data name="customerbtn.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -413,13 +434,10 @@
     <value>NoControl</value>
   </data>
   <data name="settingbtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>935, 7</value>
-  </data>
-  <data name="settingbtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>701, 6</value>
   </data>
   <data name="settingbtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 50</value>
+    <value>131, 41</value>
   </data>
   <data name="settingbtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -455,13 +473,10 @@
     <value>NoControl</value>
   </data>
   <data name="homebtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 7</value>
-  </data>
-  <data name="homebtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>12, 6</value>
   </data>
   <data name="homebtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 50</value>
+    <value>131, 41</value>
   </data>
   <data name="homebtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -485,13 +500,10 @@
     <value>Top</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 89</value>
-  </data>
-  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>0, 72</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 64</value>
+    <value>844, 52</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -508,47 +520,17 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 52</value>
-  </data>
-  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>509, 318</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>mainpanel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="mainpanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="mainpanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 153</value>
+    <value>0, 124</value>
   </data>
   <data name="mainpanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="mainpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 483</value>
+    <value>844, 393</value>
   </data>
   <data name="mainpanel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -569,10 +551,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 636</value>
+    <value>844, 517</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1707,7 +1689,7 @@
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

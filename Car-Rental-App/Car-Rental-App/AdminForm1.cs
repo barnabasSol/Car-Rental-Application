@@ -30,7 +30,6 @@ namespace Car_Rental_App
             Profile p = new Profile();
             fullnamelbl.Text = p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
-            mainpanel.Controls.Add(pictureBox2);
         }
 
         private void customerbtn_Click(object sender, EventArgs e)
@@ -43,7 +42,7 @@ namespace Car_Rental_App
             customerbtn.IdleLineColor = Color.FromArgb(199, 92, 92);
 
 
-            CustomerUC c = new CustomerUC();
+            ClientUC c = new ClientUC();
             add_user_control(c);
 
         }

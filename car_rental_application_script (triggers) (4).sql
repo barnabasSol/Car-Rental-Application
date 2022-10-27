@@ -129,3 +129,15 @@ while @@FETCH_STATUS=0
 	close cur_branches
 	deallocate cur_branches
 END
+
+
+GO
+
+create trigger [limit admin account creating] on profile 
+for insert 
+AS
+begin
+if (select count(*) from inserted where profile_type_id=1)>1
+	ROLLBACK TRANSACTION
+
+END

@@ -39,7 +39,9 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
@@ -71,11 +73,11 @@
     <Compile Include="AdminUserControl\CustomerCard.Designer.cs">
       <DependentUpon>CustomerCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminUserControl\CustomerUC.cs">
+    <Compile Include="AdminUserControl\ClientUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminUserControl\CustomerUC.Designer.cs">
-      <DependentUpon>CustomerUC.cs</DependentUpon>
+    <Compile Include="AdminUserControl\ClientUC.Designer.cs">
+      <DependentUpon>ClientUC.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminUserControl\DeactivateAccountUC.cs">
       <SubType>UserControl</SubType>
@@ -94,6 +96,12 @@
     </Compile>
     <Compile Include="AdminUserControl\HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\RenterCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\RenterCard.Designer.cs">
+      <DependentUpon>RenterCard.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminUserControl\ResetPswUC.cs">
       <SubType>UserControl</SubType>
@@ -131,6 +139,16 @@
     </Compile>
     <Compile Include="BranchStats.Designer.cs">
       <DependentUpon>BranchStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="car_rental_databaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="car_rental_databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Create_Account_Form.cs">
       <SubType>Form</SubType>
@@ -255,8 +273,8 @@
     <EmbeddedResource Include="AdminUserControl\CustomerCard.resx">
       <DependentUpon>CustomerCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminUserControl\CustomerUC.resx">
-      <DependentUpon>CustomerUC.cs</DependentUpon>
+    <EmbeddedResource Include="AdminUserControl\ClientUC.resx">
+      <DependentUpon>ClientUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\DeactivateAccountUC.resx">
       <DependentUpon>DeactivateAccountUC.cs</DependentUpon>
@@ -266,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\RenterCard.resx">
+      <DependentUpon>RenterCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl\ResetPswUC.resx">
       <DependentUpon>ResetPswUC.cs</DependentUpon>
@@ -338,6 +359,28 @@
     <EmbeddedResource Include="reusable component\InputField.resx">
       <DependentUpon>InputField.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="car_rental_databaseDataSet.xsc">
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>car_rental_databaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="car_rental_databaseDataSet.xss">
+      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xsc">
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>car_rental_databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="car_rental_databaseDataSet1.xss">
+      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -382,6 +425,7 @@
     <None Include="Resources\available.png" />
     <None Include="Resources\block.png" />
     <None Include="Resources\company.png" />
+    <None Include="Resources\edit.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />

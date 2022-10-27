@@ -51,7 +51,7 @@ namespace Car_Rental_App
                 errorProvider1.Clear();
             }
 
-            if (p.valdation(login_textbox.Text))
+            if (p.login_id_exists(login_textbox.Text))
             {
 
                 t = false;

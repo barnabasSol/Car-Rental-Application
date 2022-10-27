@@ -38,7 +38,8 @@ namespace Car_Rental_App
 
         private void settingbtn_Click(object sender, EventArgs e)
         {
-            add_user_control(new AccountSettings(this));
+            AccountSettings a = new AccountSettings(this);
+            add_user_control(a);
         }
     }
 }
