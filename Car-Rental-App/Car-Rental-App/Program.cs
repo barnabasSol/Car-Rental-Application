@@ -10,7 +10,7 @@ namespace Car_Rental_App
     {
         /// The main entry point for the application.
 
-       public static string my_connection_string = "Data Source=DESKTOP-MLSNU5I;" +
+       public static string my_connection_string = "Data Source=DESKTOP-CRCECQ7;" +
                                                     "Initial Catalog=car_rental_database;" +
                                                     "Integrated Security=true;";
         [STAThread]

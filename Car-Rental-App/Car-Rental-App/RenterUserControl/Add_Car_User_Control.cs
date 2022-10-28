@@ -177,7 +177,7 @@ namespace Car_Rental_App
 
 
                 
-                renter.addcar(LicensePlateno_textbox.Texts, CarName_txtbox.Texts, CarType_txtbox.Texts, Int16.Parse(CarCapacity_txtbox.Texts), CarModel_txtbox.Texts, CarColor_txtbox.Texts, Int16.Parse(NumericUpDown.Value.ToString()),CarBranch_txtbox.Texts.ToString(),double.Parse(Price_txtbox.Texts),Profile.current_userid);
+               // renter.addcar(LicensePlateno_textbox.Texts, CarName_txtbox.Texts, CarType_txtbox.Texts, Int16.Parse(CarCapacity_txtbox.Texts), CarModel_txtbox.Texts, CarColor_txtbox.Texts, Int16.Parse(NumericUpDown.Value.ToString()),CarBranch_txtbox.Texts.ToString(),double.Parse(Price_txtbox.Texts),Profile.current_userid);
                 MessageBox.Show("You successfully added a new car");
 
 
@@ -190,14 +190,6 @@ namespace Car_Rental_App
 
         }
 
-        private void NumericUpDown_Enter(object sender, EventArgs e)
-        {
-            NumericUpDown.BorderColor = Color.IndianRed;
-        }
-
-        private void NumericUpDown_Leave(object sender, EventArgs e)
-        {
-            NumericUpDown.BorderColor = Color.Black;
-        }
+       
     }
 }

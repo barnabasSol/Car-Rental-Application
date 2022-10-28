@@ -39,12 +39,6 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

@@ -59,7 +59,7 @@
             this.CarName_txtbox = new Sipaa.Framework.STextBox();
             this.CarColor_txtbox = new Sipaa.Framework.STextBox();
             this.Price_txtbox = new Sipaa.Framework.STextBox();
-            this.NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).BeginInit();
+           
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -437,42 +437,13 @@
             // 
             // NumericUpDown
             // 
-            this.NumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.NumericUpDown.BorderColor = System.Drawing.Color.Black;
-            this.NumericUpDown.BorderRadius = 12;
-            this.NumericUpDown.BorderThickness = 2;
-            this.NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumericUpDown.Location = new System.Drawing.Point(709, 44);
-            this.NumericUpDown.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.NumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumericUpDown.Name = "NumericUpDown";
-            this.NumericUpDown.Size = new System.Drawing.Size(137, 36);
-            this.NumericUpDown.TabIndex = 59;
-            this.NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.White;
-            this.NumericUpDown.UpDownButtonForeColor = System.Drawing.Color.Black;
-            this.NumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumericUpDown.Enter += new System.EventHandler(this.NumericUpDown_Enter);
-            this.NumericUpDown.Leave += new System.EventHandler(this.NumericUpDown_Leave);
-            // 
+           
             // Add_Car_User_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.NumericUpDown);
+            
             this.Controls.Add(this.Price_txtbox);
             this.Controls.Add(this.CarColor_txtbox);
             this.Controls.Add(this.CarName_txtbox);
@@ -503,7 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,6 +511,6 @@
         private Sipaa.Framework.STextBox CarType_txtbox;
         private Sipaa.Framework.STextBox CarModel_txtbox;
         private Sipaa.Framework.STextBox CarBranch_txtbox;
-        private Guna.UI2.WinForms.Guna2NumericUpDown NumericUpDown;
+       //private Guna.UI2.WinForms.Guna2NumericUpDown NumericUpDown;
     }
 }
