@@ -226,6 +226,12 @@
     <Compile Include="RenterUserControl\Add_Car_User_Control.Designer.cs">
       <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterUserControl\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterUserControl\Deactivate_Renter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Add_Car_User_Control.resx">
       <DependentUpon>Add_Car_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Deactivate_Renter.resx">
       <DependentUpon>Deactivate_Renter.cs</DependentUpon>

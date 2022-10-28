@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace Car_Rental_App.RenterUserControl
 {
@@ -46,14 +47,14 @@ namespace Car_Rental_App.RenterUserControl
             if (String.IsNullOrEmpty(FirstNameTxt.Texts))
             {
                 t=false;
-                errorProvider2.SetError(FirstNameTxt, "Enter your old First Name ");
+                errorProvider2.SetError(FirstNameTxt, "First Name is empty");
 
             }
             else { errorProvider2.Clear(); }
             if (String.IsNullOrEmpty(LastNameTxt.Texts))
             {
                 t = false;
-                errorProvider3.SetError(LastNameTxt, "Enter your old Last Name");
+                errorProvider3.SetError(LastNameTxt, "Last  Name is empty");
 
             }
             else { errorProvider3.Clear(); }
@@ -61,7 +62,7 @@ namespace Car_Rental_App.RenterUserControl
             if (String.IsNullOrEmpty(PhoneTxt.Texts))
             {
                 t = false;
-                errorProvider4.SetError(PhoneTxt, "Enter your old Phone Number");
+                errorProvider4.SetError(PhoneTxt, " Phone Number is empty");
 
             }
             else { errorProvider4.Clear(); }
@@ -69,7 +70,7 @@ namespace Car_Rental_App.RenterUserControl
             if (String.IsNullOrEmpty(AddressTxt.Texts))
             {
                 t = false;
-                errorProvider5.SetError(AddressTxt, "Enter your old Address");
+                errorProvider5.SetError(AddressTxt, "Address is emtpy");
 
             }
             else { errorProvider5.Clear(); }
@@ -220,6 +221,35 @@ namespace Car_Rental_App.RenterUserControl
         private void backbtn_MouseLeave(object sender, EventArgs e)
         {
             Backlbl.Visible = false;
+        }
+
+        private void Edit_Account_Rentercs_Load(object sender, EventArgs e)
+        {
+            string commandText = "select first_name, last_name,phone_number,home_address from profile where login_id=" + "\'" + Profile.current_userid+ "\'";
+           
+            using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
+            {
+                conn.Open();
+                SqlCommand cmd=new SqlCommand(commandText, conn);
+
+                cmd.Prepare();
+                SqlDataReader r= cmd.ExecuteReader();
+
+                while(r.Read())
+                {
+                    FirstNameTxt.Texts = r[0].ToString();
+                    LastNameTxt.Texts = r[1].ToString();
+                    PhoneTxt.Texts = r[2].ToString();
+                    AddressTxt.Texts = r[3].ToString();
+
+                }
+
+
+
+
+            }
+            
+
         }
     }
 }

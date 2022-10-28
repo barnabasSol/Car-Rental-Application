@@ -19,40 +19,8 @@ namespace Car_Rental_App
             InitializeComponent();
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            string current_State = CarCondition_lbl.Text;
-            int num;
-            num=Int16.Parse(current_State);
-            if (num == 10)
-            {
-                num = num;
-                CarCondition_lbl.Text=num.ToString();
-            }
-            else if(num >=1)
-            {
-                num = num + 1;
-                CarCondition_lbl.Text = num.ToString();
-            }
-            
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            string current_State = CarCondition_lbl.Text;
-            int num;
-            num = Int16.Parse(current_State);
-            if (num == 1)
-            {
-                num = num;
-                CarCondition_lbl.Text = num.ToString();
-            }
-            else if (num > 1)
-            {
-                num = num - 1;
-                CarCondition_lbl.Text = num.ToString();
-            }
-        }
+       
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -206,19 +174,13 @@ namespace Car_Rental_App
 
             if (t)
             {
+                
 
-               
-  
-              renter.addcar(LicensePlateno_textbox.Text, CarName_txtbox.Text, CarType_txtbox.Text, Int16.Parse(CarCapacity_txtbox.Text), CarModel_txtbox.Text, CarColor_txtbox.Text, Int16.Parse(CarCondition_lbl.Text),CarBranch_txtbox.Text.ToString(),double.Parse(Price_txtbox.Text),Profile.current_userid);
+
+                renter.addcar(LicensePlateno_textbox.Text, CarName_txtbox.Text, CarType_txtbox.Text, Int16.Parse(CarCapacity_txtbox.Text), CarModel_txtbox.Text, CarColor_txtbox.Text, Int16.Parse(numericUpDown1.Value.ToString()),CarBranch_txtbox.Text.ToString(),double.Parse(Price_txtbox.Text),Profile.current_userid);
                 MessageBox.Show("You successfully added a new car");
-                LicensePlateno_textbox.Clear();
-                CarName_txtbox.Clear();
-                CarType_txtbox.Clear();
-                CarCapacity_txtbox.Clear();
-                CarModel_txtbox.Clear();
-                CarColor_txtbox.Clear();
-                CarBranch_txtbox.Clear();
-                Price_txtbox.Clear();
+
+
 
             }
 
@@ -227,5 +189,7 @@ namespace Car_Rental_App
 
 
         }
+
+       
     }
 }

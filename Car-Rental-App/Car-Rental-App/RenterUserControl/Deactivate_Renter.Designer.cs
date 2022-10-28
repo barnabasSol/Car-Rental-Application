@@ -65,7 +65,7 @@
             this.deactivatebtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.deactivatebtn.ActiveForecolor = System.Drawing.Color.White;
             this.deactivatebtn.ActiveLineColor = System.Drawing.Color.IndianRed;
-            this.deactivatebtn.BackColor = System.Drawing.Color.White;
+            this.deactivatebtn.BackColor = System.Drawing.SystemColors.Control;
             this.deactivatebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deactivatebtn.BackgroundImage")));
             this.deactivatebtn.ButtonText = "Deactivate";
             this.deactivatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -86,7 +86,7 @@
             // 
             // eyebtn
             // 
-            this.eyebtn.BackColor = System.Drawing.Color.White;
+            this.eyebtn.BackColor = System.Drawing.SystemColors.Control;
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
@@ -103,7 +103,7 @@
             // 
             // backbtn
             // 
-            this.backbtn.BackColor = System.Drawing.Color.White;
+            this.backbtn.BackColor = System.Drawing.SystemColors.Control;
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
@@ -121,7 +121,7 @@
             // 
             // password
             // 
-            this.password.BackColor = System.Drawing.SystemColors.Window;
+            this.password.BackColor = System.Drawing.SystemColors.Control;
             this.password.BorderColor = System.Drawing.Color.Black;
             this.password.BorderSize = 2;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.password);
             this.Controls.Add(this.Backlbl);
             this.Controls.Add(this.deactivatebtn);

@@ -55,7 +55,7 @@
             // 
             // backbtn
             // 
-            this.backbtn.BackColor = System.Drawing.Color.White;
+            this.backbtn.BackColor = System.Drawing.SystemColors.Control;
             this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
             this.backbtn.ImageActive = null;
@@ -73,7 +73,7 @@
             // 
             // eyebtn
             // 
-            this.eyebtn.BackColor = System.Drawing.Color.White;
+            this.eyebtn.BackColor = System.Drawing.SystemColors.Control;
             this.eyebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn.Image = global::Car_Rental_App.Properties.Resources.eye1;
             this.eyebtn.ImageActive = null;
@@ -90,7 +90,7 @@
             // 
             // eyebtn2
             // 
-            this.eyebtn2.BackColor = System.Drawing.Color.White;
+            this.eyebtn2.BackColor = System.Drawing.SystemColors.Control;
             this.eyebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn2.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn2.Image")));
             this.eyebtn2.ImageActive = null;
@@ -107,7 +107,7 @@
             // 
             // eyebtn3
             // 
-            this.eyebtn3.BackColor = System.Drawing.Color.White;
+            this.eyebtn3.BackColor = System.Drawing.SystemColors.Control;
             this.eyebtn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyebtn3.Image = ((System.Drawing.Image)(resources.GetObject("eyebtn3.Image")));
             this.eyebtn3.ImageActive = null;
@@ -129,7 +129,7 @@
             this.resetbtn.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.resetbtn.ActiveForecolor = System.Drawing.Color.White;
             this.resetbtn.ActiveLineColor = System.Drawing.Color.White;
-            this.resetbtn.BackColor = System.Drawing.Color.White;
+            this.resetbtn.BackColor = System.Drawing.SystemColors.Control;
             this.resetbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resetbtn.BackgroundImage")));
             this.resetbtn.ButtonText = "Reset";
             this.resetbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -185,7 +185,7 @@
             // 
             // oldpswtxt
             // 
-            this.oldpswtxt.BackColor = System.Drawing.SystemColors.Window;
+            this.oldpswtxt.BackColor = System.Drawing.SystemColors.Control;
             this.oldpswtxt.BorderColor = System.Drawing.Color.Black;
             this.oldpswtxt.BorderSize = 2;
             this.oldpswtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -204,7 +204,7 @@
             // 
             // newpswtxt
             // 
-            this.newpswtxt.BackColor = System.Drawing.SystemColors.Window;
+            this.newpswtxt.BackColor = System.Drawing.SystemColors.Control;
             this.newpswtxt.BorderColor = System.Drawing.Color.Black;
             this.newpswtxt.BorderSize = 2;
             this.newpswtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -223,7 +223,7 @@
             // 
             // cnfrmtxt
             // 
-            this.cnfrmtxt.BackColor = System.Drawing.SystemColors.Window;
+            this.cnfrmtxt.BackColor = System.Drawing.SystemColors.Control;
             this.cnfrmtxt.BorderColor = System.Drawing.Color.Black;
             this.cnfrmtxt.BorderSize = 2;
             this.cnfrmtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.cnfrmtxt);
             this.Controls.Add(this.newpswtxt);
             this.Controls.Add(this.oldpswtxt);

@@ -32,6 +32,10 @@
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbpayment = new System.Windows.Forms.ComboBox();
+            this.cbBranch = new System.Windows.Forms.ComboBox();
             this.searchField = new Bunifu.Framework.UI.BunifuTextbox();
             this.pnlSelected = new System.Windows.Forms.FlowLayoutPanel();
             this.btnFinalize = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -68,12 +72,53 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.cbpayment);
+            this.panel3.Controls.Add(this.cbBranch);
             this.panel3.Controls.Add(this.searchField);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(415, 56);
             this.panel3.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(205, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Payment Type";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(205, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Branch";
+            // 
+            // cbpayment
+            // 
+            this.cbpayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbpayment.FormattingEnabled = true;
+            this.cbpayment.Location = new System.Drawing.Point(286, 31);
+            this.cbpayment.Name = "cbpayment";
+            this.cbpayment.Size = new System.Drawing.Size(125, 21);
+            this.cbpayment.TabIndex = 2;
+            // 
+            // cbBranch
+            // 
+            this.cbBranch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBranch.FormattingEnabled = true;
+            this.cbBranch.Location = new System.Drawing.Point(286, 7);
+            this.cbBranch.Name = "cbBranch";
+            this.cbBranch.Size = new System.Drawing.Size(125, 21);
+            this.cbBranch.TabIndex = 1;
+            this.cbBranch.SelectedIndexChanged += new System.EventHandler(this.cbBranch_SelectedIndexChanged);
             // 
             // searchField
             // 
@@ -82,9 +127,9 @@
             this.searchField.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.searchField.Icon = ((System.Drawing.Image)(resources.GetObject("searchField.Icon")));
-            this.searchField.Location = new System.Drawing.Point(48, 4);
+            this.searchField.Location = new System.Drawing.Point(3, 7);
             this.searchField.Name = "searchField";
-            this.searchField.Size = new System.Drawing.Size(254, 46);
+            this.searchField.Size = new System.Drawing.Size(195, 46);
             this.searchField.TabIndex = 0;
             this.searchField.text = "";
             this.searchField.OnTextChange += new System.EventHandler(this.searchField_OnTextChange);
@@ -186,6 +231,7 @@
             this.Load += new System.EventHandler(this.BrowseVehicles_Load);
             this.pnlLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnlRight.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -205,5 +251,9 @@
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuTextbox searchField;
+        private System.Windows.Forms.ComboBox cbpayment;
+        private System.Windows.Forms.ComboBox cbBranch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

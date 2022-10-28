@@ -1,4 +1,4 @@
-﻿using Car_Rental_App.CustomerUserControl;
+using Car_Rental_App.CustomerUserControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,8 +38,8 @@ namespace Car_Rental_App
 
         private void settingbtn_Click(object sender, EventArgs e)
         {
-            AccountSettings a = new AccountSettings(this);
-            add_user_control(a);
+            AccountSettings ac = new AccountSettings(this);
+            add_user_control(ac);
         }
     }
 }

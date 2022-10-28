@@ -28,29 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Total_Amount_number = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.EarningsDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.License_Plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Car_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Branch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rental_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Vechicles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Return_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paid_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.EarningsDataGrid1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century", 20.2F);
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(111, 483);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(227, 438);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(254, 40);
             this.bunifuCustomLabel1.TabIndex = 2;
@@ -60,148 +56,95 @@
             // 
             this.Total_Amount_number.AutoSize = true;
             this.Total_Amount_number.Font = new System.Drawing.Font("Century", 20.2F);
-            this.Total_Amount_number.Location = new System.Drawing.Point(390, 483);
+            this.Total_Amount_number.Location = new System.Drawing.Point(512, 438);
             this.Total_Amount_number.Name = "Total_Amount_number";
             this.Total_Amount_number.Size = new System.Drawing.Size(36, 40);
             this.Total_Amount_number.TabIndex = 4;
             this.Total_Amount_number.Text = "0";
             // 
-            // EarningsDataGrid1
+            // dataGridView1
             // 
-            this.EarningsDataGrid1.AllowUserToAddRows = false;
-            this.EarningsDataGrid1.AllowUserToDeleteRows = false;
-            this.EarningsDataGrid1.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.EarningsDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.EarningsDataGrid1.BackgroundColor = System.Drawing.Color.White;
-            this.EarningsDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EarningsDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EarningsDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.EarningsDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EarningsDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.License_Plate,
-            this.Car_Name,
-            this.Branch,
-            this.Customer_Name,
-            this.Rental_Date,
-            this.Total_Vechicles,
-            this.Return_Date,
-            this.Paid_Amount});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EarningsDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.EarningsDataGrid1.DoubleBuffered = true;
-            this.EarningsDataGrid1.EnableHeadersVisualStyles = false;
-            this.EarningsDataGrid1.GridColor = System.Drawing.Color.White;
-            this.EarningsDataGrid1.HeaderBgColor = System.Drawing.Color.IndianRed;
-            this.EarningsDataGrid1.HeaderForeColor = System.Drawing.Color.Black;
-            this.EarningsDataGrid1.Location = new System.Drawing.Point(0, 3);
-            this.EarningsDataGrid1.Name = "EarningsDataGrid1";
-            this.EarningsDataGrid1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EarningsDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EarningsDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.EarningsDataGrid1.RowHeadersVisible = false;
-            this.EarningsDataGrid1.RowHeadersWidth = 51;
-            this.EarningsDataGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.EarningsDataGrid1.RowTemplate.Height = 24;
-            this.EarningsDataGrid1.Size = new System.Drawing.Size(900, 477);
-            this.EarningsDataGrid1.TabIndex = 6;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(895, 373);
+            this.dataGridView1.TabIndex = 5;
             // 
-            // License_Plate
+            // Column1
             // 
-            this.License_Plate.HeaderText = "License Plate";
-            this.License_Plate.MinimumWidth = 6;
-            this.License_Plate.Name = "License_Plate";
-            this.License_Plate.ReadOnly = true;
-            this.License_Plate.Width = 80;
+            this.Column1.HeaderText = "License Plate";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
-            // Car_Name
+            // Column2
             // 
-            this.Car_Name.HeaderText = "Car Name";
-            this.Car_Name.MinimumWidth = 6;
-            this.Car_Name.Name = "Car_Name";
-            this.Car_Name.ReadOnly = true;
-            this.Car_Name.Width = 80;
+            this.Column2.HeaderText = "Car Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
-            // Branch
+            // Column3
             // 
-            this.Branch.HeaderText = "Branch";
-            this.Branch.MinimumWidth = 6;
-            this.Branch.Name = "Branch";
-            this.Branch.ReadOnly = true;
-            this.Branch.Width = 80;
+            this.Column3.HeaderText = "Car Branch";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
-            // Customer_Name
+            // Column4
             // 
-            this.Customer_Name.HeaderText = "Customer Name";
-            this.Customer_Name.MinimumWidth = 6;
-            this.Customer_Name.Name = "Customer_Name";
-            this.Customer_Name.ReadOnly = true;
-            this.Customer_Name.Width = 70;
+            this.Column4.HeaderText = "Customer Name";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
             // 
-            // Rental_Date
+            // Column5
             // 
-            this.Rental_Date.HeaderText = "Rental Date";
-            this.Rental_Date.MinimumWidth = 6;
-            this.Rental_Date.Name = "Rental_Date";
-            this.Rental_Date.ReadOnly = true;
-            this.Rental_Date.Width = 70;
+            this.Column5.HeaderText = "Rental Date";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
             // 
-            // Total_Vechicles
+            // Column6
             // 
-            this.Total_Vechicles.HeaderText = "Total Vechicles";
-            this.Total_Vechicles.MinimumWidth = 6;
-            this.Total_Vechicles.Name = "Total_Vechicles";
-            this.Total_Vechicles.ReadOnly = true;
-            this.Total_Vechicles.Width = 80;
+            this.Column6.HeaderText = "Total Vehicles";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
             // 
-            // Return_Date
+            // Column7
             // 
-            this.Return_Date.HeaderText = "Return Date";
-            this.Return_Date.MinimumWidth = 6;
-            this.Return_Date.Name = "Return_Date";
-            this.Return_Date.ReadOnly = true;
-            this.Return_Date.Width = 80;
+            this.Column7.HeaderText = "Return Date";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
             // 
-            // Paid_Amount
+            // Column8
             // 
-            this.Paid_Amount.HeaderText = "Paid Amount";
-            this.Paid_Amount.MinimumWidth = 6;
-            this.Paid_Amount.Name = "Paid_Amount";
-            this.Paid_Amount.ReadOnly = true;
-            this.Paid_Amount.Width = 80;
+            this.Column8.HeaderText = "Paid Amount";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
             // 
             // Earnings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.EarningsDataGrid1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Total_Amount_number);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "Earnings";
-            this.Size = new System.Drawing.Size(900, 574);
+            this.Size = new System.Drawing.Size(898, 498);
             this.Load += new System.EventHandler(this.Earnings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.EarningsDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,14 +153,14 @@
         #endregion
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel Total_Amount_number;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid EarningsDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn License_Plate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Car_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Branch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rental_Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Vechicles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Return_Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Paid_Amount;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
