@@ -41,12 +41,6 @@ insert into payment values(1, 'credit card'),
 insert into customer values ('cus10', 5)
 insert into customer values ('cus21', 2)
 
-insert into cars values ('0001', 'verified', 'toyota', 'coupe', 4, 'vitz', 'blue', 0, 0, 5, 10.0, null, null)
-insert into cars values ('0002', 'unverified', 'nissan', 'coupe', 4, 'almera', 'red', 0, 0, 5, 10.0, null, null)
-insert into cars values ('0003', 'verified', 'toyota', 'coupe', 4, 'vitz', 'blue', 0, 0, 2, 10.0, null, null)
-insert into cars values ('0004', 'unverified', 'nissan', 'coupe', 4, 'almera', 'red', 0, 0, 5, 10.0, null, null)
-insert into cars values ('0005', 'verified', 'toyota', 'coupe', 4, 'vitz', 'blue', 0, 0, 8, 10.0, null, null)
-insert into cars values ('0006', 'unverified', 'nissan', 'coupe', 4, 'almera', 'red', 0, 0, 5, 10.0, null, null)
 
 ------Nati--------------------------------------------------------------------------
 
@@ -125,97 +119,6 @@ rep_min_req,
 price_per_hour,
 car_branch,
 login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,5,50,'Summit','rntr13')
-
-
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(1,'cus10','rntr13','2001-10-5',2,'2001-10-8',50000,'hayat')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(2,'cus10','rntr11','2006-10-5',2,'2006-10-7',90000,'hayat')
-
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(3,'cus10','rntr12','2010-10-5',2,'2010-10-8',10000,'hayat')
-
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(4,'cus10','rntr12','2011-10-5',2,'2011-10-6',60000,'hayat')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(5,'cus21','rntr13','2012-09-5',2,'2012-09-6',51000,'hayat')
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(6,'cus21','rntr11','2015-09-5',2,'2015-09-6',51000,'hayat')
-
-
-insert into rental (rent_id
-,c_login_id
-,renter_login_id
-,rental_date
-,total_vehicles
-,return_date
-,paid_amount
-,branch_loc
-) values(7,'cus21','rntr11','2022-09-5',2,'2022-09-6',11000,'hayat')
-
-
-insert into  rented_cars (r_id,license_plate_no) values(1,'55555')
-
-insert into  rented_cars (r_id,license_plate_no) values(2,'11111')
-
-insert into  rented_cars (r_id,license_plate_no) values(3,'33333')
-
-insert into  rented_cars (r_id,license_plate_no) values(4,'44444')
-
-insert into  rented_cars (r_id,license_plate_no) values(5,'66666')
-
-insert into  rented_cars (r_id,license_plate_no) values(6,'11111')
-
-insert into  rented_cars (r_id,license_plate_no) values(7,'22222')
-
 
 
 

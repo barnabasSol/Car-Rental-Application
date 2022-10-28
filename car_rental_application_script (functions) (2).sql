@@ -1,16 +1,16 @@
 -- NATE -----------------------------------
 GO
-CREATE function [get available vehicles]
+create function [get available vehicles]
 	(@id varchar(20))
 returns table
 as return ( 
-	select license_plate_no, car_name, car_type, car_capacity, car_model, car_color, car_condition, price_per_hour from cars 
+	select license_plate_no, car_name, car_type, car_capacity, car_model, car_color, car_condition, price_per_hour, car_branch from cars 
 	where (select customer.reputation from customer 
 				where customer.login_id = @id)
 				> cars.rep_min_req
 		and verification = 'verified'
+		and car_status = 1
 )
-
 go
 create function [generate rentid]
 ()
@@ -24,10 +24,7 @@ as begin
 	return @id
 end
 
-
-
-
-
+go
 --Nati-----------------------------------
 create function return_name(@c_login_id varchar(200))
 returns varchar(200)
@@ -39,7 +36,7 @@ declare @name varchar(200)
 select @name=first_name from profile where login_id=@c_login_id 
 return @name
 	
-
+	
 end
 go
 --Nati-----------------------------------
@@ -92,3 +89,4 @@ select count (*) as [Number of User by Profile type]  from profile  group by pro
 
 )
 go
+

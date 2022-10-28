@@ -82,11 +82,10 @@ create table payment(
 )
 
 GO
-
 create table rental(
     rent_id VARCHAR(200) PRIMARY KEY,
     c_login_id varchar(200),
-    rental_date date not null,
+    rental_date datetime not null,
     total_vehicles int not null,  /*new column*/
     return_date date not null,
     paid_amount money,
@@ -125,10 +124,9 @@ create table [audit] (
 
 GO
 
-
 create view vcc_view 
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status, login_id from
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition,  firsttable.return_status, login_id, car_branch from
 cars
 full join (select rental.c_login_id, license_plate_no, return_status from rented_cars right join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
@@ -142,4 +140,7 @@ cars
 full join (select rental.c_login_id, license_plate_no, return_status from rented_cars join
 rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
 
-
+go
+create view customer_rep as 
+    select profile.login_id, concat(first_name,' ',last_name) as fullname, sex, phone_number, home_address, activity, reputation from profile
+    join customer on profile.login_id = customer.login_id where profile_type_id = 2
