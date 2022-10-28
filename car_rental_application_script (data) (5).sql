@@ -66,7 +66,7 @@ price_per_hour,
 car_branch,
 login_id) values('22222','HatchBack','Maruti Alto K10 LXi (Petrol)',4,'Red','New',10,5,15,'hayat','rntr11')
 
-select * from audit
+
 insert into cars (license_plate_no,
 car_name,
 car_type,

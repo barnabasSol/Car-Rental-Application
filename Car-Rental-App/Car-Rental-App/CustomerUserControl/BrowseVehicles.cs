@@ -95,8 +95,8 @@ namespace Car_Rental_App.CustomerUserControl
         {
             pnlSelected.Controls.Clear();
             var selectedCars = vehicles
-                .Where(x => x.Value.Selected)
-                ;
+                .Where(x => x.Value.Selected);
+                
 
             foreach (var v in selectedCars)
             {

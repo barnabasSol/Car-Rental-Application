@@ -146,15 +146,14 @@ GO
 create proc [search customer]
 @searchby varchar(100)
 with encryption
-
 AS
 BEGIN
-select login_id, fullname, sex, phone_number, home_address, activity, reputation from
-             customer_rep WHERE fullname like '%'+@searchby+'%'
+select login_id, full_name, sex, phone_number, home_address, activity, reputation from
+             customer_rep WHERE full_name like '%'+@searchby+'%'
                                 or login_id like '%'+@searchby+'%'
                                 or phone_number like '%'+@searchby+'%'
                                 or home_address like '%'+@searchby+'%'
-                                order by fullname
+                                order by full_name
 
 END
 

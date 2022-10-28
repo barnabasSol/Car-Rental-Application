@@ -25,7 +25,7 @@ create table profile(
     activity tinyint default 1,
     constraint fk_profile_id foreign key (profile_type_id) REFERENCES profile_type(prof_id) on update cascade
 )
-select * from rented_cars
+
 GO
 
 create table customer(
