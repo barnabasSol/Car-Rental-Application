@@ -250,6 +250,12 @@
     <Compile Include="RenterUserControl\Edit_Account_Rentercs.Designer.cs">
       <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterUserControl\My Car.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenterUserControl\My Car.Designer.cs">
+      <DependentUpon>My Car.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterUserControl\ResetP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\Edit_Account_Rentercs.resx">
       <DependentUpon>Edit_Account_Rentercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterUserControl\My Car.resx">
+      <DependentUpon>My Car.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenterUserControl\ResetP.resx">
       <DependentUpon>ResetP.cs</DependentUpon>
