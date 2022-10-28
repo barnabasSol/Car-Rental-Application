@@ -59,6 +59,15 @@ END
 
 GO
 
+create proc [search unreturned cars for admin]
+@searchby varchar(200)
+as
+BEGIN
+select * from vcc_view where return_status='unreturned'
+END
+
+GO
+
 create proc [search car for admin]
 @attribute varchar(200), @filter varchar(100), @admid varchar(200)
 with encryption 
@@ -288,10 +297,10 @@ with encryption
 AS
 BEGIN
 select login_id, first_name+' '+last_name, sex, phone_number, home_address, activity from
-             profile WHERE profile_type_id=3 and first_name+' '+last_name like '%'+@searchby+'%'
+             profile WHERE profile_type_id=3 and (first_name+' '+last_name like '%'+@searchby+'%'
                                 or login_id like '%'+@searchby+'%'
                                 or phone_number like '%'+@searchby+'%'
-                                or home_address like '%'+@searchby+'%'
+                                or home_address like '%'+@searchby+'%')
                                 order by first_name+' '+last_name
 
 END
@@ -357,7 +366,7 @@ create proc get_renter_for_admin
 with encryption 
 AS
 BEGIN
-select login_id, first_name, last_name, sex, phone_number, home_address, activity from
+select login_id, first_name+' '+last_name as full_name, sex, phone_number, home_address, activity from
 profile where profile_type_id = 3
 END											----------profile type----------
 

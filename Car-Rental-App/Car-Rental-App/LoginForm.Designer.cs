@@ -33,7 +33,6 @@ namespace Car_Rental_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.welcomelbl = new System.Windows.Forms.Label();
             this.dhaalbl = new System.Windows.Forms.Label();
-            this.login_btn = new System.Windows.Forms.Button();
             this.create_here_lbl = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -43,7 +42,7 @@ namespace Car_Rental_App
             this.login_idtxt = new System.Windows.Forms.TextBox();
             this.pswlbl = new System.Windows.Forms.Label();
             this.loginidlbl = new System.Windows.Forms.Label();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.login_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.little_car)).BeginInit();
@@ -53,11 +52,11 @@ namespace Car_Rental_App
             // welcomelbl
             // 
             this.welcomelbl.AutoSize = true;
-            this.welcomelbl.Font = new System.Drawing.Font("Arial", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomelbl.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomelbl.ForeColor = System.Drawing.Color.Black;
-            this.welcomelbl.Location = new System.Drawing.Point(473, 40);
+            this.welcomelbl.Location = new System.Drawing.Point(467, 40);
             this.welcomelbl.Name = "welcomelbl";
-            this.welcomelbl.Size = new System.Drawing.Size(329, 34);
+            this.welcomelbl.Size = new System.Drawing.Size(343, 36);
             this.welcomelbl.TabIndex = 1;
             this.welcomelbl.Text = "Welcome to Rent a Car";
             // 
@@ -66,30 +65,18 @@ namespace Car_Rental_App
             this.dhaalbl.AutoSize = true;
             this.dhaalbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dhaalbl.ForeColor = System.Drawing.Color.Black;
-            this.dhaalbl.Location = new System.Drawing.Point(539, 296);
+            this.dhaalbl.Location = new System.Drawing.Point(526, 309);
             this.dhaalbl.Name = "dhaalbl";
             this.dhaalbl.Size = new System.Drawing.Size(133, 15);
             this.dhaalbl.TabIndex = 7;
             this.dhaalbl.Text = "don\'t have an account?";
-            // 
-            // login_btn
-            // 
-            this.login_btn.ForeColor = System.Drawing.Color.Black;
-            this.login_btn.Location = new System.Drawing.Point(479, 315);
-            this.login_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(75, 23);
-            this.login_btn.TabIndex = 8;
-            this.login_btn.Text = "Login";
-            this.login_btn.UseVisualStyleBackColor = true;
-            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // create_here_lbl
             // 
             this.create_here_lbl.AutoSize = true;
             this.create_here_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.create_here_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create_here_lbl.Location = new System.Drawing.Point(668, 296);
+            this.create_here_lbl.Location = new System.Drawing.Point(665, 309);
             this.create_here_lbl.Name = "create_here_lbl";
             this.create_here_lbl.Size = new System.Drawing.Size(69, 15);
             this.create_here_lbl.TabIndex = 9;
@@ -132,20 +119,20 @@ namespace Car_Rental_App
             // 
             // password_txt
             // 
-            this.password_txt.Location = new System.Drawing.Point(584, 209);
+            this.password_txt.Location = new System.Drawing.Point(508, 227);
             this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '●';
-            this.password_txt.Size = new System.Drawing.Size(157, 20);
+            this.password_txt.Size = new System.Drawing.Size(243, 20);
             this.password_txt.TabIndex = 6;
             this.password_txt.TextChanged += new System.EventHandler(this.password_txt_TextChanged);
             // 
             // login_idtxt
             // 
-            this.login_idtxt.Location = new System.Drawing.Point(581, 154);
+            this.login_idtxt.Location = new System.Drawing.Point(508, 151);
             this.login_idtxt.Margin = new System.Windows.Forms.Padding(4);
             this.login_idtxt.Name = "login_idtxt";
-            this.login_idtxt.Size = new System.Drawing.Size(157, 20);
+            this.login_idtxt.Size = new System.Drawing.Size(243, 20);
             this.login_idtxt.TabIndex = 5;
             // 
             // pswlbl
@@ -153,7 +140,7 @@ namespace Car_Rental_App
             this.pswlbl.AutoSize = true;
             this.pswlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pswlbl.ForeColor = System.Drawing.Color.Black;
-            this.pswlbl.Location = new System.Drawing.Point(479, 204);
+            this.pswlbl.Location = new System.Drawing.Point(508, 188);
             this.pswlbl.Name = "pswlbl";
             this.pswlbl.Size = new System.Drawing.Size(98, 27);
             this.pswlbl.TabIndex = 4;
@@ -165,37 +152,24 @@ namespace Car_Rental_App
             this.loginidlbl.AutoSize = true;
             this.loginidlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginidlbl.ForeColor = System.Drawing.Color.Black;
-            this.loginidlbl.Location = new System.Drawing.Point(488, 149);
+            this.loginidlbl.Location = new System.Drawing.Point(508, 116);
             this.loginidlbl.Name = "loginidlbl";
             this.loginidlbl.Size = new System.Drawing.Size(86, 27);
             this.loginidlbl.TabIndex = 3;
             this.loginidlbl.Text = "Login-ID:";
             this.loginidlbl.UseCompatibleTextRendering = true;
             // 
-            // bunifuThinButton21
+            // login_btn
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Login";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(550, 243);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(170, 40);
-            this.bunifuThinButton21.TabIndex = 10;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login_btn.ForeColor = System.Drawing.Color.Black;
+            this.login_btn.Location = new System.Drawing.Point(578, 267);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(91, 23);
+            this.login_btn.TabIndex = 8;
+            this.login_btn.Text = "Login";
+            this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // LoginForm
             // 
@@ -203,7 +177,6 @@ namespace Car_Rental_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(831, 438);
-            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.create_here_lbl);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.dhaalbl);
@@ -238,7 +211,6 @@ namespace Car_Rental_App
         private System.Windows.Forms.Label welcomelbl;
         private System.Windows.Forms.PictureBox little_car;
         private System.Windows.Forms.Label dhaalbl;
-        private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label create_here_lbl;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
@@ -246,7 +218,7 @@ namespace Car_Rental_App
         private System.Windows.Forms.TextBox login_idtxt;
         private System.Windows.Forms.Label pswlbl;
         private System.Windows.Forms.Label loginidlbl;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.Button login_btn;
     }
 }
 

@@ -135,6 +135,7 @@ namespace Car_Rental_App.AdminUserControl
             this.switch_status.TabStop = false;
             this.switch_status.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.switch_status.Value = true;
+            this.switch_status.Click += new System.EventHandler(this.switch_status_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -206,7 +207,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // bunifuImageButton3
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuImageButton3.BackColor = System.Drawing.SystemColors.Menu;
             this.bunifuImageButton3.Image = global::Car_Rental_App.Properties.Resources.edit;
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(383, 7);
@@ -216,6 +217,7 @@ namespace Car_Rental_App.AdminUserControl
             this.bunifuImageButton3.TabIndex = 12;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // savebtn
             // 
@@ -224,7 +226,7 @@ namespace Car_Rental_App.AdminUserControl
             this.savebtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.savebtn.ActiveForecolor = System.Drawing.Color.White;
             this.savebtn.ActiveLineColor = System.Drawing.Color.White;
-            this.savebtn.BackColor = System.Drawing.SystemColors.Control;
+            this.savebtn.BackColor = System.Drawing.SystemColors.Menu;
             this.savebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("savebtn.BackgroundImage")));
             this.savebtn.ButtonText = "Save Changes";
             this.savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -313,7 +315,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.savebtn);
@@ -336,7 +338,7 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.gendericon);
             this.Name = "CustomerCard";
-            this.Size = new System.Drawing.Size(438, 263);
+            this.Size = new System.Drawing.Size(438, 122);
             this.Load += new System.EventHandler(this.CustomerCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();

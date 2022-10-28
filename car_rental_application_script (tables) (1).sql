@@ -128,19 +128,32 @@ GO
 
 create view vcc_view 
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status, login_id, car_branch from
-cars
-full join (select rental.c_login_id, license_plate_no, return_status from rented_cars right join
-rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, return_status, login_id, car_branch, r_id 
+from cars
+full join (
+        select r_id, rental.c_login_id, license_plate_no, return_status 
+        from rented_cars 
+        full join rental 
+        on rental.rent_id = rented_cars.r_id
+    ) 
+    as firsttable 
+on cars.license_plate_no = firsttable.license_plate_no 
+
 
 go
 
 create view srch_view
 as
-select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition, firsttable.return_status, login_id, car_branch from
-cars
-full join (select rental.c_login_id, license_plate_no, return_status from rented_cars join
-rental on rental.rent_id = rented_cars.r_id) as firsttable on cars.license_plate_no = firsttable.license_plate_no 
+select  cars.license_plate_no, car_name, car_type, verification, car_status, c_login_id, cars.price_per_hour, cars.car_condition, firsttable.return_status, login_id, car_branch 
+from cars
+full join
+     (
+        select rental.c_login_id, license_plate_no, return_status 
+        from rented_cars 
+        join rental 
+        on rental.rent_id = rented_cars.r_id
+    ) 
+    as firsttable on cars.license_plate_no = firsttable.license_plate_no
 
 GO
 

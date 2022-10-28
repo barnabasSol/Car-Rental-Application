@@ -31,18 +31,18 @@ namespace Car_Rental_App.AdminUserControl
         {
             this.vpanel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchvtxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.srchimg = new System.Windows.Forms.PictureBox();
-            this.addvehiclebtn = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.addvehiclebtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.flbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.filterbycbox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.srchimg = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).BeginInit();
             this.SuspendLayout();
             // 
             // vpanel
@@ -55,6 +55,7 @@ namespace Car_Rental_App.AdminUserControl
             this.vpanel.Name = "vpanel";
             this.vpanel.Size = new System.Drawing.Size(600, 336);
             this.vpanel.TabIndex = 16;
+            this.vpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.vpanel_Paint);
             // 
             // searchvtxt
             // 
@@ -75,32 +76,15 @@ namespace Car_Rental_App.AdminUserControl
             this.searchvtxt.Visible = false;
             this.searchvtxt.OnValueChanged += new System.EventHandler(this.searchvtxt_OnValueChanged_1);
             // 
-            // srchimg
+            // panel2
             // 
-            this.srchimg.Image = global::Car_Rental_App.Properties.Resources.icons8_search_30;
-            this.srchimg.Location = new System.Drawing.Point(585, 15);
-            this.srchimg.Name = "srchimg";
-            this.srchimg.Size = new System.Drawing.Size(40, 32);
-            this.srchimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.srchimg.TabIndex = 19;
-            this.srchimg.TabStop = false;
-            this.srchimg.Visible = false;
-            // 
-            // addvehiclebtn
-            // 
-            this.addvehiclebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.addvehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addvehiclebtn.Image = global::Car_Rental_App.Properties.Resources.addcar;
-            this.addvehiclebtn.ImageActive = null;
-            this.addvehiclebtn.Location = new System.Drawing.Point(41, 248);
-            this.addvehiclebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addvehiclebtn.Name = "addvehiclebtn";
-            this.addvehiclebtn.Size = new System.Drawing.Size(61, 63);
-            this.addvehiclebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.addvehiclebtn.TabIndex = 4;
-            this.addvehiclebtn.TabStop = false;
-            this.addvehiclebtn.Zoom = 10;
-            this.addvehiclebtn.Click += new System.EventHandler(this.addvehiclebtn_Click);
+            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.addvehiclebtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 396);
+            this.panel2.TabIndex = 13;
             // 
             // bunifuImageButton1
             // 
@@ -118,15 +102,21 @@ namespace Car_Rental_App.AdminUserControl
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // panel2
+            // addvehiclebtn
             // 
-            this.panel2.Controls.Add(this.bunifuImageButton1);
-            this.panel2.Controls.Add(this.addvehiclebtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(110, 396);
-            this.panel2.TabIndex = 13;
+            this.addvehiclebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.addvehiclebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addvehiclebtn.Image = global::Car_Rental_App.Properties.Resources.addcar;
+            this.addvehiclebtn.ImageActive = null;
+            this.addvehiclebtn.Location = new System.Drawing.Point(41, 248);
+            this.addvehiclebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addvehiclebtn.Name = "addvehiclebtn";
+            this.addvehiclebtn.Size = new System.Drawing.Size(61, 63);
+            this.addvehiclebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.addvehiclebtn.TabIndex = 4;
+            this.addvehiclebtn.TabStop = false;
+            this.addvehiclebtn.Zoom = 10;
+            this.addvehiclebtn.Click += new System.EventHandler(this.addvehiclebtn_Click);
             // 
             // flbl
             // 
@@ -155,6 +145,7 @@ namespace Car_Rental_App.AdminUserControl
             this.filterbycbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.filterbycbox.FormattingEnabled = true;
             this.filterbycbox.Items.AddRange(new object[] {
+            "unreturned",
             "verified",
             "unverified",
             "car condition (asc)",
@@ -168,6 +159,17 @@ namespace Car_Rental_App.AdminUserControl
             this.filterbycbox.Visible = false;
             this.filterbycbox.SelectedIndexChanged += new System.EventHandler(this.filterbycbox_SelectedIndexChanged);
             // 
+            // srchimg
+            // 
+            this.srchimg.Image = global::Car_Rental_App.Properties.Resources.icons8_search_30;
+            this.srchimg.Location = new System.Drawing.Point(585, 15);
+            this.srchimg.Name = "srchimg";
+            this.srchimg.Size = new System.Drawing.Size(40, 32);
+            this.srchimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.srchimg.TabIndex = 19;
+            this.srchimg.TabStop = false;
+            this.srchimg.Visible = false;
+            // 
             // VehicleUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,12 +181,12 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.panel1);
             this.Name = "VehicleUC";
             this.Size = new System.Drawing.Size(844, 396);
-            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addvehiclebtn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.srchimg)).EndInit();
             this.ResumeLayout(false);
 
         }

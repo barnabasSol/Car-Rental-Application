@@ -18,7 +18,6 @@ namespace Car_Rental_App.AdminUserControl
         private string _id;
         private string _phone_number;
         private string _address;
-        private int _rep_ind;
         private bool _switch_status;
         public RenterCard()
         {
@@ -61,16 +60,34 @@ namespace Car_Rental_App.AdminUserControl
             set { _switch_status = value; rswitch_status.Value = value; }
         }
 
+
+
+        private void load_renter_card()
+        {
+
+        }
+
+        private void RenterCard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reditbtn_Click(object sender, EventArgs e)
+        {
+            EditUserClientForm euf = new EditUserClientForm(id);
+            euf.Show();
+        }
+
         private void rswitch_status_Click(object sender, EventArgs e)
         {
+
             string disable_query = "[disable renter] @rid";
-            string enable_query = "update profile set activity=0 where login_id = @rid";
+            string enable_query = "update profile set activity=1 where login_id = @rid";
             SqlParameter rid_param = new SqlParameter("@rid", SqlDbType.VarChar, 200);
-            rid_param.Value = ridtxt;
-            if (rswitch_status.Value == true)
+            rid_param.Value = ridtxt.Text;
+            if (rswitch_status.Value == false)
             {
-                rswitch_status.Value = false;
-                using (SqlConnection connection = new SqlConnection())
+                using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(disable_query, connection))
@@ -81,11 +98,9 @@ namespace Car_Rental_App.AdminUserControl
                     }
                 }
             }
-            else
+            else 
             {
-                rswitch_status.Value = true;
-                rswitch_status.Value = false;
-                using (SqlConnection connection = new SqlConnection())
+                using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(enable_query, connection))
@@ -98,19 +113,6 @@ namespace Car_Rental_App.AdminUserControl
             }
         }
 
-        private void load_renter_card()
-        {
-            
-        }
-
-        private void RenterCard_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void reditbtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+

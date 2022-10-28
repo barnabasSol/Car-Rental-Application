@@ -72,6 +72,7 @@ namespace Car_Rental_App.AdminUserControl
                                 car_name = reader[1].ToString(),
                                 car_type = reader[2].ToString()
                             };
+                            vc.rent_id = reader[9].ToString();
                             if (reader[3].ToString() == "verified")
                             {
                                 vc.vstatus = Properties.Resources.verified;
@@ -80,7 +81,7 @@ namespace Car_Rental_App.AdminUserControl
                             {
                                 vc.vstatus = Properties.Resources.unverified;
                             }
-
+                            vc.r_status = reader[6].ToString();
                             if (reader[4].ToString() == "1")
                                 vc.status = Properties.Resources.available;
                             else
@@ -102,11 +103,23 @@ namespace Car_Rental_App.AdminUserControl
                             vpanel.Controls.Add(vc);
                             tempvcardlist.Add(vc);
                         }
+
                     }
                 }
             }
         }
 
+        public string get_rent_id(string lp)
+        {
+            foreach (var item in tempvcardlist)
+            {
+                if (item.licensep == lp)
+                {
+                    return item.rent_id;
+                }
+            }
+            return null;
+        }
 
         void filter_vehicles(string attribute, string srchfilter)
         {
@@ -181,11 +194,27 @@ namespace Car_Rental_App.AdminUserControl
             }
             vpanel.Controls.Clear();
             filter_vehicles("", filter);
+            if (filterbycbox.Text == "unreturned")
+            {
+                vpanel.Controls.Clear();
+                 
+            }
+        }
+        private void search_unreturned(string search_by)
+        {
+            //var x = from y in tempvcardlist
+            //        where y.vstatus_string == "unreturned"
+            //        select y;
 
         }
 
         private void searchvtxt_OnValueChanged_1(object sender, EventArgs e)
         {
+                if (filterbycbox.Text == "unreturned")
+                {
+                vpanel.Controls.Clear();
+
+                }
                 vpanel.Controls.Clear();
                 search_vehicle(searchvtxt.Text);
         }
@@ -201,6 +230,11 @@ namespace Car_Rental_App.AdminUserControl
                     vpanel.Controls.Add(card);
                 }
             }
+        }
+
+        private void vpanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

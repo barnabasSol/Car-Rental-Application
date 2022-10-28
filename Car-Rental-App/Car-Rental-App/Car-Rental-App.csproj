@@ -36,9 +36,21 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="SipaaFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SipaaFramework.1.1.0\lib\net46\SipaaFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -47,6 +59,7 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +71,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminClass.cs" />
@@ -140,16 +156,6 @@
     <Compile Include="BranchStats.Designer.cs">
       <DependentUpon>BranchStats.cs</DependentUpon>
     </Compile>
-    <Compile Include="car_rental_databaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="car_rental_databaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Create_Account_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="Customer_form.Designer.cs">
       <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserClientForm.Designer.cs">
+      <DependentUpon>EditUserClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditVehicleForm.cs">
       <SubType>Form</SubType>
@@ -321,6 +333,9 @@
     <EmbeddedResource Include="Customer_form.resx">
       <DependentUpon>Customer_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditUserClientForm.resx">
+      <DependentUpon>EditUserClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditVehicleForm.resx">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,28 +374,7 @@
     <EmbeddedResource Include="reusable component\InputField.resx">
       <DependentUpon>InputField.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="car_rental_databaseDataSet.xsc">
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>car_rental_databaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="car_rental_databaseDataSet.xss">
-      <DependentUpon>car_rental_databaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xsc">
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>car_rental_databaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="car_rental_databaseDataSet1.xss">
-      <DependentUpon>car_rental_databaseDataSet1.xsd</DependentUpon>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

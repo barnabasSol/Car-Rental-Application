@@ -127,7 +127,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             // reditbtn
             // 
-            this.reditbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.reditbtn.BackColor = System.Drawing.SystemColors.Menu;
             this.reditbtn.Image = global::Car_Rental_App.Properties.Resources.edit;
             this.reditbtn.ImageActive = null;
             this.reditbtn.Location = new System.Drawing.Point(387, 7);
@@ -180,6 +180,8 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.rswitch_status);
             this.Controls.Add(this.reditbtn);
@@ -193,7 +195,7 @@ namespace Car_Rental_App.AdminUserControl
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.rgendericon);
             this.Name = "RenterCard";
-            this.Size = new System.Drawing.Size(438, 124);
+            this.Size = new System.Drawing.Size(436, 122);
             this.Load += new System.EventHandler(this.RenterCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reditbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgendericon)).EndInit();

@@ -199,5 +199,16 @@ namespace Car_Rental_App.AdminUserControl
             }
             scale.Text = bunifuSlider1.Value.ToString();
         }
+
+        private void switch_status_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            EditUserClientForm ecf = new EditUserClientForm(idtxt.Text);
+            ecf.Show();
+        }
     }
 }

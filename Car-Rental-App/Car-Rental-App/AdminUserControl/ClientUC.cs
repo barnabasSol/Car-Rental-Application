@@ -14,7 +14,6 @@ namespace Car_Rental_App.AdminUserControl
 {
     public partial class ClientUC : UserControl
     {
-        string the_table = "";
         string selected_filter = "";
 
         public ClientUC()
@@ -29,7 +28,7 @@ namespace Car_Rental_App.AdminUserControl
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = Program.my_connection_string;
             search_user_client_panel.Controls.Clear();
-            if (comboBox1.Text == "Customer")
+            if (comboBox1.Text == "customer")
             {
                 commandText = "[search customer] @attribute";
                 SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 100);
@@ -76,8 +75,8 @@ namespace Car_Rental_App.AdminUserControl
             }
             else
             {
-                SqlParameter attribute_param = new SqlParameter("@attribute", SqlDbType.VarChar, 100);
-                commandText = "[search renter] @attribute";
+                SqlParameter attribute_param = new SqlParameter("@attr", SqlDbType.VarChar, 100);
+                commandText = "[search renter] @attr";
                 attribute_param.Value = searchclienttxt.Text;
 
                 using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
@@ -132,6 +131,7 @@ namespace Car_Rental_App.AdminUserControl
 
         private void searchcustomer_Enter(object sender, EventArgs e)
         {
+            search_user_client_panel.Controls.Clear();
             search_user_client(searchclienttxt.Text);
         }
  
@@ -143,33 +143,36 @@ namespace Car_Rental_App.AdminUserControl
             if (selected_filter == "renter") { 
             search_user_client_panel.Controls.Clear();
             string query = "[get_renter_for_admin]";
-            using (SqlConnection connection = new SqlConnection())
+            using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            RenterCard rc = new RenterCard();
-                            rc.id = reader[0].ToString();
-                            rc.full_name = reader[1].ToString();
-                            if (reader[2].ToString() == "M")
+                            while (reader.Read())
                             {
-                                rc.gender = Resources.male3;
+                                RenterCard rc = new RenterCard();
+                                rc.id = reader[0].ToString();
+                                rc.full_name = reader[1].ToString();
+                                if (reader[2].ToString() == "M")
+                                {
+                                    rc.gender = Resources.male3;
+                                }
+                                else
+                                {
+                                    rc.gender = Resources.female1;
+                                }
+                                rc.phone_number = reader[3].ToString();
+                                rc.address = reader[4].ToString();
+                                if (reader[5].ToString() == "0")
+                                    rc.switch_status_m = false;
+                                else
+                                {
+                                    rc.switch_status_m = true;
+                                }
+                                search_user_client_panel.Controls.Add(rc);
                             }
-                            else
-                            {
-                                rc.gender = Resources.female1;
-                            }
-                            rc.phone_number = reader[3].ToString();
-                            rc.address = reader[4].ToString();
-                            if (reader[5].ToString() == "0")
-                                rc.switch_status_m = false;
-                            else
-                            {
-                                rc.switch_status_m = true;
-                            }
-                            search_user_client_panel.Controls.Add(rc);
                         }
                     }
             }

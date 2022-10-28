@@ -22,6 +22,8 @@ namespace Car_Rental_App.AdminUserControl
         private Image _status;
         private Image _currentuserimg;
         private string _curcustomer;
+        public string r_status { get; set; }
+        public string rent_id { get; set; }
 
 
         public VehicleCard()
@@ -68,6 +70,7 @@ namespace Car_Rental_App.AdminUserControl
             get { return _vstatus; }
             set { _vstatus = value; vstatusimg.Image = value; }
         }
+
         public Image status
         {
             get { return _status; }
@@ -142,7 +145,7 @@ namespace Car_Rental_App.AdminUserControl
 
         private void update_return_status(string lp)
         {
-            string query = "update rented_cars set return_status= 'returned' where license_plate_no=@lp";
+            string query = "delete from rented_cars where license_plate_no=@lp";
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
             lp_param.Value = lp;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
@@ -173,12 +176,16 @@ namespace Car_Rental_App.AdminUserControl
             update_return_status(lplbl.Text);
         }
 
+        
+
         private void undofreebtn_Click(object sender, EventArgs e)
         {
             disable_car();
             free_btn.ButtonText = "Free Vehicle";
-            string query = "update rented_cars set return_status= 'unreturned' where license_plate_no=@lp";
+            string query = "insert into rented_cars(r_id, license_plate_no) values(@rid, @lp)";
+            SqlParameter rid_param = new SqlParameter("@rid", SqlDbType.VarChar, 100);
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
+            rid_param.Value = rent_id;
             lp_param.Value = lplbl.Text;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
@@ -186,6 +193,7 @@ namespace Car_Rental_App.AdminUserControl
                 {
                     connection.Open();
                     command.Parameters.Add(lp_param);
+                    command.Parameters.Add(rid_param);
                     command.Prepare();
                     command.ExecuteNonQuery();
                 }
