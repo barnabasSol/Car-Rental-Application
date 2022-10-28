@@ -48,80 +48,17 @@ insert into payment values(1, 'credit card'),
 
 ------Nati--------------------------------------------------------------------------
 
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('11111','Pickup','Full-size pickup trucks',5,'Blue','New',10,5,20,'summit','rntr11')
+insert into cars values('1111','verified', 'Toyota', 'Sedan', 4, 'Camri', 'Red', 1, 10, 4, 10.0, 'cmc', 'rntr11')
+insert into cars values('2222','verified', 'Toyota', 'Sedan', 4, 'Vitz', 'Blue', 1, 10, 4, 20.0, 'summit', 'rntr12')
+insert into cars values('3333','verified', 'Ford', 'Truck', 4, 'F150', 'Violet', 1, 10, 4, 40.0, 'hayat', 'rntr13')
 
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('22222','HatchBack','Maruti Alto K10 LXi (Petrol)',4,'Red','New',10,5,15,'hayat','rntr11')
+insert into cars values('4444','verified', 'Toyota', 'Sedan', 4, 'Camri', 'Green', 1, 10, 4, 10.0, 'cmc', 'rntr11')
+insert into cars values('5555','verified', 'Toyota', 'Sedan', 4, 'Vitz', 'White', 1, 10, 4, 20.0, 'summit', 'rntr12')
+insert into cars values('6666','verified', 'Ford', 'Truck', 4, 'F150', 'Black', 1, 10, 4, 40.0, 'hayat', 'rntr13')
 
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('33333','Toyota','Toyota Camry',4,'Red','New',10,5,15,'hayat','rntr12')
-
-
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('44444','BMW',' 3 Series GT',4,'Red','New',10,5,30,'hayat','rntr12')
-
-
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('55555','Ford',' F-350',6,'White','New',10,5,25,'hayat','rntr13')
-
-insert into cars (license_plate_no,
-car_name,
-car_type,
-car_capacity,
-car_color,
-car_model,
-car_condition,
-rep_min_req,
-price_per_hour,
-car_branch,
-login_id) values('66666','Chevrolet',' Chevrolet K5 Blazer',4,'Yellow','New',10,5,50,'Summit','rntr13')
-
+insert into cars values('7777','verified', 'Toyota', 'Sedan', 4, 'Camri', 'Yellow', 1, 10, 4, 10.0, 'cmc', 'rntr11')
+insert into cars values('8888','verified', 'Toyota', 'Sedan', 4, 'Vitz', 'Orange', 1, 10, 4, 20.0, 'summit', 'rntr12')
+insert into cars values('9999','verified', 'Ford', 'Truck', 4, 'F150', 'Pink', 1, 10, 4, 40.0, 'hayat', 'rntr13')
 
 
 
