@@ -52,8 +52,20 @@ namespace Car_Rental_App.RenterUserControl
                 string command = "select dbo.Total_Earings(" + "\'" + Profile.current_userid + "\')";
 
                 SqlCommand cmd = new SqlCommand(command, conn);
-                Decimal total_Amount = (Decimal)cmd.ExecuteScalar();
-                Total_Amount_number.Text = total_Amount.ToString();
+                var gotten  = cmd.ExecuteScalar();
+
+               
+                decimal total_Amount;
+                if (gotten==null) {
+                    total_Amount =(decimal)0.0;
+                }
+                else
+                {
+                    
+                    decimal.TryParse(gotten.ToString(), out total_Amount);
+                }
+                Total_Amount_number.Text=total_Amount.ToString();
+             
                 conn.Close();
 
             }

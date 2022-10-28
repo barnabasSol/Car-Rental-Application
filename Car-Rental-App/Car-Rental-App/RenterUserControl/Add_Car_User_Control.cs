@@ -190,6 +190,14 @@ namespace Car_Rental_App
 
         }
 
- 
+        private void NumericUpDown_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown.BorderColor = Color.IndianRed;
+        }
+
+        private void NumericUpDown_Leave(object sender, EventArgs e)
+        {
+            NumericUpDown.BorderColor = Color.Black;
+        }
     }
 }

@@ -144,7 +144,7 @@
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(493, 44);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(474, 44);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(206, 31);
             this.bunifuCustomLabel9.TabIndex = 15;
@@ -156,18 +156,18 @@
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(480, 172);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(461, 172);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(219, 31);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(212, 31);
             this.bunifuCustomLabel10.TabIndex = 16;
-            this.bunifuCustomLabel10.Text = " Price(per Hour) :";
+            this.bunifuCustomLabel10.Text = " Price(per Hour):";
             // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(517, 108);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(508, 108);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(172, 31);
             this.bunifuCustomLabel11.TabIndex = 17;
@@ -191,7 +191,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(572, 408);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(631, 324);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(92, 52);
@@ -457,13 +457,15 @@
             this.NumericUpDown.Name = "NumericUpDown";
             this.NumericUpDown.Size = new System.Drawing.Size(137, 36);
             this.NumericUpDown.TabIndex = 59;
-            this.NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.Black;
-            this.NumericUpDown.UpDownButtonForeColor = System.Drawing.Color.White;
+            this.NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.NumericUpDown.UpDownButtonForeColor = System.Drawing.Color.Black;
             this.NumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.NumericUpDown.Enter += new System.EventHandler(this.NumericUpDown_Enter);
+            this.NumericUpDown.Leave += new System.EventHandler(this.NumericUpDown_Leave);
             // 
             // Add_Car_User_Control
             // 

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Renter_Form));
             this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,7 +57,7 @@
             this.idlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.idlbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.idlbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.idlbl.Location = new System.Drawing.Point(84, 272);
+            this.idlbl.Location = new System.Drawing.Point(857, 9);
             this.idlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idlbl.Name = "idlbl";
             this.idlbl.Size = new System.Drawing.Size(26, 24);
@@ -64,6 +68,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.idlbl);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Location = new System.Drawing.Point(218, 0);
@@ -71,14 +77,38 @@
             this.panel3.Size = new System.Drawing.Size(887, 536);
             this.panel3.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(694, 513);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Date";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(693, 485);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Time";
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(198, 124);
+            this.pictureBox5.Location = new System.Drawing.Point(192, 68);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(554, 318);
+            this.pictureBox5.Size = new System.Drawing.Size(505, 321);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
@@ -130,7 +160,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(0, 96);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.pictureBox3.Size = new System.Drawing.Size(220, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(220, 52);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.Text = "    Add";
             this.pictureBox3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,10 +176,10 @@
             this.pictureBox2.ForeColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 156);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 148);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.pictureBox2.Size = new System.Drawing.Size(220, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(220, 52);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.Text = "     Earnings";
             this.pictureBox2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,10 +209,10 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 276);
+            this.button1.Location = new System.Drawing.Point(0, 252);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(220, 60);
+            this.button1.Size = new System.Drawing.Size(220, 52);
             this.button1.TabIndex = 11;
             this.button1.Text = "      Setting";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,16 +228,21 @@
             this.pictureBox4.ForeColor = System.Drawing.Color.Black;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 216);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 200);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.pictureBox4.Size = new System.Drawing.Size(220, 60);
+            this.pictureBox4.Size = new System.Drawing.Size(220, 52);
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.Text = "     Revenue";
             this.pictureBox4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pictureBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.pictureBox4.UseVisualStyleBackColor = true;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Renter_Form
             // 
@@ -247,5 +282,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button pictureBox4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -385,6 +385,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Edit_Account_Rentercs";
             this.Size = new System.Drawing.Size(586, 663);
+            this.Load += new System.EventHandler(this.Edit_Account_Rentercs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();

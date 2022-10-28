@@ -43,6 +43,7 @@ namespace Car_Rental_App
 
             fullnamelbl.Text=p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
+            timer1.Start();
 
         }
 
@@ -106,6 +107,12 @@ namespace Car_Rental_App
 
             Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
             add_user_control_for_setting(s);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            label2.Text=DateTime.Now.ToLongDateString();
         }
     }
 }
