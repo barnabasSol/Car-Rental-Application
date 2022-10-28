@@ -282,7 +282,7 @@
             // 
             // CarCapacity_txtbox
             // 
-            this.CarCapacity_txtbox.Location = new System.Drawing.Point(275, 257);
+            this.CarCapacity_txtbox.Location = new System.Drawing.Point(275, 256);
             this.CarCapacity_txtbox.Name = "CarCapacity_txtbox";
             this.CarCapacity_txtbox.Size = new System.Drawing.Size(137, 22);
             this.CarCapacity_txtbox.TabIndex = 61;
@@ -296,6 +296,7 @@
             // 
             // CarModel_txtbox
             // 
+            this.CarModel_txtbox.BackColor = System.Drawing.Color.White;
             this.CarModel_txtbox.Location = new System.Drawing.Point(275, 334);
             this.CarModel_txtbox.Name = "CarModel_txtbox";
             this.CarModel_txtbox.Size = new System.Drawing.Size(137, 22);
