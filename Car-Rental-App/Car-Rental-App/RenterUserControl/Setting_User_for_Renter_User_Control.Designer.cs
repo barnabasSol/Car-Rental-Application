@@ -47,7 +47,7 @@
             // 
             this.logoutlbl.AutoSize = true;
             this.logoutlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutlbl.Location = new System.Drawing.Point(42, 104);
+            this.logoutlbl.Location = new System.Drawing.Point(73, 104);
             this.logoutlbl.Name = "logoutlbl";
             this.logoutlbl.Size = new System.Drawing.Size(77, 21);
             this.logoutlbl.TabIndex = 38;
@@ -58,7 +58,7 @@
             // 
             this.resetpswlbl.AutoSize = true;
             this.resetpswlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetpswlbl.Location = new System.Drawing.Point(200, 105);
+            this.resetpswlbl.Location = new System.Drawing.Point(251, 104);
             this.resetpswlbl.Name = "resetpswlbl";
             this.resetpswlbl.Size = new System.Drawing.Size(139, 21);
             this.resetpswlbl.TabIndex = 39;
@@ -69,7 +69,7 @@
             // 
             this.deactivatelbl.AutoSize = true;
             this.deactivatelbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deactivatelbl.Location = new System.Drawing.Point(566, 104);
+            this.deactivatelbl.Location = new System.Drawing.Point(635, 104);
             this.deactivatelbl.Name = "deactivatelbl";
             this.deactivatelbl.Size = new System.Drawing.Size(186, 21);
             this.deactivatelbl.TabIndex = 40;
@@ -78,11 +78,11 @@
             // 
             // deactivatebtn
             // 
-            this.deactivatebtn.BackColor = System.Drawing.Color.White;
+            this.deactivatebtn.BackColor = System.Drawing.SystemColors.Control;
             this.deactivatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deactivatebtn.Image = ((System.Drawing.Image)(resources.GetObject("deactivatebtn.Image")));
             this.deactivatebtn.ImageActive = null;
-            this.deactivatebtn.Location = new System.Drawing.Point(604, 6);
+            this.deactivatebtn.Location = new System.Drawing.Point(683, 6);
             this.deactivatebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deactivatebtn.Name = "deactivatebtn";
             this.deactivatebtn.Size = new System.Drawing.Size(87, 96);
@@ -96,11 +96,11 @@
             // 
             // resetpswbtn
             // 
-            this.resetpswbtn.BackColor = System.Drawing.Color.White;
+            this.resetpswbtn.BackColor = System.Drawing.SystemColors.Control;
             this.resetpswbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetpswbtn.Image = ((System.Drawing.Image)(resources.GetObject("resetpswbtn.Image")));
             this.resetpswbtn.ImageActive = null;
-            this.resetpswbtn.Location = new System.Drawing.Point(225, 6);
+            this.resetpswbtn.Location = new System.Drawing.Point(274, 6);
             this.resetpswbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resetpswbtn.Name = "resetpswbtn";
             this.resetpswbtn.Size = new System.Drawing.Size(89, 98);
@@ -114,11 +114,11 @@
             // 
             // logoutbtn
             // 
-            this.logoutbtn.BackColor = System.Drawing.Color.White;
+            this.logoutbtn.BackColor = System.Drawing.SystemColors.Control;
             this.logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutbtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutbtn.Image")));
             this.logoutbtn.ImageActive = null;
-            this.logoutbtn.Location = new System.Drawing.Point(33, 6);
+            this.logoutbtn.Location = new System.Drawing.Point(57, 6);
             this.logoutbtn.Margin = new System.Windows.Forms.Padding(4);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Size = new System.Drawing.Size(108, 96);
@@ -132,11 +132,11 @@
             // 
             // bunifuImageButton1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(414, 6);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(491, 6);
             this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(87, 96);
@@ -152,7 +152,7 @@
             // 
             this.Edit_Button.AutoSize = true;
             this.Edit_Button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit_Button.Location = new System.Drawing.Point(392, 104);
+            this.Edit_Button.Location = new System.Drawing.Point(478, 105);
             this.Edit_Button.Name = "Edit_Button";
             this.Edit_Button.Size = new System.Drawing.Size(119, 21);
             this.Edit_Button.TabIndex = 42;

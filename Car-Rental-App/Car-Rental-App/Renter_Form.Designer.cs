@@ -28,42 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Renter_Form));
-            this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Add = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pictureBox3 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fullnamelbl
-            // 
-            this.fullnamelbl.AutoSize = true;
-            this.fullnamelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.fullnamelbl.Font = new System.Drawing.Font("Calibri", 12.25F);
-            this.fullnamelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fullnamelbl.Location = new System.Drawing.Point(162, 52);
-            this.fullnamelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.fullnamelbl.Name = "fullnamelbl";
-            this.fullnamelbl.Size = new System.Drawing.Size(147, 26);
-            this.fullnamelbl.TabIndex = 5;
-            this.fullnamelbl.Text = "name goes here";
             // 
             // idlbl
             // 
@@ -71,166 +57,199 @@
             this.idlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.idlbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.idlbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.idlbl.Location = new System.Drawing.Point(178, 15);
+            this.idlbl.Location = new System.Drawing.Point(857, 9);
             this.idlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idlbl.Name = "idlbl";
-            this.idlbl.Size = new System.Drawing.Size(112, 24);
+            this.idlbl.Size = new System.Drawing.Size(26, 24);
             this.idlbl.TabIndex = 6;
-            this.idlbl.Text = "id goes here";
+            this.idlbl.Text = "id";
+            this.idlbl.Visible = false;
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.idlbl);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.fullnamelbl);
-            this.panel1.Controls.Add(this.Add);
-            this.panel1.Location = new System.Drawing.Point(-4, -5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 580);
-            this.panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
-            this.label5.Location = new System.Drawing.Point(82, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 25);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Name :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
-            this.label4.Location = new System.Drawing.Point(79, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 25);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Login Id :";
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.idlbl);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Location = new System.Drawing.Point(218, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(887, 536);
+            this.panel3.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 499);
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(694, 513);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 21);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Setting";
-            this.label2.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(80, 446);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(74, 331);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(74, 200);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(93, 77);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.label2.Size = new System.Drawing.Size(38, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Date";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 384);
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(693, 485);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 21);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Earnings";
-            this.label1.Visible = false;
-            // 
-            // Add
-            // 
-            this.Add.AutoSize = true;
-            this.Add.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(74, 279);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(100, 21);
-            this.Add.TabIndex = 39;
-            this.Add.Text = "Add a Car";
-            this.Add.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Location = new System.Drawing.Point(332, -2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(900, 574);
-            this.panel3.TabIndex = 1;
+            this.label1.Size = new System.Drawing.Size(39, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Time";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(198, 124);
+            this.pictureBox5.Location = new System.Drawing.Point(192, 68);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(554, 318);
+            this.pictureBox5.Size = new System.Drawing.Size(505, 321);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.fullnamelbl);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 96);
+            this.panel2.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // fullnamelbl
+            // 
+            this.fullnamelbl.AutoSize = true;
+            this.fullnamelbl.BackColor = System.Drawing.Color.IndianRed;
+            this.fullnamelbl.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnamelbl.ForeColor = System.Drawing.Color.Black;
+            this.fullnamelbl.Location = new System.Drawing.Point(55, 68);
+            this.fullnamelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fullnamelbl.Name = "fullnamelbl";
+            this.fullnamelbl.Size = new System.Drawing.Size(46, 17);
+            this.fullnamelbl.TabIndex = 5;
+            this.fullnamelbl.Text = "name";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.FlatAppearance.BorderSize = 0;
+            this.pictureBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.pictureBox3.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 96);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.pictureBox3.Size = new System.Drawing.Size(220, 52);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.Text = "    Add";
+            this.pictureBox3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.pictureBox3.UseVisualStyleBackColor = true;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.FlatAppearance.BorderSize = 0;
+            this.pictureBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox2.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 148);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.pictureBox2.Size = new System.Drawing.Size(220, 52);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.Text = "     Earnings";
+            this.pictureBox2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.pictureBox2.UseVisualStyleBackColor = true;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 539);
+            this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 252);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(220, 52);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "      Setting";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.FlatAppearance.BorderSize = 0;
+            this.pictureBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox4.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 200);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.pictureBox4.Size = new System.Drawing.Size(220, 52);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.Text = "     Revenue";
+            this.pictureBox4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.pictureBox4.UseVisualStyleBackColor = true;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Renter_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1231, 571);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1106, 539);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -238,36 +257,33 @@
             this.MaximizeBox = false;
             this.Name = "Renter_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Renter_Form";
+            this.Text = "Renter";
             this.Load += new System.EventHandler(this.Renter_Form_Load);
-            this.MouseEnter += new System.EventHandler(this.Renter_Form_MouseEnter);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuCustomLabel fullnamelbl;
         private Bunifu.Framework.UI.BunifuCustomLabel idlbl;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Add;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuCustomLabel fullnamelbl;
+        private System.Windows.Forms.Button pictureBox3;
+        private System.Windows.Forms.Button pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button pictureBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

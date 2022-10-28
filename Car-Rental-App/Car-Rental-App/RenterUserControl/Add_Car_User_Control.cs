@@ -19,40 +19,8 @@ namespace Car_Rental_App
             InitializeComponent();
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            string current_State = CarCondition_lbl.Text;
-            int num;
-            num=Int16.Parse(current_State);
-            if (num == 10)
-            {
-                num = num;
-                CarCondition_lbl.Text=num.ToString();
-            }
-            else if(num >=1)
-            {
-                num = num + 1;
-                CarCondition_lbl.Text = num.ToString();
-            }
-            
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            string current_State = CarCondition_lbl.Text;
-            int num;
-            num = Int16.Parse(current_State);
-            if (num == 1)
-            {
-                num = num;
-                CarCondition_lbl.Text = num.ToString();
-            }
-            else if (num > 1)
-            {
-                num = num - 1;
-                CarCondition_lbl.Text = num.ToString();
-            }
-        }
+       
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -69,7 +37,7 @@ namespace Car_Rental_App
             Boolean t = true;
 
             Regex r = new Regex(@"^[0-9]{1,100}$");
-            if (String.IsNullOrEmpty(LicensePlateno_textbox.Text))
+            if (String.IsNullOrEmpty(LicensePlateno_textbox.Texts))
             {
 
                 t = false;
@@ -79,7 +47,7 @@ namespace Car_Rental_App
             {
                 errorProvider1.Clear();
             }
-            if (String.IsNullOrEmpty(CarName_txtbox.Text))
+            if (String.IsNullOrEmpty(CarName_txtbox.Texts))
             {
 
                 t = false;
@@ -93,7 +61,7 @@ namespace Car_Rental_App
 
 
 
-            if (String.IsNullOrEmpty(CarType_txtbox.Text))
+            if (String.IsNullOrEmpty(CarType_txtbox.Texts))
             {
 
                 t = false;
@@ -112,7 +80,7 @@ namespace Car_Rental_App
 
 
 
-            if (String.IsNullOrEmpty(CarCapacity_txtbox.Text))
+            if (String.IsNullOrEmpty(CarCapacity_txtbox.Texts))
             {
 
                 t = false;
@@ -125,7 +93,7 @@ namespace Car_Rental_App
 
 
 
-            if (String.IsNullOrEmpty(CarModel_txtbox.Text))
+            if (String.IsNullOrEmpty(CarModel_txtbox.Texts))
             {
 
                 t = false;
@@ -136,7 +104,7 @@ namespace Car_Rental_App
                 errorProvider5.Clear();
             }
 
-            if (String.IsNullOrEmpty(CarColor_txtbox.Text))
+            if (String.IsNullOrEmpty(CarColor_txtbox.Texts))
             {
 
                 t = false;
@@ -148,7 +116,7 @@ namespace Car_Rental_App
             }
 
 
-            if (String.IsNullOrEmpty(CarBranch_txtbox.Text))
+            if (String.IsNullOrEmpty(CarBranch_txtbox.Texts))
             {
 
                 t = false;
@@ -162,7 +130,7 @@ namespace Car_Rental_App
 
 
 
-            if (String.IsNullOrEmpty(Price_txtbox.Text))
+            if (String.IsNullOrEmpty(Price_txtbox.Texts))
             {
 
                 t = false;
@@ -175,7 +143,7 @@ namespace Car_Rental_App
 
 
 
-            if (!(r.IsMatch(CarCapacity_txtbox.Text)))
+            if (!(r.IsMatch(CarCapacity_txtbox.Texts)))
             {
 
 
@@ -189,7 +157,7 @@ namespace Car_Rental_App
 
             }
 
-            if (!(r.IsMatch(Price_txtbox.Text)))
+            if (!(r.IsMatch(Price_txtbox.Texts)))
             {
 
 
@@ -207,18 +175,12 @@ namespace Car_Rental_App
             if (t)
             {
 
-               
-  
-              renter.addcar(LicensePlateno_textbox.Text, CarName_txtbox.Text, CarType_txtbox.Text, Int16.Parse(CarCapacity_txtbox.Text), CarModel_txtbox.Text, CarColor_txtbox.Text, Int16.Parse(CarCondition_lbl.Text),CarBranch_txtbox.Text.ToString(),double.Parse(Price_txtbox.Text),Profile.current_userid);
+
+                
+                renter.addcar(LicensePlateno_textbox.Texts, CarName_txtbox.Texts, CarType_txtbox.Texts, Int16.Parse(CarCapacity_txtbox.Texts), CarModel_txtbox.Texts, CarColor_txtbox.Texts, Int16.Parse(NumericUpDown.Value.ToString()),CarBranch_txtbox.Texts.ToString(),double.Parse(Price_txtbox.Texts),Profile.current_userid);
                 MessageBox.Show("You successfully added a new car");
-                LicensePlateno_textbox.Clear();
-                CarName_txtbox.Clear();
-                CarType_txtbox.Clear();
-                CarCapacity_txtbox.Clear();
-                CarModel_txtbox.Clear();
-                CarColor_txtbox.Clear();
-                CarBranch_txtbox.Clear();
-                Price_txtbox.Clear();
+
+
 
             }
 
@@ -226,6 +188,16 @@ namespace Car_Rental_App
 
 
 
+        }
+
+        private void NumericUpDown_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown.BorderColor = Color.IndianRed;
+        }
+
+        private void NumericUpDown_Leave(object sender, EventArgs e)
+        {
+            NumericUpDown.BorderColor = Color.Black;
         }
     }
 }

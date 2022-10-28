@@ -32,7 +32,7 @@ namespace Car_Rental_App
         }
         public void add_user_control_for_setting(UserControl uc)
         {
-            uc.Dock = DockStyle.Bottom;
+            uc.Dock = DockStyle.Fill;
             panel3.Controls.Clear();
             panel3.Controls.Add(uc);
 
@@ -43,6 +43,7 @@ namespace Car_Rental_App
 
             fullnamelbl.Text=p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
+            timer1.Start();
 
         }
 
@@ -76,83 +77,42 @@ namespace Car_Rental_App
             loginForm.Show();
         }
 
-        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Renter_Form_MouseEnter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void logoutbtn_MouseHover(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void bunifuSeparator1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
+      
       
       
 
+  
      
-       
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             Add_Car_User_Control h = new Add_Car_User_Control();
             add_user_control(h);
         }
 
-        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        private void pictureBox2_Click_2(object sender, EventArgs e)
         {
-            Add.Visible = true;
+            Earnings earnings = new Earnings();
+            add_user_control(earnings);
         }
 
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        private void pictureBox4_Click_1(object sender, EventArgs e)
         {
-
-            Add.Visible = false;
+            Chart chart = new Chart();
+            add_user_control(chart);
         }
 
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            label1.Visible = true;
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
-            label1.Visible = false;
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
             Setting_User_for_Renter_User_Control s = new Setting_User_for_Renter_User_Control(this);
             add_user_control_for_setting(s);
         }
 
-        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            label2.Visible = true;
-        }
-
-        private void pictureBox4_MouseLeave(object sender, EventArgs e)
-        {
-            label2.Visible = false;
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            Earnings earnings = new Earnings();
-            add_user_control(earnings);
+            label1.Text = DateTime.Now.ToLongTimeString();
+            label2.Text=DateTime.Now.ToLongDateString();
         }
     }
 }
