@@ -14,6 +14,9 @@ as return (
 		and car_status=1
 )
 
+
+
+
 go
 create function [generate rentid]
 ()

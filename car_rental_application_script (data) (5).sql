@@ -2,6 +2,17 @@ use car_rental_database;
 
 go
 
+--delete from admin
+--delete from customer
+--delete from payment
+--delete from cars
+
+--delete from branch
+--delete from profile
+--delete from profile_type
+
+
+
 insert into branch values ('summit', 0, null), ('cmc', 0, null), ('hayat', 0, null)
 
 insert into profile_type values(1, 'admin'),
@@ -25,20 +36,15 @@ insert into profile(login_id, first_name, last_name, [sex], phone_number, home_a
                             values('cus10', 'Nathan', 'Dawit', 'M', '092355534', 'summit', '1111',2)
 							
 insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
-                            values ('adm21', 'Barnabas', 'Solomon', 'M', '09780786', 'cmc', '2222',1)
-
+                            values ('adm12', 'Barnabas', 'Solomon', 'M', '09780786', 'hayat', '2222',1)
+insert into profile(login_id, first_name, last_name, [sex], phone_number, home_address, [password], profile_type_id)
+                            values ('adm10', 'Marcus', 'Solomon', 'M', '0909090909', 'cmc', '2222',1)
 
 insert into admin values('adm12', 10000, 'hayat'),
                         ('adm10', 10000, 'cmc')
 
 insert into payment values(1, 'credit card'),
                            (2, 'bank transfer')
-
-
--- NATE ----------------------------------------------------------------------
-insert into customer values ('cus10', 5)
-insert into customer values ('cus21', 2)
-
 
 ------Nati--------------------------------------------------------------------------
 
@@ -66,7 +72,6 @@ price_per_hour,
 car_branch,
 login_id) values('22222','HatchBack','Maruti Alto K10 LXi (Petrol)',4,'Red','New',10,5,15,'hayat','rntr11')
 
-select * from audit
 insert into cars (license_plate_no,
 car_name,
 car_type,
