@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Car_Rental_App
 {
-    internal class Renter   : Profile
+    internal class Renter : Profile
     {
 
 
@@ -25,7 +25,7 @@ namespace Car_Rental_App
                 SqlTransaction tran = conn.BeginTransaction();
                 try
                 {
-                    SqlCommand cmd = new SqlCommand(stm, conn,tran);
+                    SqlCommand cmd = new SqlCommand(stm, conn, tran);
                     cmd.Parameters.Add(new SqlParameter("@login_id", System.Data.SqlDbType.VarChar, 200)).Value = login_id;
                     cmd.Parameters.Add(new SqlParameter("@first_name", System.Data.SqlDbType.VarChar, 100)).Value = first_name;
                     cmd.Parameters.Add(new SqlParameter("@last_name", System.Data.SqlDbType.VarChar, 100)).Value = last_name;
@@ -39,7 +39,7 @@ namespace Car_Rental_App
                     cmd.ExecuteNonQuery();
                     tran.Commit();
                 }
-                catch(SqlException p)
+                catch (SqlException p)
                 {
                     tran.Rollback();
                     Console.WriteLine("Transaction Rollback");
@@ -51,7 +51,7 @@ namespace Car_Rental_App
                     conn.Close();
                 }
             }
-            
+
 
         }
         public void insert_By_Sp()
@@ -59,14 +59,14 @@ namespace Car_Rental_App
             using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
             {
                 conn.Open();
-                
-          
-                SqlTransaction transaction= conn.BeginTransaction(IsolationLevel.Serializable);
-          
+
+
+                SqlTransaction transaction = conn.BeginTransaction(IsolationLevel.Serializable);
+
                 try
                 {
                     //Console.WriteLine(transaction.IsolationLevel);
-                    SqlCommand cmd = new SqlCommand("Insert_Profile", conn,transaction);
+                    SqlCommand cmd = new SqlCommand("Insert_Profile", conn, transaction);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = login_id;
@@ -82,11 +82,11 @@ namespace Car_Rental_App
                     cmd.ExecuteNonQuery();
                     transaction.Commit();
 
-                
+
                 }
-                catch(SqlException ex)
+                catch (SqlException ex)
                 {
-                    
+
                     transaction.Rollback();
                     Console.WriteLine("Transaction Rollback");
 
@@ -97,7 +97,7 @@ namespace Car_Rental_App
                 }
 
             }
-        
+
 
         }
 
@@ -117,7 +117,7 @@ namespace Car_Rental_App
                     cmd.ExecuteNonQuery();
                     transaction.Commit();
                 }
-                catch(SqlException p)
+                catch (SqlException p)
                 {
                     transaction.Rollback();
                     Console.WriteLine("Transaction Rollback");
@@ -128,48 +128,39 @@ namespace Car_Rental_App
                     conn.Close();
                 }
             }
-           
+
         }
 
-        public void addcar(string license_plate_no,string car_name,string car_type,int car_capacity,string car_model, string car_color, int car_condition, string car_branch ,double price,string current_loginid )
+        public void addcar(string license_plate_no, string car_name, string car_type, int car_capacity, string car_model, string car_color, int car_condition, string car_branch, double price, string current_loginid)
         {
             using (SqlConnection conn = new SqlConnection(Program.my_connection_string)) {
                 conn.Open();
-                SqlTransaction transaction = conn.BeginTransaction();
-                try
-                {
 
-                    SqlCommand cmd = new SqlCommand("insert_car", conn, transaction);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@license_plate_no", SqlDbType.VarChar).Value = license_plate_no;
-                    cmd.Parameters.AddWithValue("@car_name", SqlDbType.VarChar).Value = car_name;
-                    cmd.Parameters.AddWithValue("@car_type", SqlDbType.VarChar).Value = car_type;
-                    cmd.Parameters.AddWithValue("@car_capacity", SqlDbType.Int).Value = car_capacity;
-                    cmd.Parameters.AddWithValue("@car_model", SqlDbType.VarChar).Value = car_model;
-                    cmd.Parameters.AddWithValue("@car_color", SqlDbType.VarChar).Value = car_color;
-                    cmd.Parameters.AddWithValue("@car_condition", SqlDbType.Int).Value = car_condition;
-                    cmd.Parameters.AddWithValue("@car_branch", SqlDbType.NVarChar).Value = car_branch;
-                    cmd.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = price;
-                    cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = current_loginid;
-                    cmd.Parameters.AddWithValue("@rep_min_req", SqlDbType.VarChar).Value = 5;
-                    cmd.Prepare();
-                    cmd.ExecuteNonQuery();
-                   transaction.Commit();
-                }
-                catch(Exception e)
-                {
-                    transaction.Rollback();
-                    Console.WriteLine("Transaction Rollback");
-                    
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
-                
+
+
+                SqlCommand cmd = new SqlCommand("insert_car", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@license_plate_no", SqlDbType.VarChar).Value = license_plate_no;
+                cmd.Parameters.AddWithValue("@car_name", SqlDbType.VarChar).Value = car_name;
+                cmd.Parameters.AddWithValue("@car_type", SqlDbType.VarChar).Value = car_type;
+                cmd.Parameters.AddWithValue("@car_capacity", SqlDbType.Int).Value = car_capacity;
+                cmd.Parameters.AddWithValue("@car_model", SqlDbType.VarChar).Value = car_model;
+                cmd.Parameters.AddWithValue("@car_color", SqlDbType.VarChar).Value = car_color;
+                cmd.Parameters.AddWithValue("@car_condition", SqlDbType.Int).Value = car_condition;
+                cmd.Parameters.AddWithValue("@car_branch", SqlDbType.NVarChar).Value = car_branch;
+                cmd.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = price;
+                cmd.Parameters["@price"].Precision = 18;
+                cmd.Parameters["@price"].Scale = 2;
+                cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = current_loginid;
+                cmd.Parameters.AddWithValue("@rep_min_req", SqlDbType.VarChar).Value = 5;
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+
             }
 
+        }
+    
         public void Edit_Renter_Account(string FirstName,string LastName,string Phone,string Address,string sex,string currentuserid)
         {
             using (SqlConnection conn = new SqlConnection(Program.my_connection_string))

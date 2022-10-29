@@ -51,15 +51,15 @@
             this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.LicensePlateno_textbox = new System.Windows.Forms.TextBox();
-            this.CarName_txtbox = new System.Windows.Forms.TextBox();
-            this.CarType_txtbox = new System.Windows.Forms.TextBox();
-            this.CarCapacity_txtbox = new System.Windows.Forms.TextBox();
-            this.CarBranch_txtbox = new System.Windows.Forms.TextBox();
-            this.CarModel_txtbox = new System.Windows.Forms.TextBox();
-            this.Price_txtbox = new System.Windows.Forms.TextBox();
-            this.CarColor_txtbox = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.CarModel_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.CarBranch_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.CarCapacity_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.Price_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.CarColor_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.CarType_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.LicensePlateno_textbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
+            this.CarName_txtbox = new Car_Rental_App.RenterUserControl.UnderLined_TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -259,66 +259,12 @@
             this.errorProvider10.ContainerControl = this;
             this.errorProvider10.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider10.Icon")));
             // 
-            // LicensePlateno_textbox
-            // 
-            this.LicensePlateno_textbox.Location = new System.Drawing.Point(275, 44);
-            this.LicensePlateno_textbox.Name = "LicensePlateno_textbox";
-            this.LicensePlateno_textbox.Size = new System.Drawing.Size(137, 22);
-            this.LicensePlateno_textbox.TabIndex = 58;
-            // 
-            // CarName_txtbox
-            // 
-            this.CarName_txtbox.Location = new System.Drawing.Point(275, 118);
-            this.CarName_txtbox.Name = "CarName_txtbox";
-            this.CarName_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarName_txtbox.TabIndex = 59;
-            // 
-            // CarType_txtbox
-            // 
-            this.CarType_txtbox.Location = new System.Drawing.Point(275, 182);
-            this.CarType_txtbox.Name = "CarType_txtbox";
-            this.CarType_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarType_txtbox.TabIndex = 60;
-            // 
-            // CarCapacity_txtbox
-            // 
-            this.CarCapacity_txtbox.Location = new System.Drawing.Point(275, 257);
-            this.CarCapacity_txtbox.Name = "CarCapacity_txtbox";
-            this.CarCapacity_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarCapacity_txtbox.TabIndex = 61;
-            // 
-            // CarBranch_txtbox
-            // 
-            this.CarBranch_txtbox.Location = new System.Drawing.Point(709, 108);
-            this.CarBranch_txtbox.Name = "CarBranch_txtbox";
-            this.CarBranch_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarBranch_txtbox.TabIndex = 62;
-            // 
-            // CarModel_txtbox
-            // 
-            this.CarModel_txtbox.Location = new System.Drawing.Point(275, 334);
-            this.CarModel_txtbox.Name = "CarModel_txtbox";
-            this.CarModel_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarModel_txtbox.TabIndex = 63;
-            // 
-            // Price_txtbox
-            // 
-            this.Price_txtbox.Location = new System.Drawing.Point(709, 182);
-            this.Price_txtbox.Name = "Price_txtbox";
-            this.Price_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.Price_txtbox.TabIndex = 64;
-            // 
-            // CarColor_txtbox
-            // 
-            this.CarColor_txtbox.Location = new System.Drawing.Point(275, 396);
-            this.CarColor_txtbox.Name = "CarColor_txtbox";
-            this.CarColor_txtbox.Size = new System.Drawing.Size(137, 22);
-            this.CarColor_txtbox.TabIndex = 65;
-            // 
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.Control;
-            this.numericUpDown1.Location = new System.Drawing.Point(709, 50);
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
+            this.numericUpDown1.Location = new System.Drawing.Point(709, 45);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -330,7 +276,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(137, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(137, 34);
             this.numericUpDown1.TabIndex = 66;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -338,20 +284,172 @@
             0,
             0});
             // 
+            // CarModel_txtbox
+            // 
+            this.CarModel_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarModel_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarModel_txtbox.BorderSize = 2;
+            this.CarModel_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarModel_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarModel_txtbox.Location = new System.Drawing.Point(275, 320);
+            this.CarModel_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarModel_txtbox.Name = "CarModel_txtbox";
+            this.CarModel_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarModel_txtbox.PasswordChar = false;
+            this.CarModel_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarModel_txtbox.TabIndex = 74;
+            this.CarModel_txtbox.Texts = "";
+            this.CarModel_txtbox.UnderlinedStlye = false;
+            this.CarModel_txtbox.Enter += new System.EventHandler(this.CarModel_txtbox_Enter);
+            this.CarModel_txtbox.Leave += new System.EventHandler(this.CarModel_txtbox_Leave);
+            // 
+            // CarBranch_txtbox
+            // 
+            this.CarBranch_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarBranch_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarBranch_txtbox.BorderSize = 2;
+            this.CarBranch_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarBranch_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarBranch_txtbox.Location = new System.Drawing.Point(709, 108);
+            this.CarBranch_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarBranch_txtbox.Name = "CarBranch_txtbox";
+            this.CarBranch_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarBranch_txtbox.PasswordChar = false;
+            this.CarBranch_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarBranch_txtbox.TabIndex = 73;
+            this.CarBranch_txtbox.Texts = "";
+            this.CarBranch_txtbox.UnderlinedStlye = false;
+            this.CarBranch_txtbox.Enter += new System.EventHandler(this.CarBranch_txtbox_Enter);
+            this.CarBranch_txtbox.Leave += new System.EventHandler(this.CarBranch_txtbox_Leave);
+            // 
+            // CarCapacity_txtbox
+            // 
+            this.CarCapacity_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarCapacity_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarCapacity_txtbox.BorderSize = 2;
+            this.CarCapacity_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarCapacity_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarCapacity_txtbox.Location = new System.Drawing.Point(275, 247);
+            this.CarCapacity_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarCapacity_txtbox.Name = "CarCapacity_txtbox";
+            this.CarCapacity_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarCapacity_txtbox.PasswordChar = false;
+            this.CarCapacity_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarCapacity_txtbox.TabIndex = 72;
+            this.CarCapacity_txtbox.Texts = "";
+            this.CarCapacity_txtbox.UnderlinedStlye = false;
+            this.CarCapacity_txtbox.Enter += new System.EventHandler(this.CarCapacity_txtbox_Enter);
+            this.CarCapacity_txtbox.Leave += new System.EventHandler(this.CarCapacity_txtbox_Leave);
+            // 
+            // Price_txtbox
+            // 
+            this.Price_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.Price_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.Price_txtbox.BorderSize = 2;
+            this.Price_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.Price_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.Price_txtbox.Location = new System.Drawing.Point(709, 172);
+            this.Price_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Price_txtbox.Name = "Price_txtbox";
+            this.Price_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.Price_txtbox.PasswordChar = false;
+            this.Price_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.Price_txtbox.TabIndex = 71;
+            this.Price_txtbox.Texts = "";
+            this.Price_txtbox.UnderlinedStlye = false;
+            this.Price_txtbox.Enter += new System.EventHandler(this.Price_txtbox_Enter);
+            this.Price_txtbox.Leave += new System.EventHandler(this.Price_txtbox_Leave);
+            // 
+            // CarColor_txtbox
+            // 
+            this.CarColor_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarColor_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarColor_txtbox.BorderSize = 2;
+            this.CarColor_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarColor_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarColor_txtbox.Location = new System.Drawing.Point(275, 386);
+            this.CarColor_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarColor_txtbox.Name = "CarColor_txtbox";
+            this.CarColor_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarColor_txtbox.PasswordChar = false;
+            this.CarColor_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarColor_txtbox.TabIndex = 70;
+            this.CarColor_txtbox.Texts = "";
+            this.CarColor_txtbox.UnderlinedStlye = false;
+            this.CarColor_txtbox.Enter += new System.EventHandler(this.CarColor_txtbox_Enter);
+            this.CarColor_txtbox.Leave += new System.EventHandler(this.CarColor_txtbox_Leave);
+            // 
+            // CarType_txtbox
+            // 
+            this.CarType_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarType_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarType_txtbox.BorderSize = 2;
+            this.CarType_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarType_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarType_txtbox.Location = new System.Drawing.Point(275, 172);
+            this.CarType_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarType_txtbox.Name = "CarType_txtbox";
+            this.CarType_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarType_txtbox.PasswordChar = false;
+            this.CarType_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarType_txtbox.TabIndex = 69;
+            this.CarType_txtbox.Texts = "";
+            this.CarType_txtbox.UnderlinedStlye = false;
+            this.CarType_txtbox.Enter += new System.EventHandler(this.CarType_txtbox_Enter);
+            this.CarType_txtbox.Leave += new System.EventHandler(this.CarType_txtbox_Leave);
+            // 
+            // LicensePlateno_textbox
+            // 
+            this.LicensePlateno_textbox.BackColor = System.Drawing.SystemColors.Window;
+            this.LicensePlateno_textbox.BorderColor = System.Drawing.Color.Black;
+            this.LicensePlateno_textbox.BorderSize = 2;
+            this.LicensePlateno_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.LicensePlateno_textbox.ForeColor = System.Drawing.Color.DimGray;
+            this.LicensePlateno_textbox.Location = new System.Drawing.Point(275, 35);
+            this.LicensePlateno_textbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LicensePlateno_textbox.Name = "LicensePlateno_textbox";
+            this.LicensePlateno_textbox.Padding = new System.Windows.Forms.Padding(7);
+            this.LicensePlateno_textbox.PasswordChar = false;
+            this.LicensePlateno_textbox.Size = new System.Drawing.Size(137, 35);
+            this.LicensePlateno_textbox.TabIndex = 68;
+            this.LicensePlateno_textbox.Texts = "";
+            this.LicensePlateno_textbox.UnderlinedStlye = false;
+            this.LicensePlateno_textbox.Enter += new System.EventHandler(this.LicensePlateno_textbox_Enter);
+            this.LicensePlateno_textbox.Leave += new System.EventHandler(this.LicensePlateno_textbox_Leave);
+            // 
+            // CarName_txtbox
+            // 
+            this.CarName_txtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.CarName_txtbox.BorderColor = System.Drawing.Color.Black;
+            this.CarName_txtbox.BorderSize = 2;
+            this.CarName_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.CarName_txtbox.ForeColor = System.Drawing.Color.DimGray;
+            this.CarName_txtbox.Location = new System.Drawing.Point(275, 108);
+            this.CarName_txtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarName_txtbox.Name = "CarName_txtbox";
+            this.CarName_txtbox.Padding = new System.Windows.Forms.Padding(7);
+            this.CarName_txtbox.PasswordChar = false;
+            this.CarName_txtbox.Size = new System.Drawing.Size(137, 35);
+            this.CarName_txtbox.TabIndex = 67;
+            this.CarName_txtbox.Texts = "";
+            this.CarName_txtbox.UnderlinedStlye = false;
+            this.CarName_txtbox.Enter += new System.EventHandler(this.CarName_txtbox_Enter);
+            this.CarName_txtbox.Leave += new System.EventHandler(this.CarName_txtbox_Leave);
+            // 
             // Add_Car_User_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.CarColor_txtbox);
-            this.Controls.Add(this.Price_txtbox);
             this.Controls.Add(this.CarModel_txtbox);
             this.Controls.Add(this.CarBranch_txtbox);
             this.Controls.Add(this.CarCapacity_txtbox);
+            this.Controls.Add(this.Price_txtbox);
+            this.Controls.Add(this.CarColor_txtbox);
             this.Controls.Add(this.CarType_txtbox);
-            this.Controls.Add(this.CarName_txtbox);
             this.Controls.Add(this.LicensePlateno_textbox);
+            this.Controls.Add(this.CarName_txtbox);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuThinButton21);
@@ -403,15 +501,15 @@
         private System.Windows.Forms.ErrorProvider errorProvider8;
         private System.Windows.Forms.ErrorProvider errorProvider9;
         private System.Windows.Forms.ErrorProvider errorProvider10;
-        private System.Windows.Forms.TextBox CarName_txtbox;
-        private System.Windows.Forms.TextBox LicensePlateno_textbox;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox CarColor_txtbox;
-        private System.Windows.Forms.TextBox Price_txtbox;
-        private System.Windows.Forms.TextBox CarModel_txtbox;
-        private System.Windows.Forms.TextBox CarBranch_txtbox;
-        private System.Windows.Forms.TextBox CarCapacity_txtbox;
-        private System.Windows.Forms.TextBox CarType_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarName_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarModel_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarBranch_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarCapacity_txtbox;
+        private RenterUserControl.UnderLined_TextBox Price_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarColor_txtbox;
+        private RenterUserControl.UnderLined_TextBox CarType_txtbox;
+        private RenterUserControl.UnderLined_TextBox LicensePlateno_textbox;
         //private Guna.UI2.WinForms.Guna2NumericUpDown NumericUpDown;
     }
 }

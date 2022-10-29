@@ -48,7 +48,7 @@ insert into payment values(1, 'credit card'),
 
 ------Nati--------------------------------------------------------------------------
 
-insert into cars values('1111','verified', 'Toyota', 'Sedan', 4, 'Camri', 'Red', 1, 10, 4, 10.0, 'cmc', 'rntr11')
+insert into cars values('1111','unverified', 'Toyota', 'Sedan', 4, 'Camri', 'Red', 1, 10, 4, 10.0, 'cmc', 'rntr11')
 insert into cars values('2222','verified', 'Toyota', 'Sedan', 4, 'Vitz', 'Blue', 1, 10, 4, 20.0, 'summit', 'rntr12')
 insert into cars values('3333','verified', 'Ford', 'Truck', 4, 'F150', 'Violet', 1, 10, 4, 40.0, 'hayat', 'rntr13')
 

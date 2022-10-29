@@ -114,5 +114,11 @@ namespace Car_Rental_App
             label1.Text = DateTime.Now.ToLongTimeString();
             label2.Text=DateTime.Now.ToLongDateString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            My_Car my_Car = new My_Car();
+            add_user_control(my_Car);
+        }
     }
 }
