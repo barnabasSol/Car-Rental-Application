@@ -43,11 +43,24 @@ namespace Car_Rental_App.CustomerUserControl
             }
         }
 
-        private void btnlogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click_1(object sender, EventArgs e)
         {
             LoginForm lg = new LoginForm();
             s_usercontrol.Hide();
             lg.Show();
+        }
+
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+            using(SqlConnection con = new SqlConnection(Program.my_connection_string))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update profile set activity = 0 where login_id = '" + Profile.current_userid + "'", con);
+                cmd.ExecuteNonQuery();
+                LoginForm lg = new LoginForm();
+                s_usercontrol.Hide();
+                lg.Show();
+            }
         }
     }
 }

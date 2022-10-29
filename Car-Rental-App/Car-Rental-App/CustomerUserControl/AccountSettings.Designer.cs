@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountSettings));
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btndeactivate = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnlogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtConfirmP = new System.Windows.Forms.TextBox();
             this.txtNewP = new System.Windows.Forms.TextBox();
             this.txtOldP = new System.Windows.Forms.TextBox();
@@ -40,10 +38,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnDeactivate = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeactivate)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,87 +72,20 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.btndeactivate);
-            this.splitContainer1.Panel2.Controls.Add(this.btnlogout);
+            this.splitContainer1.Panel2.Controls.Add(this.btnDeactivate);
+            this.splitContainer1.Panel2.Controls.Add(this.btnLogout);
             this.splitContainer1.Panel2.Controls.Add(this.txtConfirmP);
             this.splitContainer1.Panel2.Controls.Add(this.txtNewP);
             this.splitContainer1.Panel2.Controls.Add(this.txtOldP);
             this.splitContainer1.Panel2.Controls.Add(this.bunifuFlatButton1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.label5);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Size = new System.Drawing.Size(721, 454);
             this.splitContainer1.SplitterDistance = 41;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // btndeactivate
-            // 
-            this.btndeactivate.Activecolor = System.Drawing.Color.White;
-            this.btndeactivate.BackColor = System.Drawing.Color.White;
-            this.btndeactivate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btndeactivate.BorderRadius = 0;
-            this.btndeactivate.ButtonText = "Deactivate";
-            this.btndeactivate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btndeactivate.DisabledColor = System.Drawing.Color.Gray;
-            this.btndeactivate.Iconcolor = System.Drawing.Color.Transparent;
-            this.btndeactivate.Iconimage = global::Car_Rental_App.Properties.Resources.block;
-            this.btndeactivate.Iconimage_right = null;
-            this.btndeactivate.Iconimage_right_Selected = null;
-            this.btndeactivate.Iconimage_Selected = null;
-            this.btndeactivate.IconMarginLeft = 0;
-            this.btndeactivate.IconMarginRight = 0;
-            this.btndeactivate.IconRightVisible = true;
-            this.btndeactivate.IconRightZoom = 0D;
-            this.btndeactivate.IconVisible = true;
-            this.btndeactivate.IconZoom = 90D;
-            this.btndeactivate.IsTab = false;
-            this.btndeactivate.Location = new System.Drawing.Point(382, 108);
-            this.btndeactivate.Name = "btndeactivate";
-            this.btndeactivate.Normalcolor = System.Drawing.Color.White;
-            this.btndeactivate.OnHovercolor = System.Drawing.Color.White;
-            this.btndeactivate.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.btndeactivate.selected = false;
-            this.btndeactivate.Size = new System.Drawing.Size(241, 43);
-            this.btndeactivate.TabIndex = 11;
-            this.btndeactivate.Text = "Deactivate";
-            this.btndeactivate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndeactivate.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.btndeactivate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.Activecolor = System.Drawing.Color.White;
-            this.btnlogout.BackColor = System.Drawing.Color.White;
-            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlogout.BorderRadius = 0;
-            this.btnlogout.ButtonText = "Logout";
-            this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlogout.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlogout.Iconimage = global::Car_Rental_App.Properties.Resources.block;
-            this.btnlogout.Iconimage_right = null;
-            this.btnlogout.Iconimage_right_Selected = null;
-            this.btnlogout.Iconimage_Selected = null;
-            this.btnlogout.IconMarginLeft = 0;
-            this.btnlogout.IconMarginRight = 0;
-            this.btnlogout.IconRightVisible = true;
-            this.btnlogout.IconRightZoom = 0D;
-            this.btnlogout.IconVisible = true;
-            this.btnlogout.IconZoom = 90D;
-            this.btnlogout.IsTab = false;
-            this.btnlogout.Location = new System.Drawing.Point(382, 27);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Normalcolor = System.Drawing.Color.White;
-            this.btnlogout.OnHovercolor = System.Drawing.Color.White;
-            this.btnlogout.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.btnlogout.selected = false;
-            this.btnlogout.Size = new System.Drawing.Size(241, 43);
-            this.btnlogout.TabIndex = 10;
-            this.btnlogout.Text = "Logout";
-            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.btnlogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // txtConfirmP
             // 
@@ -242,6 +179,55 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Old Password:";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::Car_Rental_App.Properties.Resources.icons8_log_out_64;
+            this.btnLogout.ImageActive = null;
+            this.btnLogout.InitialImage = global::Car_Rental_App.Properties.Resources.icons8_log_out_64;
+            this.btnLogout.Location = new System.Drawing.Point(384, 47);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(79, 71);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 10;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Zoom = 10;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.BackColor = System.Drawing.Color.White;
+            this.btnDeactivate.Image = global::Car_Rental_App.Properties.Resources._552848;
+            this.btnDeactivate.ImageActive = null;
+            this.btnDeactivate.Location = new System.Drawing.Point(384, 149);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(79, 71);
+            this.btnDeactivate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDeactivate.TabIndex = 11;
+            this.btnDeactivate.TabStop = false;
+            this.btnDeactivate.Zoom = 10;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(479, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Logout";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(479, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Deactivate Account";
+            // 
             // AccountSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +240,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeactivate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +257,9 @@
         private System.Windows.Forms.TextBox txtConfirmP;
         private System.Windows.Forms.TextBox txtNewP;
         private System.Windows.Forms.TextBox txtOldP;
-        private Bunifu.Framework.UI.BunifuFlatButton btnlogout;
-        private Bunifu.Framework.UI.BunifuFlatButton btndeactivate;
+        private Bunifu.Framework.UI.BunifuImageButton btnDeactivate;
+        private Bunifu.Framework.UI.BunifuImageButton btnLogout;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
