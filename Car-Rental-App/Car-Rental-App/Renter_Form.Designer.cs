@@ -167,7 +167,7 @@
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.pictureBox2.Size = new System.Drawing.Size(220, 52);
             this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.Text = "     Earnings";
+            this.pictureBox2.Text = "    Earnings";
             this.pictureBox2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pictureBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.pictureBox2.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(220, 52);
             this.button2.TabIndex = 12;
-            this.button2.Text = "     My Car";
+            this.button2.Text = "    My Car";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -239,7 +239,7 @@
             this.pictureBox4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.pictureBox4.Size = new System.Drawing.Size(220, 52);
             this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.Text = "     Revenue";
+            this.pictureBox4.Text = "    Revenue";
             this.pictureBox4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pictureBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.pictureBox4.UseVisualStyleBackColor = true;
