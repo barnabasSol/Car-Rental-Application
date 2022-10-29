@@ -13,7 +13,16 @@ as return (
 		and verification = 'verified'
 		and car_status=1
 )
-
+go
+create function [get rented cars] 
+(@cusid varchar(200))
+returns table 
+as return(
+	select * from rented_cars
+	full join rental
+	on rental.rent_id = rented_cars.r_id
+	where rental.c_login_id = @cusid
+)
 
 
 

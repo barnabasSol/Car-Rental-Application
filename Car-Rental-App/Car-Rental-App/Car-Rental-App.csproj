@@ -181,6 +181,24 @@
     <Compile Include="CustomerUserControl\BrowseVehicles.Designer.cs">
       <DependentUpon>BrowseVehicles.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerUserControl\CustomerReportCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\CustomerReportCard.Designer.cs">
+      <DependentUpon>CustomerReportCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\CustomerReportGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\CustomerReportGroup.Designer.cs">
+      <DependentUpon>CustomerReportGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUserControl\HomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUserControl\HomeUserControl.Designer.cs">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUserControl\VehicleCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +350,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUserControl\BrowseVehicles.resx">
       <DependentUpon>BrowseVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\CustomerReportCard.resx">
+      <DependentUpon>CustomerReportCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\CustomerReportGroup.resx">
+      <DependentUpon>CustomerReportGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUserControl\HomeUserControl.resx">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUserControl\VehicleCard.resx">
       <DependentUpon>VehicleCard.cs</DependentUpon>

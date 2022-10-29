@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +18,8 @@ namespace Car_Rental_App
         public Customer_form()
         {
             InitializeComponent();
+            var homepage = new HomeUserControl();
+            add_user_control(homepage);
         }
         public void add_user_control(UserControl uc)
         {
@@ -40,6 +44,12 @@ namespace Car_Rental_App
         {
             AccountSettings ac = new AccountSettings(this);
             add_user_control(ac);
+        }
+
+        private void homebtn_Click(object sender, EventArgs e)
+        {
+            HomeUserControl hc = new HomeUserControl();
+            add_user_control(hc);
         }
     }
 }

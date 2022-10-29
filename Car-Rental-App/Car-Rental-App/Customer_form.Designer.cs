@@ -175,6 +175,7 @@
             this.homebtn.TabIndex = 9;
             this.homebtn.TabStop = false;
             this.homebtn.Zoom = 10;
+            this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
             // mainpanel
             // 

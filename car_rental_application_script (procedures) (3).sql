@@ -255,11 +255,12 @@ END
 go
 
 create proc [vehicle card content] 
-@admid varchar(200)
+@id varchar(200)
 with encryption
 AS
-begin 
-select * from vcc_view where login_id = @admid
+begin
+declare @branch varchar(100) = (select branch_loc from admin where login_id=@id)
+select * from vcc_view where car_branch = @branch
 END
 GO
 
