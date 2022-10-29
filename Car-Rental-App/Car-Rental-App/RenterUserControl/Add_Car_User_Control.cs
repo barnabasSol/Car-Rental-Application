@@ -174,13 +174,12 @@ namespace Car_Rental_App
 
             if (t)
             {
-                
 
+        
 
                 renter.addcar(LicensePlateno_textbox.Texts, CarName_txtbox.Texts, CarType_txtbox.Texts, Int16.Parse(CarCapacity_txtbox.Texts), CarModel_txtbox.Texts, CarColor_txtbox.Texts, Int16.Parse(numericUpDown1.Value.ToString()),CarBranch_txtbox.Texts.ToString(),double.Parse(Price_txtbox.Texts),Profile.current_userid);
-               // MessageBox.Show("You successfully added a new car");
 
-
+                MessageBox.Show("Hello","Confrimation",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
 

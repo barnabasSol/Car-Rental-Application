@@ -263,6 +263,7 @@
             // 
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.Control;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
             this.numericUpDown1.Location = new System.Drawing.Point(709, 45);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
