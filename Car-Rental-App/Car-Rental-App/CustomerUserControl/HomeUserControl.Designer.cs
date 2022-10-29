@@ -32,7 +32,12 @@
             this.pnlHomeList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRep = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblPending = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,13 +52,17 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.splitContainer1.Panel1.Controls.Add(this.lblPending);
+            this.splitContainer1.Panel1.Controls.Add(this.lblRep);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pnlHomeList);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Size = new System.Drawing.Size(650, 448);
-            this.splitContainer1.SplitterDistance = 52;
+            this.splitContainer1.SplitterDistance = 86;
             this.splitContainer1.TabIndex = 0;
             // 
             // pnlHomeList
@@ -63,7 +72,7 @@
             this.pnlHomeList.Location = new System.Drawing.Point(0, 45);
             this.pnlHomeList.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHomeList.Name = "pnlHomeList";
-            this.pnlHomeList.Size = new System.Drawing.Size(594, 403);
+            this.pnlHomeList.Size = new System.Drawing.Size(560, 403);
             this.pnlHomeList.TabIndex = 0;
             // 
             // panel1
@@ -73,7 +82,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(594, 45);
+            this.panel1.Size = new System.Drawing.Size(560, 45);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -87,6 +96,48 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Rented cars";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Reputation";
+            // 
+            // lblRep
+            // 
+            this.lblRep.AutoSize = true;
+            this.lblRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRep.ForeColor = System.Drawing.Color.White;
+            this.lblRep.Location = new System.Drawing.Point(3, 23);
+            this.lblRep.Name = "lblRep";
+            this.lblRep.Size = new System.Drawing.Size(70, 26);
+            this.lblRep.TabIndex = 2;
+            this.lblRep.Text = "label3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Pending cars";
+            // 
+            // lblPending
+            // 
+            this.lblPending.AutoSize = true;
+            this.lblPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPending.ForeColor = System.Drawing.Color.White;
+            this.lblPending.Location = new System.Drawing.Point(3, 88);
+            this.lblPending.Name = "lblPending";
+            this.lblPending.Size = new System.Drawing.Size(70, 26);
+            this.lblPending.TabIndex = 2;
+            this.lblPending.Text = "label3";
+            // 
             // HomeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,6 +145,8 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "HomeUserControl";
             this.Size = new System.Drawing.Size(650, 448);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -109,5 +162,9 @@
         private System.Windows.Forms.FlowLayoutPanel pnlHomeList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRep;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPending;
+        private System.Windows.Forms.Label label3;
     }
 }

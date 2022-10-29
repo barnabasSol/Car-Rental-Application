@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerReportGroup));
             this.lblBranch = new System.Windows.Forms.Label();
             this.lblTimeLeft = new System.Windows.Forms.Label();
+            this.bunifuRating1 = new Bunifu.Framework.UI.BunifuRating();
+            this.btnRate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // lblBranch
@@ -54,15 +57,63 @@
             this.lblTimeLeft.TabIndex = 1;
             this.lblTimeLeft.Text = "label2";
             // 
+            // bunifuRating1
+            // 
+            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuRating1.Location = new System.Drawing.Point(392, 26);
+            this.bunifuRating1.Name = "bunifuRating1";
+            this.bunifuRating1.Size = new System.Drawing.Size(187, 27);
+            this.bunifuRating1.TabIndex = 2;
+            this.bunifuRating1.Value = 0;
+            // 
+            // btnRate
+            // 
+            this.btnRate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRate.BorderRadius = 0;
+            this.btnRate.ButtonText = "Rate";
+            this.btnRate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRate.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRate.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRate.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRate.Iconimage")));
+            this.btnRate.Iconimage_right = null;
+            this.btnRate.Iconimage_right_Selected = null;
+            this.btnRate.Iconimage_Selected = null;
+            this.btnRate.IconMarginLeft = 0;
+            this.btnRate.IconMarginRight = 0;
+            this.btnRate.IconRightVisible = true;
+            this.btnRate.IconRightZoom = 0D;
+            this.btnRate.IconVisible = true;
+            this.btnRate.IconZoom = 90D;
+            this.btnRate.IsTab = false;
+            this.btnRate.Location = new System.Drawing.Point(604, 20);
+            this.btnRate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRate.Name = "btnRate";
+            this.btnRate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnRate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnRate.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRate.selected = false;
+            this.btnRate.Size = new System.Drawing.Size(103, 40);
+            this.btnRate.TabIndex = 3;
+            this.btnRate.Text = "Rate";
+            this.btnRate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRate.Textcolor = System.Drawing.Color.White;
+            this.btnRate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRate.Click += new System.EventHandler(this.btnRate_Click_1);
+            // 
             // CustomerReportGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.btnRate);
+            this.Controls.Add(this.bunifuRating1);
             this.Controls.Add(this.lblTimeLeft);
             this.Controls.Add(this.lblBranch);
             this.Name = "CustomerReportGroup";
-            this.Size = new System.Drawing.Size(470, 76);
+            this.Size = new System.Drawing.Size(711, 76);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,5 +123,7 @@
 
         private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.Label lblTimeLeft;
+        private Bunifu.Framework.UI.BunifuRating bunifuRating1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRate;
     }
 }

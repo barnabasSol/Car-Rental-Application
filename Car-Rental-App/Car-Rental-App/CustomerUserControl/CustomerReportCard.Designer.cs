@@ -76,7 +76,7 @@
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.lbllicense);
             this.Name = "CustomerReportCard";
-            this.Size = new System.Drawing.Size(633, 55);
+            this.Size = new System.Drawing.Size(707, 55);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

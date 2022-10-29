@@ -27,6 +27,9 @@ namespace Car_Rental_App.CustomerUserControl
                 String current_id = null;
                 string current_branch = null;
                 DateTime current_timeLeft = DateTime.Now;
+
+                int total_cars = 0;
+
                 while (reader.Read())
                 {
                     string carname = reader[0].ToString();
@@ -39,22 +42,32 @@ namespace Car_Rental_App.CustomerUserControl
                     new_cusr.CName = carname;
                     current_timeLeft = returndate;
                     current_branch = branch;
-                    Console.WriteLine(current_id + " " + rentId);
                     if ( current_id != rentId)
                     {
                         var breaker = new CustomerReportGroup();
                         breaker.Branch = current_branch;
                         breaker.timeLeft = current_timeLeft;
+                        breaker.Rentid = rentId;
                         pnlHomeList.Controls.Add(breaker); 
                         current_id = rentId;
                     }
 
                     pnlHomeList.Controls.Add(new_cusr);
+                    total_cars += 1;
     
                 }
+                reader.Close();
+                SqlCommand cmdrep = new SqlCommand("select reputation from customer where login_id = '" + Profile.current_userid + "'", con);
+                String rep = cmdrep.ExecuteScalar().ToString();
+                lblRep.Text = rep;
+
+                lblPending.Text = total_cars.ToString();
                 // Todo
-                // [ ] add the grouping and listing for these vehicles
-                // [ ] add rating system
+                // [x] add the grouping and listing for these vehicles
+                // [x] add rating system
+                // [x] show reputation
+                // [x] show pending cars
+
             }
         }
     }

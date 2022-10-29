@@ -268,6 +268,22 @@ GO
 
 
 GO
+create procedure [rate rent]
+@rentid varchar (200),
+@rating decimal(2,1)
+as begin
+	if (select count(*) from car_reviews where car_reviews.rent_id = @rentid) > 0
+	begin
+		update car_reviews
+		set car_rating = @rating
+		where @rentid = rent_id
+	end
+	else
+	begin
+		insert into car_reviews
+		values(@rentid, @rating)
+	end
+end
 									-------------profile/renter--------------
 
 create proc [reset_renter_password]

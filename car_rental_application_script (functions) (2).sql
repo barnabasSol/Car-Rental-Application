@@ -18,12 +18,17 @@ create function [get rented cars]
 (@cusid varchar(200))
 returns table 
 as return(
-	select * from rented_cars
-	full join rental
-	on rental.rent_id = rented_cars.r_id
-	where rental.c_login_id = @cusid
+	select cars.car_name, firsttable.* from (
+		select rented_cars.license_plate_no, rental.return_date, branch_loc, rented_cars.r_id
+		from rented_cars
+		inner join rental
+		on rental.rent_id = rented_cars.r_id
+		where rental.c_login_id = @cusid
+	)
+	as firsttable
+	inner join cars
+	on cars.license_plate_no = firsttable.license_plate_no
 )
-
 
 
 go

@@ -51,7 +51,6 @@ namespace Car_Rental_App.CustomerUserControl
                         v.Branch = reader[8].ToString();
                         v.Selected = false;
                         vehicles.Add(++counter, v);
-                        Console.WriteLine(v.Branch);
                     }
                 }
             }
@@ -85,7 +84,6 @@ namespace Car_Rental_App.CustomerUserControl
         private void BrowseVehicles_Load(object sender, EventArgs e)
         {
             reset();
-            Console.WriteLine(cbBranch.Items[0]);
         }
 
         private void filterSearch(String search_term)
@@ -136,7 +134,6 @@ namespace Car_Rental_App.CustomerUserControl
             vehicles[index].Selected = true;
             updateSelected();
             filterSearch(searchField.text);
-            Console.WriteLine($"Selected {index}");
         }
         public void unselectCar(int index)
         {
@@ -250,7 +247,7 @@ namespace Car_Rental_App.CustomerUserControl
                     }
                     // TODO:
                     // [x] Generate rent id
-                    // [ ] Get payment id
+                    // [x] Get payment id
                     // [x] Generate rent id
                     // [x] Create combo box for branch and payment id
                     // [x]=> {insert into rental the batch}
