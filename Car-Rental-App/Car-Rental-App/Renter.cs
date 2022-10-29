@@ -149,6 +149,8 @@ namespace Car_Rental_App
                 cmd.Parameters.AddWithValue("@car_condition", SqlDbType.Int).Value = car_condition;
                 cmd.Parameters.AddWithValue("@car_branch", SqlDbType.NVarChar).Value = car_branch;
                 cmd.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = price;
+                cmd.Parameters["@price"].Precision = 18;
+                cmd.Parameters["@price"].Scale = 2;
                 cmd.Parameters.AddWithValue("@login_id", SqlDbType.VarChar).Value = current_loginid;
                 cmd.Parameters.AddWithValue("@rep_min_req", SqlDbType.VarChar).Value = 5;
                 cmd.Prepare();

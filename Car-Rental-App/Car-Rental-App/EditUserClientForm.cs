@@ -129,7 +129,7 @@ namespace Car_Rental_App
                         command.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("Changes Successfully Made!");
+                MessageBox.Show("Changes Successfully Made!", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
