@@ -54,7 +54,7 @@ declare @temptb table (
 	 set @i += 1
 	END
 END
-
+select * from branch
 
 GO
 

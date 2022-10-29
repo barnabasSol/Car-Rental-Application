@@ -178,7 +178,7 @@ namespace Car_Rental_App
 
 
                 renter.addcar(LicensePlateno_textbox.Text, CarName_txtbox.Text, CarType_txtbox.Text, Int16.Parse(CarCapacity_txtbox.Text), CarModel_txtbox.Text, CarColor_txtbox.Text, Int16.Parse(numericUpDown1.Value.ToString()),CarBranch_txtbox.Text.ToString(),double.Parse(Price_txtbox.Text),Profile.current_userid);
-                MessageBox.Show("You successfully added a new car");
+                //MessageBox.Show("You successfully added a new car");
 
 
 

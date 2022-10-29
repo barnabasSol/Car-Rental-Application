@@ -33,6 +33,10 @@ namespace Car_Rental_App.AdminUserControl
 
         private void VehicleCard_Load(object sender, EventArgs e)
         {
+            if (free_btn.Visible == true)
+            {
+                carstatusbtn.Visible = false;
+            }
             if (carstatusbtn.ButtonText == "Disable")
             {
                 carstatusbtn.ActiveFillColor = Color.Red;
