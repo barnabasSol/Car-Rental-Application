@@ -20,6 +20,7 @@ namespace Car_Rental_App.RenterUserControl
         private void Chart_Load(object sender, EventArgs e)
         {
             fillchart();
+            
         }
         
           
@@ -29,7 +30,7 @@ namespace Car_Rental_App.RenterUserControl
             SqlConnection conn = new SqlConnection(Program.my_connection_string);
             DataSet ds = new DataSet();
             conn.Open();
-            string command = "select year(return_date) as year,paid_amount from  Earnings("+"\'"+Profile.current_userid+"\')";
+            string command = "select year(rental_date) as year,paid_amount from  Earnings("+"\'"+Profile.current_userid+"\')";
             SqlDataAdapter sd = new SqlDataAdapter(command, conn);
 
             sd.Fill(ds, "Earnings");
@@ -41,8 +42,6 @@ namespace Car_Rental_App.RenterUserControl
 
 
         }
-
-        
-
+      
     }
 }

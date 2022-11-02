@@ -22,11 +22,11 @@ namespace Car_Rental_App.RenterUserControl
         {
 
             string command = "select license_plate_no,car_name,car_branch,car_type,verification,car_color,car_condition,price_per_hour,car_status from cars where login_id=" + "\'" + Profile.current_userid + "\'";
-            using(SqlConnection conn=new SqlConnection(Program.my_connection_string))
+            using (SqlConnection conn = new SqlConnection(Program.my_connection_string))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(command, conn);
-                
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 int r = 0;
                 while (reader.Read())
@@ -44,9 +44,11 @@ namespace Car_Rental_App.RenterUserControl
 
                     r++;
                 }
-               
+
 
             }
         }
+
     }
 }
+
