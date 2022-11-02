@@ -240,7 +240,7 @@ namespace Car_Rental_App.AdminUserControl
             this.savebtn.Location = new System.Drawing.Point(17, 198);
             this.savebtn.Margin = new System.Windows.Forms.Padding(5);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(159, 40);
+            this.savebtn.Size = new System.Drawing.Size(159, 48);
             this.savebtn.TabIndex = 11;
             this.savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.savebtn.Click += new System.EventHandler(this.savebtn_Click);

@@ -52,11 +52,11 @@ namespace Car_Rental_App
             // welcomelbl
             // 
             this.welcomelbl.AutoSize = true;
-            this.welcomelbl.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomelbl.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomelbl.ForeColor = System.Drawing.Color.Black;
             this.welcomelbl.Location = new System.Drawing.Point(467, 40);
             this.welcomelbl.Name = "welcomelbl";
-            this.welcomelbl.Size = new System.Drawing.Size(343, 36);
+            this.welcomelbl.Size = new System.Drawing.Size(351, 36);
             this.welcomelbl.TabIndex = 1;
             this.welcomelbl.Text = "Welcome to Rent a Car";
             // 
@@ -76,14 +76,14 @@ namespace Car_Rental_App
             this.create_here_lbl.AutoSize = true;
             this.create_here_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.create_here_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create_here_lbl.Location = new System.Drawing.Point(665, 309);
+            this.create_here_lbl.Location = new System.Drawing.Point(655, 309);
             this.create_here_lbl.Name = "create_here_lbl";
             this.create_here_lbl.Size = new System.Drawing.Size(69, 15);
             this.create_here_lbl.TabIndex = 9;
             this.create_here_lbl.Text = "create here";
             this.create_here_lbl.Click += new System.EventHandler(this.create_here_lbl_Click);
+            this.create_here_lbl.MouseEnter += new System.EventHandler(this.create_here_lbl_MouseEnter);
             this.create_here_lbl.MouseLeave += new System.EventHandler(this.create_here_lbl_MouseLeave);
-            this.create_here_lbl.MouseHover += new System.EventHandler(this.create_here_lbl_MouseHover);
             // 
             // errorProvider1
             // 
@@ -138,11 +138,11 @@ namespace Car_Rental_App
             // pswlbl
             // 
             this.pswlbl.AutoSize = true;
-            this.pswlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pswlbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pswlbl.ForeColor = System.Drawing.Color.Black;
             this.pswlbl.Location = new System.Drawing.Point(508, 188);
             this.pswlbl.Name = "pswlbl";
-            this.pswlbl.Size = new System.Drawing.Size(98, 27);
+            this.pswlbl.Size = new System.Drawing.Size(101, 29);
             this.pswlbl.TabIndex = 4;
             this.pswlbl.Text = "Password:";
             this.pswlbl.UseCompatibleTextRendering = true;
@@ -150,11 +150,11 @@ namespace Car_Rental_App
             // loginidlbl
             // 
             this.loginidlbl.AutoSize = true;
-            this.loginidlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginidlbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginidlbl.ForeColor = System.Drawing.Color.Black;
             this.loginidlbl.Location = new System.Drawing.Point(508, 116);
             this.loginidlbl.Name = "loginidlbl";
-            this.loginidlbl.Size = new System.Drawing.Size(86, 27);
+            this.loginidlbl.Size = new System.Drawing.Size(89, 29);
             this.loginidlbl.TabIndex = 3;
             this.loginidlbl.Text = "Login-ID:";
             this.loginidlbl.UseCompatibleTextRendering = true;

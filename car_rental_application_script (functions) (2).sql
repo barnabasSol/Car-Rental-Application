@@ -9,7 +9,7 @@ as return (
 	select license_plate_no, car_name, car_type, car_capacity, car_model, car_color, car_condition, price_per_hour, car_branch from cars 
 	where (select customer.reputation from customer 
 				where customer.login_id = @id)
-				> cars.rep_min_req
+				>= cars.rep_min_req
 		and verification = 'verified'
 		and car_status=1
 )
@@ -64,7 +64,6 @@ go
 create Function Earnings(@renter_id varchar(200))
 returns table
 as
-
 return(
 select rented_cars.license_plate_no, 
 		car_name, 
@@ -79,9 +78,10 @@ select rented_cars.license_plate_no,
 		join cars on cars.license_plate_no=rented_cars.license_plate_no
 		where login_id = @renter_id 
 	
-		
 )  
+
 go
+
 --Nati-----------------------------------
 
 create function Total_Earings(@renter_login_id varchar(200))
@@ -89,14 +89,13 @@ returns money
 as
 begin
 declare @earnings money
-
 set @earnings=(select SUM(paid_amount) from Earnings(@renter_login_id))
 set @earnings=@earnings*0.6
-
 
 return @earnings
 
 end
+
 go
 
 --Nati-----------------------------------
@@ -108,7 +107,11 @@ return(
 select count (*) as [Number of User by Profile type]  from profile  group by profile_type_id 
 
 )
-go
+
+
+GO
+
+
 create function [generate admid]
 ()
 returns varchar(5)

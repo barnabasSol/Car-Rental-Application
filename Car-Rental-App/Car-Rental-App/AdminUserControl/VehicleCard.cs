@@ -47,7 +47,7 @@ namespace Car_Rental_App.AdminUserControl
             }
         }
 
-      
+
 
         public string licensep
         {
@@ -150,22 +150,41 @@ namespace Car_Rental_App.AdminUserControl
         private void update_return_status(string lp)
         {
             string query = "delete from rented_cars where license_plate_no=@lp";
+            string query2 = "update rented_cars_log set return_status='returned' where license_plate_no=@lp";
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
+            SqlParameter lp_param2 = new SqlParameter("@lp", SqlDbType.VarChar, 200);
             lp_param.Value = lp;
+            lp_param2.Value = lp;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction(IsolationLevel.Serializable);
+                try
                 {
-                    connection.Open();
-                    command.Parameters.Add(lp_param);
-                    command.Prepare();
-                    command.ExecuteNonQuery();
+                    SqlCommand command_1 = new SqlCommand(query, connection, transaction);
+                    command_1.Parameters.Add(lp_param);
+                    command_1.Prepare();
+                    command_1.ExecuteNonQuery();
+
+                    SqlCommand command_2 = new SqlCommand(query2, connection, transaction);
+                    command_2.Parameters.Add(lp_param2);
+                    command_2.Prepare();
+                    command_2.ExecuteNonQuery();
+
+                    free_btn.ButtonText = "Freed!";
+                    transaction.Commit();
+                }
+                catch (Exception e)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show(e.Message);
                 }
             }
 
+
         }
 
-       
+
         private void edit_vehicle_Click(object sender, EventArgs e)
         {
             EditVehicleForm ev = new EditVehicleForm(lplbl.Text);
@@ -175,34 +194,50 @@ namespace Car_Rental_App.AdminUserControl
         private void free_btn_Click(object sender, EventArgs e)
         {
             enable_car();
-            free_btn.ButtonText = "Freed!";
             undofreebtn.Visible = true;
             update_return_status(lplbl.Text);
         }
 
-        
+
 
         private void undofreebtn_Click(object sender, EventArgs e)
         {
+            undofreebtn.Visible = false;
             disable_car();
-            free_btn.ButtonText = "Free Vehicle";
             string query = "insert into rented_cars(r_id, license_plate_no) values(@rid, @lp)";
+            string query2 = "update rented_cars_log set return_status='unreturned' where license_plate_no=@lp";
             SqlParameter rid_param = new SqlParameter("@rid", SqlDbType.VarChar, 100);
             SqlParameter lp_param = new SqlParameter("@lp", SqlDbType.VarChar, 200);
+            SqlParameter lp_param2 = new SqlParameter("@lp", SqlDbType.VarChar, 200);
             rid_param.Value = rent_id;
             lp_param.Value = lplbl.Text;
+            lp_param2.Value = lplbl.Text;
             using (SqlConnection connection = new SqlConnection(Program.my_connection_string))
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction(IsolationLevel.Serializable);
+                try
                 {
-                    connection.Open();
-                    command.Parameters.Add(lp_param);
-                    command.Parameters.Add(rid_param);
-                    command.Prepare();
-                    command.ExecuteNonQuery();
+                    SqlCommand command_1 = new SqlCommand(query, connection, transaction);
+                    command_1.Parameters.Add(lp_param);
+                    command_1.Parameters.Add(rid_param);
+                    command_1.Prepare();
+                    command_1.ExecuteNonQuery();
+
+                    SqlCommand command_2 = new SqlCommand(query2, connection, transaction);
+                    command_2.Parameters.Add(lp_param2);
+                    command_2.Prepare();
+                    command_2.ExecuteNonQuery();
+
+                    free_btn.ButtonText = "Free Vehicle";
+                    transaction.Commit();
+                }
+                catch (Exception e1)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show(e1.Message);
                 }
             }
         }
-
     }
 }

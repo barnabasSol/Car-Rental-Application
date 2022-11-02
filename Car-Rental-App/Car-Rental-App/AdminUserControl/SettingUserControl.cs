@@ -35,19 +35,6 @@ namespace Car_Rental_App.AdminUserControl
             settingform.Close();
         }
 
-        private void logoutbtn_MouseHover(object sender, EventArgs e)
-        {
-            logoutlbl.Visible = true;
-        }
-
-        private void logoutbtn_MouseLeave(object sender, EventArgs e)
-        {
-            logoutlbl.Visible = false;
-        }
-        private void resetpswbtn_MouseHover(object sender, EventArgs e)
-        {
-            resetpswlbl.Visible = true;
-        }
 
         private void resetpswbtn_MouseLeave(object sender, EventArgs e)
         {
@@ -74,6 +61,26 @@ namespace Car_Rental_App.AdminUserControl
         {
             DeactivateAccountUC d = new DeactivateAccountUC(settingform);
             settingform.add_user_control(d);
+        }
+
+        private void logoutbtn_MouseEnter(object sender, EventArgs e)
+        {
+            logoutlbl.Visible = true;
+        }
+
+        private void resetpswbtn_MouseEnter(object sender, EventArgs e)
+        {
+            resetpswlbl.Visible = true;
+        }
+
+        private void deactivatebtn_MouseEnter(object sender, EventArgs e)
+        {
+            deactivatelbl.Visible = true;
+        }
+
+        private void logoutbtn_MouseLeave(object sender, EventArgs e)
+        {
+            logoutlbl.Visible = false;
         }
     }
 }

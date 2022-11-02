@@ -19,7 +19,7 @@ then To make SuperAdmin sysAdmin go to security=>Logins => SuperAdmin => propert
 */
 
 
-create Login SuperAdmin with password='Super'
+create Login Car_RentalAdmin with password='Super'
 
 use car_rental_database
 

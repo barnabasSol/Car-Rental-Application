@@ -219,9 +219,15 @@ namespace Car_Rental_App.CustomerUserControl
                         foreach (var ve in vehicles.Where(x => x.Value.Selected).Select(x => x.Value.Licence).ToList())
                         {
                             SqlCommand cmd_rent = new SqlCommand("insert into rented_cars(r_id, license_plate_no) values (@rentid, @license)", con, trans);
+                            SqlCommand cmd_rent_log = new SqlCommand("insert into rented_cars_log(r_id, license_plate_no) values (@rentid, @license)", con, trans);
+
                             cmd_rent.Parameters.Add(new SqlParameter("@rentid ", SqlDbType.VarChar, 5)).Value = rentid;
                             cmd_rent.Parameters.Add(new SqlParameter("@license", SqlDbType.VarChar, 200)).Value = ve ;
+                            cmd_rent_log.Parameters.Add(new SqlParameter("@rentid ", SqlDbType.VarChar, 5)).Value = rentid;
+                            cmd_rent_log.Parameters.Add(new SqlParameter("@license", SqlDbType.VarChar, 200)).Value = ve;
+
                             cmd_rent.Prepare();
+                            cmd_rent_log.ExecuteNonQuery();
                             cmd_rent.ExecuteNonQuery();
                         }
 

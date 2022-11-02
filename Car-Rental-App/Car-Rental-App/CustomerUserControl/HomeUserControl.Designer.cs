@@ -36,7 +36,6 @@
             this.pnlHomeList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,10 +73,9 @@
             this.lblPending.AutoSize = true;
             this.lblPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPending.ForeColor = System.Drawing.Color.White;
-            this.lblPending.Location = new System.Drawing.Point(4, 108);
-            this.lblPending.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPending.Location = new System.Drawing.Point(3, 88);
             this.lblPending.Name = "lblPending";
-            this.lblPending.Size = new System.Drawing.Size(86, 31);
+            this.lblPending.Size = new System.Drawing.Size(70, 26);
             this.lblPending.TabIndex = 2;
             this.lblPending.Text = "label3";
             // 
@@ -86,10 +84,9 @@
             this.lblRep.AutoSize = true;
             this.lblRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRep.ForeColor = System.Drawing.Color.White;
-            this.lblRep.Location = new System.Drawing.Point(4, 28);
-            this.lblRep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRep.Location = new System.Drawing.Point(3, 23);
             this.lblRep.Name = "lblRep";
-            this.lblRep.Size = new System.Drawing.Size(86, 31);
+            this.lblRep.Size = new System.Drawing.Size(70, 26);
             this.lblRep.TabIndex = 2;
             this.lblRep.Text = "label3";
             // 
@@ -97,10 +94,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 92);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(5, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Pending cars";
             // 
@@ -108,10 +104,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Reputation";
             // 
@@ -140,23 +135,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(4, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 31);
+            this.label1.Size = new System.Drawing.Size(133, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rented cars";
-            // 
-            // doubleBitmapControl1
-            // 
-            this.doubleBitmapControl1.Location = new System.Drawing.Point(3, 3);
-            this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-            this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-            this.doubleBitmapControl1.TabIndex = 0;
-            this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-            this.doubleBitmapControl1.Visible = false;
             // 
             // HomeUserControl
             // 

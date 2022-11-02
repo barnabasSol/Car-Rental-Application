@@ -38,7 +38,7 @@ namespace Car_Rental_App
             // bstatspanel
             // 
             this.bstatspanel.AutoScroll = true;
-            this.bstatspanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bstatspanel.BackColor = System.Drawing.Color.White;
             this.bstatspanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bstatspanel.Location = new System.Drawing.Point(0, 69);
             this.bstatspanel.Name = "bstatspanel";

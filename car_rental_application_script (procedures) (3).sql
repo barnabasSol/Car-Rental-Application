@@ -64,45 +64,46 @@ create proc [search car for admin]
 with encryption 
 as
 begin 
+declare @loc VARCHAR(100) = (select branch_loc from admin where login_id=@admid)
 if @filter='none'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and login_id = @admid 
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and car_branch=@loc
 end
 
 else if @filter='verified'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='verified' and login_id = @admid
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='verified' and car_branch=@loc
 end
 
 else if @filter='unverified'
 begin
 	select * from srch_view where (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
-	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified' and login_id = @admid
+	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') and verification='unverified' and car_branch=@loc
 end
 
 else if @filter='car condition (asc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch=@loc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition asc
 end
 
 else if @filter='car condition (desc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch=@loc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by car_condition desc
 end
 
 else if @filter='price (asc)'
 begin
-	select * from srch_view where login_id = @admid  and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch=@loc  and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour asc
 end
 
 else if @filter='price (desc)'
 begin
-	select * from srch_view where login_id = @admid and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
+	select * from srch_view where car_branch=@loc and (license_plate_no like '%'+@attribute+'%' or car_name like '%'+@attribute+'%' or
 	car_type like '%'+@attribute+'%' or c_login_id like '%'+@attribute+'%') order by price_per_hour desc
 end
     end
