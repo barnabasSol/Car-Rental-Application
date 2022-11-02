@@ -38,10 +38,7 @@ namespace Car_Rental_App.RenterUserControl
                     dataGridView1[2,r].Value = reader["car_branch"].ToString();
                     dataGridView1[3,r].Value = reader["firstname"].ToString();
                     dataGridView1[4,r].Value = reader["rental_date"].ToString();
-                    dataGridView1[5,r].Value = reader["total_vehicles"].ToString();
-                    dataGridView1[6,r].Value = reader["return_date"].ToString();
-                    dataGridView1[7,r].Value = reader["paid_amount"].ToString();
-                    
+                    dataGridView1[5,r].Value = reader["return_date"].ToString();
                     r++;
                 }
             }

@@ -92,9 +92,9 @@ namespace Car_Rental_App.AdminUserControl
             this.comboBox1.Items.AddRange(new object[] {
             "customer",
             "renter"});
-            this.comboBox1.Location = new System.Drawing.Point(96, 229);
+            this.comboBox1.Location = new System.Drawing.Point(78, 229);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
+            this.comboBox1.Size = new System.Drawing.Size(233, 21);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 

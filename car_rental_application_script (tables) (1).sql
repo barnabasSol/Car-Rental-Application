@@ -116,6 +116,16 @@ create table rented_cars(
 
 GO
 
+create table rented_cars_log(
+    r_id VARCHAR(200),
+    license_plate_no varchar(200),
+    return_status VARCHAR(100) default 'unreturned',
+    CONSTRAINT fk_r2_id FOREIGN KEY(r_id) REFERENCES rental(rent_id),
+    CONSTRAINT fk_lp2_num FOREIGN KEY(license_plate_no) REFERENCES cars(license_plate_no) on update cascade,
+)
+
+GO
+
 create table [audit] (
     admin_id varchar(200),
     task varchar(1000),
@@ -155,7 +165,10 @@ full join
     as firsttable on cars.license_plate_no = firsttable.license_plate_no
 
 GO
-
 create view customer_rep as
 select profile.login_id, first_name+' '+last_name as full_name, sex, phone_number, home_address, activity, reputation from profile
 join customer on profile.login_id=customer.login_id
+
+GO
+
+

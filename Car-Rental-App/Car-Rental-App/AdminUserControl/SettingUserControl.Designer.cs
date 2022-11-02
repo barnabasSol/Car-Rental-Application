@@ -45,7 +45,7 @@ namespace Car_Rental_App.AdminUserControl
             // 
             this.logoutlbl.AutoSize = true;
             this.logoutlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutlbl.Location = new System.Drawing.Point(127, 188);
+            this.logoutlbl.Location = new System.Drawing.Point(131, 188);
             this.logoutlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logoutlbl.Name = "logoutlbl";
             this.logoutlbl.Size = new System.Drawing.Size(60, 17);
@@ -92,6 +92,7 @@ namespace Car_Rental_App.AdminUserControl
             this.deactivatebtn.TabStop = false;
             this.deactivatebtn.Zoom = 10;
             this.deactivatebtn.Click += new System.EventHandler(this.deactivatebtn_Click);
+            this.deactivatebtn.MouseEnter += new System.EventHandler(this.deactivatebtn_MouseEnter);
             this.deactivatebtn.MouseLeave += new System.EventHandler(this.deactivatebtn_MouseLeave);
             this.deactivatebtn.MouseHover += new System.EventHandler(this.deactivatebtn_MouseHover);
             // 
@@ -110,8 +111,8 @@ namespace Car_Rental_App.AdminUserControl
             this.resetpswbtn.TabStop = false;
             this.resetpswbtn.Zoom = 10;
             this.resetpswbtn.Click += new System.EventHandler(this.resetpswbtn_Click);
+            this.resetpswbtn.MouseEnter += new System.EventHandler(this.resetpswbtn_MouseEnter);
             this.resetpswbtn.MouseLeave += new System.EventHandler(this.resetpswbtn_MouseLeave);
-            this.resetpswbtn.MouseHover += new System.EventHandler(this.resetpswbtn_MouseHover);
             // 
             // logoutbtn
             // 
@@ -128,8 +129,8 @@ namespace Car_Rental_App.AdminUserControl
             this.logoutbtn.TabStop = false;
             this.logoutbtn.Zoom = 10;
             this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
+            this.logoutbtn.MouseEnter += new System.EventHandler(this.logoutbtn_MouseEnter);
             this.logoutbtn.MouseLeave += new System.EventHandler(this.logoutbtn_MouseLeave);
-            this.logoutbtn.MouseHover += new System.EventHandler(this.logoutbtn_MouseHover);
             // 
             // SettingUserControl
             // 

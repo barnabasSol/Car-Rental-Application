@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblPending = new System.Windows.Forms.Label();
+            this.lblRep = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlHomeList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblRep = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPending = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,6 +65,48 @@
             this.splitContainer1.SplitterDistance = 86;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lblPending
+            // 
+            this.lblPending.AutoSize = true;
+            this.lblPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPending.ForeColor = System.Drawing.Color.White;
+            this.lblPending.Location = new System.Drawing.Point(3, 88);
+            this.lblPending.Name = "lblPending";
+            this.lblPending.Size = new System.Drawing.Size(70, 26);
+            this.lblPending.TabIndex = 2;
+            this.lblPending.Text = "label3";
+            // 
+            // lblRep
+            // 
+            this.lblRep.AutoSize = true;
+            this.lblRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRep.ForeColor = System.Drawing.Color.White;
+            this.lblRep.Location = new System.Drawing.Point(3, 23);
+            this.lblRep.Name = "lblRep";
+            this.lblRep.Size = new System.Drawing.Size(70, 26);
+            this.lblRep.TabIndex = 2;
+            this.lblRep.Text = "label3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Pending cars";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Reputation";
+            // 
             // pnlHomeList
             // 
             this.pnlHomeList.AutoScroll = true;
@@ -88,55 +130,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 26);
+            this.label1.Size = new System.Drawing.Size(133, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rented cars";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Reputation";
-            // 
-            // lblRep
-            // 
-            this.lblRep.AutoSize = true;
-            this.lblRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRep.ForeColor = System.Drawing.Color.White;
-            this.lblRep.Location = new System.Drawing.Point(3, 23);
-            this.lblRep.Name = "lblRep";
-            this.lblRep.Size = new System.Drawing.Size(70, 26);
-            this.lblRep.TabIndex = 2;
-            this.lblRep.Text = "label3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Pending cars";
-            // 
-            // lblPending
-            // 
-            this.lblPending.AutoSize = true;
-            this.lblPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPending.ForeColor = System.Drawing.Color.White;
-            this.lblPending.Location = new System.Drawing.Point(3, 88);
-            this.lblPending.Name = "lblPending";
-            this.lblPending.Size = new System.Drawing.Size(70, 26);
-            this.lblPending.TabIndex = 2;
-            this.lblPending.Text = "label3";
             // 
             // HomeUserControl
             // 

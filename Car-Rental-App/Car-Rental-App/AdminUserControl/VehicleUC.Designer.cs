@@ -145,7 +145,6 @@ namespace Car_Rental_App.AdminUserControl
             this.filterbycbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.filterbycbox.FormattingEnabled = true;
             this.filterbycbox.Items.AddRange(new object[] {
-            "unreturned",
             "verified",
             "unverified",
             "car condition (asc)",
