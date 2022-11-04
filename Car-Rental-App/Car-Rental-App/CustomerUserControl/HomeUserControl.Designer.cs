@@ -40,6 +40,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.pnlHomeList.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -61,8 +63,9 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pnlHomeList);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(650, 448);
-            this.splitContainer1.SplitterDistance = 86;
+            this.splitContainer1.Size = new System.Drawing.Size(867, 551);
+            this.splitContainer1.SplitterDistance = 114;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblPending
@@ -110,11 +113,12 @@
             // pnlHomeList
             // 
             this.pnlHomeList.AutoScroll = true;
+            this.pnlHomeList.Controls.Add(this.doubleBitmapControl1);
             this.pnlHomeList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHomeList.Location = new System.Drawing.Point(0, 45);
+            this.pnlHomeList.Location = new System.Drawing.Point(0, 55);
             this.pnlHomeList.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHomeList.Name = "pnlHomeList";
-            this.pnlHomeList.Size = new System.Drawing.Size(560, 403);
+            this.pnlHomeList.Size = new System.Drawing.Size(748, 496);
             this.pnlHomeList.TabIndex = 0;
             // 
             // panel1
@@ -123,8 +127,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 45);
+            this.panel1.Size = new System.Drawing.Size(748, 55);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -132,7 +137,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Location = new System.Drawing.Point(4, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 24);
             this.label1.TabIndex = 0;
@@ -140,16 +146,18 @@
             // 
             // HomeUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeUserControl";
-            this.Size = new System.Drawing.Size(650, 448);
+            this.Size = new System.Drawing.Size(867, 551);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.pnlHomeList.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -166,5 +174,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPending;
         private System.Windows.Forms.Label label3;
+        private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
     }
 }

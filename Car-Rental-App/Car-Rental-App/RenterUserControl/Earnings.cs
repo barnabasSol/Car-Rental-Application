@@ -35,10 +35,14 @@ namespace Car_Rental_App.RenterUserControl
                     dataGridView1.Rows.Add(1);
                     dataGridView1[0,r].Value = reader["license_plate_no"].ToString();
                     dataGridView1[1,r].Value = reader["car_name"].ToString();
-                    dataGridView1[2,r].Value = reader["car_branch"].ToString();
-                    dataGridView1[3,r].Value = reader["firstname"].ToString();
-                    dataGridView1[4,r].Value = reader["rental_date"].ToString();
-                    dataGridView1[5,r].Value = reader["return_date"].ToString();
+                    dataGridView1[2,r].Value = reader["car_color"].ToString();
+                    dataGridView1[3,r].Value = reader["car_branch"].ToString();
+                    dataGridView1[4,r].Value = reader["firstname"].ToString();
+                    dataGridView1[5,r].Value = reader["rental_date"].ToString();
+                    dataGridView1[6, r].Value = reader["return_status"].ToString();
+                    dataGridView1[7, r].Value = reader["paid_amount"].ToString();
+
+
                     r++;
                 }
             }
@@ -52,14 +56,14 @@ namespace Car_Rental_App.RenterUserControl
                 var gotten  = cmd.ExecuteScalar();
 
                
-                decimal total_Amount;
+                float total_Amount;
                 if (gotten==null) {
-                    total_Amount =(decimal)0.0;
+                    total_Amount =(float)0.0;
                 }
                 else
                 {
                     
-                    decimal.TryParse(gotten.ToString(), out total_Amount);
+                    float.TryParse(gotten.ToString(), out total_Amount);
                 }
                 Total_Amount_number.Text=total_Amount.ToString();
              

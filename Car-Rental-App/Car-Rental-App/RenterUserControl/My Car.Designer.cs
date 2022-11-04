@@ -37,11 +37,16 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -53,14 +58,15 @@
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8});
+            this.Column8,
+            this.Column9});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 536);
+            this.dataGridView1.Size = new System.Drawing.Size(892, 536);
             this.dataGridView1.TabIndex = 6;
             // 
             // Column1
@@ -89,7 +95,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Car Model";
+            this.Column5.HeaderText = "Verfication";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
@@ -111,13 +117,19 @@
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Car Status";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            // 
             // My_Car
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
             this.Name = "My_Car";
-            this.Size = new System.Drawing.Size(887, 536);
+            this.Size = new System.Drawing.Size(898, 536);
             this.Load += new System.EventHandler(this.My_Car_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

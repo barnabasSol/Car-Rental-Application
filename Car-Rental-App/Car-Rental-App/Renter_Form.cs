@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Car_Rental_App.RenterUserControl;
 
+
 namespace Car_Rental_App
 {
     public partial class Renter_Form : Form
@@ -43,7 +44,7 @@ namespace Car_Rental_App
 
             fullnamelbl.Text=p.get_full_name(Profile.current_userid);
             idlbl.Text = Profile.current_userid;
-            timer1.Start();
+         
 
         }
 
@@ -109,16 +110,13 @@ namespace Car_Rental_App
             add_user_control_for_setting(s);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label1.Text = DateTime.Now.ToLongTimeString();
-            label2.Text=DateTime.Now.ToLongDateString();
-        }
-
+     
         private void button2_Click(object sender, EventArgs e)
         {
             My_Car my_Car = new My_Car();
             add_user_control(my_Car);
         }
+
+       
     }
 }

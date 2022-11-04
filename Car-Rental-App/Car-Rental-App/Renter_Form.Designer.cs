@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Renter_Form));
             this.idlbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fullnamelbl = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -43,7 +40,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,37 +63,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.idlbl);
             this.panel3.Location = new System.Drawing.Point(218, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(887, 536);
+            this.panel3.Size = new System.Drawing.Size(892, 536);
             this.panel3.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(694, 513);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Date";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(693, 485);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Time";
             // 
             // panel2
             // 
@@ -245,11 +215,6 @@
             this.pictureBox4.UseVisualStyleBackColor = true;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Renter_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,9 +251,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button pictureBox4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button2;
     }
 }

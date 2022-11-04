@@ -36,7 +36,9 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,10 +46,9 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century", 20.2F);
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(170, 356);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(53, 438);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(209, 33);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(254, 40);
             this.bunifuCustomLabel1.TabIndex = 2;
             this.bunifuCustomLabel1.Text = "Total Amount :";
             // 
@@ -55,15 +56,18 @@
             // 
             this.Total_Amount_number.AutoSize = true;
             this.Total_Amount_number.Font = new System.Drawing.Font("Century", 20.2F);
-            this.Total_Amount_number.Location = new System.Drawing.Point(384, 356);
-            this.Total_Amount_number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Total_Amount_number.Location = new System.Drawing.Point(326, 438);
             this.Total_Amount_number.Name = "Total_Amount_number";
-            this.Total_Amount_number.Size = new System.Drawing.Size(30, 33);
+            this.Total_Amount_number.Size = new System.Drawing.Size(36, 40);
             this.Total_Amount_number.TabIndex = 4;
             this.Total_Amount_number.Text = "0";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,16 +77,17 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column7});
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(-1, -1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 303);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.Size = new System.Drawing.Size(894, 432);
+            this.dataGridView1.TabIndex = 7;
             // 
             // Column1
             // 
@@ -98,39 +103,52 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Car Branch";
+            this.Column3.HeaderText = "Car Color";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Customer Name";
+            this.Column4.HeaderText = "Car Branch";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Rental Date";
+            this.Column5.HeaderText = "Customer Name";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Rental Date";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
             // Column7
             // 
-            this.Column7.HeaderText = "Return Date";
+            this.Column7.HeaderText = "Return Status";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Paid Amount";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            // 
             // Earnings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Total_Amount_number);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Earnings";
-            this.Size = new System.Drawing.Size(674, 405);
+            this.Size = new System.Drawing.Size(892, 496);
             this.Load += new System.EventHandler(this.Earnings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -147,6 +165,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
