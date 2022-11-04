@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car_23773.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -465,6 +468,7 @@
     <None Include="Resources\block.png" />
     <None Include="Resources\company.png" />
     <None Include="Resources\edit.png" />
+    <Content Include="car_23773.ico" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\female1.png" />
     <Content Include="Resources\icons8-log-out-64.png" />

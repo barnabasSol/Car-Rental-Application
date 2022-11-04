@@ -37,7 +37,7 @@ namespace Car_Rental_App
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
                     transaction.Commit();
-                }catch(Exception e)
+                }catch(Exception)
                 {
                     transaction.Rollback();
                     Console.WriteLine("Transaction Rollback");
@@ -75,7 +75,7 @@ namespace Car_Rental_App
                     transaction.Commit();
                     Console.WriteLine();
                 }
-                catch(SqlException p)
+                catch(SqlException)
                 {
                     transaction.Rollback();
                     Console.WriteLine("Transaction Rollback");

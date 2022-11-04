@@ -194,11 +194,7 @@ namespace Car_Rental_App.AdminUserControl
             }
             vpanel.Controls.Clear();
             filter_vehicles("", filter);
-            if (filterbycbox.Text == "unreturned")
-            {
-                vpanel.Controls.Clear();
-                 
-            }
+
         }
         private void search_unreturned(string search_by)
         {
@@ -210,11 +206,6 @@ namespace Car_Rental_App.AdminUserControl
 
         private void searchvtxt_OnValueChanged_1(object sender, EventArgs e)
         {
-                if (filterbycbox.Text == "unreturned")
-                {
-                vpanel.Controls.Clear();
-
-                }
                 vpanel.Controls.Clear();
                 search_vehicle(searchvtxt.Text);
         }
@@ -232,9 +223,5 @@ namespace Car_Rental_App.AdminUserControl
             }
         }
 
-        private void vpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

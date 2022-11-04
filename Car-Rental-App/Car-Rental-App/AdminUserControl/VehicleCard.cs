@@ -174,10 +174,10 @@ namespace Car_Rental_App.AdminUserControl
                     free_btn.ButtonText = "Freed!";
                     transaction.Commit();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     transaction.Rollback();
-                    MessageBox.Show(e.Message);
+                    MessageBox.Show("Something Went Wrong");
                 }
             }
 

@@ -114,7 +114,7 @@ open cur_branches
 fetch next from cur_branches into @branch
 insert @temp_table
 	select avg(car_reviews.car_rating) as avgrating, rental.branch_loc as [location] from
-	rental join car_reviews on rental.rent_id = car_reviews.rent_id where branch_loc='cmc' group by branch_loc
+	rental join car_reviews on rental.rent_id = car_reviews.rent_id where branch_loc=@branch group by branch_loc
 while @@FETCH_STATUS=0
 	begin
 		set @newrating = (select average_rating from @temp_table)

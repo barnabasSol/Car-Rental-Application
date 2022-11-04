@@ -55,7 +55,6 @@ namespace Car_Rental_App.AdminUserControl
             this.vpanel.Name = "vpanel";
             this.vpanel.Size = new System.Drawing.Size(600, 336);
             this.vpanel.TabIndex = 16;
-            this.vpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.vpanel_Paint);
             // 
             // searchvtxt
             // 

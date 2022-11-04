@@ -85,7 +85,7 @@ namespace Car_Rental_App
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            login_idtxt.Text = "a0001";
+            login_idtxt.Text = "nathan321";
             password_txt.Text = "0000";
         }
 
