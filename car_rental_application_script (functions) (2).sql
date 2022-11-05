@@ -77,7 +77,6 @@ select rented_cars.license_plate_no,
 		from rental join rented_cars on rental.rent_id=rented_cars.r_id
 		join cars on cars.license_plate_no=rented_cars.license_plate_no
 		where login_id = @renter_id 
-	
 )  
 
 go
