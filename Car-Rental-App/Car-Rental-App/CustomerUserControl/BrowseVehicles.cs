@@ -172,9 +172,9 @@ namespace Car_Rental_App.CustomerUserControl
 
         private void btnFinalize_Click(object sender, EventArgs e)
         {
-            if (cbpayment.SelectedItem == null)
+            if (cbpayment.SelectedItem == null || cbBranch.Text == "")
             {
-                MessageBox.Show("please select a payment type first");
+                MessageBox.Show("please fill out the empty fields");
             }
             else
             {
@@ -188,6 +188,19 @@ namespace Car_Rental_App.CustomerUserControl
 
                     try
                     {
+                        // extra check car status
+
+                        foreach (var ve in vehicles.Where(x => x.Value.Selected).Select(x => x.Value.Licence).ToList())
+                        {
+                            SqlCommand cmd_get_status = new SqlCommand("select [dbo].[extra_check_car_status] (@licensep)", con, trans);
+                            cmd_get_status.Parameters.Add(new SqlParameter("@licensep", SqlDbType.VarChar, 200)).Value = ve;
+                            cmd_get_status.Prepare();
+                            if (cmd_get_status.ExecuteScalar().ToString() == "0")
+                            {
+                                reset();
+                                throw new Exception ("Transaction Failed, Try Again.");
+                            }
+                        }
                         // RENTID generation
                         SqlCommand get_rentid = new SqlCommand("select [dbo].[generate rentid] ()",con,trans);
                         String rentid = get_rentid.ExecuteScalar().ToString();
@@ -240,15 +253,15 @@ namespace Car_Rental_App.CustomerUserControl
                             cmd_rent.ExecuteNonQuery();
                         }
                         trans.Commit();
+                        MessageBox.Show("Payment Succesfull");
                     }
-                    catch(SqlException ex)
+                    catch(Exception ex)
                     {
                         trans.Rollback();
                         MessageBox.Show(ex.Message);
                     }
                     finally
                     {
-                        MessageBox.Show("Payment Succesfull");
                         reset();
                     }
                     // TODO:

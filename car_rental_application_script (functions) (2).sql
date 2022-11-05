@@ -1,7 +1,20 @@
 use car_rental_database;
 -- NATE -----------------------------------
-
+select * from cars
 GO
+ 
+create function extra_check_car_status (@lp VARCHAR(100))
+returns int
+as 
+begin
+declare @status int 
+    set @status = (select car_status from cars where license_plate_no=@lp)
+	return @status
+end
+
+go
+
+
 create function [get available vehicles]
 	(@id varchar(20))
 returns table
@@ -122,4 +135,6 @@ as begin
 		set @id = 'a' + (format((cast(substring((select top 1 login_id from profile order by login_id desc), 2, 4) as int) + 1), 'D4'))
 	return @id
 end
+
+go
 
