@@ -74,21 +74,21 @@ return @name
 end
 go
 --Nati-----------------------------------
+
 create Function Earnings(@renter_id varchar(200))
 returns table
 as
 return(
-select rented_cars.license_plate_no, 
+select rented_cars_log.license_plate_no, 
 		car_name, 
 		car_color, 
 		car_branch, 
 		dbo.return_name(c_login_id) as firstname,
 		rental_date,
-		total_vehicles,
-		return_date,
+		return_status,
 		paid_amount
-		from rental join rented_cars on rental.rent_id=rented_cars.r_id
-		join cars on cars.license_plate_no=rented_cars.license_plate_no
+		from rental join rented_cars_log on rental.rent_id=rented_cars_log.r_id
+		join cars on cars.license_plate_no=rented_cars_log.license_plate_no
 		where login_id = @renter_id 
 )  
 
@@ -104,11 +104,12 @@ declare @earnings money
 set @earnings=(select SUM(paid_amount) from Earnings(@renter_login_id))
 set @earnings=@earnings*0.6
 
-return @earnings
 
+return round(@earnings,2)
 end
 
 go
+
 
 --Nati-----------------------------------
 create Function number_of_useraccounts()
