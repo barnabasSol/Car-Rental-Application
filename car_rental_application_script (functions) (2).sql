@@ -47,6 +47,21 @@ end
 GO
 
 --Nati-----------------------------------
+create function return_name(@c_login_id varchar(200))
+returns varchar(200)
+as
+
+begin
+declare @name varchar(200)
+
+select @name=first_name from profile where login_id=@c_login_id 
+return @name
+	
+
+end
+go
+--Nati-----------------------------------
+
 create Function Earnings(@renter_id varchar(200))
 returns table
 as
@@ -61,25 +76,6 @@ select rented_cars_log.license_plate_no,
 		paid_amount
 		from rental join rented_cars_log on rental.rent_id=rented_cars_log.r_id
 		join cars on cars.license_plate_no=rented_cars_log.license_plate_no
-		where login_id = @renter_id 
-	
-)  
---Nati-----------------------------------
-create Function Earnings(@renter_id varchar(200))
-returns table
-as
-return(
-select rented_cars.license_plate_no, 
-		car_name, 
-		car_color, 
-		car_branch, 
-		dbo.return_name(c_login_id) as firstname,
-		rental_date,
-		total_vehicles,
-		return_date,
-		paid_amount
-		from rental join rented_cars on rental.rent_id=rented_cars.r_id
-		join cars on cars.license_plate_no=rented_cars.license_plate_no
 		where login_id = @renter_id 
 	
 )  
