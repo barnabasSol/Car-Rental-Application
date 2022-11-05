@@ -75,7 +75,7 @@ end
 go
 --Nati-----------------------------------
 
-create Function Earnings(@renter_id varchar(200))
+alter Function Earnings(@renter_id varchar(200))
 returns table
 as
 return(
