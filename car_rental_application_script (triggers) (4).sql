@@ -91,7 +91,7 @@ declare @temptb table (
 	 set @admid = (select login_id from @temptb where tempid=@i)
 	 set @lp = (select lp from @temptb where tempid=@i)
 	 if exists (select login_id from profile where profile_type_id=1 and login_id = @admid)
-	 	insert into [audit] values (@admid, 'you deleted a vehicle with license plate  -  '+@lp, GETDATE())
+	 	insert into [audit] values (null, 'manually deleted a vehicle with license plate  -  '+@lp, GETDATE())
 	 set @i += 1
 	END
 END

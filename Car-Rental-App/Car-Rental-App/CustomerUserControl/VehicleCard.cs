@@ -53,14 +53,14 @@ namespace Car_Rental_App.CustomerUserControl
         public string type
         {
             get { return _type; }
-            set { _type = value; lbltype.Text = value; }
+            set { _type = value; lbltype.Text = "car type: "+value; }
         }
         private string _condition;
 
         public string condition
         {
             get { return _condition; }
-            set { _condition = value; lblcondition.Text = value; }
+            set { _condition = value; lblcondition.Text = "condition: "+ value; }
         }
 
         private string _price;
@@ -68,7 +68,7 @@ namespace Car_Rental_App.CustomerUserControl
         public string price
         {
             get { return _price; }
-            set { _price = value; lblprice.Text = value; }
+            set { _price = value; lblprice.Text = "$"+value; }
         }
 
         private string _color;
@@ -83,7 +83,7 @@ namespace Car_Rental_App.CustomerUserControl
         public string capacity
         {
             get { return _capacity; }
-            set { _capacity = value; lblcapacity.Text = value;  }
+            set { _capacity = value; lblcapacity.Text = "capacity: "+value;  }
         }
 
 
