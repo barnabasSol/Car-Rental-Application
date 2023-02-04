@@ -3,7 +3,7 @@ C-sharp defense project
 
 ## Made using
 * C-sharp (WINDOWSFORM)
-* T-sql
+* sql server database
 
 ## Project Management
 * [Draw.IO](https://drive.google.com/file/d/1zQ99xIBnQFktpXHKOykA8n8QJ_DrEzk3/view?usp=sharing)
